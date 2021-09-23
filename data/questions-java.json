@@ -1,0 +1,175 @@
+[
+	{
+		"id": "java-1",
+		"question": "What does this code segment print? <div class=\"code\">static void increment(int index) { <br> &ensp;index++; <br>} <br> <br>public static void main(String[] args){ <br>  &ensp;int i = 0; <br>  &ensp;increment(i); <br> &ensp;i++; <br>  &ensp;System.out.println(i); <br>}</div>",
+		"correct_answer": "1",
+		"incorrect_answers": [
+			"3",
+			"0",
+			"2"
+		]
+	},
+	{
+		"id": "java-2",
+		"question": "What class can use a method from another class without a visibility modifier?",
+		"correct_answer": "Any class from the same package",
+		"incorrect_answers": [
+			"Any class",
+			"Any class that extends this class",
+			"Any class from any subpackage of this package"
+		]
+	},
+	{
+		"id": "java-3",
+		"question": "What is an unchecked exception?",
+		"correct_answer": "An exception that extends RuntimeException of Error that you do not need to catch or rethrow",
+		"incorrect_answers": [
+			"An exception that extends RuntimeException that you may catch but cannot rethrow",
+			"An exception that can be of any type, and that you do not need to catch or rethrow",
+			"An exception that extends RuntimeException that you cannot catch but can rethrow"
+		],
+		"fr": "https://blog.octo.com/la-gestion-des-exceptions-en-java/"
+	},
+	{
+		"id": "java-4",
+		"question": "How can you add a method to an existing interface without having to modify the classes that already implement it?",
+		"correct_answer": "You make this method a default method",
+		"incorrect_answers": [
+			"You provide an implementation of this method in a separate static class",
+			"You make this method an abstract class",
+			"You cannot add a method to an interface without implementing in the existing implementing classes"
+		]
+	},
+	{
+		"id": "java-5",
+		"question": "What does a class need to do when it declares that it is implementing an interface?",
+		"correct_answer": "It must be declared as abstract OR implement each of the interface's abstract methods, apart from the methods of the Object class.",
+		"incorrect_answers": [
+			"It must implement each of the interface's abstract methods and override the default methods",
+			"It must be declared as abstract",
+			"It must implement each of the interface's abstract methods"
+		]
+	},
+	{
+		"id": "java-6",
+		"question": "What will be the output of the following program? <div class=\"code\"><p>public class MyFirst {</p><p>&nbsp; &nbsp;public static void main(String[] args) {</p><p>&nbsp; &nbsp; &nbsp; MyFirst obj =newMyFirst(n);</p><p>&nbsp; &nbsp;}</p><p><br></p><p>&nbsp; &nbsp;static int a = 10;</p><p>&nbsp; &nbsp;static int n;</p><p>&nbsp; &nbsp;int b = 5;</p><p>&nbsp; &nbsp;int c;</p><p><br></p><p>&nbsp; &nbsp;public MyFirst(int m) {</p><p>&nbsp;&nbsp; &nbsp; System.out.println(a + &quot;, &quot; + b + &quot;, &quot; + c + &quot;, &quot; + n + &quot;, &quot;+m);</p><p>&nbsp; &nbsp;}</p><p><br></p><p>&nbsp; &nbsp;// Instance Block</p><p>&nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; b= 30;</p><p>&nbsp; &nbsp; &nbsp; n = 20;</p><p>&nbsp; &nbsp;}</p><p>&nbsp; &nbsp;// Static Block</p><p>&nbsp; &nbsp;static {</p><p>&nbsp; &nbsp; &nbsp; a = 60;</p><p>&nbsp; &nbsp;}</p><p>}</p></div>",
+		"correct_answer": " 60, 30, 0, 20, 0",
+		"incorrect_answers": [
+			"10, 5, 0, 20, 0",
+			"10, 30, 20",
+			"60, 5, 0, 20"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-7",
+		"question": "Which of the following option leads to the portability and security of Java?",
+		"correct_answer": "Bytecode is executed by JVM",
+		"incorrect_answers": [
+			"The applet makes the Java code secure and portable",
+			"Use of exception handling",
+			"Dynamic binding between objects"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-8",
+		"question": "What is the return type of the hashCode() method in the Object class?",
+		"correct_answer": "int",
+		"incorrect_answers": [
+			"Object",
+			"long",
+			"void"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-9",
+		"question": "What does the expression float a = 35 / 0 return?",
+		"correct_answer": "Infinity",
+		"incorrect_answers": [
+			"0",
+			"Not a Number",
+			"Run time exception"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-10",
+		"question": " Evaluate the following Java expression, if x=3, y=5, and z=10: <div class=\"code\">++z + y - y + z + x++ <div>",
+		"correct_answer": "25",
+		"incorrect_answers": [
+			"20",
+			"23",
+			"24"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-11",
+		"question": "What will be the output of the following program? <div class=\"code\"><p>public class Test { &nbsp;</p><p>public static void main(String[] args) { &nbsp;</p><p>&nbsp; &nbsp; int count = 1; &nbsp;</p><p>&nbsp; &nbsp; while (count &lt;= 15) { &nbsp;</p><p>&nbsp; &nbsp; System.out.println(count % 2 == 1 ?&quot;***&quot;: &quot;+++++&quot;); &nbsp;</p><p>&nbsp; &nbsp; ++count; &nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&nbsp;} &nbsp;</p><div>",
+		"correct_answer": "8 times *** and 7 times +++++",
+		"incorrect_answers": [
+			"15 times ***",
+			"15 times +++++",
+			"Both will print only once"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-12",
+		"question": "Which of the following for loop declaration is not valid?",
+		"correct_answer": "<div class=\"code\">for ( int i = 99; i >= 0; i / 9 )<div>",
+		"incorrect_answers": [
+			"<div class=\"code\">for ( int i = 7; i <= 77; i += 7 )<div>",
+			"<div class=\"code\">for ( int i = 20; i >= 2; - -i )<div>",
+			"<div class=\"code\">for ( int i = 2; i <= 20; i = 2* i )<div>"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-13",
+		"question": "Which of the following is true about the anonymous inner class?",
+		"correct_answer": "It has no class name",
+		"incorrect_answers": [
+			"It has only methods",
+			"Objects can't be created",
+			"It has a fixed class name"
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-14",
+		"question": "Which option is false about the final keyword?",
+		"correct_answer": "A final class cannot extend other classes.",
+		"incorrect_answers": [
+			"A final method cannot be overridden in its subclasses.",
+			"A final class cannot be extended.",
+			"A final method can be inherited."
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-15",
+		"question": "Given that Student is a class, how many reference variables and objects are created by the following code? <div class=\"code\"><p>Student studentName, studentId;</p><p>studentName = new Student();</p><p>Student stud_class = new Student();</p><div>",
+		"correct_answer": "Three reference variables and two objects are created.",
+		"incorrect_answers": [
+			"Two reference variables and two objects are created.",
+			"One reference variable and two objects are created.",
+			"Three reference variables and three objects are created."
+		],
+		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-16",
+		"question": "Which of the following is a valid syntax to synchronize the HashMap?",
+		"correct_answer": "<div class=\"code\">Map m1 = Collections.synchronizedMap(hashMap); <div>",
+		"incorrect_answers": [
+			"<div class=\"code\"> Map m = hashMap.synchronizeMap();<div>",
+			"<div class=\"code\"> HashMap map =hashMap.synchronizeMap();<div>",
+			"<div class=\"code\"> Map m2 = Collection.synchronizeMap(hashMap);<div>"
+		],
+		"source":"https://www.javatpoint.com/"
+	}
+
+]
