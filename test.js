@@ -130,22 +130,25 @@ function addEventListenerForThisAnswer(choice) {
         acceptingAnswers = false;
         const selectedChoice = e.target;
 
-        if(selectedChoice.dataset['number']){
+        if (selectedChoice.dataset['number']) {
             currentQuestion.selectedAnswer = parseInt(selectedChoice.dataset['number']);
-        }else{
+        } else {
             currentQuestion.selectedAnswer = parseInt(selectedChoice.parentElement.dataset['number']);
         }
-        
 
-        let classToApply = 'select';
 
-        if (practiceMode) {
-            if (currentQuestion.selectedAnswer === currentQuestion.answer) {
-                classToApply = 'correct';
-                incrementScore();
-            } else {
-                classToApply = 'incorrect';
-            }
+        if (currentQuestion.selectedAnswer === currentQuestion.answer) {
+            incrementScore();
+        }
+
+        let classToApply;
+
+        if (!practiceMode) {
+            classToApply = 'select';
+        } else if (practiceMode && currentQuestion.selectedAnswer === currentQuestion.answer) {
+            classToApply = 'correct';
+        }else{
+            classToApply = 'incorrect';
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
@@ -175,11 +178,7 @@ function getQuestionsDone() {
 
 function incrementScore() {
     score += 1;
-
-    if (practiceMode) {
-        scoreText.innerText = score;
-    }
-
+    scoreText.innerText = score;
 };
 
 function showGame() {
