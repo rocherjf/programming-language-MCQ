@@ -96,7 +96,7 @@
 	},
 	{
 		"id": "java-10",
-		"question": " Evaluate the following Java expression, if x=3, y=5, and z=10: <div class=\"code\">++z + y - y + z + x++ <div>",
+		"question": " Evaluate the following Java expression, if x=3, y=5, and z=10: <div class=\"code\">++z + y - y + z + x++ </div>",
 		"correct_answer": "25",
 		"incorrect_answers": [
 			"20",
@@ -107,7 +107,7 @@
 	},
 	{
 		"id": "java-11",
-		"question": "What will be the output of the following program? <div class=\"code\"><p>public class Test { &nbsp;</p><p>public static void main(String[] args) { &nbsp;</p><p>&nbsp; &nbsp; int count = 1; &nbsp;</p><p>&nbsp; &nbsp; while (count &lt;= 15) { &nbsp;</p><p>&nbsp; &nbsp; System.out.println(count % 2 == 1 ?&quot;***&quot;: &quot;+++++&quot;); &nbsp;</p><p>&nbsp; &nbsp; ++count; &nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&nbsp;} &nbsp;</p><div>",
+		"question": "What will be the output of the following program? <div class=\"code\"><p>public class Test { &nbsp;</p><p>public static void main(String[] args) { &nbsp;</p><p>&nbsp; &nbsp; int count = 1; &nbsp;</p><p>&nbsp; &nbsp; while (count &lt;= 15) { &nbsp;</p><p>&nbsp; &nbsp; System.out.println(count % 2 == 1 ?&quot;***&quot;: &quot;+++++&quot;); &nbsp;</p><p>&nbsp; &nbsp; ++count; &nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&nbsp;} &nbsp;</p></div>",
 		"correct_answer": "8 times *** and 7 times +++++",
 		"incorrect_answers": [
 			"15 times ***",
@@ -119,11 +119,11 @@
 	{
 		"id": "java-12",
 		"question": "Which of the following for loop declaration is not valid?",
-		"correct_answer": "<div class=\"code\">for ( int i = 99; i >= 0; i / 9 )<div>",
+		"correct_answer": "<div class=\"code\">for ( int i = 99; i >= 0; i / 9 )</div>",
 		"incorrect_answers": [
-			"<div class=\"code\">for ( int i = 7; i <= 77; i += 7 )<div>",
-			"<div class=\"code\">for ( int i = 20; i >= 2; - -i )<div>",
-			"<div class=\"code\">for ( int i = 2; i <= 20; i = 2* i )<div>"
+			"<div class=\"code\">for ( int i = 7; i <= 77; i += 7 )</div>",
+			"<div class=\"code\">for ( int i = 20; i >= 2; - -i )</div>",
+			"<div class=\"code\">for ( int i = 2; i <= 20; i = 2* i )</div>"
 		],
 		"source":"https://www.javatpoint.com/"
 	},
@@ -151,7 +151,7 @@
 	},
 	{
 		"id": "java-15",
-		"question": "Given that Student is a class, how many reference variables and objects are created by the following code? <div class=\"code\"><p>Student studentName, studentId;</p><p>studentName = new Student();</p><p>Student stud_class = new Student();</p><div>",
+		"question": "Given that Student is a class, how many reference variables and objects are created by the following code? <div class=\"code\"><p>Student studentName, studentId;</p><p>studentName = new Student();</p><p>Student stud_class = new Student();</p></div>",
 		"correct_answer": "Three reference variables and two objects are created.",
 		"incorrect_answers": [
 			"Two reference variables and two objects are created.",
@@ -163,13 +163,57 @@
 	{
 		"id": "java-16",
 		"question": "Which of the following is a valid syntax to synchronize the HashMap?",
-		"correct_answer": "<div class=\"code\">Map m1 = Collections.synchronizedMap(hashMap); <div>",
+		"correct_answer": "<div class=\"code\">Map m1 = Collections.synchronizedMap(hashMap); </div>",
 		"incorrect_answers": [
-			"<div class=\"code\"> Map m = hashMap.synchronizeMap();<div>",
-			"<div class=\"code\"> HashMap map =hashMap.synchronizeMap();<div>",
-			"<div class=\"code\"> Map m2 = Collection.synchronizeMap(hashMap);<div>"
+			"<div class=\"code\"> Map m = hashMap.synchronizeMap();</div>",
+			"<div class=\"code\"> HashMap map =hashMap.synchronizeMap();</div>",
+			"<div class=\"code\"> Map m2 = Collection.synchronizeMap(hashMap);</div>"
 		],
 		"source":"https://www.javatpoint.com/"
+	},
+	{
+		"id": "java-17",
+		"question": "<p>Given that strings is an ArrayList with the following elements: &quot;one&quot;, &quot;two&quot; and &quot;three&quot;, what does the following code do?</p><div class=\"code\"><p>for (string s : strings){</p><p><span>&nbsp; &nbsp;&nbsp;</span>System.out.println(&quot;s = &quot; + s);</p><p><span>&nbsp; &nbsp;&nbsp;</span>strings.remove(&quot;two&quot;);</p><p>}</p></div>",
+		"correct_answer": "The code throws a ConcurrentModificationException",
+		"incorrect_answers": [
+			"The code throws a ArrayOutModificationException",
+			"The code prints \"one\" and then \"three\"",
+			"The code throws an IllegalStateException"
+		],
+		"source":""
+	},
+	{
+		"id": "java-18",
+		"question": "<p>You have the following code</p><div class=\"code\"><p>try (Reader reader1 = new FileReader(&quot;log.txt&quot;);</p><p>&nbsp; Reader reader2 = new FileReader(&quot;log.txt&quot;)){</p><p>&nbsp; // some code</p><p>} catch (IOException e){</p><p>}</p></div><p>At run time, the constructor of reader2 throws an IOException, and the close() method of reader1 also throws an IOException. What exception(s) is/are caught in this code ?</p>",
+		"correct_answer": "The exception thrown by the construction of reader2",
+		"incorrect_answers": [
+			"The exception thrown by the closing of reader1",
+			"A third exception is caught, wrapping the two first exceptions",
+			"Both exceptions are caught"
+		],
+		"source":""
+	},
+	{
+		"id": "java-19",
+		"question": "You need to concatenate a list of instances of String together. What precautions should you take ?",
+		"correct_answer": "Avoid the unnecessary creation of instances of String",
+		"incorrect_answers": [
+			"Properly flush the buffer of string in the returned String",
+			"Properly flush the buffer of strings",
+			"Make sure all the elements of the list are properly consumed"
+		],
+		"source":""
+	},
+	{
+		"id": "java-20",
+		"question": "You need to distribute your application as a JAR file on the internet. How can you make your customer sure that the JAR they will download has not been modified by anyone?",
+		"correct_answer": "You can sign it so that the JVM can check for its integrity",
+		"incorrect_answers": [
+			"You can distribute a password along with it",
+			"You can distribute a hash code along with it",
+			"You can hash each class in it"
+		],
+		"source":""
 	}
 
 ]

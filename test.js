@@ -26,13 +26,18 @@ const typeQuiz = new URLSearchParams(window.location.search).get("type");
 const practiceMode = true;
 const MAX_QUESTIONS = 3;
 
+// URL test
+//let URL = 'http://localhost:3000/static/questions-java.json'
+
+let URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/questions-java.json';
+
 
 start();
 
 
 function start() {
     fetch(
-        'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/questions-java.json'
+        URL
     )
         .then((res) => {
             return res.json();
