@@ -1,0 +1,26 @@
+.line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 1rem;
+}
+
+
+input {
+  width: 6rem;
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  border: none;
+  color: #56a5eb;
+}
+
+
+select {
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  border: none;
+  color: #56a5eb;
+}

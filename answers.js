@@ -1,7 +1,7 @@
 // Html element
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('answer-text'));
-const next = document.getElementById('next-container');
+const next = document.getElementById('next');
 let currentResult = 0;
 
 
