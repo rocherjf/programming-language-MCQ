@@ -302,5 +302,104 @@
 			"The field is a constant, accessible from all the class instances."
 		],
 		"source": ""
+	},
+	{
+		"id": "java-29",
+		"question": "<p>Given the following code:&nbsp;</p><div class=\"code\"><p>public static void main(String[] args) {</p><p>&nbsp; int myInt = 2;</p><p>&nbsp; float myFloat = 3.8f;</p><p>&nbsp; double myDouble = 2.9;</p><p>&nbsp; char myChar = &apos;P&apos;;</p><p>}</p></div><p>Which is a valid assignment operation?</p><p><br></p>",
+		"correct_answer": "<div class=\"codeAnswer\">myInt = myChar;</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">myChar = myInt;</div>",
+			"<div class=\"codeAnswer\">myInt = myFloat;</div>",
+			"<div class=\"codeAnswer\">myFloat = myDouble;</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-30",
+		"question": "<p>What will happen when you write the following code?&nbsp;</p><div class=\"code\"><p>class Animal {</p><p>&nbsp; &nbsp; //variables, constructors and methods</p><p>}</p><p>public class MainClass {</p><p>&nbsp; &nbsp; public static void main(String[] args) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Animal animal;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(animal);</p><p>&nbsp; &nbsp; }</p><p>}</p></div>",
+		"correct_answer": "A syntax error stating that the animal variable must be instantiated",
+		"incorrect_answers": [
+			"&quot;null&quot; will be printed to the console.",
+			"&quot;animal&quot; will be printed to the console.",
+			"A NullPointerException when you run the application"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-31",
+		"question": "You have a class Person with an age property of type int and its corresponding getter getAge(). You have a stream of instances of this class and want to divide this stream into two lists: the first containing the people younger than or equal to 20, and the other the people older than 20. Which collector can you use?",
+		"correct_answer": "<div class=\"codeAnswer\">Collectors.partitioningBy(p -> p.getAge() > 20, toList())</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">Collectors.partitioningBy(age -> age > 20, toList())</div>",
+			"<div class=\"codeAnswer\">Collectors.groupingBy(Person::getAge, comparing(p -> p.getAge() > 20))</div>",
+			"<div class=\"codeAnswer\">Collectors.groupingBy(Person::getAge, comparing(age -> age > 20))</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-32",
+		"question": "You must create a size() method in an interface and provide an implementation. How do you declare this method?",
+		"correct_answer": "default int size() { /* method implementation */ }",
+		"incorrect_answers": [
+			"concrete int size() { /* method implementation */ }",
+			"final int size() { /* method implementation */ }",
+			"int size() { /* method implementation */ }"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-33",
+		"question": "What do you need to make an interface a functional interface?",
+		"correct_answer": "Make sure it has only one abstract method that needs to be implemented.",
+		"incorrect_answers": [
+			"Remove its static methods.",
+			"Remove its default methods.",
+			"Annotate it with @FunctionalInterface. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-34",
+		"question": "You have a User class with a single field: name. In your application, two instances of User are the same if they have the same name. Keeping in mind the optimized program performance and efficient object comparison, how can you enforce such a rule?",
+		"correct_answer": "By overriding the equals(Object) and hashCode() methods in the User class",
+		"incorrect_answers": [
+			"By creating an equals(User) and overriding the hashCode() method in the User class",
+			"By only creating an equals(User) method in the User class",
+			"By only overriding an equals(Object) method in the User class"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-35",
+		"question": "How can a final field be set to a value?",
+		"correct_answer": "By using an initializer or by setting it in a constructor",
+		"incorrect_answers": [
+			"By using an initializer only",
+			"By setting it in a constructor only",
+			"By using an initializer and by optionally modifying this value in a constructor"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-36",
+		"question": "What is true of a Stream?",
+		"correct_answer": "Streams don't store their elements.",
+		"incorrect_answers": [
+			"Streams support indexed access to their elements.",
+			"Streams are reusable.",
+			"Streams are mutable."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-37",
+		"question": "You have a <span class=\"code\">Map&lt;Integer, String&gt;</span>. This Map does not allow null values. You call the <span class=\"code\">get()</span> method with a key that is not present in it. What does this method return?",
+		"correct_answer": "null",
+		"incorrect_answers": [
+			"An empty String",
+			"NoSuchElementException",
+			"NullPointerException"
+		],
+		"source": ""
 	}
 ]

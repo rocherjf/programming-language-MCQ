@@ -34,6 +34,18 @@
   background-color: #cccecf;
 }
 
+.codeInLine{
+  padding : 0.5rem;
+  background-color: #cccecf;
+}
+
+.codeAnswer{
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding : 0.5rem;
+  background-color: #cccecf;
+}
+
 
 #next {
   margin: 5rem auto 0 auto;
