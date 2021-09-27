@@ -21,8 +21,8 @@ let questionsDone = [];
 // URL parameters
 let urlParams = new URLSearchParams(window.location.search);
 const typeQuiz = urlParams.get("type"); // TODO : A prendre en compte pour l'URL
-const MAX_QUESTIONS = urlParams.get("nbQuestions");
-const practiceMode = urlParams.get("training");
+const MAX_QUESTIONS = urlParams.get("nbQuestions") || 10;
+const practiceMode = urlParams.get("training") || true;
 
 // URL test
 //let URL = 'http://localhost:3000/static/questions-java.json'

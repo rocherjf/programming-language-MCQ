@@ -119,11 +119,11 @@
 	{
 		"id": "java-12",
 		"question": "Which of the following for loop declaration is not valid?",
-		"correct_answer": "<div class=\"code\">for ( int i = 99; i >= 0; i / 9 )</div>",
+		"correct_answer": "<div class=\"codeAnswer\">for ( int i = 99; i >= 0; i / 9 )</div>",
 		"incorrect_answers": [
-			"<div class=\"code\">for ( int i = 7; i <= 77; i += 7 )</div>",
-			"<div class=\"code\">for ( int i = 20; i >= 2; - -i )</div>",
-			"<div class=\"code\">for ( int i = 2; i <= 20; i = 2* i )</div>"
+			"<div class=\"codeAnswer\">for ( int i = 7; i <= 77; i += 7 )</div>",
+			"<div class=\"codeAnswer\">for ( int i = 20; i >= 2; - -i )</div>",
+			"<div class=\"codeAnswer\">for ( int i = 2; i <= 20; i = 2* i )</div>"
 		],
 		"source":"https://www.javatpoint.com/"
 	},
@@ -163,11 +163,11 @@
 	{
 		"id": "java-16",
 		"question": "Which of the following is a valid syntax to synchronize the HashMap?",
-		"correct_answer": "<div class=\"code\">Map m1 = Collections.synchronizedMap(hashMap); </div>",
+		"correct_answer": "<div class=\"codeAnswer\">Map m1 = Collections.synchronizedMap(hashMap); </div>",
 		"incorrect_answers": [
-			"<div class=\"code\"> Map m = hashMap.synchronizeMap();</div>",
-			"<div class=\"code\"> HashMap map =hashMap.synchronizeMap();</div>",
-			"<div class=\"code\"> Map m2 = Collection.synchronizeMap(hashMap);</div>"
+			"<div class=\"codeAnswer\"> Map m = hashMap.synchronizeMap();</div>",
+			"<div class=\"codeAnswer\"> HashMap map =hashMap.synchronizeMap();</div>",
+			"<div class=\"codeAnswer\"> Map m2 = Collection.synchronizeMap(hashMap);</div>"
 		],
 		"source":"https://www.javatpoint.com/"
 	},
@@ -212,6 +212,50 @@
 			"You can distribute a password along with it",
 			"You can distribute a hash code along with it",
 			"You can hash each class in it"
+		],
+		"source":""
+	},
+	{
+		"id": "java-21",
+		"question": "What will be the output of the following program? <div class=\"code\"><p>public class MyFirst {</p><p><span>&nbsp; &nbsp;&nbsp;</span>public static void main(String[] args) {</p><p><span>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>System.out.println(&quot;main&quot;);</p><p><span>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>MyFirst obj = new MyFirst(n);</p><p><span>&nbsp; &nbsp;&nbsp;</span>}</p><p><span>&nbsp;&nbsp;&nbsp;</span>public MyFirst(int m) {</p><p><span>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>System.out.println(&quot;constructor&quot;);</p><p><span>&nbsp;&nbsp;&nbsp;</span>}</p><p><span>&nbsp; &nbsp;&nbsp;</span>{</p><p><span>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;</span>System.out.println(&quot;instance&quot;);</p><p><span>&nbsp; &nbsp;&nbsp;</span>}</p><p><span>&nbsp; &nbsp;&nbsp;</span>static {</p><p><span>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;</span>System.out.println(&quot;static&quot;);</p><p><span>&nbsp; &nbsp;&nbsp;</span>}</p><p>}</p></div>",
+		"correct_answer": "static -> main -> instance -> constructor",
+		"incorrect_answers": [
+			"main -> constructor -> static -> instance",
+			"main -> static -> constructor -> instance",
+			"static -> instance -> main -> constructor"
+		],
+		"source":"self"
+	},
+	{
+		"id": "java-22",
+		"question": "<p>The following code is a part of a Java program&nbsp;</p><div class=\"code\"><p>String a = &quot;Hello&quot;;</p><p>String b = &quot; World&quot;;</p><p>a.concat(b);</p></div><p>How many instances of <span class=\"codeInLine\">String</span> are created at the end of the program?</p>",
+		"correct_answer": "3",
+		"incorrect_answers": [
+			"2",
+			"4",
+			"1"
+		],
+		"source":""
+	},
+	{
+		"id": "java-23",
+		"question": "You need to call a method that throws <span class=\"codeInLine\">IOException</span> and <span class=\"codeInLine\">FileNotFoundException</span>. Knowing that <span class=\"codeInLine\">FileNotFoundException</span> is an extension of <span class=\"codeInLine\">IOException</span>, among the following catch clauses, which one is NOT correct?",
+		"correct_answer": "<div class=\"codeAnswer\">catch(FileNotFoundException e){}catch(IOException e){}</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">catch(FileNotFoundException | IOException e){}</div>",
+			"<div class=\"codeAnswer\">catch(Exception e){}</div>",
+			"<div class=\"codeAnswer\">catch(IOException e){}</div>"
+		],
+		"source":""
+	},
+	{
+		"id": "java-24",
+		"question": "The maximum value you can store in an int is 2147483647. What does the following code print out? <div class=\"code\"><p>public static void main(String[] args){</p><p>&nbsp; int max = 2147483647;</p><p>&nbsp;System.out.println(max+1);</p><p>}</p></div>",
+		"correct_answer": "It throws an OperationOverflowException",
+		"incorrect_answers": [
+			"-1",
+			"-2147483648",
+			"0"
 		],
 		"source":""
 	}
