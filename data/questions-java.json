@@ -59,7 +59,7 @@
 			"10, 30, 20",
 			"60, 5, 0, 20"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-7",
@@ -70,7 +70,7 @@
 			"Use of exception handling",
 			"Dynamic binding between objects"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-8",
@@ -81,7 +81,7 @@
 			"long",
 			"void"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-9",
@@ -92,7 +92,7 @@
 			"Not a Number",
 			"Run time exception"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-10",
@@ -103,7 +103,7 @@
 			"23",
 			"24"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-11",
@@ -114,7 +114,7 @@
 			"15 times +++++",
 			"Both will print only once"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-12",
@@ -125,7 +125,7 @@
 			"<div class=\"codeAnswer\">for ( int i = 20; i >= 2; - -i )</div>",
 			"<div class=\"codeAnswer\">for ( int i = 2; i <= 20; i = 2* i )</div>"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-13",
@@ -136,7 +136,7 @@
 			"Objects can't be created",
 			"It has a fixed class name"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-14",
@@ -147,7 +147,7 @@
 			"A final class cannot be extended.",
 			"A final method can be inherited."
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-15",
@@ -158,7 +158,7 @@
 			"One reference variable and two objects are created.",
 			"Three reference variables and three objects are created."
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-16",
@@ -169,7 +169,7 @@
 			"<div class=\"codeAnswer\"> HashMap map =hashMap.synchronizeMap();</div>",
 			"<div class=\"codeAnswer\"> Map m2 = Collection.synchronizeMap(hashMap);</div>"
 		],
-		"source":"https://www.javatpoint.com/"
+		"source": "https://www.javatpoint.com/"
 	},
 	{
 		"id": "java-17",
@@ -180,7 +180,7 @@
 			"The code prints \"one\" and then \"three\"",
 			"The code throws an IllegalStateException"
 		],
-		"source":""
+		"source": ""
 	},
 	{
 		"id": "java-18",
@@ -191,7 +191,7 @@
 			"A third exception is caught, wrapping the two first exceptions",
 			"Both exceptions are caught"
 		],
-		"source":""
+		"source": ""
 	},
 	{
 		"id": "java-19",
@@ -202,7 +202,7 @@
 			"Properly flush the buffer of strings",
 			"Make sure all the elements of the list are properly consumed"
 		],
-		"source":""
+		"source": ""
 	},
 	{
 		"id": "java-20",
@@ -213,7 +213,7 @@
 			"You can distribute a hash code along with it",
 			"You can hash each class in it"
 		],
-		"source":""
+		"source": ""
 	},
 	{
 		"id": "java-21",
@@ -224,7 +224,7 @@
 			"main -> static -> constructor -> instance",
 			"static -> instance -> main -> constructor"
 		],
-		"source":"self"
+		"source": "self"
 	},
 	{
 		"id": "java-22",
@@ -235,7 +235,7 @@
 			"4",
 			"1"
 		],
-		"source":""
+		"source": ""
 	},
 	{
 		"id": "java-23",
@@ -246,18 +246,61 @@
 			"<div class=\"codeAnswer\">catch(Exception e){}</div>",
 			"<div class=\"codeAnswer\">catch(IOException e){}</div>"
 		],
-		"source":""
+		"source": ""
 	},
 	{
 		"id": "java-24",
 		"question": "The maximum value you can store in an int is 2147483647. What does the following code print out? <div class=\"code\"><p>public static void main(String[] args){</p><p>&nbsp; int max = 2147483647;</p><p>&nbsp;System.out.println(max+1);</p><p>}</p></div>",
-		"correct_answer": "It throws an OperationOverflowException",
+		"correct_answer": "-2147483648",
 		"incorrect_answers": [
 			"-1",
-			"-2147483648",
+			"It throws an OperationOverflowException",
 			"0"
 		],
-		"source":""
+		"source": ""
+	},
+	{
+		"id": "java-25",
+		"question": "Which functional interface does not return a value?",
+		"correct_answer": "Consumer",
+		"incorrect_answers": [
+			"Unary operator",
+			"Supplier",
+			"Predicate"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-26",
+		"question": "Why are Java streams considered lazy?",
+		"correct_answer": "Because intermediate operations are not evaluated until the terminal operation is invoked",
+		"incorrect_answers": [
+			"Because, when the terminal operation is called, traversal of streams begins and the associated function is performed one by one",
+			"Because intermediate operations are evaluated before the terminal operation is invoked",
+			"Because, when the intermediate operation is called, traversal of streams begins and the associated function is performed one by one"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-27",
+		"question": "You have a stream of strings of characters. You want to concatenate all those strings using a comma as a separator. How do you proceed?",
+		"correct_answer": "Collect the elements using the Collectors.joining() collector, passing the comma as a parameter.",
+		"incorrect_answers": [
+			"Collect the elements in a StringJoiner and call join() on that object, passing the comma as a parameter.",
+			"Reduce the stream in a StringBuilder, using the StringBuilder::add as the reduction function.",
+			"Collect the elements in a list and call join() on that list, passing the comma as a parameter."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-28",
+		"question": "What does it mean for a field to be final?",
+		"correct_answer": "Its value must be set during the construction of the object and cannot be modified.",
+		"incorrect_answers": [
+			"The field cannot be overridden in any extension this class may have.",
+			"Once set, its value can only be modified within the instance initializer block.",
+			"The field is a constant, accessible from all the class instances."
+		],
+		"source": ""
 	}
-
 ]
