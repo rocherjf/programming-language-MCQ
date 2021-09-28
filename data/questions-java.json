@@ -339,11 +339,11 @@
 	{
 		"id": "java-32",
 		"question": "You must create a size() method in an interface and provide an implementation. How do you declare this method?",
-		"correct_answer": "default int size() { /* method implementation */ }",
+		"correct_answer": "<div class=\"codeAnswer\">default int size() { /* method implementation */ }</div>",
 		"incorrect_answers": [
-			"concrete int size() { /* method implementation */ }",
-			"final int size() { /* method implementation */ }",
-			"int size() { /* method implementation */ }"
+			"<div class=\"codeAnswer\">concrete int size() { /* method implementation */ }</div>",
+			"<div class=\"codeAnswer\">final int size() { /* method implementation */ }</div>",
+			"<div class=\"codeAnswer\">int size() { /* method implementation */ }</div>"
 		],
 		"source": ""
 	},
@@ -399,6 +399,83 @@
 			"An empty String",
 			"NoSuchElementException",
 			"NullPointerException"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-38",
+		"question": "You want to package an application composed of many class files in a single Java Archive (JAR) and make it executable. How will you proceed?",
+		"correct_answer": "Create a single JAR file containing a MANIFEST.mf file with a reference to the class that contains the main() method.",
+		"incorrect_answers": [
+			"Create a single JAR file containing a MANIFEST.mf file with a reference to all the classes of that JAR.",
+			"Create one JAR file per module, put a MANIFEST.mf with a reference to the class that contains the main() method in one of them, and launch that JAR.",
+			"Package each module in a JAR, then package them in a meta-JAR, put a reference to the class that contains the main() method in this meta-JAR, and launch that JAR."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-39",
+		"question": "You wrote a method that takes an index (of type int) in a list as a parameter. Which properly documents this parameter in the Javadoc?",
+		"correct_answer": "@param index the index in the list",
+		"incorrect_answers": [
+			"@param int index the index in the list",
+			"@parameter int index the index in the list",
+			"@parameter index the index in the list"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-40",
+		"question": "You want to add the content of an optional to a list. How do you proceed?",
+		"correct_answer": "Call the following on the optional object: <span class=\"codeAnswer\">ifPresent(list::add)</span>",
+		"incorrect_answers": [
+			"Call the following on the optional object: <span class=\"codeAnswer\">orElse(list::add)</span>",
+			"Call the following on the optional object: <span class=\"codeAnswer\">list.Add(<item>)</span>",
+			"Call the following on the optional object: <span class=\"codeAnswer\">isPresent(list::add)</span>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-41",
+		"question": "You must create a collection of strings. You want to guarantee that the iteration over this collection will be in the lexicographic order of the strings. What class will you use?",
+		"correct_answer": "A TreeSet",
+		"incorrect_answers": [
+			"A HashSet",
+			"An ArrayList",
+			"A LinkedList"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-42",
+		"question": "You must sort a stream of strings of characters from the shortest string to the longest. How do you proceed?",
+		"correct_answer": "Sort the stream by passing the comparator of strings that compares the length of the strings.",
+		"incorrect_answers": [
+			"Collect the stream in a SortedSet built with the right comparator.",
+			"Map the strings to their length, then sort the result.",
+			"Collect the stream in a TreeMap where the keys are the length of the strings, then extract the ordered values."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-43",
+		"question": "Given the following abstract class: <div class=\"code\"><p>public abstract class AbstractTesting {</p><p>&nbsp; &nbsp; public abstract int size();</p><p>&nbsp; &nbsp; public boolean isEmpty() {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return size() == 0;</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; public AbstractTesting() {&nbsp;</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; abstract int getSize() {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return size;</p><p>&nbsp; &nbsp; }</p><p>}</p></div> Which part of this class will result in a syntax error?",
+		"correct_answer": "The <span class=\"codeAnswer\">getSize()</span> method ",
+		"incorrect_answers": [
+			"The <span class=\"codeAnswer\">isEmpty()</span> method",
+			"The <span class=\"codeAnswer\">AbstractTesting()</span> constructor",
+			"The <span class=\"codeAnswer\">size</span> variable "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-44",
+		"question": "You have the following code:<div class=\"code\"><p>WorkOrder wo = new WorkOrder() {</p><p>&nbsp; &nbsp; modelNumber = &quot;LIF-42&quot;</p><p>};</p></div>For this code to successfully compile, what must WorkOrder contain?",
+		"correct_answer": "A default constructor and an editable String property modelNumber",
+		"incorrect_answers": [
+			"A constructor that takes a String parameter, and a String attribute which will set a modelNumber",
+			"A String attribute which will set a modelNumber",
+			"A constructor that takes a String parameter, which sets a modelNumber"
 		],
 		"source": ""
 	}
