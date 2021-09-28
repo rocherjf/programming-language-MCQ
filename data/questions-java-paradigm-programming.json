@@ -1,0 +1,175 @@
+[
+
+	{
+		"id": "java-pp-1",
+		"question": "Consider the following block of code:<div class=\"code\"> <p>class NumberData {</p><p>&nbsp; private final int[] data;</p><p><br></p><p>&nbsp; public NumberData(final int numItems) {</p><p>&nbsp; &nbsp; data = new int[numItems];</p><p>&nbsp; }</p><p><br></p><p>&nbsp; public int[] getData() {&nbsp;</p><p>&nbsp; &nbsp; // IMPLEMENTATION HERE</p><p>&nbsp; }</p><p>}</p><p>public class MyClass {</p><p>&nbsp; public static void main(final String[] args) {</p><p>&nbsp; &nbsp; NumberData data = new NumberData(10);</p><p>&nbsp; &nbsp; // add numbers into data</p><p>&nbsp; &nbsp; int[] newData = data.getData();</p><p>&nbsp; &nbsp; newData[0] = 10;</p><p>&nbsp; }</p><p>}</p></div>What must you add into the getData() method to create a defensive copy of data?",
+		"correct_answer": "return Arrays.copyOf(data, data.length);",
+		"incorrect_answers": [
+			"return new int[];",
+			"return data;",
+			"return Arrays.copyOf(data);"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-2",
+		"question": "Which type of operations transform into another stream?",
+		"correct_answer": "Intermediate operations",
+		"incorrect_answers": [
+			"Terminal operations",
+			"Collectors",
+			"Pipelines"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-3",
+		"question": "You have a class named BookType with appropriate getters and setters. The following code contains a list of book types and then selects one of the book types: <div class=\"code\"><p>List&lt;BookType&gt; bookTypes = new ArrayList();</p><p>bookTypes.add(new BookType(&quot;History&quot;));</p><p>bookTypes.add(new BookType(&quot;Classic Literature&quot;));</p><p>bookTypes.add(new BookType(&quot;Biographies&quot;));</p><p>BookType bk = bookTypes.stream() &nbsp;.filter(book -&gt; &quot;History&quot;.equals(book.getName())).findAny();</p> </div>This code does not compile, what change can you make on line 5 for this to work?",
+		"correct_answer": "Add an optional at the end, such as <span class=\"codeAnswer\">orElse(null)</span>",
+		"incorrect_answers": [
+			"Rename book to bk",
+			"Change <span class=\"codeAnswer\">findAny()</span> to <span class=\"codeAnswer\">find()</span>",
+			"Remove the <span class=\"codeAnswer\">.stream()</span>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-4",
+		"question": "Which is a valid format for a constructor method reference?",
+		"correct_answer": "<div class=\"codeAnswer\">ClassName::new</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">ClassName::super()</div>",
+			"<div class=\"codeAnswer\">ClassName::this</div>",
+			"<div class=\"codeAnswer\">ClassName::super()</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-5",
+		"question": "What does Java's lambda expression allow you to do?",
+		"correct_answer": "Treat a function as an argument",
+		"incorrect_answers": [
+			"Achieve multiple inheritance",
+			"Write single-statement anonymous methods",
+			"Write single-parameter anonymous methods"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-6",
+		"question": "Which method of the java.util.function.Predicate interface allows you to chain two predicates?",
+		"correct_answer": "Predicate<T> and(Predicate<? super T> other)",
+		"incorrect_answers": [
+			"Predicate<T> negate()",
+			"Predicate<T> join(Predicate<? super T> other)",
+			"Predicate<T> andThen(Predicate<? super T> other)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-7",
+		"question": "How does Java pass reference type arguments to methods?",
+		"correct_answer": "By value; a reference to the actual object is passed",
+		"incorrect_answers": [
+			"By reference; an actual copy of the object is passed with each method call",
+			"By value; the actual object is passed",
+			"By reference; the actual object is passed"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-8",
+		"question": "Consider the following lambda expression, where s is of type String: <div class=\"code\"> s -> s.isEmpty() </div> How would you rewrite this using a method reference?",
+		"correct_answer": "<div class=\"codeAnswer\">String::isEmpty</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">s -> String::isEmpty()</div>",
+			"<div class=\"codeAnswer\">String::isEmpty()</div>",
+			"<div class=\"codeAnswer\">s -> String::isEmpty</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-9",
+		"question": "Given the following method definition:<div class=\"code\"><p>public static void someMethod(long arg, int... args) {</p><p>&nbsp; &nbsp; // assume implementation here</p><p>}</p></div> Which is a valid call of this method?",
+		"correct_answer": "<div class=\"codeAnswer\">someMethod(1);</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">someMethod(new int[]{1,2});</div>",
+			"<div class=\"codeAnswer\">someMethod(1, {2,3});</div>",
+			"<div class=\"codeAnswer\">someMethod(1L, 2L, 3L);</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-10",
+		"question": "What is it called when you change the value of a variable inside a method and it retains that value after the method has completed?",
+		"correct_answer": "Call by reference",
+		"incorrect_answers": [
+			"Side effect",
+			"Immutability",
+			"Call by value"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-11",
+		"question": "Why are Java streams described as lazy ?",
+		"correct_answer": "Computation on the data source is only performed when the terminal operation starts",
+		"incorrect_answers": [
+			"When compared to an equivalent, pre-Java 8 implementation, using the streams application programming interface (API) will always result in a lower performance",
+			"Using streams in your application will always turn on lazy-loading in any Java Persistence API (JPA) implementation that you use",
+			"Computation on the data source is only performed when an intermediate operation starts"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-12",
+		"question": "What is true of terminal stream operations?",
+		"correct_answer": "They always return a non-stream value such as a primitive or object type except for those whose return type is void. ",
+		"incorrect_answers": [
+			"They are lazily loaded.",
+			"They may return either a stream or a non-stream value such as a primitive or object type.",
+			"They always return a stream as a result."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-13",
+		"question": "You have the following declaration: <div class=\"code\">Predicate isEven = i -&gt; i % 2 == 0;</div> How can you use this declaration to create a predicate isOdd?",
+		"correct_answer": "<div class=\"codeAnswer\">Predicate<Integer> isOdd = isEven.negate();</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">Predicate<Integer> isOdd = isEven.not();</div>",
+			"<div class=\"codeAnswer\">Predicate<Integer> isOdd = Predicate.negate(isEven);</div>",
+			"<div class=\"codeAnswer\">Predicate<Integer> isOdd = Predicate.not();</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-14",
+		"question": "What is encapsulation?",
+		"correct_answer": "A means of determining the level of accessibility of your code",
+		"incorrect_answers": [
+			"When a class has the ability to take many different forms",
+			"When a class acquires the characteristics of another class",
+			"The process of showing only essential attributes and hiding unnecessary details from a user"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-15",
+		"question": "What is true about composition?",
+		"correct_answer": "It allows for code reuse, even from a final class.",
+		"incorrect_answers": [
+			"It can expose a public method from the parent class.",
+			"It provides its features at compile time.",
+			"It can expose a protected method from the parent class."
+		],
+		"source": ""
+	}
+	
+	
+
+
+	
+	
+	
+]
