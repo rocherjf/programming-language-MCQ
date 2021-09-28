@@ -164,6 +164,94 @@
 			"It can expose a protected method from the parent class."
 		],
 		"source": ""
+	},
+	{
+		"id": "java-pp-16",
+		"question": "Which method of the java.util.Comparator interface accepts an argument of type java.util.Function?",
+		"correct_answer": "comparing",
+		"incorrect_answers": [
+			"compare",
+			"comparingInt",
+			"thenComparingInt"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-17",
+		"question": "Consider the following Java interface: <div class=\"code\"><p>interface StringValidator {</p><p>&nbsp; &nbsp; boolean test(String s);</p><p>&nbsp; &nbsp; default boolean initialTest(String s) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return !s.isEmpty();</p><p>&nbsp; &nbsp; }</p><p>}</p></div> Which is true of the StringValidator?",
+		"correct_answer": "StringValidator is a functional interface.",
+		"incorrect_answers": [
+			"Adding an abstract method would make it a functional interface. ",
+			"StringValidator has two abstract methods so it is not a valid functional interface.",
+			"Annotating it with @FunctionalInterface and removing the default method would convert it to a functional interface. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-18",
+		"question": "What will the following code snippet print out when executed?<div class=\"code\"><p>public class Parent {</p><p>&nbsp; &nbsp;public static String greet() {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return &quot;This is the parent speaking&quot;;</p><p>&nbsp; &nbsp; }</p><p>}</p><p>public class Child extends Parent {</p><p>&nbsp; &nbsp; public static String greet() {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return &quot;This is the child speaking&quot;;</p><p>&nbsp; &nbsp; }</p><p>}</p><p>public class Main {</p><p>&nbsp; &nbsp; public static void main(String[] args) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Parent p = new Parent();</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Parent c = new Child();</p><p>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(p.greet());</p><p>&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(c.greet());</p><p>&nbsp; &nbsp; }</p><p>}</p></div>",
+		"correct_answer": "<p>This is the parent speaking</p><p>This is the parent speaking</p>",
+		"incorrect_answers": [
+			"<p>This is the parent speaking</p><p>This is the child speaking</p>",
+			"<p>This is the child speaking</p><p>This is the child speaking</p>",
+			"<p>This is the child speaking</p><p>This is the parent speaking</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-19",
+		"question": "What is true of static variables of a class?",
+		"correct_answer": "They are statically bound at compile time.",
+		"incorrect_answers": [
+			"They are statically bound at run time.",
+			"They are dynamically bound at compile time.",
+			"They are dynamically bound at run time."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-20",
+		"question": "The following method hashes a char array:<div class=\"code\"><p>private final char[] arrayValues;</p><p>private hashValue = 0;</p><p><br></p><p>public int &nbsp;hashSelectedCode() {</p><p>&nbsp; &nbsp; char[] newArray = arrayValues;</p><p><br></p><p>&nbsp; &nbsp; for(int i = 0; i &lt; arrayValues.length; i++) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; hashValue += hash + arrayValues[i];</p><p>&nbsp; &nbsp; &nbsp; &nbsp; // do any other possible calculations</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; return hashValue;</p><p>}</p></div> This is not thread-safe, however. What can you do to fix this?",
+		"correct_answer": "In the hashSelectedCode method, create a copy of hashValue and populate your code in the loop.",
+		"incorrect_answers": [
+			"Declare hashValue as final.",
+			"Enclose the code in the hashSelectedCode method in a lock statement to only allow one thread in at a time.",
+			"In the hashSelectedCode method, iterate through newArray instead of arrayValues in the for loop."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-21",
+		"question": "Why is immutability key to the functional programming paradigm?",
+		"correct_answer": "It minimizes conflicts among objects.",
+		"incorrect_answers": [
+			"It encapsulates moving parts.",
+			"It provides a centralized way for state to leak out.",
+			"It is faster for developers to write functional code if the objects are immutable."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-22",
+		"question": "Which type of operations transform into another stream?",
+		"correct_answer": "Intermediate operations",
+		"incorrect_answers": [
+			"Terminal operations",
+			"Pipelines",
+			"Collectors"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-23",
+		"question": "What does Java use to achieve runtime polymorphism?",
+		"correct_answer": "Overriding",
+		"incorrect_answers": [
+			"Abstraction",
+			"Overloading",
+			"Encapsulation"
+		],
+		"source": ""
 	}
 	
 	
