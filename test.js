@@ -128,10 +128,17 @@ function addEventListenerForThisAnswer(choice) {
         acceptingAnswers = false;
         const selectedChoice = e.target;
 
+        // TODO : simplify ...
+        let answerHTMLElement;
         if (selectedChoice.dataset['number']) {
+            answerHTMLElement = selectedChoice;
             currentQuestion.selectedAnswer = parseInt(selectedChoice.dataset['number']);
-        } else {
+        } else if (selectedChoice.parentElement.dataset['number']) {
+            answerHTMLElement = selectedChoice.parentElement;
             currentQuestion.selectedAnswer = parseInt(selectedChoice.parentElement.dataset['number']);
+        } else{
+            answerHTMLElement = selectedChoice.parentElement.parentElement;
+            currentQuestion.selectedAnswer = parseInt(selectedChoice.parentElement.parentElement.dataset['number']);
         }
 
 
@@ -149,7 +156,7 @@ function addEventListenerForThisAnswer(choice) {
             classToApply = 'incorrect';
         }
 
-        selectedChoice.parentElement.classList.add(classToApply);
+        answerHTMLElement.classList.add(classToApply);
 
         let questionsDone = getQuestionsDone();
         questionsDone.push(currentQuestion);
@@ -157,11 +164,10 @@ function addEventListenerForThisAnswer(choice) {
         localStorage.setItem('questionsDone', JSON.stringify(questionsDone))
 
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
+            answerHTMLElement.classList.remove(classToApply);
             getNewQuestionFromAvailableQuestions();
         }, 1000);
     });
-
 }
 
 

@@ -1,5 +1,4 @@
 [
-
 	{
 		"id": "java-pp-1",
 		"question": "Consider the following block of code:<div class=\"code\"> <p>class NumberData {</p><p>&nbsp; private final int[] data;</p><p><br></p><p>&nbsp; public NumberData(final int numItems) {</p><p>&nbsp; &nbsp; data = new int[numItems];</p><p>&nbsp; }</p><p><br></p><p>&nbsp; public int[] getData() {&nbsp;</p><p>&nbsp; &nbsp; // IMPLEMENTATION HERE</p><p>&nbsp; }</p><p>}</p><p>public class MyClass {</p><p>&nbsp; public static void main(final String[] args) {</p><p>&nbsp; &nbsp; NumberData data = new NumberData(10);</p><p>&nbsp; &nbsp; // add numbers into data</p><p>&nbsp; &nbsp; int[] newData = data.getData();</p><p>&nbsp; &nbsp; newData[0] = 10;</p><p>&nbsp; }</p><p>}</p></div>What must you add into the getData() method to create a defensive copy of data?",
@@ -252,12 +251,82 @@
 			"Encapsulation"
 		],
 		"source": ""
+	},
+	{
+		"id": "java-pp-24",
+		"question": "Using a function of type java.util.function.BiFunction, which option correctly defines a partial function that takes arguments of type String?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>Function partial(BiFunction f, String y) {</p><p>&nbsp;return (x) -&gt; f.apply(x, y);&nbsp;</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>Integer partial(BiFunction f, String y) {&nbsp;</p><p>return f.apply(y);&nbsp;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>Function partial(BiFunction f, String x, String y) {&nbsp;</p><p>return (x) -&gt; f.apply(x, y);&nbsp;</p><p>} </p></div>",
+			"<div class=\"codeAnswer\"><p>BiFunction partial(Function f, String y) {&nbsp;</p><p>return (x) -&gt; f.apply(x, y);&nbsp;</p><p>} &nbsp;</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-25",
+		"question": "Given the following code:<div class=\"code\"><p>class Book {</p><p>&nbsp; &nbsp; private String title;</p><p>&nbsp; &nbsp; private String author;</p><p><br></p><p>&nbsp; &nbsp; public Book(String title, String author) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; this.title = title;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; this.author = author;</p><p>&nbsp; &nbsp; }</p><p><br></p><p>&nbsp; &nbsp; interface IBookBuilder {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;IBookBuilder2 withTitle(String title);</p><p>&nbsp; &nbsp; }</p><p><br></p><p>&nbsp; &nbsp; interface IBookBuilder2 {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; Book withAuthor(String author);</p><p>&nbsp; &nbsp; }</p><p><br></p><p>&nbsp; &nbsp; public static IBookBuilder build() {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return f1 -&gt; f2 -&gt; new Book(f1, f2);</p><p>&nbsp; &nbsp; }</p><p>}</p></div>Which option builds a Book instance?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>Book b = Book</p><p>&nbsp;.build()</p><p>&nbsp;.withTitle(&quot;title&quot;)</p><p>&nbsp;.withAuthor(&quot;author&quot;);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>Book b = Book</p><p>&nbsp;.withTitle(() -&gt; &quot;title&quot;)</p><p>&nbsp;.withAuthor(()-&gt;&quot;author&quot;)</p><p>&nbsp;.build();</p></div>",
+			"<div class=\"codeAnswer\"><p>Book b = Book</p><p>&nbsp;.build()</p><p>&nbsp;.andThen(() -&gt; &quot;title&quot;)</p><p>&nbsp;.andThen(() -&gt; &quot;author&quot;);</p></div>",
+			"<div class=\"codeAnswer\"><p>Book b = Book</p><p>&nbsp;.withTitle(&quot;title&quot;)</p><p>&nbsp;.withAuthor(&quot;author&quot;)</p><p>&nbsp;.build();</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-26",
+		"question": "Which code block is equivalent to the following reduce method of the java.util.stream.Stream interface?<div class=\"code\">T reduce(T val, BinaryOperator<T> operator)</div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>T result = val;</p><p>for (T element : stream)</p><p>&nbsp; &nbsp; result =operator.apply(result, element);</p><p>return result;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>T result = null;</p><p>for (T element : stream)</p><p>&nbsp; &nbsp; result = operator.apply(val, element);</p><p>return result;</p></div>",
+			"<div class=\"codeAnswer\"><p>T result = null;</p><p>for (T element : stream)</p><p>&nbsp; &nbsp; result = operator.apply(result, element);</p><p>return result != null ? result : val;</p></div>",
+			"<div class=\"codeAnswer\"><p>T result = val;</p><p>for (T element : stream)</p><p>&nbsp; &nbsp; result =operator.apply(element);</p><p>return result;</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-27",
+		"question": "Which method of the java.util.function.BiFunction interface allows you to compose functions?",
+		"correct_answer": "<div class=\"codeAnswer\">BiFunction<T,U,V> andThen(Function&lt;? super R,? extends V&gt; f)</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">BiFunction<T,U,V> compose(BiFunction&lt;? super R,? extends V&gt; f)</div>",
+			"<div class=\"codeAnswer\">BiFunction<T,U,V> andThen(BiFunction&lt;? super R,? extends V&gt; f)</div>",
+			"<div class=\"codeAnswer\">BiFunction<T,U,V> and(Function&lt;? super R,? extends V&gt; f)</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-28",
+		"question": "The Student class is defined and its constructor sets the name field. What will happen when you execute the following code snippet?<div class=\"code\"><p>public static void main(String[] args) {</p><p>&nbsp; &nbsp; Student aStudent = new Student(&quot;Student1&quot;);</p><p>&nbsp; &nbsp; clearStudentName(aStudent);</p><p>&nbsp; &nbsp; System.out.println(aStudent.name);</p><p>}</p><p>public static void clearStudentName(Student student) {</p><p>&nbsp; &nbsp; student = new Student(&quot;NO_NAME&quot;);</p><p>}</p></div>",
+		"correct_answer": "Student1 will be printed out",
+		"incorrect_answers": [
+			"NO_NAME will be printed out",
+			"A compile-time exception will be thrown because you cannot use reference type arguments in static contexts",
+			"A run-time exception will be thrown because you cannot use reference type arguments in static contexts"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-29",
+		"question": "You are working on an application that is making extensive use of polymorphism. A number of your classes use the method overriding feature of Java, together with method hiding. An incorrect version of a static method is being called. Where would you start looking for the problem?",
+		"correct_answer": "Look at how that method is being called in your hierarchy (method usage).",
+		"incorrect_answers": [
+			"Look for wrong usages of extends rather than implements.",
+			"Look for wrong usages of implements rather than extends.",
+			"Look for misused @Override annotations."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-30",
+		"question": "Consider the following code: <div class=\"code\"><p>class Person {</p><p>&nbsp; &nbsp; private int age;</p><p>&nbsp; &nbsp; // getters and setters</p><p>}</p><p>public class MyClass {</p><p>/**L1*/ &nbsp; &nbsp;public static void multiplyNumbers(Person person) &nbsp;{</p><p>/**L2*/ &nbsp; &nbsp; &nbsp; person.setAge(person.getAge() * 2);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; public static void main(String[] args) {</p><p>/**L3*/ &nbsp; &nbsp; &nbsp; &nbsp;Person person = new Person();</p><p>/**L4*/ &nbsp; &nbsp; &nbsp; &nbsp;person.setAge(30);</p><p>/**L5*/ &nbsp; &nbsp; &nbsp; &nbsp;System.out.println(&quot;Person age: &quot; + person.getAge());</p><p>/**L6*/ &nbsp; &nbsp; &nbsp; &nbsp;multiplyNumbers(person);</p><p>/**L7*/ &nbsp; &nbsp; &nbsp; &nbsp;System.out.println(&quot;Person age: &quot; + person.getAge());</p><p>&nbsp; &nbsp; }</p><p>}</p></div> What change can you make so this code no longer passes the object reference as a value so it becomes a concrete example of pass-by-value?",
+		"correct_answer": "Change the parameter in line 1 to be a primitive type and change lines 2 and 6 accordingly.",
+		"incorrect_answers": [
+			"Change line 4 to: <span class=\"codeAnswer\">int age = person.setAge(30);</span>",
+			"Add a new line of code after line 4 with a variable set to the person's age and update lines 5 and 7 to print out that variable value instead.",
+			"Remove the static keyword in line 1."
+		],
+		"source": ""
 	}
-	
-	
-
-
-	
-	
-	
 ]
