@@ -328,5 +328,192 @@
 			"Remove the static keyword in line 1."
 		],
 		"source": ""
+	},
+	{
+		"id": "java-pp-31",
+		"question": "The following class declaration attempts to achieve immutability: <div class=\"code\"><p>final public class Immutable {</p><p></p><p>    private final PotentiallyImmutable collaborator;</p><p></p><p>    public Immutable(PotentiallyImmutable collaborator) {</p><p>        this.collaborator = collaborator;</p><p>    }</p><p>}</p></div> PotentiallyImmutable is declared and you can't be sure whether it's immutable or not. If you still need the collaborator type, which change would you make to the Immutable class to ensure that it is indeed fully immutable?",
+		"correct_answer": "Create a copy of the collaborator constructor argument and store this reference instead.",
+		"incorrect_answers": [
+			"Mark the collaborator instance variable as volatile.",
+			"Annotate the constructor with @ThreadSafe.",
+			"Make the constructor private."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-32",
+		"question": "You designed the following class to be immutable but it is not. Why not?<div class=\"code\"><p>import java.util.Date;</p><p>public final class SomewhatImmutable {</p><p>&nbsp; &nbsp;private final String id;</p><p>&nbsp; &nbsp;private final Date dateCreated;</p><p></p><p>&nbsp; &nbsp;public SomewhatImmutable(String id, Date dateCreated) {</p><p>&nbsp; &nbsp;&nbsp; &nbsp;this.id = id;</p><p>&nbsp; &nbsp;&nbsp; &nbsp;this.dateCreated = dateCreated;</p><p>&nbsp; &nbsp;}</p><p></p><p>&nbsp; &nbsp;public String getId() {</p><p>&nbsp; &nbsp;&nbsp; &nbsp;return id;</p><p>&nbsp; &nbsp;}</p><p></p><p>&nbsp; &nbsp;public Date getDateCreated() {</p><p>&nbsp; &nbsp;&nbsp; &nbsp;return dateCreated;</p><p>&nbsp; &nbsp;}</p><p>}</p></div>",
+		"correct_answer": "The Date class is not immutable. You should have used defensive copying in the constructor and the getter to protect the object from changes the original caller made to the Date object and to prevent leaking the mutable Date field with the getter.",
+		"incorrect_answers": [
+			"The class is using a constructor rather than setter methods, which makes it impossible to enforce any immutability constraints when the arguments are passed in.",
+			"The Date class is mutable and objects having a state that contains mutable objects cannot be made immutable without replacing the mutable types of the state with immutable types.",
+			"The String class is not immutable. You should have used defensive copying in the constructor and the getter to protect the object from changes the original caller made to the String object and to prevent leaking the mutable String field with the getter."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-33",
+		"question": "Which combination of functional interfaces would you use to implement a partial function application and to test an object based on a condition respectively?",
+		"correct_answer": "java.util.function.BiFunction and java.util.function.Predicate ",
+		"incorrect_answers": [
+			"java.util.function.Function and java.util.function.Consumer ",
+			"java.util.function.UnaryOperator and java.util.function.BiPredicate ",
+			"java.util.function.BooleanSupplier and java.util.function.Supplier"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-34",
+		"question": "What will be the output of the following program? <div class=\"code\"><p>class MyClass {</p><p>&nbsp; public double addNumbers(double num1, double num2) {</p><p>&nbsp; &nbsp; return num1 + num2 + 1;</p><p>&nbsp; }</p><p></p><p>&nbsp; public double addNumbers(double num1) {</p><p>&nbsp; &nbsp; return num1 + 2;</p><p>&nbsp; }</p><p></p><p>&nbsp; public double addNumbers(int num1) {</p><p>&nbsp; &nbsp; return num1 + 3;</p><p>&nbsp; }</p><p></p><p>&nbsp; public double addNumbers(float num1) {</p><p>&nbsp; &nbsp; return num1 + 4;</p><p>&nbsp; }</p><p></p><p>&nbsp; public static void main(String[] args) {</p><p>&nbsp; &nbsp; MyClass c = new MyClass();</p><p>&nbsp; &nbsp; System.out.println(c.addNumbers(3.0));</p><p>&nbsp; }</p><p>}</p></div>",
+		"correct_answer": "5.0",
+		"incorrect_answers": [
+			"7.0",
+			"4.0",
+			"6.0"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-35",
+		"question": "What type of a relationship does composition use?",
+		"correct_answer": "PART-OF",
+		"incorrect_answers": [
+			"HAS-A",
+			"IS-A",
+			"JOIN-A"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-36",
+		"question": "Consider the following block of code: <div class=\"code\"><p>public final class Person {</p><p>&nbsp; private Date dateOfBirth;</p><p>&nbsp; private String name;</p><p>&nbsp; </p><p>&nbsp; public Person(Date dob, String name) {</p><p>&nbsp; &nbsp; this.name = name;</p><p>&nbsp; &nbsp; this.dateOfBirth = dob;</p><p>&nbsp; }</p><p>}</p></div> How would you change this class to return a defensive copy of the dateOfBirth variable?",
+		"correct_answer": "Create a new Date instance in the class constructor<div class=\"codeAnswer\">this.dateOfBirth = new Date((dateOfBirth.getTime());</div>",
+		"incorrect_answers": [
+			"Declare the dateOfBirth variable as public<div class=\"codeAnswer\">public Date dateOfBirth;</div>",
+			"Add a getter method which returns the dateOfBirth variable<div class=\"codeAnswer\"><p>public void getDateOfBirth() {</p><p>&nbsp; return dateOfBirth;</p><p>}</p></div>",
+			"Declare the dateOfBirth variable as final<div class=\"codeAnswer\">private final Date dateOfBirth;</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-37",
+		"question": "If immutable objects cannot change state after creation, what is the industry best practice for updating them?",
+		"correct_answer": "An immutable class requires a new object for each distinct value and therefore you can only perform an update by creating a brand new object.",
+		"incorrect_answers": [
+			"Use the State design pattern to make this change.",
+			"Use reflection to update the immutable state.",
+			"Perform the update with a separate thread and do not use the thread that created the object."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-38",
+		"question": "In the following Stream pipeline the SomeObject class exists and it has a visible id instance variable: <div class=\"code\"><p>final List<SomeObject> result = someObjects</p><p>&nbsp; .stream()</p><p>&nbsp; .filter(element -> element.id.startsWith(\"404\"))</p><p>&nbsp; .map(element -> element.id)</p><p>&nbsp; .collect(Collectors.toList());</p></div>What is wrong with it?",
+		"correct_answer": "The map intermediate operation maps the data from SomeObject type to a String type, which should be reflected in the type of the result variable.",
+		"incorrect_answers": [
+			"There are two intermediate operations but a maximum of one is permitted.",
+			"When more than one intermediate operation is used, the Stream API states that a parallel stream must be used and therefore stream() must be replaced with parallelStream().",
+			"A terminal operation must always follow an intermediate operation and, therefore, the collect call should be placed immediately after filter and immediately before map."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-40",
+		"question": "In the context of Java, why is the design principle \"Favor composition over inheritance\" generally accepted?",
+		"correct_answer": "Overusing inheritance can lead to increased maintenance effort and increased resistance to change",
+		"incorrect_answers": [
+			"Composition is more portable than inheritance and goes hand in hand with Java's \"write once, run anywhere\" principle",
+			"Inheritance has become less important as a design principle as composition has gained popularity",
+			"Composition is always faster than inheritance"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-41",
+		"question": "Consider the following if-else statement: <div class=\"code\"><p>class TestClass {</p><p>&nbsp; public static void main(String[] args) {</p><p>&nbsp; &nbsp; int i = 0;</p><p>&nbsp; &nbsp; if ((Boolean) i)</p><p>&nbsp; &nbsp; &nbsp; System.out.print(\"Good morning World\");</p><p>&nbsp; &nbsp; else</p><p>&nbsp; &nbsp; &nbsp; System.out.print(\"Good night World\");</p><p>&nbsp; &nbsp; &nbsp; System.out.print(\"Hello World\");&nbsp;  </p><p>&nbsp; }</p><p>}</p></div>Why does this block of code have a syntax error?",
+		"correct_answer": "Because you cannot directly cast an int to a Boolean",
+		"incorrect_answers": [
+			"Because there are two statements under else and there must be brackets surrounding them",
+			"Because i is not being compared to anything in the if statement",
+			"Because you cannot cast a primitive int to a Boolean wrapper; you must use boolean as a primitive"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-42",
+		"question": "You are writing your first Java stream. You chose your data source, added a few filters, and are ready to finish the stream pipeline. What type of operation do you need now?",
+		"correct_answer": "Terminal",
+		"incorrect_answers": [
+			"Finisher",
+			"Intermediate",
+			"Finalizer"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-43",
+		"question": "What is the main difference between intermediate and terminal Java stream operations?",
+		"correct_answer": "Intermediate operations transform a stream into another stream, whereas terminal operations produce a result or a side effect.",
+		"incorrect_answers": [
+			"Terminal operations can be carried out in parallel, whereas intermediate operations can't.",
+			"Intermediate operations provide various ways for the clients to start the processing, such as on delay or on multiple threads, whereas terminal operations provide multiple stopping mechanisms, such as on timeout or on failure.",
+			"When initiated, intermediate operations immediately carry out the actual computation, whereas terminal operations don't."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-44",
+		"question": "What will the following code snippet print out when executed? <div class=\"code\"> <p>public static void main(String[] args) {</p><p>&nbsp; int score = 70;</p><p>&nbsp; switch (score) {</p><p>&nbsp; &nbsp; case 70:</p><p>&nbsp; &nbsp; &nbsp; System.out.println(\"Great score!\");</p><p>&nbsp; &nbsp; case 50:</p><p>&nbsp; &nbsp; &nbsp; System.out.println(\"Pass score\");</p><p>&nbsp; &nbsp; default:</p><p>&nbsp; &nbsp; &nbsp; System.out.println(\"Unknown score\");</p><p>&nbsp; }</p><p>}</p></div>",
+		"correct_answer": "<p>Great score!</p><p>Pass score</p><p>Unknown score</p>",
+		"incorrect_answers": [
+			"Great score!",
+			"<p>Great score!</p><p>Pass score</p>",
+			"<p>Great score!</p><p>Unknown score</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-45",
+		"question": "If you override a method that returns a type T, what return type can this method have?",
+		"correct_answer": "T or a subtype of T",
+		"incorrect_answers": [
+			"A subtype of T only",
+			"A supertype of T only",
+			"T only"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-46",
+		"question": "Consider the following Java functional interface: <div class=\"code\"><p>interface StringValidator {</p><p>&nbsp; boolean test(String s);</p><p>}</p></div>While implementing StringValidator interface in a class, what lambda expression could represent the test method?",
+		"correct_answer": "<div class=\"codeAnswer\">s -> !s.isEmpty()</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">s -> return true</div>",
+			"<div class=\"codeAnswer\">() -> return true</div>",
+			"<div class=\"codeAnswer\">() -> true</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-47",
+		"question": "Which block of code represents a correct implementation of a defensive copy of a variable called dateOfBirth?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>public Date getDateOfBirth() {</p><p>&nbsp; return new Date(dateOfBirth.getTime());</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>public Date getDateOfBirth() {</p><p>&nbsp; return dateOfBirth;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public Object getDateOfBirth() {</p><p>&nbsp; return dateOfBirth;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public Date getDateOfBirth() {</p><p>&nbsp; return new Date();</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-48",
+		"question": "Given the following Stateful class, which doesn't define any setter methods that could be used to mutate its state: <div class=\"code\"> <p>import java.util.Set;</p><p>public class Stateful {</p><p>&nbsp; private Set<String> content;</p><p>&nbsp; public Stateful(Set<String> content) {</p><p>&nbsp; &nbsp; this.content = content;</p><p>&nbsp; }</p><p>&nbsp; public Set<String> getContent() {</p><p>&nbsp; &nbsp; return content;</p><p>&nbsp; }</p><p>}</p> </div> You have access to an object of type Stateful, referenced by a variable stateful. Which is a modification of the state of the object referenced by stateful?",
+		"correct_answer": "<div class=\"codeAnswer\">stateful.getContent() = new HashSet<>();</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">stateful.getContent().add(\"yet another state\");</div>",
+			"<div class=\"codeAnswer\">stateful.content.add(\"yet another state\");</div>",
+			"<div class=\"codeAnswer\">stateful.content = new HashSet<>();</div>"
+		],
+		"source": ""
 	}
 ]
