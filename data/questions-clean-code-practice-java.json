@@ -1,0 +1,266 @@
+[
+	{
+		"id": "java-ccp-1",
+		"question": "The following code uses a loop on a list to calculate the average age of the clients older than 18. <div class=\"code\"><p>List<Client> list = new ArrayList<Client>();</p><p>int count = 0;</p><p>double sum = 0.0, average = 0.0;</p><p>for (Client client: list) {</p><p>&nbsp; if (client.getAge() > 18) {</p><p>&nbsp; &nbsp; sum += client.getAge();</p><p>&nbsp; &nbsp;count++;</p><p>&nbsp; }</p><p>}</p><p>average = sum/count;</p></div> How can you refactor it to a stream?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>double average = </p><p>&nbsp; list.stream()</p><p>&nbsp; &nbsp; .filter(client -> client.getAge() > 18)</p><p>&nbsp; &nbsp;.mapToInt(Client::getAge)</p><p>&nbsp; &nbsp; .average()</p><p>&nbsp; &nbsp; .getAsDouble();</p></div>",
+		"incorrect_answers": [
+			"<div class=\"code\"><p>double average = </p><p>&nbsp; list.stream()</p><p>&nbsp; &nbsp; .filter(client -> client.getAge() > 18)</p><p>&nbsp; &nbsp;.mapToInt(Client::getAge)</p><p>&nbsp; &nbsp; .average();</p></div>",
+			"<div class=\"code\"><p>double average = </p><p>&nbsp; list.stream()</p><p>&nbsp; &nbsp; .mapToInt(Client::getAge)</p><p>&nbsp; &nbsp; .filter(client ->client.getAge() > 18)</p><p>&nbsp; &nbsp; .average();</p></div>",
+			"<div class=\"code\"><p>double average = </p><p>&nbsp; list.stream()</p><p>&nbsp; &nbsp; .mapToInt(Client::getAge)</p><p>&nbsp; &nbsp; .filter(client ->client.getAge() > 18)</p><p>&nbsp; &nbsp; .average()</p><p>&nbsp; &nbsp; .getAsDouble();</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-2",
+		"question": "The following anonymous class intends to filter all files from the current folder that have \".txt\" as the extension:<div class=\"code\"><p>FileFilter filter = new FileFilter() {</p><p>&nbsp; @Override </p><p>&nbsp; public boolean accept(File pathname) {</p><p>&nbsp; &nbsp; return pathname.getName().endsWith(\".txt\");</p><p>&nbsp; }</p><p>};</p><p>File[] files = new File(\".\").listFiles(filter);</p></div>Which attempt at an equivalent rewrite of the code above will result in a syntax error?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>FileFilter filter = new FileFilter() {</p><p>&nbsp; @Override </p><p>&nbsp; public boolean accept(File pathname) { </p><p>&nbsp; &nbsp; return pathname.getName().endsWith(\".txt\");</p><p>&nbsp; }</p><p>};</p><p>File[] files = new File(\".\").listFiles(FileFilter::accept);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>FileFilter filterLambda = </p><p>&nbsp; (File pathname) -> pathname.getName().endsWith(\".txt\");</p><p>File[] files = new File(\".\").listFiles(filterLambda);</p></div>",
+			"<div class=\"codeAnswer\"><p>FileFilter filterLambda = (pathname) -> pathname.getName().endsWith(\".txt\");</p><p>File[] files = new File(\".\").listFiles(filterLambda);</p></div>",
+			"<div class=\"codeAnswer\"><p>FileFilter filter = new FileFilter() {</p><p>&nbsp; @Override </p><p>&nbsp; public boolean accept(File pathname) {</p><p>&nbsp; &nbsp; return pathname.getName().endsWith(\".txt\");</p><p>&nbsp; }</p><p>};</p><p>File[] files = new File(\".\").listFiles(filter::accept);</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-3",
+		"question": "What is the main reason to use Java's exception chaining mechanism?",
+		"correct_answer": "To provide error information so an implementation-specific exception is wrapped up in a more general exception with the original exception as the cause",
+		"incorrect_answers": [
+			"To pass information about all the exceptions to the caller of a method when multiple exceptions occur at the same time ",
+			"To have a catch block to catch any type of exception, even unexpected ones, and then re-throw the exception wrapped in a known exception type",
+			"For multi-threaded exception handling so, if one thread causes an exception, another thread must handle it; the exception chaining mechanism passes information about the exception to the handling thread"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-4",
+		"question": "Which helper class contains several methods to create preconfigured thread pool instances? ",
+		"correct_answer": "Executors",
+		"incorrect_answers": [
+			"ForkJoinPool",
+			"Task",
+			"ExecutorService"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-5",
+		"question": "You serialized a Person object as follows:<div class=\"code\"><p>public class Person implements Serializable {</p><p>&nbsp; private static final long serialVersionUID = 1L;</p><p>&nbsp; private final Integer id;</p><p>&nbsp; private final String name;</p><p></p><p>&nbsp; public Person(Integer id, String name) {</p><p>&nbsp; &nbsp; this.id = id;</p><p>&nbsp; &nbsp; this.name = name;</p><p>&nbsp; }</p><p></p><p>&nbsp; // getter for id and name</p><p></p><p>&nbsp; @Override</p><p>&nbsp; public String toString() {</p><p>&nbsp; &nbsp; return id + \" \" + name;</p><p>&nbsp; }</p><p>}</p></div>You add a new field to this class. <div class=\"code\"><p>private final String nickname;</p></div>What will happen if you try to deserialize the previously serialized Person object with the modified version of class Person?",
+		"correct_answer": "It will work without any error and the new field in the deserialized object will be set to null.",
+		"incorrect_answers": [
+			"It will work without any error, but a warning will be logged on the console because the value for the new field is missing in the serialized data.",
+			"You will get a ClassCastException because the new class Person is regarded as a different class than the original class of the serialized object.",
+			"You will get an InvalidClassException because the serialized Person object does not match class Person anymore."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-6",
+		"question": "What is true about creating accessor methods for private fields?",
+		"correct_answer": "It allows you to insert additional actions when a field is accessed.",
+		"incorrect_answers": [
+			"You should use it for all private fields.",
+			"It is equivalent to making the fields public.",
+			"You should use it for all private mutable fields."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-8",
+		"question": "What happens when you call shutdownNow() on a ThreadPoolExecutor?",
+		"correct_answer": "The shutdownNow() method attempts to stop all currently executing tasks, but it does not wait for the tasks and threads to be stopped.",
+		"incorrect_answers": [
+			"The shutdownNow() method only puts the ThreadPoolExecutor in the shutdown state, which means that it will not accept new tasks, but currently executing tasks will continue to run.",
+			"The shutdownNow() method puts the ThreadPoolExecutor in the shutdown state, which means that it will not accept new tasks, and then it waits until all currently executing tasks have finished before returning.",
+			"The shutdownNow() method forces all threads to stop and doesn't return until all threads in the pool have stopped."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-10",
+		"question": "Given the following code, why won't the class compile?  <div class=\"code\"><p>public abstract class Car {</p><p>&nbsp; protected int speed = 55;</p><p>&nbsp; public abstract int getSpeed();</p><p>}</p><p></p><p>public class FastCar extends Car {</p><p>&nbsp; public FastCar(int maxSpeed) {</p><p>&nbsp; &nbsp; speed = maxSpeed;</p><p>&nbsp; }</p><p> </p><p>&nbsp; public static FastCar() {</p><p>&nbsp; &nbsp; speed = 80;</p><p>&nbsp; }</p><p></p><p>&nbsp; public int getSpeed() {</p><p>&nbsp; &nbsp; return speed;</p><p>&nbsp; }</p><p>}</p></div>",
+		"correct_answer": "Constructors that are declared as static cannot be defined.",
+		"incorrect_answers": [
+			"There is no mutator method present in the class.",
+			"The speed variable is declared as protected but should be declared as public.",
+			"Static constructors are only allowed in a class that is declared as static."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-11",
+		"question": "Which design pattern can you implement to encapsulate conditional logic in a lambda expression?",
+		"correct_answer": "Strategy",
+		"incorrect_answers": [
+			"Mediator",
+			"Adapter",
+			"Observer"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-13",
+		"question": "What is one benefit of replacing conditionals with polymorphism?",
+		"correct_answer": "It removes repeated code.",
+		"incorrect_answers": [
+			"It uses composition instead of inheritance.",
+			"It reuses existing objects.",
+			"It minimizes the number of classes within the application."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-14",
+		"question": "If you need to pull up a field in your program, in which direction should it go?",
+		"correct_answer": "From a subclass to a superclass ",
+		"incorrect_answers": [
+			"From a superclass to a subclass ",
+			"From a struct to an abstract class ",
+			"From an abstract class to a subclass "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-15",
+		"question": "What will the following program print when you run it?<div class=\"code\"><p>public class ThreadsDemo {</p><p>&nbsp; public static void main(String[] args) {</p><p>&nbsp; &nbsp; final AtomicInteger counter = new AtomicInteger();</p><p></p><p>&nbsp; &nbsp; Runnable task = new Runnable() {</p><p>&nbsp; &nbsp; &nbsp; @Override</p><p>&nbsp; &nbsp; &nbsp; public void run() {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i < 5; i++) {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(counter.incrementAndGet());</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; };</p><p></p><p>&nbsp; &nbsp; Thread thread1 = new Thread(task);</p><p>&nbsp; &nbsp; Thread thread2 = new Thread(task);</p><p></p><p>&nbsp; &nbsp; thread1.run();</p><p>&nbsp; &nbsp; thread2.run();</p><p>&nbsp; }</p><p>}</p></div>",
+		"correct_answer": "The numbers 1 through 10, each on a new line",
+		"incorrect_answers": [
+			"The numbers 1 through 5, each on a new line",
+			"The numbers 1 through 10, printing each number twice",
+			"The numbers 1 through 5, printing each number twice"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-16",
+		"question": "What will happen when you try to serialize a Person object and then deserialize the output again in the following code for the class Person? <div class=\"code\"><p>public class Person implements Serializable {</p><p>&nbsp; private final transient Integer id;</p><p>&nbsp; private final String name;</p><p></p><p>&nbsp; public Person(Integer id, String name) {</p><p>&nbsp; &nbsp; this.id = id;</p><p>&nbsp; &nbsp; this.name = name;</p><p>&nbsp; }</p><p></p><p>&nbsp; // getter for id and name</p><p>}</p></div>",
+		"correct_answer": "It will work without any errors; the deserialized Person object will have its id field set to null and its name field will have the same value as the original Person object.",
+		"incorrect_answers": [
+			"You will get an exception when you try to deserialize the Person object, because the fields of class Person are final.",
+			"You will get an exception when you try to serialize the Person object, because class Person is missing the serialVersionUID field.",
+			"It will work without any errors, and the deserialized Person object will have the same values for the fields id and name as the original Person object."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-17",
+		"question": "The following class describes a person:<div class=\"code\"><p>public class Person {</p><p>&nbsp; private String name;</p><p>&nbsp; private int age;</p><p></p><p>&nbsp; // getter and setter for age and name</p><p></p><p>}</p></div>If the variable \"persons\" contains a <span class=\"code\">List<Person></span>, which instruction will return a <span class=\"code\">Map<Integer, List<Person>></span>?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>persons.stream()</p><p>&nbsp; .filter(person -> person.getAge() > 20)</p><p>&nbsp; .collect(Collectors.groupingBy(Person::getAge));</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>persons.stream()</p><p>&nbsp; .filter(person -> person.getAge() > 20)</p><p>&nbsp; .map(Person::getName)</p><p>&nbsp; .collect(Collectors.joining(\",\"));</p></div>",
+			"<div class=\"codeAnswer\"><p>persons.stream()</p><p>&nbsp; .filter(person -> person.getAge() > 20)</p><p>&nbsp; .collect(Collectors.groupingBy(Person::getAge, Collectors.counting()));</p></div>",
+			"<div class=\"codeAnswer\"><p>persons.stream()</p><p>&nbsp; .filter(person -> person.getAge() > 20)</p><p>&nbsp; .map(Person::getName)</p><p>&nbsp; .collect(Collectors.toList());</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-18",
+		"question": "You need to include a variable in your program that may be updated by multiple running threads, so it needs to be stored in main memory. How can you declare this variable?",
+		"correct_answer": "Use the volatile keyword. ",
+		"incorrect_answers": [
+			"Use the synchronized keyword. ",
+			"Use the async keyword.",
+			"Use the static keyword. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-19",
+		"question": "You are using the instanceof operator on your collections to check on their types, but using this will not allow you to obtain the names of all its members for display. What change can you make to achieve this?",
+		"correct_answer": "Use Reflection with the getClass() method. ",
+		"incorrect_answers": [
+			"Convert the collection to a list of type Object.",
+			"Use Reflection with the getInstance() method.",
+			"Convert the collection to an unmodifiable list with Collections.unmodifiableList()."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-20",
+		"question": "You are designing an application in which the behavior of your classes is more important than its structure. Objects in a superclass and subclasses need to behave the same way. You can implement less restrictive validation rules, but cannot enforce stricter rules in subclasses. Which SOLID design principle is being used in this application?",
+		"correct_answer": "Liskov Substitution Principle ",
+		"incorrect_answers": [
+			"Dependency Inversion Principle ",
+			"Single Responsibility Principle ",
+			"Open/Closed Principle "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-21",
+		"question": "What is one of the benefits of putting code in a finally block?",
+		"correct_answer": "It prevents memory leaks ",
+		"incorrect_answers": [
+			"It prints a stack trace",
+			"It allows you to use the throws keyword from this block ",
+			"It allows the application to continue running "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-22",
+		"question": "When can a programmer choose composition instead of inheritance?",
+		"correct_answer": "When they would like to simulate multiple inheritance",
+		"incorrect_answers": [
+			"When they must also implement more than one interface",
+			"When they must implement a marker interface",
+			"When they must also implement an interface"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-23",
+		"question": "What is a stack trace composed of?",
+		"correct_answer": "A series of stack frames ",
+		"incorrect_answers": [
+			"A series of stack objects ",
+			"A series of breakpoints that were hit during execution",
+			"Documentation of currently running code "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-24",
+		"question": "When will you reference an object through implementation rather than through an interface?",
+		"correct_answer": "When the implementation provides additional methods that must be called on the declared object",
+		"incorrect_answers": [
+			"When the implementation extends an abstract class which in turn implements an interface",
+			"When the implementation contains a limited number of methods that can be used on the object ",
+			"When the implementation extends a class which in turn implements an interface"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-25",
+		"question": "Given the following piece of code:<div class=\"code\"><p>List<Integer> li = new ArrayList<Integer>();</p><p>List<Object> lo = li;</p><p>lo.add(new Object());</p><p>Integer i = li.get(0);</p></div>What will happen?",
+		"correct_answer": "It will produce a compile-time error at line 2.",
+		"incorrect_answers": [
+			"It will compile correctly but it will throw an exception at line 2.",
+			"It will compile and execute correctly.",
+			"It will compile correctly but it will throw an exception at line 4."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-26",
+		"question": "Which situation will require you to choose composition instead of inheriting from class A?",
+		"correct_answer": "Class A provides only private constructors.",
+		"incorrect_answers": [
+			"Class A provides only private fields.",
+			"Class A does not provide the default constructor.",
+			"Class A does not provide any setters."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-27",
+		"question": "What would you use to implement the command pattern?",
+		"correct_answer": "One functional interface with a method that different lambda expressions will define; each lambda expression will represent a command",
+		"incorrect_answers": [
+			"One functional interface with a few default methods; each default method will represent a command",
+			"One functional interface containing a few abstract methods that different lambda expressions will define; each lambda expression will represent a command",
+			"One functional interface with a few static methods; each static method will represent a command"
+		],
+		"source": ""
+	}
+]
