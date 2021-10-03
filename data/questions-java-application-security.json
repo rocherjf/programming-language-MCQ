@@ -1,0 +1,365 @@
+[
+	{
+		"id": "java-application-security-1",
+		"question": "How do you retrieve the authentication user from the SecurityContextHolder?",
+		"correct_answer": "<div class=\"codeAnswer\">SecurityContextHolder.getContext().getAuthentication()</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">SecurityContextHolder.get().getAuthentication()</div>",
+			"<div class=\"codeAnswer\">SecurityContextHolder.getSecurityContext().getAuthentication()</div>",
+			"<div class=\"codeAnswer\">SecurityContextHolder.getAuthentication()</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-2",
+		"question": "You discovered an XXE vulnerability, after which you implement an EntityResolver that returns null for all external entities. Upon retest, the application remains vulnerable. Why was the solution incorrect?",
+		"correct_answer": "When an EntityResolver returns null, the parser uses default behavior and opens a connection to the URI.",
+		"incorrect_answers": [
+			"The EntityResolver was not set on the XMLReader.",
+			"The EntityResolver was not set on the XML parser.",
+			"EntityResolvers cannot be used to mitigate XXE attacks."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-3",
+		"question": "An application, for convenience, granted AllPermission to the entire application. How would you programmatically reduce the permissions of a serializable object while deserializing untrusted members?",
+		"correct_answer": "Implement readObject, wrap calls to ObjectInputStream#readObject in an AccessControl#doPrivileged block for each untrusted member, and pass an AccessControlContext that has only the needed Permissions in its ProtectionDomain",
+		"incorrect_answers": [
+			"Implement readObject, wrap calls to ObjectInputStream#readObject in an AccessControl#doPrivileged block for each untrusted member, and pass a null AccessControlContext in addition to the list of needed Permissions",
+			"Implement readObject, wrap calls to ObjectInputStream#readObject in an AccessControl#doPrivileged block for each untrusted member, and pass the list of needed Permissions",
+			"Implement readObject and check SecurityManager#checkPermission to ensure that the class has the necessary permission for each untrusted member"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-4",
+		"question": "How might an attacker exploit the following?<div class=\"code\"><p>public static Field getField(Class<?> clazz, String fieldName) {</p><p>&nbsp; return doPrivileged(() -> {</p><p>&nbsp; &nbsp; Field field = clazz.getDeclaredField(fieldName);</p><p>&nbsp; &nbsp; field.setAccessible(true);</p><p>&nbsp; &nbsp; return field;</p><p>&nbsp; });</p><p>}</p></div>",
+		"correct_answer": "By using the following to change the SecurityManager: <div class=\"codeAnswer\">getField(System.class, \"security\").set(null, badSecurityManager);</div>",
+		"incorrect_answers": [
+			"By using the following to force garbage collection: <div class=\"codeAnswer\">getField(System.class, \"gc\").invoke(null);</div>",
+			"By using the following to shutdown the VM: <div class=\"codeAnswer\">getField(System.class, \"exit\").invoke(null, 0);</div>",
+			"By using the following to change standard out: <div class=\"codeAnswer\">getField(System.class, \"out\").set(null, badStandardOut);</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-5",
+		"question": "You populate an online form with the date November 6, 2021. The server performs the following operations:<div class=\"code\"><p>LocalDate loc = LocalDate.of(2021, 11, 6);</p><p>DateTimeFormatter form = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);</p><p>String output = form.format(loc);</p> The expected output is 11/6/21, but the result is 6/11/21. What is the issue?",
+		"correct_answer": "The system default locale is incorrect.",
+		"incorrect_answers": [
+			"The parameters for LocalDate.of are incorrect.",
+			"The date format is incorrect.",
+			"The system time on the server is off."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-6",
+		"question": "Once authentication is successful, the application runs the following set of instructions:<div class=\"code\"><p>String redirectTo = request.getParameter(\"redirect_to\");</p><p>response.sendRedirect(redirectTo);</p></div>How might an attacker exploit the instructions?",
+		"correct_answer": "In a phishing attack with Open Redirect",
+		"incorrect_answers": [
+			"In a phishing attack with XSS",
+			"It cannot be exploited unless the user is also vulnerable to XSS, in which case a standard phishing attack would apply",
+			"In a phishing attack with Response Splitting"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-7",
+		"question": "Which vulnerability is unrelated to string concatenation of untrusted strings?",
+		"correct_answer": "Weak Encryption",
+		"incorrect_answers": [
+			"SQL Injection",
+			"Cross-site Scripting",
+			"Command Injection"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-8",
+		"question": "<p>An application uses a signed cookie for user authentication. Before the data within the cookie is trusted on subsequent requests, it validates via the following process:</p><p>1. Read the URL of the signer's public key from the cookie,</p><p>2. Download the signer's public key from the URL, and</p><p>3. Use the public key to verify the signature</p><p>What is incorrect about the validation process?</p>",
+		"correct_answer": "It is possible to forge the cookie by signing with your own private key and modifying the public key URL",
+		"incorrect_answers": [
+			"The signed cookie should include the public key to reduce the number of network connections.",
+			"Only HTTPS URLs should be accepted for the public key to protect against on-path attacks.",
+			"Signatures cannot be used to verify identities."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-9",
+		"question": "What attributes would you include in a log statement for a failed login attempt?",
+		"correct_answer": "Timestamp, application name, host identifier, source IP address, username, and event type",
+		"incorrect_answers": [
+			"Timestamp, application name, host identifer, source IP address, username, browser language, request duration, and password length",
+			"Timestamp, application name, username, and event type",
+			"Timestamp, source IP address, and username"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-10",
+		"question": "You need to read a subset of a large XML document. Why would either a push parser or a pull parser be better suited for the task?",
+		"correct_answer": "A pull parser allows you to filter and ignore unneeded elements.",
+		"incorrect_answers": [
+			"A pull parser loads the entire document in memory.",
+			"A push parser loads the entire document in memory.",
+			"A push parser allows you to not define callbacks to filter and ignore unneeded elements."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-11",
+		"question": "What is the simplest way to ensure that a resource closes given that resource implements java.lang.AutoCloseable?",
+		"correct_answer": "Implement a try-with-resources construct",
+		"incorrect_answers": [
+			"Wrap the resource with OverrideAndClose",
+			"Call .close on the resource in a finally block",
+			"Assign responsibility to the Java Virtual Machine (JVM)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-12",
+		"question": "How would you ensure that only external entities that reference safe domains are resolved when parsing an XML document?",
+		"correct_answer": "Use an EntityResolver to implement a whitelist of safe domains",
+		"incorrect_answers": [
+			"Validate the XML schema before parsing",
+			"Disable external entities on the XML parser",
+			"Create a preprocessor that removes unsafe domains from the XML document"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-13",
+		"question": "The servlet spec states that a transport guarantee setting of CONFIDENTIAL means that data will be sent confidentially. In practice, how does the aforementioned translate?",
+		"correct_answer": "The container requires TLS for the configured URIs.",
+		"incorrect_answers": [
+			"The container signs the configured URIs.",
+			"The container requires mutual authentication for the configured URIs.",
+			"The container rejects GETs for the configured URIs."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-14",
+		"question": "What does a TrustManager do?",
+		"correct_answer": "It uses a trust store to determine whether a credential should be trusted.",
+		"incorrect_answers": [
+			"It uses a trust store to determine which hosts are trusted.",
+			"It functions as a certificate authority.",
+			"It is used to sign code."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-15",
+		"question": "There is an error in the immutable class below that causes it to be mutable. What would you do to resolve the error? <div class=\"code\"><p>public final class Immutable {</p><p>&nbsp; private final String name;</p><p>&nbsp; private final int[] data;</p><p>&nbsp; public Immutable(String name, int[] data) {</p><p>&nbsp; &nbsp; this.name = name;</p><p>&nbsp; &nbsp; this.data = Arrays.copyOf(data, data.length);</p><p>&nbsp; }</p><p>&nbsp; public String getName() {</p><p>&nbsp; &nbsp; return name;</p><p>&nbsp; }</p><p>&nbsp; public int[] getData() {</p><p>&nbsp; &nbsp; return data;</p><p>&nbsp; }</p><p>}</p></div>",
+		"correct_answer": "Modify getData() to return a defensive copy",
+		"incorrect_answers": [
+			"Change the class from public to private",
+			"Modify getName() to return a defensive copy",
+			"Add the final keyword to the getName() method"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-16",
+		"question": "You need to add a new certificate authority to a Java deployment, but the cacerts keystore is password protected. No one has ever set or changed the password. What would you do to add the certificate authority?",
+		"correct_answer": "Try the default Java keystore password, \"changeit\".",
+		"incorrect_answers": [
+			"Try the default Java keystore password, \"java\".",
+			"Copy the cacerts keystore file from another Java deployment.",
+			"Reinstall Java to reset the cacerts password."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-17",
+		"question": "You are upgrading to Spring Security 5, but the existing passwords in your database do not possess the encoding prefix that Spring Security 5 will add for future registrations. What would you do to prevent downtime during upgrades?",
+		"correct_answer": "Generate a DelegatingPasswordEncoder instance using PasswordEncoders and use setDefaultPasswordEncoderForMatches, which will indicate the encoder to use when there is no prefix",
+		"incorrect_answers": [
+			"Update the UserDetailsService to query a \"password upgrade required\" field, return null if an upgrade is required, which indicates upstream that the user's credentials require an update before the user can login, and redirect that user to the update password page",
+			"Create a PasswordController with admin access that will iterate through all users in the background and update their passwords and hit the endpoint",
+			"Expose a NoOpPasswordEncoder as a bean"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-18",
+		"question": "What is incorrect in the following custom permission that contains multiple actions? <div class=\"code\"><p>public class MyPermission extends BasicPermission {</p><p>&nbsp; Set<String> actions = new HashSet<>();</p><p>&nbsp; public MyPermission(String name, String actions) {</p><p>&nbsp; &nbsp; super(name);</p><p>&nbsp; &nbsp; this.actions = new HashSet<>(Arrays.asList(actions.split(\",\")));</p><p>&nbsp; }</p><p>&nbsp; public String getActions() {</p><p>&nbsp; &nbsp; return  actions.stream().collect(Collectors.joining(\",\"));</p><p>&nbsp;}</p><p>}</p></div>",
+		"correct_answer": "Calls to getActions do not consistently return the values in the same order, which breaks the APIs contract.",
+		"incorrect_answers": [
+			"Calls to getActions are slow, which breaks the APIs contract.",
+			"Calls to getActions might return an empty string, which breaks the APIs contract.",
+			"Calls to getActions might return null, which breaks the APIs contract."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-19",
+		"question": "An application server has been configured to require mutual TLS authentication. Mutual TLS is functional, but the server also accepts client connections that do not present a certificate. What's the most likely cause?",
+		"correct_answer": "The server's socket was configured with setWantClientAuth() instead of setNeedClientAuth().",
+		"incorrect_answers": [
+			"It's up to the client to request mutual TLS authentication.",
+			"The server is using an older version of TLS that does not require mutual authentication.",
+			"The client's socket was configured with setWantServerAuth() instead of setNeedServerAuth()."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-20",
+		"question": "You are writing a data class that will be accessed by multiple threads. How would you ensure the data class is threadsafe while also minimizing memory usage?",
+		"correct_answer": "By making the data class immutable",
+		"incorrect_answers": [
+			"By copying the data object in each thread",
+			"By making the data class private",
+			"By making the data class a singleton"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-21",
+		"question": "For what purpose would you use an EntityResolver as an XXE defense?",
+		"correct_answer": "To restrict external entity resolution to whitelisted domains",
+		"incorrect_answers": [
+			"To log all external entity resolutions",
+			"To ensure connections are only conducted over the HTTPS protocol",
+			"To block specific domains from being used in entity resolution"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-22",
+		"question": "How is the serialization and deserialization of Enums different from that of other objects?",
+		"correct_answer": "Enums are automatically serializable.",
+		"incorrect_answers": [
+			"Both need to be declared serializable.",
+			"Any fields on the Enum are null on deserialization.",
+			"Enums cannot be serialized."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-23",
+		"question": "Why is it insecure to trust the Content-Type header when you determine file types",
+		"correct_answer": "The header can be supplied by the user.",
+		"incorrect_answers": [
+			"The header might have a CRLF injection.",
+			"The Accept header is the more semantically correct header to use.",
+			"There are content types the server might not understand."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-24",
+		"question": "You configured your application to grant the authority of ADMIN to admin users and you configured Spring Security to authorize requests with the expression hasRole('ADMIN'). However, no one reaches the admin pages. What is the most likely problem?",
+		"correct_answer": "There is a mismatch between the name of the authority Spring Security searches for and the name of the authority that the UserDetailsService grants.",
+		"incorrect_answers": [
+			"The application fails to grant the ADMIN authority in the UserDetailsService implementation.",
+			"The authorize requests ant mappings map the admin URLs to another authority expression.",
+			"The application's admin pages are not mapped to Spring MVC endpoints."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-25",
+		"question": "Which is the most secure way to validate a redirect?",
+		"correct_answer": "Select the redirect uniform resource identifier (URI) from a whitelist",
+		"incorrect_answers": [
+			"Check the host; redirect only if it starts with http://",
+			"Remove the scheme, remove the host, and sanitize the uniform resource identifier (URI)",
+			"Remove the scheme, remove the host, and encode the uniform resource identifier (URI)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-26",
+		"question": "What occurs if code calls toLowerCase without passing the desired locale as a parameter?",
+		"correct_answer": "Some characters may incorrectly map from uppercase to lowercase.",
+		"incorrect_answers": [
+			"The code may not compile on operating systems outside of the United States.",
+			"The code might throw an UnsupportedEncodingException.",
+			"Some characters may map to unsupported code points."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-27",
+		"question": "If CSRF protection is disabled and a site is otherwise secure, which of the following is most likely to succeed?",
+		"correct_answer": "A remote attacker could POST information as if it were the victim.",
+		"incorrect_answers": [
+			"A remote attacker could read the victim's HTTP responses.",
+			"A remote attacker could persist arbitrary Javascript to the database.",
+			"A remote attacker could steal the victim's session ID."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-28",
+		"question": "You need to read a file into memory as ASCII. How would you configure the reader to complain when it finds a character that it cannot map?",
+		"correct_answer": "Configure a CharsetDecoder with onUnmappableCharacter(REPORT), wrap a FileInputStream in an InputStreamReader, and supply the decoder",
+		"incorrect_answers": [
+			"Specify -Dfile.encoding=ASCII and -Dfile.encoding.unmappable=REPORT from the command line",
+			"Configure a CharsetDecoder with onUnmappableCharacter(REPORT), create a FileReader, and supply the decoder",
+			"Configure a CharsetEncoder with onUnmappableCharacter(REPORT), wrap a FileInputStream in an InputStreamReader, and supply the decoder"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-29",
+		"question": "Why does using a database connection pooler improve the security posture of an application?",
+		"correct_answer": "The use of a database connection pooler mitigates denial of service attacks.",
+		"incorrect_answers": [
+			"The use of a database connection pooler mitigates remote code execution attacks.",
+			"The use of a database connection pooler mitigates directory traversal attacks.",
+			"The use of a database connection pooler mitigates SQL injection attacks."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-31",
+		"question": "If a String is interned, what is possible with that String that is not possible with other Strings?",
+		"correct_answer": "The String can be compared using == in addition to .equals().",
+		"incorrect_answers": [
+			"The String can be subclassed.",
+			"The String can be garbage collected.",
+			"The String can be converted to a char array."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-34",
+		"question": "Why should passwords NOT be stored in String variables?",
+		"correct_answer": "Strings place the information into the String pool.",
+		"incorrect_answers": [
+			"Strings are UTF-16 encoded.",
+			"Most security libraries require a char[] array or byte[] array for hashing.",
+			"Strings are immutable."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-36",
+		"question": "If you consider the principle of least privilege, what is the preferred way to create a file in Java?",
+		"correct_answer": "Files.write(path, bytes, StandardOpenOption.CREATE_NEW).toFile().setReadOnly();",
+		"incorrect_answers": [
+			"Files.write(path, bytes).toFile().setReadOnly()",
+			"Files.write(path, bytes, StandardOpenOption.CREATE).toFile().setReadOnly()",
+			"Files.write(path, bytes)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-37",
+		"question": "What is the difference between running with the default security manager and running without the default security manager?",
+		"correct_answer": "When you use the default security manager, risky operations are disallowed, but can be granted through a policy file. Without a security manager, permissions are not checked for any operation.",
+		"incorrect_answers": [
+			"The two are roughly equivalent. Risky operations are granted by default, but can be revoked through a policy file.",
+			"The default security manager only allows access to a handful of system properties, but other permissions can be granted through a policy file. Without a security manager, permissions are not checked for any operation.",
+			"There is no default security manager as the application must define its own policy file in order to use a security manager."
+		],
+		"source": ""
+	}
+]

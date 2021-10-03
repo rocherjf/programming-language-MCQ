@@ -1,0 +1,398 @@
+[
+	{
+		"id": "java-testing-1",
+		"question": "Which option describes a good practice about multiple assertions in a test method?",
+		"correct_answer": "It can have many physical assertions that form a single logical assertion about one action.",
+		"incorrect_answers": [
+			"It can have many physical assertions about one action but only if they are the same (e.g. all the assertions are assertEquals).",
+			"It can only have one physical assertion about many actions.",
+			"It can have many physical assertions about many actions."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-3",
+		"question": "In the following instance, what is the purpose of the @Primary annotation?<div class=\"code\"><p>@Profile(\"test\")</p><p>@Configuration</p><p>class TestConfiguration {</p><p>&nbsp; @Bean</p><p>&nbsp; @Primary</p><p>&nbsp; public UserManager userService() {</p><p>&nbsp; &nbsp; return Mockito.mock(UserManager.class);</p><p>&nbsp; }</p><p>}</p></div>",
+		"correct_answer": "@Primary forces the Spring framework to inject the userService() bean preferentially.",
+		"incorrect_answers": [
+			"@Primary causes UserManager to be instantiated like an interface.",
+			"@Primary forces the Spring framework to return this instance when used in every profile.",
+			"@Primary causes UserManager to be instantiated like a Singleton."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-4",
+		"question": "What is a feature as per behavior-driven development (BDD)?",
+		"correct_answer": "A capability that the product is going to offer.",
+		"incorrect_answers": [
+			"A scheduled software release to production.",
+			"Functionality provided by the test automation tool or Cucumber.",
+			"A scenario where a positive result is expected."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-6",
+		"question": "Given the following report of a mutation testing tool: <div class=\"code\"><p>Total mutations: 10</p><p>Mutations executed: 10</p><p>Mutations not executed: 0</p><p>Killed mutations: 7</p><p>Survived mutations: 3</p></div>Which is a valid conclusion after applying some basic analysis?",
+		"correct_answer": "More unit tests or data sets are needed to increase the number of killed mutations.",
+		"incorrect_answers": [
+			"Fewer unit tests or data sets are needed to increase the number of total mutations.",
+			"More unit tests or data sets are needed to decrease the number of executed mutations.",
+			"Fewer unit tests or data sets are needed to decrease the number of survived mutations."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-8",
+		"question": "Assuming that an extension is placed in the /test/addon folder, which Selenium code snippet correctly configures the FirefoxDriver to run with the myextension.xpi extension installed?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>FirefoxProfile profile = new FirefoxProfile();</p><p>profile.addExtension(\"/test/addon/myextension.xpi\");</p><p>driver = new FirefoxDriver(profile);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>driver = new FirefoxDriver(\"/test/addon/myextension.xpi\");</p></div>",
+			"<div class=\"codeAnswer\"><p>driver = new FirefoxDriver(profile);</p><p>driver.addExtension(\"/test/addon/myextension.xpi\");</p></div>",
+			"<div class=\"codeAnswer\"><p>FirefoxProfile profile = new FirefoxProfile();</p><p>profile.installExtension(\"/test/addon/myextension.xpi\");</p><p>driver = new FirefoxDriver(profile);</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-9",
+		"question": "Which problem can be solved using dependency injection?",
+		"correct_answer": "Supporting different configurations at runtime",
+		"incorrect_answers": [
+			"Defining how an object may use another object",
+			"Having to pass any number of parameters to a method",
+			"Testing prototype and other throw-away investigative pieces of code"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-10",
+		"question": "Which is an example of the problems that can be found using static analysis?",
+		"correct_answer": "Unnecessary object creation",
+		"incorrect_answers": [
+			"Detection of a memory leak at runtime",
+			"Incompatibilities between Java versions",
+			"Low quality unit tests"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-11",
+		"question": "Which component of Selenium Grid gives you information about the Selenium Server and the browser instances connected to it?",
+		"correct_answer": "Selenium Grid Hub",
+		"incorrect_answers": [
+			"Selenium Remote Control",
+			"Selenium IDE",
+			"Selenium Grid Node"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-12",
+		"question": "What's the definition of the mutation score in mutation testing?",
+		"correct_answer": "The percentage of killed mutants and total the number of mutants.",
+		"incorrect_answers": [
+			"The number of killed mutants.",
+			"The number of mutations executed.",
+			"The percentage of failed tests and the total number of tests."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-13",
+		"question": "Which statement best describes what the term \"data-driven testing\" means?",
+		"correct_answer": "Using a table of data with input and verifying values instead of hard-coded values in tests.",
+		"incorrect_answers": [
+			"Testing if the data contained in a database table is saved correctly.",
+			"Designing the database model first and then the test cases and the application.",
+			"Loading complete test cases from Excel files or database tables into a testing framework."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-14",
+		"question": "Which tools can help you look for coding errors in Java code?",
+		"correct_answer": "SpotBugs",
+		"incorrect_answers": [
+			"YourKit",
+			"JFrog",
+			"Checkstyle"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-15",
+		"question": "Which situation would be a good use for a Spy in a mocking framework?",
+		"correct_answer": "Recording interactions among objects",
+		"incorrect_answers": [
+			"Mocking behavior of functional objects in the runtime",
+			"Quickly throwing an exception for methods",
+			"Uncovering bugs quickly"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-16",
+		"question": "You need to assess the quality of your tests. Which of the following techniques can you use for that purpose?",
+		"correct_answer": "Mutation testing",
+		"incorrect_answers": [
+			"Decision table testing",
+			"Triangulation",
+			"Test-driven development"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-17",
+		"question": "Which of the following is an example of a mutation in mutation testing?",
+		"correct_answer": "Change the return value of a method.",
+		"incorrect_answers": [
+			"Change the real implementation of a class for a fake implementation.",
+			"Change the name of a class or method.",
+			"Change the version of a third-party library."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-18",
+		"question": "Given:<div class=\"code\"><p>public class MyTest {</p><p>&nbsp; @Test</p><p>&nbsp; public void testDefaultName() {</p><p>&nbsp; &nbsp; Person p = new Person();</p><p>&nbsp; &nbsp; assertEquals(\"John Doe\", p.getName(), \"The default name is not set correctly\");</p><p>&nbsp; }</p><p>}</p></div>What happens when the assertion fails?",
+		"correct_answer": "An exception of type AssertionError (or a subclass) is thrown with the specified message and shown in the output.",
+		"incorrect_answers": [
+			"The test is marked as failed but only the specified message is shown in the output.",
+			"An exception of type AssertionError (or a subclass) is thrown. The specified message is shown only in the test report (if generated).",
+			"The test is NOT marked as failed but the specified message is shown in the output."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-19",
+		"question": "You create a mock service inside a class to test a differential() method. The definition for the creation of mock is given below:<div class=\"code\"><p>@ExtendWith(MockitoExtension.class)</p><p>public class TestDerivative { </p><p>&nbsp; Derivative c = null; </p><p> </p><p>&nbsp; @Mock</p><p>&nbsp; DerivativeService service;</p><p>&nbsp; DerivativeService service = Mockito.mock(DerivativeService.class);</p><p>&nbsp; ....</p><p>}</p></div>You execute the TestDerivative class and receive an error stating Unresolved compilation problems: Duplicate field TestDerivative.service. What changes are required to remove the error?",
+		"correct_answer": "Remove either the @Mock annotation definition or the mock() definition.",
+		"incorrect_answers": [
+			"Join both the mock definitions to:<div class=\"codeAnswer\"><p>@Mock</p><p>DerivativeService service = Mockito.mock();</p></div>",
+			"Combine <span class=\"codeAnswer\">@Mock</span> and <span class=\"codeAnswer\">DerivativeService service;</span> as a single line.",
+			"Remove the <span class=\"codeAnswer\">@ExtendWith(MockitoExtension.class)</span> statement."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-20",
+		"question": "You are integration testing new changes on your application and an error is discovered. It takes a long time to diagnose this bug, causing you to miss a deadline with your client. What improvement can you make on your integration test so that this does not happen again?",
+		"correct_answer": "Use detailed logging to help determine where the error occurred. ",
+		"incorrect_answers": [
+			"Combine your integration tests and unit tests by using a Maven plugin.",
+			"Remove all logging from the application to allow more processing power on the application. ",
+			"Use your integration tests and unit tests concurrently so that the unit tests can pick up specific errors. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-21",
+		"question": "What is true about assertion methods?",
+		"correct_answer": "Only failed assertions are recorded. ",
+		"incorrect_answers": [
+			"The only way to use an assertion is by referencing it through a static import: <div class=\"codeAnswer\"><p>import static org.junit.jupiter.api.Assertions.*;</p><p>...</p><p>assertEquals(...); </p></div>",
+			"Only passed assertions are recorded. ",
+			"The only way to use an assertion is directly:<div class=\"codeAnswer\">Assertions.assertEquals(...);</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-22",
+		"question": "You have a Derivatives.java file and an interface DerivativesService.java file. You need to create a mock inside a test class using the content of these two files. Using Mockito 3, how can you achieve this?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>Derivatives obj = null; </p><p>DerivativesService service = Mockito.mock(DerivativesService.class);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>Derivatives obj = null; </p><p>DerivativesService service = Mockito.mock();</p></div>",
+			"<div class=\"codeAnswer\"><p>DerivativesService obj = null; </p><p>Derivatives service = Mockito.mock(DerivativesService.class);</p></div>",
+			"<div class=\"codeAnswer\"><p>DerivativesService obj = null; </p><p>Derivatives service = Mockito.mock();</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-23",
+		"question": "You made significant updates to an application and you need to run unit testing. You begin by testing large chunks of the software and everything looks good. Once the software is released, users find multiple bugs that should have been noticed by unit testing. What could you do next time to prevent this?",
+		"correct_answer": "Unit test small pieces of code as you are making the software updates, and then build out the testing to larger functionality. ",
+		"incorrect_answers": [
+			"Add more data logging in the software so that bugs will be easier to notice and can be fixed quicker. ",
+			"Check that each unit test is unique and not related to other unit tests so that all parts of the application are tested.",
+			"Check that each unit test is not too complex, and fix or simplify the unit tests when necessary. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-24",
+		"question": "You created a Selenium Java class to open the google homepage as shown: <div class=\"code\"><p>import org.openqa.selenium.By;</p><p>import org.openqa.selenium.WebDriver;</p><p>import org.openqa.selenium.chrome.ChromeDriver;</p><p></p><p>public class AutoClass {</p><p>&nbsp; public static void main(String[] args) {</p><p>&nbsp; &nbsp; System.setProperty(\"webdriver.chrome.driver\",\"D:\\geckodriver.exe\");</p><p>&nbsp; &nbsp; WebDriver driver = new ChromeDriver();</p><p>&nbsp; &nbsp; String baseUrl = \"https://google.com/\";&nbsp;    </p><p>&nbsp; &nbsp; driver.get(baseUrl);</p><p>&nbsp; }&nbsp; &nbsp; </p><p>}</p></div> After running the code, you receive an error stating Unable to find a matching set of capabilities. Why is that?",
+		"correct_answer": "You are using the Google Chrome driver through Selenium and passing the Firefox driver's .exe file.",
+		"incorrect_answers": [
+			"You are using the ChromeDriver() method instead of ChromeDriverService() method with geckodriver. ",
+			"You are using the ChromeDriver() method instead of the ChromeOption() method with geckodriver.",
+			"You are using the Google Chrome driver through Selenium and passing the Safari driver's .exe file."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-25",
+		"question": "In Java Selenium, which method can be used instead of the get(baseUrl) method to open the baseUrl webpage?",
+		"correct_answer": "navigate().to(baseUrl)",
+		"incorrect_answers": [
+			"navigate(baseUrl)",
+			"navigate.to(baseUrl)",
+			"navigate().refresh(baseUrl)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-26",
+		"question": "You have the following Mockito mock interaction and its verification code:<div class=\"code\"><p>when(service.add(2, 3)).thenReturn(5);</p><p>assertEquals(5, c.perform(2, 3));</p><p>verify(service).add(2, 3);</p></div>How can you use argument matchers in the statements above without failing the test?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>when(service.add(anyInt(), anyInt())).thenReturn(5);</p><p>assertEquals(5, c.perform(anyInt(), anyInt()));</p><p>verify(service).add(anyInt(), anyInt());</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>when(service.add(anyInt(), anyInt())).thenReturn(anyInt());</p><p>assertEquals(anyInt(), c.perform(anyInt(), anyInt()));</p><p>verify(service).add(anyInt(), anyInt());</p></div>",
+			"<div class=\"codeAnswer\"><p>when(service.add(2, 3)).thenReturn(anyInt());</p><p>assertEquals(5, c.perform(2, 3));</p><p>verify(service).add(anyInt(), anyInt());</p></div>",
+			"<div class=\"codeAnswer\"><p>when(service.add(2, 3)).thenReturn(anyInt());</p><p>assertEquals(anyInt(), c.perform(anyInt(), anyInt()));</p><p>verify(service).add(2, 3); </p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-27",
+		"question": "<p>Consider a Java-based service that calculates the discount that should be applied according to the following rules:</p><p></p><p>A purchase in the range of $1 to $49.99 has a 10% discount;</p><p>A purchase in the range of $50 to $99.99 has a 20% discount;</p><p>A purchase of $100 or more has 30% discount.</p><p></p><p>According to boundary-value analysis, which is an example of the minimum set of values you should test?</p>",
+		"correct_answer": "<p>0.99</p><p>1</p><p>49.99</p><p>50</p><p>99.99</p><p>100</p>",
+		"incorrect_answers": [
+			"<p>1</p><p>49.99</p><p>50</p><p>99.99</p><p>100</p><p>101</p>",
+			"<p>1</p><p>50</p><p>100</p>",
+			"<p>1</p><p>49.99</p><p>50</p><p>99.99</p><p>101</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-28",
+		"question": "Given the following code:<div class=\"code\"><p>public class Person {</p><p>&nbsp; private int age;</p><p>&nbsp; private boolean isAdult()</p><p>&nbsp; //getters, setters, other methods</p><p>}</p><p> </p><p>public class PersonTest {</p><p>&nbsp; @Test</p><p>&nbsp; void isNotAdult() {</p><p>&nbsp; &nbsp; Person p = new Person();</p><p>&nbsp; &nbsp; p.setAge(5);</p><p>&nbsp; &nbsp; &lt;YOUR_CODE&gt;(p.isAdult());</p><p>&nbsp; }</p><p>}</p></div> What should the value for \"&lt;YOUR_CODE&gt;\" be on the last line of code?",
+		"correct_answer": "assertFalse",
+		"incorrect_answers": [
+			"assert",
+			"assertValid",
+			"assertTrue"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-29",
+		"question": "You have the following class:<div class=\"code\"><p>public class Cat {</p><p>&nbsp; private String name;</p><p>&nbsp; private double weight;</p><p>&nbsp; //getters and setters</p><p>}</p><p>...</p><p>Cat kittyCat = new Cat(\"Kitty Cat\", 4.75);</p><p>Cat catClone = new Cat(\"Kitty Cat\", 4.75);</p></div> You check this with the following assertion with AssertJ: <div class=\"code\">assertThat(kittyCat).isEqualTo(catClone);</div> This returns false. What change to this test would allow this test to pass?",
+		"correct_answer": "Use the isEqualToComparingFieldByFieldRecursively() method:<div class=\"codeAnswer\">assertThat(kittyCat).isEqualToComparingFieldByFieldRecursively(catClone);</div>",
+		"incorrect_answers": [
+			"Reverse the Cat objects: <div class=\"codeAnswer\">assertThat(catClone).isEqualTo(kittyCat);</div>",
+			"Use the assert() method instead: <div class=\"codeAnswer\">assert(kittyCat).isEqualTo(catClone);</div>",
+			"Use the functional programming features in Java 8:<div class=\"codeAnswer\">assertThat(kittyCat::isEqualTo(catClone));</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-30",
+		"question": "You have the following testing method: <div class=\"code\"><p>public static String GetDayPart() {</p><p>&nbsp; Calendar rightNow = Calendar.getInstance();</p><p>&nbsp; int hour = rightNow.get(Calendar.HOUR_OF_DAY);</p><p>&nbsp; String retVal = \"\";</p><p>&nbsp; if (hour <= 12) {</p><p>&nbsp; &nbsp; retVal = \"Good morning\";</p><p>&nbsp; } else if (hour > 12 && hour <= 17) {</p><p>&nbsp; &nbsp; retVal = \"Good afternoon\";</p><p>&nbsp; } else {</p><p>&nbsp; &nbsp; retVal = \"Good night\";</p><p>&nbsp; }</p><p>&nbsp; &nbsp; return retVal;</p><p>}</p></div> Why does this method follow ineffective testing practices in the context of test-driven development (TDD)?",
+		"correct_answer": "It has non-deterministic behavior. ",
+		"incorrect_answers": [
+			"It is syntactically incorrect.",
+			"The code can possibly return two values. ",
+			"The code is untestable."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-31",
+		"question": "Given: <div class=\"code\">List<Integer> list = Arrays.asList(1, 2, 3, 4);</div> Using Hamcrest, how would you test the list that contains the element 3?",
+		"correct_answer": "<div class=\"codeAnswer\">assertThat(list, hasItem(3));</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">assertThat(list, hasValue(3));</div>",
+			"<div class=\"codeAnswer\">assertThat(list, in(3));</div>",
+			"<div class=\"codeAnswer\">assertThat(list, everyItem(equalsTo(3)));</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-32",
+		"question": "How is a parameterized test annotated in JUnit?",
+		"correct_answer": "@ParameterizedTest",
+		"incorrect_answers": [
+			"@Parameters",
+			"@Params",
+			"@Test"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-35",
+		"question": "Which method in Mockito verifies that no interaction has happened with a mock in Java?",
+		"correct_answer": "never()",
+		"incorrect_answers": [
+			"times(null)",
+			"ignore()",
+			"discard()"
+		],
+		"source": ""
+	},
+		{
+		"id": "java-testing-36",
+		"question": "Based on the following String variable, which of these Hamcrest tests will pass? <div class=\"code\">String val = \"Hello World\";</div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>assertThat(val, </p><p>&nbsp; &nbsp;allOf(startsWith(\"Hello\"), containsString(\"World\")));</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>assertThat(val, </p><p>&nbsp; &nbsp;allOf(endsWith(\"World\"), is(\"Hello\")));</p></div>",
+			"<div class=\"codeAnswer\"><p>assertThat(val, </p><p>&nbsp; &nbsp;is(startsWith(\"Hello\"), containsString(\"World\")));</p></div>",
+			"<div class=\"codeAnswer\"><p>assertThat(val, </p><p>&nbsp; &nbsp;equalTo(containsString(\"Hello\"), containsString(\"World\")));</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-37",
+		"question": "You have the following two arrays of integers: <div class=\"code\"><p>int[] intArray1= { 1, 2, 3 };</p><p>int[] intArray2= { 1, 2, 3 };</p></div> What will result in a passing test?",
+		"correct_answer": "<div class=\"codeAnswer\">assertArrayEquals(intArray1, intArray2);</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">assertEquals(intArray1, intArray2);</div>",
+			"<div class=\"codeAnswer\">pass(intArray1, intArray2);</div>",
+			"<div class=\"codeAnswer\">assertNotNull(intArray1, intArray2);</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-38",
+		"question": "Which option is a good practice for multiple assertions in a test method?",
+		"correct_answer": "The test method can have many physical assertions that form a single logical assertion about one action.",
+		"incorrect_answers": [
+			"The test method can only have one physical assertion about many actions.",
+			"The test method can have many physical assertions about many actions.",
+			"The test method can have many physical assertions about one action but only if they are the same (for example all the assertions are assertEquals)."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-39",
+		"question": "What is the correct syntax to create a spy for an array list with the help of Mockito annotation?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>@Spy</p><p>List<String> spyList = new ArrayList<String>();</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>List<String> spyList;</p><p>spyList = Spy.from(new ArrayList<>());</p></div>",
+			"<div class=\"codeAnswer\"><p>@Spy</p><p>@Mock</p><p>List<String> spyList = new ArrayList<String>();</p></div>",
+			"<div class=\"codeAnswer\"><p>@Mock</p><p>List<String> spyList = new ArrayList<String>();</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-40",
+		"question": "You are using mutation testing but the process is taking too long to run. What can you do with a mutation testing tool to speed things up?",
+		"correct_answer": "Target only those packages or classes that are currently of interest.",
+		"incorrect_answers": [
+			"Compile the code before running the mutation testing tool.",
+			"Configure the way in which mutants are inserted.",
+			"Change your testing framework, for example, use TestNG instead of JUnit."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-41",
+		"question": "In terms of mutation testing, and where it falls in the entire program testing paradigm, what type of test is a mutation test?",
+		"correct_answer": "White-box testing",
+		"incorrect_answers": [
+			"User admittance testing ",
+			"Black-box testing ",
+			"User acceptance testing "
+		],
+		"source": ""
+	}
+]
