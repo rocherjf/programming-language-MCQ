@@ -1,0 +1,585 @@
+[
+	{
+		"id": "java-web-application-security-1",
+		"question": "Even though an image file is validated correctly and passes extension and size checks, what threat is still possible?",
+		"correct_answer": "The image file can always contain exploit code through steganography",
+		"incorrect_answers": [
+			"The Multipurpose Internet Mail Extensions (MIME) header was set to something different than, for example, .img or .png",
+			"Renaming the image file could execute a virus",
+			"The file shows no visible image when you view it meaning it is infected"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-2",
+		"question": "What type of attack could an attacker carry out by defining nested XML document type definition (DTD) entities that expand exponentially?",
+		"correct_answer": "Denial-of-service (DoS) attack",
+		"incorrect_answers": [
+			"On-path attack ",
+			"Rainbow table attack",
+			"Phishing attack"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-3",
+		"question": "In the context of hashing and storing passwords, what is a salt?",
+		"correct_answer": "A randomly generated, fixed-length value designed to be unique for each user password",
+		"incorrect_answers": [
+			"A randomly generated, variable-length value designed to be unique for a given web application",
+			"A variable-length value designed to be unique for a given web application",
+			"A variable-length value designed to be unique for each user password"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-4",
+		"question": "Your application uses YAML serialization format. What is a valid reason for your development team to look at Open Web Application Security Project (OWASP) A8: Insecure Deserialization?",
+		"correct_answer": "Insecure de-serialization is independent of the format.",
+		"incorrect_answers": [
+			"The YAML parsing library in use was built in-house.",
+			"It is a safe serialization format.",
+			"It is the most important of the OWASP Top 10 items."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-5",
+		"question": "Which are types of cross-site scripting vulnerabilities?",
+		"correct_answer": "Reflected, stored, and Document Object Model (DOM)-based",
+		"incorrect_answers": [
+			"Passive and active",
+			"Direct, indirect, and blind",
+			"Same-origin and cross-origin"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-6",
+		"question": "You are an information-security team member performing a risk assessment of your company’s web application against the Open Web Application Security Project (OWASP) Top 10 list. How would you calculate risk for each?",
+		"correct_answer": "Risk = Likelihood x Business Impact",
+		"incorrect_answers": [
+			"Risk = Threat Actor Sophistication x Business Impact",
+			"Risk = Threat Actor Sophistication x Technical Impact",
+			"Risk = Likelihood x Technical Impact"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-7",
+		"question": "You are a software engineer looking to improve your organization’s security. What is a possible step you can take to ensure a secure Software Development Life Cycle?",
+		"correct_answer": "Perform an architecture risk analysis from the beginning of each project.",
+		"incorrect_answers": [
+			"Consult with users to test the application for bugs at several points in the development process.",
+			"Remove all old tests and build them again from scratch.",
+			"Perform security-related activities as part of the testing phase."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-8",
+		"question": "When would you use static analysis?",
+		"correct_answer": "After coding and before executing unit tests",
+		"incorrect_answers": [
+			"After coding and before getting user feedback reviews",
+			"Before coding and after getting user feedback reviews",
+			"Before coding and before executing unit tests"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-9",
+		"question": "How would you perform a proper password salting and hashing?",
+		"correct_answer": "<p>Append the salt to the clear text password;</p><p>Feed that into a hashing algorithm;</p><p>Store hashed value in the database.</p>",
+		"incorrect_answers": [
+			"<p>Feed the clear text password into a hashing algorithm;</p><p>Append the salt to the output;</p><p>Store hashed value in the database.</p>",
+			"<p>Feed the clear text password into a hashing algorithm;</p><p>Store hashed value in the database;</p><p>Email the secret salt value to the user.</p>",
+			"<p>Store clear text value in the database and the salt value;</p><p>Feed the clear text password into a hashing algorithm;</p><p>Append the salt to the output. </p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-10",
+		"question": "You decrypt your private Secure Shell (SSH) key before logging on to a server that uses public key authentication. Why is that not considered multi-factor authentication?",
+		"correct_answer": "Because you only need the private key file",
+		"incorrect_answers": [
+			"Because you need a password to decrypt the key, as well as the private key file",
+			"Because only private key authentication is multi-factor authentication",
+			"Because it depends on the type of password used"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-11",
+		"question": "Why would you deploy a cross-domain policy file?",
+		"correct_answer": "To allow outside applications to interact with a web service",
+		"incorrect_answers": [
+			"To post a web form to another domain",
+			"To read and set cookies for a different domain",
+			"To load content from a location internal to the current domain"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-12",
+		"question": "What are Dynamic Application Security Testing (DAST) tools?",
+		"correct_answer": "Tools that run on operating code to detect issues with interfaces, requests, responses, and scripting.",
+		"incorrect_answers": [
+			"Tools that examine software to determine the origins of all components and libraries within the software",
+			"Tools that check for updated patches and versions, weak passwords, and configuration errors for databases.",
+			"Tools that run on static or compiled source code to detect and report weaknesses."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-13",
+		"question": "What is time-of-check, time-of-use?",
+		"correct_answer": "The potential difference in state between when a resource is checked and when the results of that check are used.",
+		"incorrect_answers": [
+			"The timestamps software generates for each request and the total resource usage.",
+			"The time delta between when software checks a resource and when software processes a resource.",
+			"The time software takes to check a resource and the time it takes to process a resource."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-14",
+		"question": "What is an example of an injection vulnerability exploit?",
+		"correct_answer": "`ls -als",
+		"incorrect_answers": [
+			"AAAAAAAAAAAAAA",
+			"input=a[]",
+			"<p>GET / HTTP/1.0</p><p>Host: AAAAAAAAAAA</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-15",
+		"question": "Following the same-origin policy, any two separate JavaScript instances should only be able to access each others' Document Object Model (DOM), if what is true?",
+		"correct_answer": "The protocols, Domain Name System (DNS) names, and port numbers of their host documents match",
+		"incorrect_answers": [
+			"They are both served from the same web server",
+			"They are both served over a secure connection.",
+			"Domain Name System (DNS) names and port numbers of the web servers match"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-16",
+		"question": "Hostnames example.com and www.example.com point to the same website. http://example.com/a cannot access the Document Object Model on http://www.example.com/. How would you resolve the access issue?",
+		"correct_answer": "Ensure that both pages are served using the same hostname.",
+		"incorrect_answers": [
+			"Verify that the cookie path is set correctly.",
+			"Confirm that both pages are served using the https:// protocol.",
+			"Move both pages to the same path."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-17",
+		"question": "A developer wants to verify whether a logged-on client can request a sensitive page. Which aspect of an HTTP request can they use?",
+		"correct_answer": "Cookie",
+		"incorrect_answers": [
+			"Host",
+			"Referer",
+			"Origin"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-18",
+		"question": "A web application serializes only American Standard Code for Information Interchange (ASCII)-encoded user roles as JSON data, which is transported to and from clients. What can potentially go wrong?",
+		"correct_answer": "The logic of the application can be abused, as well as the integrity of the data.",
+		"incorrect_answers": [
+			"The data is confidential and cannot be read, even by the client.",
+			"ASCII encoded data cannot always be deserialized.",
+			"ACSII encoding is not supported by standard JSON."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-19",
+		"question": "How would you associate a document type definition with an XML document?",
+		"correct_answer": "By means of a document type declaration tag (DOCTYPE)",
+		"incorrect_answers": [
+			"By means of a document type meta tag (META)",
+			"By means of a primary document type definition tag (PDTD)",
+			"By means of a document type definition tag (DTD)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-20",
+		"question": "What is an example of a secure password reset process?",
+		"correct_answer": "Sending a one-time reset token using a different predetermined channel",
+		"incorrect_answers": [
+			"Using predetermined additional user identity questions",
+			"Instructing the user to enter an email address to send a password reset token to",
+			"Asking the user for one of their previous passwords"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-21",
+		"question": "An application uses XML documents. You want to prevent any XML External Entity from being loaded. As you are dealing with legacy code, you are given a limited set of options to change the application. What would be your first choice?",
+		"correct_answer": "Disable external document type declarations.",
+		"incorrect_answers": [
+			"Filter all input and escape all output.",
+			"Disable all outgoing traffic",
+			"Use the latest version of any XML processor."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-22",
+		"question": "What is a limitation of XML External Entity (XXE) attacks?",
+		"correct_answer": "They can only obtain files or responses that contain “valid” XML",
+		"incorrect_answers": [
+			"They can only access and manipulate files that are available publicly",
+			"They can only carry out denial-of-service (DoS) attacks",
+			"They can only obtain binary files under 10 MB in size"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-23",
+		"question": "What are valid HTTP cookie flags?",
+		"correct_answer": "HttpOnly and Secure",
+		"incorrect_answers": [
+			"Http and HttpSecure",
+			"Http and Secure",
+			"Http and SecureOnly"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-24",
+		"question": "What are the two common families of encryption systems? ",
+		"correct_answer": "Symmetric systems and asymmetric systems",
+		"incorrect_answers": [
+			"Rivest–Shamir–Adleman (RSA) systems and asymmetric systems",
+			"Elliptic-curve systems and Rivest–Shamir–Adleman (RSA) systems",
+			"Symmetric systems and Advanced Encryption Standard (AES) systems"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-25",
+		"question": "What is an easy way to mitigate security misconfiguration vulnerabilities? ",
+		"correct_answer": "Removing unnecessary features",
+		"incorrect_answers": [
+			"Showing detailed error messages",
+			"Throttling server requests",
+			"Enforcing strong passwords for users"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-26",
+		"question": "You carefully used a strong encryption algorithm and key to secure the contents of your company’s communications messages, but you are still concerned there are risks. What risks might still exist?",
+		"correct_answer": "An adversary could glean information about a message's contents leaked from its metadata.",
+		"incorrect_answers": [
+			"An attacker could intercept a message in transit and read the contents.",
+			"An adversary could rapidly brute force the encryption of your messages' contents.",
+			"An attacker could use a quantum computer to break your communications"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-27",
+		"question": "How can you implement a flow control mechanism for web forms? ",
+		"correct_answer": "Use a random value per form and store that server-side in a session.",
+		"incorrect_answers": [
+			"Use a random value chosen for each form on the site and store that in a cookie.",
+			"Use a static value and store that server-side in a session.",
+			"Add an extra submit JavaScript function."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-28",
+		"question": "A company wants to know whether it is vulnerable to unvalidated redirects and forwards. How can the company definitively determine this?",
+		"correct_answer": "By reviewing the code for all uses of redirects and forwards",
+		"incorrect_answers": [
+			"By checking the application log files",
+			"By surveying company users for any known vulnerabilities",
+			"By checking the web server log files"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-29",
+		"question": "In general, excluding scenarios involving massive key sizes, which reversible encryption method is faster?",
+		"correct_answer": "Symmetric encryption",
+		"incorrect_answers": [
+			"Quantum-safe encryption",
+			"Hashing encryption",
+			"Asymmetric encryption"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-30",
+		"question": "How can you prevent most access control vulnerabilities? ",
+		"correct_answer": "By using centralized access control checks",
+		"incorrect_answers": [
+			"By enforcing the use of Secure Sockets Layer (SSL)/Transport Layer Security (TLS)",
+			"By enforcing the use of short passwords",
+			"By setting specific HTTP security headers"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-31",
+		"question": "Why is hashing alone not sufficient for password security?  ",
+		"correct_answer": "Hashed passwords are vulnerable to rainbow table attacks.",
+		"incorrect_answers": [
+			"Hashed passwords can only be reversed if a private key is provided, which opens a security vulnerability.",
+			"Hashed passwords are only secure if several layers of hashing are used.",
+			"Hashed passwords are always reversible."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-32",
+		"question": "Your goal is to validate whether an address field excludes HTML. Which option would you select? ",
+		"correct_answer": "An allowlist with allowed alphanumeric characters and select valid special characters",
+		"incorrect_answers": [
+			"A denylist containing single and double quotes",
+			"A denylist containing all HTML tags",
+			"A denylist containing angular brackets"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-33",
+		"question": "Which is a broken access control vulnerability?",
+		"correct_answer": "Horizontal or vertical privilege escalation",
+		"incorrect_answers": [
+			"Denial of service",
+			"The ability to brute force a valid account",
+			"The lack of a rate limiter"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-34",
+		"question": "What are examples of parameters that influence risk? ",
+		"correct_answer": "The threat agent's skill level and the ease of discovery of a vulnerability",
+		"incorrect_answers": [
+			"The threat agent's specialty and the vulnerability's framework",
+			"The country of residence of the threat agent and its gross national product",
+			"The ease of exploitation of the vulnerability and the code size of the exploit"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-35",
+		"question": "Preflight requests use which HTTP method? ",
+		"correct_answer": "OPTIONS",
+		"incorrect_answers": [
+			"HEAD",
+			"GET",
+			"PROPS"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-36",
+		"question": "A company wants to ensure that any third-party supplied database that contains products, users, and documents, does not contain malicious code. Which approach should they implement?",
+		"correct_answer": "An allowlist per field type",
+		"incorrect_answers": [
+			"An allowlist per database",
+			"A denylist containing code start and end tags",
+			"A denylist containing malicious code snippets"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-37",
+		"question": "How would you describe a corrective control?",
+		"correct_answer": "A control that reacts to a breach",
+		"incorrect_answers": [
+			"A control that prevents a security incident",
+			"A control that corrects user input",
+			"A control that detects a security incident"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-38",
+		"question": "A one-time password scheme such as time-based one-time passwords (TOTP) uses a secret key, a seed. What items does a user need to log in with a multi-factor authentication?",
+		"correct_answer": "The seed (for initial setup), the account password, and the TOTP",
+		"incorrect_answers": [
+			"The seed (used for each login attempt), the account password, and the TOTP",
+			"Only the TOTP",
+			"The seed (for initial setup) and the TOTP"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-39",
+		"question": "Why would you use JSON Web Tokens?",
+		"correct_answer": "To securely transmit information between two parties as JSON",
+		"incorrect_answers": [
+			"To identify unique user sessions in server logs",
+			"To transport data securely between servers as JSON wrapped in XML",
+			"To authenticate users securely"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-40",
+		"question": "What is a cross-origin resource sharing (CORS) preflight request?",
+		"correct_answer": "A method to determine whether a request is safe to send",
+		"incorrect_answers": [
+			"A method to determine which content types are allowed",
+			"A method to determine the origin of the server",
+			"A method to determine which transport protocol to use"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-41",
+		"question": "You want to validate that a specific third party is generating incoming data. Which mechanism would you use to ensure its authenticity?",
+		"correct_answer": "A keyed-hash message authentication code",
+		"incorrect_answers": [
+			"Multi-signature encryption",
+			"A message digest",
+			"The Secure Hash Algorithm"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-42",
+		"question": "Who should perform threat modeling?",
+		"correct_answer": "A broad group of users from across the organization",
+		"incorrect_answers": [
+			"A group of customers who are familiar with the organization's application",
+			"The software developers who wrote the organization's code",
+			"An organization's IT security team"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-43",
+		"question": "Which check might be performed as a part of the validation process for uploaded files?",
+		"correct_answer": "Validating whether the upload is within a reasonable size range for its file type",
+		"incorrect_answers": [
+			"Checking if the source IP address is from the same geographic region as the server",
+			"Checking if the filename of the source file includes a valid extension",
+			"Validating whether the upload was authenticated"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-44",
+		"question": "A website serves its content over a secure connection. Users log on using the /logon/ path, after which they can access the entire site. What should you use for cookie parameters?",
+		"correct_answer": "HttpOnly; Secure; path=/",
+		"incorrect_answers": [
+			"HttpOnly; path=/logon",
+			"Secure; path=/logon/",
+			"Secure; HttpOnly; path=/logon"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-45",
+		"question": "When can JavaScript served from example.com/a access HTML served from example.com/b?",
+		"correct_answer": "When using an XMLHttpRequest (XHR) request to fetch the HTML",
+		"incorrect_answers": [
+			"Only when they are both served using the same port, but different protocols",
+			"Only when both requests are serving the same content-type",
+			"When they are both served using different ports and protocols"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-46",
+		"question": "What is character escaping?",
+		"correct_answer": "Invoking an alternative interpretation of certain characters",
+		"incorrect_answers": [
+			"Prepending all characters with a backslash",
+			"Transforming a character to its HTML representation",
+			"Transforming all HTML entities into URL encoded values"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-47",
+		"question": "A company has both a mobile phone application and a single-page web application. Both applications communicate with an API gateway, which in turn talks to several microservices. What is the best location to implement access controls?",
+		"correct_answer": "At the mobile and single-page applications, the API gateway, and the microservices",
+		"incorrect_answers": [
+			"At the API gateway",
+			"At each of the microservices",
+			"At the mobile and single-page applications"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-48",
+		"question": "You log on to globomantics.com and open a new browser window for browsing. At what point are you vulnerable to cross-site request forgery (CSRF) attacks?",
+		"correct_answer": "While you are logged onto globomantics.com",
+		"incorrect_answers": [
+			"While the globomantics.com window is open, whether logged in or not",
+			"When cookies between domains are separated using the same-origin policy",
+			"When you open a private browser window"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-49",
+		"question": "A web server receives numerous requests for a certain page resulting in service interruptions. How would you determine whether the requests are an application layer denial-of-service attack?",
+		"correct_answer": "Determine whether there is a similarity between the requests.",
+		"incorrect_answers": [
+			"Analyze the Transmission Control Protocol (TCP) handshakes.",
+			"Check that the geographical locations of the incoming requests are normal.",
+			"Check the caching functionality of that page."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-50",
+		"question": "What is cross-site scripting?",
+		"correct_answer": "Injecting HTML or JavaScript into a page",
+		"incorrect_answers": [
+			"Loading JavaScript from another site",
+			"Using JavaScript to modify the Document Object Model",
+			"Using JavaScript to fetch resources from other sites"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-51",
+		"question": "What would be the outcome of a server attempting to parse the following XML file? <div class=\"code\"><p>&lt;?xml version=\"1.0\" encoding=\"ISO-8859-1\"?&gt; </p><p>&lt;!DOCTYPE foo [</p><p>  &nbsp; &lt;!ELEMENT foo ANY&gt;</p><p>  &nbsp; &lt;!ENTITY bar \"World \"&gt;</p><p>  &nbsp; &lt;!ENTITY t1 \"&bar;&bar;\"&gt;</p><p>  &nbsp; &lt;!ENTITY t2 \"&t1;&t1;&t1;&t1;\"&gt;</p><p>  &nbsp; &lt;!ENTITY t3 \"&t2;&t2;&t2;&t2;&t2;\"&gt;</p><p>]&gt;</p><p>&lt;foo&gt;</p><p>  Hello &t3;</p><p>&lt;/foo&gt;</p></div>",
+		"correct_answer": "It would overload the memory of the XML parser with expanding XML entities. ",
+		"incorrect_answers": [
+			"It would fail to parse because it has xml version=\"1.0\" instead of the newer version \"2.0\".",
+			"It would parse correctly, rendering Hello World.",
+			"It would parse correctly, rendering <foo>Hello World</foo>."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-52",
+		"question": "Which is an account enumeration mitigation?",
+		"correct_answer": "Using the same error messages for all outcomes and throttling the number of Internet protocol suite (TCP/IP) requests",
+		"incorrect_answers": [
+			"Enforcing strong passwords and throttling the number of Internet protocol suite (TCP/IP) requests",
+			"Randomizing session identifiers and enforcing weaker passwords",
+			"Throttling the number of Internet protocol suite (TCP/IP) requests and using different error messages for all outcomes"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-53",
+		"question": "A user is authenticated before being forwarded to another part of the site, which does not successfully prevent unvalidated forwards. Why not?",
+		"correct_answer": "Because the forward itself must be validated",
+		"incorrect_answers": [
+			"Because the forward is to the same website",
+			"Because the user is authenticated",
+			"Because it depends on the permission of the role the user is assigned"
+		],
+		"source": ""
+	}
+]

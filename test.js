@@ -25,9 +25,9 @@ const MAX_QUESTIONS = urlParams.get("nbQuestions") || 10;
 const practiceMode = urlParams.get("training") || true;
 
 // URL test
-//let URL = 'http://localhost:3000/static/questions-java.json'
+let URL = getURLDocumentQuestion();
 
-let URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/questions-java.json';
+//let URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/questions-java.json';
 
 
 start();
@@ -75,6 +75,41 @@ function start() {
         .catch((err) => {
             console.error(err);
         });
+}
+
+function getURLDocumentQuestion() {
+
+    let URL;
+
+    switch (typeQuiz) {
+        case "Java":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java.json';
+            break;
+        case "JavaCleanCode":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-clean-code-practice.json';
+            break;
+        case "JavaAppSec":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-application-security.json';
+            break;
+        case "JavaWebAppSec":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-web-application-security.json';
+            break;
+        case "JavaParadigmProgamming":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-paradigm-programming.json';
+            break;
+        case "JavaTesting":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-testing.json';
+            break;
+        case "Spring":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-core.json';
+            break;
+        default:
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java.json';
+    }
+
+    return URL;
+
+
 }
 
 function initLocalStorage() {
@@ -136,7 +171,7 @@ function addEventListenerForThisAnswer(choice) {
         } else if (selectedChoice.parentElement.dataset['number']) {
             answerHTMLElement = selectedChoice.parentElement;
             currentQuestion.selectedAnswer = parseInt(selectedChoice.parentElement.dataset['number']);
-        } else{
+        } else {
             answerHTMLElement = selectedChoice.parentElement.parentElement;
             currentQuestion.selectedAnswer = parseInt(selectedChoice.parentElement.parentElement.dataset['number']);
         }
@@ -152,7 +187,7 @@ function addEventListenerForThisAnswer(choice) {
             classToApply = 'select';
         } else if (practiceMode && currentQuestion.selectedAnswer === currentQuestion.answer) {
             classToApply = 'correct';
-        }else{
+        } else {
             classToApply = 'incorrect';
         }
 

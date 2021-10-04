@@ -1,0 +1,277 @@
+[
+	{
+		"id": "spring-core-1",
+		"question": "Which term describes the technique that allows Reactive Streams to avoid overwhelming the data receiver?",
+		"correct_answer": "Back pressure",
+		"incorrect_answers": [
+			"Controlled pressure",
+			"Throttling",
+			"Push back"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-3",
+		"question": "Using JUnit 5 with Spring, consider the following: <div class=\"code\"><p>@RunWith(SpringRunner.class)</p><p>@ContextConfiguration</p><p>public class MyServiceTest {&nbsp; &nbsp; </p><p>&nbsp; @Autowired&nbsp; &nbsp; </p><p>&nbsp; private MyService myService;&nbsp; </p><p> </p><p>&nbsp; @Test </p><p>&nbsp; public void doTest() {&nbsp; &nbsp; &nbsp; &nbsp; </p><p>&nbsp; &nbsp;  ...&nbsp; &nbsp; </p><p>&nbsp; }</p><p>}</p></div> What are the possible types of tests applicable for this example?",
+		"correct_answer": "Integration test and unit test",
+		"incorrect_answers": [
+			"Service test and unit test",
+			"Integration test and functional test",
+			"Functional test and service test"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-4",
+		"question": "What mechanism can you use when you want to add Basic Authentication to all requests using RestTemplate?",
+		"correct_answer": "<div class=\"codeAnswer\">restTemplateBuilder.basicAuthentication(username, password).build();</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">template.addHeaders(HTTPHeaders.AUTHORIZATION, \"Basic\");</div>",
+			"<div class=\"codeAnswer\">restTemplateBuilder.addHeader(HTTPHeaders.AUTHORIZATION, \"Basic\");</div>",
+			"<div class=\"codeAnswer\">template.setEncoder(new BasicAuthentication(username, password));</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-5",
+		"question": "Spring Security is built to run on web-based Java Enterprise Edition (EE) projects. Which technology is it specifically built on?",
+		"correct_answer": "Servlet Filters",
+		"incorrect_answers": [
+			"Beans",
+			"DispatcherServlet",
+			"ApplicationContext"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-6",
+		"question": "When unit testing a Spring model-view-controller (MVC), which class allows you to perform requests and generate responses without a Servlet container?",
+		"correct_answer": "MockMvc",
+		"incorrect_answers": [
+			"MockWeb",
+			"MockRequest",
+			"MockWebMvc"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-7",
+		"question": "You are writing code to override the executor, which will run the methods annotated with the @Async annotation. <div class=\"code\"><p>@Configuration</p><p>public class AsyncConfiguration implements AsyncConfigurer {</p><p>&nbsp;@Override</p><p>&nbsp;public Executor getAsyncExecutor() {</p><p>&nbsp;&nbsp;return new ThreadPoolTaskExecutor();</p><p>&nbsp;}</p><p>}</p></div> While executing the code, you encounter an error. Why?",
+		"correct_answer": "<span class=\"codeAnswer\">@EnableAsync</span> is missing from the code: <div class=\"codeAnswer\"><p>@Configuration</p><p>@EnableAsync</p><p>public class AsyncConfiguration implements AsyncConfigurer {</p></div>",
+		"incorrect_answers": [
+			"<span class=\"codeAnswer\">@Async</span> is missing from the code: <div class=\"codeAnswer\"><p>@Configuration</p><p>@Async</p><p>public class AsyncConfiguration implements AsyncConfigurer {</p></div>",
+			"<span class=\"codeAnswer\">@Async</span> is missing from the code: <div class=\"codeAnswer\"><p>@Override</p><p>@Async</p><p>public Executor getAsyncExecutor() {</p></div>",
+			"You must change the interface AsyncConfigurer to AsyncConfigure."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-8",
+		"question": "What would you add to the following code so it will also configure the location of files that the test uses?<div class=\"code\"><p>@RunWith(SpringRunner.class)</p><p>@SpringBootTest(SpringBootTest.WebEnvironment.MOCK, classes=Application.class)</p><p>@AutoConfigureMockMvc</p><p>public class StudentIntegrationTest{</p><p> // ...</p><p>}</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\">@TestPropertySource(location=\"...\")</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">@Configuration(location=\"...\")</div>",
+			"<div class=\"codeAnswer\">@IntegrationTest(location=\"...\")</div>",
+			"<div class=\"codeAnswer\">@SpringTest(location=\"...\")</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-9",
+		"question": "What can you infer from the StudentRespository in the following code:<div class=\"code\"><p>@RestController</p><p>@RequestMapping(\"/student\")</p><p>public class StudentData {</p><p>&nbsp;private final StudentRespository studentRespository;</p><p>&nbsp;// constructor...</p><p>}</p></div>",
+		"correct_answer": "It is a data repository that supports non-blocking reactive streams.",
+		"incorrect_answers": [
+			"It is a class that supports blocking reactive streams.",
+			"It is a local variable that supports reactive streams.",
+			"It is a method that supports non-blocking streams."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-10",
+		"question": "Which class is most useful for testing Spring WebFlux endpoints?",
+		"correct_answer": "WebTestClient",
+		"incorrect_answers": [
+			"TestRestTemplate",
+			"RestTemplate",
+			"HttpClient"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-11",
+		"question": "Which scope creates a new instance of a bean by hiding the changes made in one instance from other requests that share the same bean?",
+		"correct_answer": "request",
+		"incorrect_answers": [
+			"session",
+			"singleton",
+			"global session"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-12",
+		"question": "You want to apply aspect oriented programming (AOP) advice only when an exception of a given type is thrown. Which annotation would you use?",
+		"correct_answer": "@AfterThrowing",
+		"incorrect_answers": [
+			"@AfterException",
+			"@AfterThrowable",
+			"@AfterReturning"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-13",
+		"question": "In a Spring Cloud application, what is the purpose of the bootstrap context?",
+		"correct_answer": "It's responsible for loading configuration from external sources",
+		"incorrect_answers": [
+			"It's responsible for loading service discovery configuration",
+			"It's responsible for initializing all dependent microservices",
+			"It's responsible for initializing beans with remote dependencies"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-14",
+		"question": "What does the @PropertySource annotation do in the following code? <div class=\"code\"><p>@Configuration</p><p>@PropertySource(\"classpath:config.properties\")</p><p>&nbsp;public class PropertiesWithJavaConfig {   </p><p>&nbsp;&nbsp;@Bean   </p><p>&nbsp;&nbsp;public static PropertySourcesPlaceholderConfigurer</p><p></p><p>&nbsp;&nbsp;propertySourcesPlaceholderConfigurer() {      </p><p>&nbsp;&nbsp;&nbsp;return new PropertySourcesPlaceholderConfigurer();   </p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"correct_answer": "Locates config.properties and makes them available to inject",
+		"incorrect_answers": [
+			"Declares config.properties and makes them available to the bean",
+			"Declares the source of properties and makes them available to inject",
+			"Configures properties and makes them available to the bean"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-15",
+		"question": "Which annotation of Spring model-view-controller (MVC) allows an application to run heavy-load jobs on a separate thread?",
+		"correct_answer": "@Async because the caller may or may not wait for the completion of the called method for execution. ",
+		"incorrect_answers": [
+			"@async because the Spring framework supports the asynchronous processing by default. ",
+			"@EnableAsync because it enables asynchronous processing with some configuration. ",
+			"@async because you can apply it to private methods for fast execution. "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-16",
+		"question": "When is the value attribute of the @RequestParam annotation optional?",
+		"correct_answer": "When the request parameter and handler method parameter names are the same",
+		"incorrect_answers": [
+			"When using a GET instead of a POST for your request",
+			"When using @RequestParam together with @RequestMapping",
+			"When using an @PathVariable"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-17",
+		"question": "A programmer uses the following code snippet in Spring security. How do they set up the authorization query? <div class=\"code\"><p>@Autowired</p><p>public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {</p><p>&nbsp;auth.jdbcAuthentication()</p><p>&nbsp;&nbsp;.dataSource(dataSource)</p><p>&nbsp;&nbsp;.usersByUsernameQuery(\"select username,email, enabled from users where username=?\")</p><p>&nbsp;&nbsp;.authoritiesByUsernameQuery(\"select username, office from employee where username=?\");</p><p>}</p></div>",
+		"correct_answer": "By using authoritiesByUsernameQuery ",
+		"incorrect_answers": [
+			"By using auth.jdbcAuthentication",
+			"By using @Autowired",
+			"By throwing an exception "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-18",
+		"question": "Which snippet of code do you use to return a single non-blocking response?",
+		"correct_answer": "<div class=\"codeAnswer\">Mono<String> string = request.bodyToMono(String.class);</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">String string = request.parseString(String.class);</div>",
+			"<div class=\"codeAnswer\">Flux<Person> people = request.bodyToFlux(Person.class);</div>",
+			"<div class=\"codeAnswer\">RestTemplate.readResponse((String) result);</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-19",
+		"question": "What is the difference between Spring aspect-oriented programming (AOP) and AspectJ AOP? ",
+		"correct_answer": "Spring only supports proxy-based AOP, whereas AspectJ supports all kinds of pointcuts. ",
+		"incorrect_answers": [
+			"You can apply Spring to any kind of bean, whereas AspectJ avoids all kinds of beans. ",
+			"Spring only supports its own annotation, whereas AspectJ supports all Spring annotations. ",
+			"Spring supports all kinds of pointcuts, whereas AspectJ only supports proxy-based AOP. "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-20",
+		"question": "Consider the following snippet of a test: <div class=\"code\"><p>@ContextConfiguration</p><p>public class PersonTests {</p><p>&nbsp;@Test</p><p>&nbsp;public void exampleTest() {</p><p>&nbsp; &nbsp; ...</p><p>&nbsp; }</p><p>}</p></div> In a Spring Boot application, which annotation can you use as an alternative to the @ContextConfiguration annotation?",
+		"correct_answer": "@SpringBootTest",
+		"incorrect_answers": [
+			"@RunWith(SpringBootTestRunner.class)",
+			"@RunWith(SpringBootTester.class)",
+			"@SpringBootTestApplication"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-21",
+		"question": "You can configure Spring Boot tests to start a web environment in four different modes, including WebEnvironment.RANDOM_PORT, WebEnvironment.DEFINED_PORT, and WebEnvironment.NONE. Which is the fourth mode?",
+		"correct_answer": "WebEnvironment.MOCK",
+		"incorrect_answers": [
+			"WebEnvironment.DEFAULT_PORT",
+			"WebEnvironment.NEXT_AVAIL_PORT",
+			"WebEnvironment.OFF"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-22",
+		"question": "The Authentication object has a method getAuthorities() that returns an array of GrantedAuthority objects. What are these authorities objects commonly called?",
+		"correct_answer": "Permissions",
+		"incorrect_answers": [
+			"Users",
+			"Authentications",
+			"AuthTokens"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-23",
+		"question": "Which annotation would you use to create type-safe configuration?",
+		"correct_answer": "@ConfigurationProperties",
+		"incorrect_answers": [
+			"@Configuration",
+			"@TypeSafeConfiguration",
+			"@SpringBootConfiguration"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-24",
+		"question": "You want to use the @Transactional annotation in your Spring Data and Java Persistence API (JPA) project. Which annotation must you add to your configuration?",
+		"correct_answer": "@EnableTransactionManagement",
+		"incorrect_answers": [
+			"@EnableTransactional",
+			"@EnableJpaTransactions",
+			"@EnableTransactions"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-25",
+		"question": "To set up an API gateway with Spring Cloud and Netflix Zuul, which annotation would you use?",
+		"correct_answer": "@EnableZuulProxy",
+		"incorrect_answers": [
+			"@EnableZuulApiGateway",
+			"@EnableApiGateway",
+			"@EnableZuulServer"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-26",
+		"question": "What are some of the different bean autowiring modes in a legacy Spring application that use the XML configuration method?",
+		"correct_answer": "byName, byType, and constructor",
+		"incorrect_answers": [
+			"Constructor, Java, and properties",
+			"@Component, @Field, and @Autowired",
+			"Field, setter, and constructor"
+		],
+		"source": ""
+	}
+]
