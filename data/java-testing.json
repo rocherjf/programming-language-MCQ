@@ -329,7 +329,7 @@
 		],
 		"source": ""
 	},
-		{
+	{
 		"id": "java-testing-36",
 		"question": "Based on the following String variable, which of these Hamcrest tests will pass? <div class=\"code\">String val = \"Hello World\";</div>",
 		"correct_answer": "<div class=\"codeAnswer\"><p>assertThat(val, </p><p>&nbsp; &nbsp;allOf(startsWith(\"Hello\"), containsString(\"World\")));</p></div>",
