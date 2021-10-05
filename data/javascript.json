@@ -1,0 +1,417 @@
+[
+	{
+		"id": "javascript-core-1",
+		"question": "Given the statement <span class=\"code\">let person = 'User1'</span>, the statement person instanceof String is false. What does this mean?",
+		"correct_answer": "User1 is a string primitive, and instanceof checks to see what constructor was used to create the item. The String object constructor must be used to create the string for that expression to be true.",
+		"incorrect_answers": [
+			"String is not a type in JavaScript; there is only the string primitive. instanceof is only used for custom types.",
+			"The return value of the constructor used when User1 is evaluated as undefined.",
+			"instanceof performs Type coercion if there is no Type specified; because person was initialized without a type, it defaults to Object."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-2",
+		"question": "What boolean is returned from the following code?<div class=\"code\">Symbol(\"foo\") !== Symbol(\"foo\")</div>",
+		"correct_answer": "true",
+		"incorrect_answers": [
+			"Truthy",
+			"Falsy",
+			"false"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-3",
+		"question": "Given a custom object defined with a constructor function, how can you use <span class=\"code\">Object.defineProperty()</span> to create a private key secret that does not show up in property enumeration (for..in, etc)?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>Object.defineProperty(this, 'secret', {</p><p>  enumerable: false,</p><p>});</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(this, 'secret', {</p><p>  public: false,</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(this, 'secret', {</p><p>  private: true,</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(this, 'secret', {</p><p>  hidden: true,</p><p>});</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-4",
+		"question": "Consider this script in the page's head tag: <div class=\"code\"><p>&lt;script&gt;   document.getElementById('theControl').addEventListener('click',</p><p>&nbsp;function (e) { console.warn('clicked'); }</p><p>);</p><p>&lt;/script&gt;</p></div> The  web page is behaving incorrectly. What is the most likely cause of the problem?",
+		"correct_answer": "The target element does not exist when this executes.",
+		"incorrect_answers": [
+			"The script tag is missing a type attribute.",
+			"The event object e is not being used.",
+			"Event listeners cannot be added before the page is done loading."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-5",
+		"question": "How can you recreate the following string with a line break into a template literal?<div class=\"code\">console.log('string text line 1 '+'\\n'+'string text line 2');</div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>console.log(`string text line 1</p><p>string text line 2`);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">console.log(`string text line 1 /n string text line 2`);</div>",
+			"<div class=\"codeAnswer\">console.log(`string text line 1 ${''} string text line 2`);</div>",
+			"<div class=\"codeAnswer\">console.log(`string text line 1 string text line 2`);</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-7",
+		"question": "Which is considered a \"truthy\" value?",
+		"correct_answer": "{}",
+		"incorrect_answers": [
+			"NaN",
+			"\"\"",
+			"0"
+		],
+		"source": "",
+		"explanation": "<p>A truthy value simply means a value that is considered true when evaluated in a boolean context (Mozilla Developer Network)</p><p>Any primitive type will evaluate to true in JavaScript, with the exception of the following 7 values, which are called falsy values:</p><p>the number 0</p><p>the BigInt 0n</p><p>the keyword null</p><p>the keyword undefined</p><p>the boolean false</p><p>the number NaN</p><p>the empty string \"\" (equivalent to `` or ‘’)</p>"
+	},
+	{
+		"id": "javascript-core-8",
+		"question": "What does the next method of an iterable object return?",
+		"correct_answer": "An object with value and done properties",
+		"incorrect_answers": [
+			"An array with two values",
+			"Itself",
+			"An object with a next method"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-9",
+		"question": "What static method defines setters, getters, and other configurations for a new or existing property on an object?",
+		"correct_answer": "Object.defineProperty()",
+		"incorrect_answers": [
+			"Object.prototype.Property()",
+			"Object[\"setProperty\"]()",
+			"Property.declare()"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-10",
+		"question": "What is returned from the Object.assign() method?",
+		"correct_answer": "The target value",
+		"incorrect_answers": [
+			"The source value",
+			"A boolean value",
+			"A string value"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-11",
+		"question": "What is a valid identifier?",
+		"correct_answer": "first$name",
+		"incorrect_answers": [
+			"first-name",
+			"first+name",
+			"2ndName"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-12",
+		"question": "You defined two promises that will each take different amounts of time to execute. You would like to see which promise will execute faster by executing console.log() on the variable result. What code option can you use to accomplish this?",
+		"correct_answer": "var result = Promise.race([promise1, promise2]);",
+		"incorrect_answers": [
+			"var result = Promise.resolve(promise1) + Promise.resolve(promise2);",
+			"var result = Promise.finally(promise1, promise2).result;",
+			"var result = Promise.result([promise1, promise2]).status;"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-13",
+		"question": "Given that the sine of 90 degrees is 1, what is the result of the following code?let foo = Math.sin(90);",
+		"correct_answer": "Not 1, because Math.sin() expects the parameter to be in radians",
+		"incorrect_answers": [
+			"A ValueError will be thrown; Math.sin() expects a second argument specifying degrees or radians",
+			"A ReferenceError will be thrown; trigonometry functions are meant to be called at a global scope:let foo = sin(90)",
+			"1"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-14",
+		"question": "What syntax is required for named imports that default imports do not use?",
+		"correct_answer": "Curly braces around the imported item(s)",
+		"incorrect_answers": [
+			"The name of the imported item",
+			"The from keyword",
+			"The name of the module"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-15",
+		"question": "You want to create a unique identifier named ident for a single object named object1. You must ensure that this identifier cannot be recreated or mutated. What code option would accomplish this?",
+		"correct_answer": "let ident = Symbol(object1)",
+		"incorrect_answers": [
+			"let ident = String(object1)",
+			"let ident = Typeof(object1)",
+			"let ident = Identifier(object1)"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-16",
+		"question": "What is the value of the variable result? <div class=\"code\"><p>const valueOne = \"2\";</p><p>const valueTwo = \"2\";</p><p>const result = valueOne / valueTwo;</p></div>",
+		"correct_answer": "1",
+		"incorrect_answers": [
+			"\"22\"",
+			"NaN",
+			"Error"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-17",
+		"question": "The following code is intended to guard against undefined being provided to the function while also allowing any string to pass through. What valid values of x would unexpectedly satisfy the conditional? <div class=\"code\"><p>function foo(x) {</p><p>&nbsp;if (x == undefined) {</p><p>&nbsp;&nbsp;console.log(\"A value must be provided for 'x'\");</p><p>&nbsp;&nbsp;return;</p><p>&nbsp;}</p><p>&nbsp;return x;</p><p>}</p></div>",
+		"correct_answer": "null",
+		"incorrect_answers": [
+			"Only Unicode strings",
+			"Empty strings",
+			"All strings"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-18",
+		"question": "You are looking for a method to change the behavior of objects and functions in your code. You implement a proxy. What is the first step you would take to do so?",
+		"correct_answer": "let proxy = new Proxy() and then add target and handler inputs",
+		"incorrect_answers": [
+			"let proxy = new Proxy() and then add target and function inputs",
+			"let proxy = create Proxy() and then add target and handler inputs ",
+			"let proxy = create Proxy() and then add handler and function inputs"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-19",
+		"question": "You frequently use third-party libraries in your JavaScript code. What is a way that an attacker could cause Prototype Pollution?",
+		"correct_answer": "The attacker could provide JSON data in the third-party code that has the __proto__ property.",
+		"incorrect_answers": [
+			"The attacker could allow for application security testing prior to code execution.",
+			"The attacker could enable a Subresource Integrity (SRI) to enter into the third-party code.",
+			"The attacker could refrain from using any merge or clone operations on JSON objects."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-20",
+		"question": "What is wrong with the following Set code snippet? <div class=\"code\"><p>let mySet = new Set();</p><p>mySet.set('23');</p></div>",
+		"correct_answer": "Sets use \"add\" to append new values.",
+		"incorrect_answers": [
+			"Sets can only be created from arrays.",
+			"The set can only take primitive values, so 23 must be cast to an integer first.",
+			"Only Maps can have values added to them."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-21",
+		"question": "What iterable method executes a callback on every item and returns undefined?",
+		"correct_answer": "<span class=\"codeAnswer\">.forEach((e) => {})</span>",
+		"incorrect_answers": [
+			"<span class=\"codeAnswer\">.filter((e) => {})</span>",
+			"<span class=\"codeAnswer\">.list((e) => {})</span>",
+			"<span class=\"codeAnswer\">.map((e) => {})</span>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-22",
+		"question": "What built-in browser object can you use to perform an AJAX request to a server?",
+		"correct_answer": "XMLHttpRequest",
+		"incorrect_answers": [
+			"AJAXRequest",
+			"HttpRequest",
+			"window.AJAX()"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-23",
+		"question": "You created a new promise function that returns a rejected status every time the promise function is executed. Given the following code, why are the statements after the reject() function not executed? <div class=\"code\"><p>let p = new Promise(function(resolve, reject) {</p><p>&nbsp;resolve(\"successful!\");</p><p>&nbsp;reject(new Error(\" This parameter is invalid\"));</p><p>&nbsp;let isError = \"1\";</p><p>});</p></div>",
+		"correct_answer": "Only one instance of resolve or reject can be called by the code. Anything after is ignored by the promise function.",
+		"incorrect_answers": [
+			"The statements after the reject function are not enumerable and cannot be executed by a promise.",
+			"The promise function cannot calculate the return values of the statements after the reject function because they are nullable.",
+			"Statements after the reject function are not referencing a promise object, so a promise cannot be executed on them."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-24",
+		"question": "What is the value of \"x\" after the following snippet executes? <div class=\"code\">var x, y = 42;</div>",
+		"correct_answer": "undefined",
+		"incorrect_answers": [
+			"SyntaxError",
+			"null",
+			"42"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-25",
+		"question": "You are using the comparison operator to compare two different primitive symbols in JavaScript called sym1 and sym2. What would be the output of the following code?<div class=\"code\">sym1 === sym2</div>",
+		"correct_answer": "A return of false because Symbols are unique identifiers",
+		"incorrect_answers": [
+			"A return of true because Symbols are not unique identifiers",
+			"A return of true because Symbols are unique identifiers",
+			"A return of false because Symbols are not unique identifiers"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-26",
+		"question": "How can you create a function that will invoke immediately?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>(function() {</p><p>&nbsp; statements</p><p>})();</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>function() {</p><p>&nbsp; statements</p><p>}();</p></div>",
+			"<div class=\"codeAnswer\"><p>function() {</p><p>&nbsp; statements</p><p>};</p></div>",
+			"<div class=\"codeAnswer\"><p>(function() {</p><p>&nbsp; statements</p><p>});</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-27",
+		"question": "You must refactor some JavaScript code that was written for ES5, as follows: <div class=\"code\"><p>var obj1 = {\"color\": \"blue\", \"model\": \"Model1\", \"make\": \"Brand1\"};</p><p>var list = [];</p><p>for(var prop in obj1) {</p><p>&nbsp;list.push(obj1[prop]);</p><p>}</p><p>console.log(list);</p></div> How can you refactor away from the for loop and use a more efficient, up-to-date method?",
+		"correct_answer": "Pass obj1 as a parameter to the Object.values() method and embed the Object.values() method inside a console.log() statement.",
+		"incorrect_answers": [
+			"Pass the two methods obj1.keys() and obj1.values() to a console.log() statement.",
+			"Embed the obj1.keys() method inside a while loop incrementing the enumerable value at the end of the loop.",
+			"Embed the obj1.keys() method inside a foreach statement."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-28",
+		"question": "What scenario would allow you to declare a new object using object literal property shorthand?",
+		"correct_answer": "Variable values are defined that match an object's property names.",
+		"incorrect_answers": [
+			"Variable values contain return data from a setter function.",
+			"Variable values contain return data from a getter function.",
+			"Variable names have been initialized to zero."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-29",
+		"question": "Which snippet will set up iterator1 for the following behavior? <div class=\"code\">console.log(iterator1.next().value); //42</div>",
+		"correct_answer": "<div class=\"code\"><p>let set1 = new Set();</p><p>set1.add(42);</p><p>const iterator1 = set1.values();</p></div>",
+		"incorrect_answers": [
+			"<div class=\"code\"><p>let set1 = new Set();</p><p>set1.add(42);</p><p>const iterator1 = set1.allKeys();</p></div>",
+			"<div class=\"code\"><p>let set1 = new Set();</p><p>set1.add(42);</p><p>const iterator1 = set1.properties();</p></div>",
+			"<div class=\"code\"><p>let set1 = new Set();</p><p>set1.add(42);</p><p>const iterator1 = set1.getValues();</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-30",
+		"question": "What is the result of this code snippet? <div class=\"code\"><p>let FIRST = 'User';</p><p>let LAST = 'One';</p><p>let FIRST&LAST = FIRST + LAST;</p><p>console.log(FIRST&LAST);</p></div>",
+		"correct_answer": "It throws a SyntaxError",
+		"incorrect_answers": [
+			"2",
+			"'User' 'One'",
+			"UserOne"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-31",
+		"question": "What primitive type is the variable result?<div class=\"code\">const result = NaN</div>",
+		"correct_answer": "Number",
+		"incorrect_answers": [
+			"Symbol",
+			"String",
+			"Boolean"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-32",
+		"question": "What parameters does the function object.defineProperty() accept?",
+		"correct_answer": "obj, prop, descriptor",
+		"incorrect_answers": [
+			"index, value",
+			"object, key",
+			"success, failure, error"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-33",
+		"question": "What will the following code snippet return?<div class=\"code\"><p>function square(n) { </p><p>&nbsp; n * n; </p><p>}</p><p>square(5);</p></div>",
+		"correct_answer": "undefined",
+		"incorrect_answers": [
+			"10",
+			"null",
+			"25"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-34",
+		"question": "What would happen if you try to create a new object from a class with multiple constructor methods?",
+		"correct_answer": "A syntax error will be thrown",
+		"incorrect_answers": [
+			"A fatal error with be thrown",
+			"A segmentation fault will occur",
+			"An infinite loop will run"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-35",
+		"question": "What is the output of iterating over the following Set?<div class=\"code\"><p>let set = new Set(\"food\");</p><p>for (let item of set) console.log(item);</p></div>",
+		"correct_answer": "<p>f</p><p>o</p><p>d</p>",
+		"incorrect_answers": [
+			"<p>f</p><p>o</p><p>o</p><p>d</p>",
+			"<p>[f, f]</p><p>[o, o]</p><p>[o, o]</p><p>[d, d]</p>",
+			"<p>[f, f]</p><p>[o, o]</p><p>[d, d]</p>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "javascript-core-36",
+		"question": "Which code snippet declares a new property called prop on obj1, defined below, that can be changed with the assignment operator?<div class=\"code\">const obj1 = {};</div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>Object.defineProperty(obj1, 'prop', {</p><p>&nbsp; writable: true,</p><p>&nbsp; configurable: true,</p><p>});</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(obj1, 'prop', {&nbsp; </p><p>&nbsp; assignment: true,</p><p>&nbsp; enumerable: false,</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(obj1, 'prop', {&nbsp; </p><p>&nbsp; enumerable: true,&nbsp; </p><p>&nbsp; configurable: true,</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(obj1, 'prop', {</p><p>&nbsp; enumerable: true,&nbsp; </p><p>&nbsp; configurable: true,&nbsp; </p><p>&nbsp; writable: false</p><p>}); </p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	}
+]

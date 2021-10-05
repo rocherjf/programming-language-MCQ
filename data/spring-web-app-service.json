@@ -1,0 +1,374 @@
+[
+	{
+		"id": "spring-web-app-service-1",
+		"question": "Here is an API :<div class=\"code\">https://www.myAPI.com/api/v1/orders/1234</div> Currently, anyone who knows the ID of the order can use this API call with HTTP GET. What security vulnerability are you potentially exposing with this approach?",
+		"correct_answer": "Insecure direct object reference (IDOR)",
+		"incorrect_answers": [
+			"Session fixation",
+			"Direct Denial of Service (DDOS)",
+			"Cross Site Scripting"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-2",
+		"question": "How do you inform Springfox of your Spring API's version in a programmatic manner?",
+		"correct_answer": "Set the version property on the ApiInfo object on the Docket.",
+		"incorrect_answers": [
+			"Set the version property on the Docket directly.",
+			"Add a Tag named path on the Docket.",
+			"Add a Tag named version on the Docket."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-4",
+		"question": "You are deploying a new version of your API after you have made some breaking changes to one version. What URL will allow you to get a specific version of an API through a request parameter?",
+		"correct_answer": "https://api.example.com/example-inventory/entity?version=1",
+		"incorrect_answers": [
+			"GET https://api.example.com/reading-inventory/quizzes",
+			"https://api.example.com/example-inventory/entity&version=1",
+			"https://api.example.com/example-inventory/v2/entity"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-5",
+		"question": "When refactoring a Spring MVC application that uses JSP, you extracted a fragment that represents the header, but you notice that this fragment is accessible outside the web application and you can construct a URL to retrieve it. How can you avoid this?",
+		"correct_answer": "Make sure that the fragment has .jspf extension and is placed under /WEB-INF/jspf.",
+		"incorrect_answers": [
+			"Make sure that the front-end web server blocks all the URLs that correspond to fragments.",
+			"Encapsulate the extracted code in a JSP page that do not include the taglib directive.",
+			"Make sure that all the fragments are located under /WEB-APP/jspf."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-6",
+		"question": "You're working on building an enterprise REST web service which will handle all the Human Resources aspects of your customer. You are now modeling the resources that will be handled by this service, and therefore their URIs as well. How will you model the resource that maps to the set of all employees, ensuring that you follow REST naming conventions?",
+		"correct_answer": "employees",
+		"incorrect_answers": [
+			"listEmployees",
+			"getEmployees",
+			"get_employees"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-7",
+		"question": "What is the main bean that you must configure when setting up Springfox for Swagger 2?",
+		"correct_answer": "Docket",
+		"incorrect_answers": [
+			"Socket",
+			"DocumentationType",
+			"EnableSwagger2"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-10",
+		"question": "Where are the routes defined in Spring MVC compared to other popular web frameworks?",
+		"correct_answer": "They are dispersed throughout the whole application.",
+		"incorrect_answers": [
+			"They are defined as constants in a config class.",
+			"They are fetched from a table in the database.",
+			"They are externalized in a single configuration file."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-11",
+		"question": "Which view resolver should always be positioned as the last resolver in the chain in a Spring MVC application?",
+		"correct_answer": "org.springframework.web.servlet.view.InternalResourceViewResolver",
+		"incorrect_answers": [
+			"org.springframework.web.servlet.view.BeanNameViewResolver",
+			"org.springframework.web.servlet.view.ContentNegotiatingViewResolver",
+			"org.springframework.web.servlet.view.XmlViewResolver "
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-14",
+		"question": "What Spring annotation will help you maintain state for user sessions?",
+		"correct_answer": "@SessionAttributes",
+		"incorrect_answers": [
+			"@UserSessionDetails",
+			"@SessionState",
+			"@UserSessionStore"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-15",
+		"question": "Your Spring MVC application needs an additional CSS file. You have put the resource under webapp/resources and created a Spring mvc:resources mapping, but when you run the project, the CSS is still not loading. What is wrong?",
+		"correct_answer": "The CSS is not included in the JSP page.",
+		"incorrect_answers": [
+			"The CSS code contains an error.",
+			"The spring-web-config.xml contains a syntax error.",
+			"The static resources should be in the WEB-INF folder."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-16",
+		"question": "You are building an API for a restaurant company. There is a possibility for a lot of different types of exceptions to be thrown which you do not have specific exception handlers for. What can you do to handle all the exceptions thrown by application?",
+		"correct_answer": "Use the <span class=\"codeAnswer\">@ControllerAdvice</span> annotation on a class to define your global exception handler.",
+		"incorrect_answers": [
+			"Use the <span class=\"codeAnswer\">@ExceptionHandler</span> annotation to define your global exception handler for all controllers",
+			"Create a class with <span class=\"codeAnswer\">public static void main(String[] args)</span> entry point to catch all exceptions.",
+			"Use the <span class=\"codeAnswer\">@Global</span> annotation to define your global exception handler for all controllers."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-17",
+		"question": "How can you avoid double submission of the same form in Spring MVC?",
+		"correct_answer": "By using the RedirectView to implement the Post-Redirect-Get (PRG) pattern",
+		"incorrect_answers": [
+			"By ensuring that the user does not press the browser’s refresh button",
+			"By using a Synchronizer Token to perform validation on both the server and the client",
+			"By ensuring that the user does not press the browser’s back button"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-19",
+		"question": "Which of the HTTP methods is idempotent?",
+		"correct_answer": "PUT",
+		"incorrect_answers": [
+			"CONNECT",
+			"PLACE",
+			"POST"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-20",
+		"question": "What is the purpose of versioning APIs?",
+		"correct_answer": "It allows you to iterate faster when required changes are identified for multiple client integrations.",
+		"incorrect_answers": [
+			"It ensures the technical quality of your API when you have multiple client integrations.",
+			"It ensures users have the proper instructions to update APIs.",
+			"It allows your API to be independent of any single communication protocol."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-21",
+		"question": "What is the standard procedure by which you would vary the value of the database connection URL on a per-environment basis using functionality offered by Spring?",
+		"correct_answer": "Define a database connection URL per profile and activate the profile that is suitable for the environment you're running in.",
+		"incorrect_answers": [
+			"Define a single database connection URL and edit it at application startup based on the environment you're in, before using it",
+			"Define all database connection URLs in each profile and activate the profile that is suitable for the environment you're running in.",
+			"Define a database connection URL per profile, load all of them at application startup, regardless of the environment you're in, and try them out sequentially until you find the one that works."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-22",
+		"question": "When sending a request to http://yoursite.com/test.jsp you are able to see the contents of the JSP of your Spring MVC application, which poses a security threat. How can you fix this?",
+		"correct_answer": "Move test.jsp file under the WEB-INF/ folder.",
+		"incorrect_answers": [
+			"Restrict all the requests to .jsp files from the security config.",
+			"Move test.jsp file under webapp/ folder.",
+			"Obfuscate the content of the test.jsp file."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-23",
+		"question": "You are creating a website using the Spring framework and want to create a way to access the about page. How can you ensure your main controller links to the /about webpage?",
+		"correct_answer": "Place @GetMapping (\"/about\") above a method in the controller class. ",
+		"incorrect_answers": [
+			"Place @RequestMapping (\"/about\") above the controller class. ",
+			"Place @PathMapping (\"/about\") above a method in the controller class. ",
+			"Place @UrlMapping(\"/about\") above a method in the controller class."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-24",
+		"question": "You issue the same request twice in a row on a RESTful web service:<div class=\"code\">PUT http://localhost:8888/api/v1/object/33</div>Assume that the RESTful web service is up, that the body of the PUT request is valid, and that no resource representation exists at that URL at the time of running these requests. What do you expect to happen on the server?",
+		"correct_answer": "<p>The first request returns an HTTP code 201 and succeeds in creating the representation for the resource.</p><p>The second request returns an HTTP code of either 200 or 204 and succeeds in updating the representation for the resource to an identical representation.</p>",
+		"incorrect_answers": [
+			"<p>The first request returns an HTTP code 200 and succeeds in creating the representation for the resource.</p><p>The second request returns an HTTP code 200 and succeeds in creating another, separate representation for the resource, of identical value.</p>",
+			"<p>The first request returns an HTTP code 201 and succeeds in creating the representation for the resource.</p><p>The second request returns an HTTP code 201 and succeeds in creating another, separate representation for the resource, of identical value.</p>",
+			"<p>The first request returns an HTTP code 201 and succeeds in creating the representation for the resource.</p><p>The second request returns an HTTP code of 201 and succeeds in updating the representation for the resource to an identical representation.</p>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-25",
+		"question": "You have two versions of an API. One class is APIVersionOne.java and APIVersionTwo.java. You want to use a request parameter to differentiate these versions. What code can you use to call version 1 of the API?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>@GetMapping(value = \"/api\", params = \"version=1\")</p><p>public ApiVersionOne paramV1() {</p><p>&nbsp; return new ApiVersionOne(\"String\");</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>@RequestParameter(value = \"/api\", params = \"version=1\")</p><p>public ApiVersionOne paramV1() {</p><p>&nbsp; return new ApiVersionOne(\"String\");</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>@GetMapping(parameter = \"/api\", requestParams = \"version=1\")</p><p>public SyntaxV1 ApiVersionOne() {</p><p>&nbsp; return new ApiVersionOne(\"String\");</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>@RequestParameter(parameter = \"/api\", request = \"version=1\")</p><p>public ApiVersionOne paramV1() {</p><p>&nbsp; return new ApiVersionOne(\"String\");</p><p>} </p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-26",
+		"question": "What pattern does the DispatcherServlet from Spring MVC framework implement?",
+		"correct_answer": "Front Controller Pattern",
+		"incorrect_answers": [
+			"Model View Controller Pattern",
+			"Application Controller Pattern",
+			"Page Controller Pattern"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-27",
+		"question": "What type of ViewResolver would you use for rendering JSP files in Spring MVC?",
+		"correct_answer": "InternalResourceViewResolver ",
+		"incorrect_answers": [
+			"FreeMarkerViewResolver ",
+			"JadeViewResolver ",
+			"SpringResourceTemplateResolver"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-28",
+		"question": "What can you use from Thymeleaf to create a common layout that can be reused in your Spring MVC application?",
+		"correct_answer": "Fragments",
+		"incorrect_answers": [
+			"Layouts",
+			"Chunks",
+			"Macros"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-29",
+		"question": "What is a disadvantage of having model classes that are also entity classes in a Spring MVC application",
+		"correct_answer": "The MVC layer of the application has to deal with transactions.",
+		"incorrect_answers": [
+			"The same class will be changed multiple times.",
+			"The annotations will be persisted in the database.",
+			"The Object Relational Mapping ORM layer of the application has to deal with transactions."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-33",
+		"question": "The attributes of what Swagger annotation are used to configure custom descriptions on parameters of Spring controller methods?",
+		"correct_answer": "@ApiParam ",
+		"incorrect_answers": [
+			"@SwaggerParam",
+			"@RequestParam",
+			"@ApiModelProperty"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-34",
+		"question": "What is the delegate implementation of the ThemeSource that loads properties file from the root of the classpath in Spring MVC?",
+		"correct_answer": "org.springframework.ui.context.support.ResourceBundleThemeSource",
+		"incorrect_answers": [
+			"org.springframework.ui.context.support.DelegatingThemeSource",
+			"org.springframework.web.servlet.theme.ThemeChangeInterceptor",
+			"org.springframework.web.servlet.theme.AbstractThemeResolver"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-35",
+		"question": "What Spring MVC annotation can you use on a handler method that checks if the server is up and allowing requests?",
+		"correct_answer": "<div class=\"codeAnswer\">@RequestMapping(value=\"/check\", method=RequestMethod.OPTIONS)</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">@RequestMapping(value=\"/check\", method=RequestMethod.PATCH)</div>",
+			"<div class=\"codeAnswer\">@RequestMapping(value=\"/check\", method=RequestMethod.PUT)</div>",
+			"<div class=\"codeAnswer\">@RequestMapping(value=\"/check\", method=RequestMethod.TRACE)</div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-36",
+		"question": "What library can you use to reduce redundant code in your Spring MVC application by creating reusable template-based layouts?",
+		"correct_answer": "Apache Tiles",
+		"incorrect_answers": [
+			"Apache Freemarker",
+			"Apache Velocity",
+			"Apache Tapestry"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-38",
+		"question": "In which folder do you need to place your additional CSS files in a Spring MVC application that uses Thymeleaf as a template engine?",
+		"correct_answer": "static",
+		"incorrect_answers": [
+			"css",
+			"resources",
+			"templates"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-39",
+		"question": "What procedure is followed when you version your API through a custom HTTP header?",
+		"correct_answer": "A new header is defined that has the version number in the request. ",
+		"incorrect_answers": [
+			"The version number is included in the \"Accept\" header. ",
+			"The version number in the URL path of the endpoint is included. ",
+			"The version number is passed as a query parameter. "
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-40",
+		"question": "What exception does Spring throw if no view is returned by any view resolver in the chain?",
+		"correct_answer": "ServletException",
+		"incorrect_answers": [
+			"ServerWebInputException",
+			"RuntimeException",
+			"ModelAndViewDefiningException"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-42",
+		"question": "Which of the following examples of HTTP verbs lacks the idempotence property?",
+		"correct_answer": "POST",
+		"incorrect_answers": [
+			"OPTIONS",
+			"PUT",
+			"GET"
+		],
+		"source": "",
+		"explanation": ""
+	}
+]

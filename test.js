@@ -25,9 +25,9 @@ const MAX_QUESTIONS = urlParams.get("nbQuestions") || 10;
 const practiceMode = urlParams.get("training") || true;
 
 // URL test
-let URL = getURLDocumentQuestion();
+//let URL = "http://localhost:3000/static/questions-java.json"
 
-//let URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/questions-java.json';
+let URL = getURLDocumentQuestion();
 
 
 start();
@@ -102,6 +102,12 @@ function getURLDocumentQuestion() {
             break;
         case "Spring":
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-core.json';
+            break;
+        case "Javascript":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/javascript.json';
+            break;
+        case "SpringWebAppService":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-web-app-service.json';
             break;
         default:
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java.json';
