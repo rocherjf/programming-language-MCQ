@@ -1,0 +1,482 @@
+[
+	{
+		"id": "spring-security-1",
+		"question": "What is the advantage of using @PreAuthorize annotation instead of @Secured when implementing Spring Security on your Spring Data Rest API?",
+		"correct_answer": "@PreAuthorize supports Spring Expression Language (SpEL) and provides expression-based access control.",
+		"incorrect_answers": [
+			"@PreAuthorize supports multiple roles, @Secured can only define one role.",
+			"@PreAuthorize can be put at class level, @Secured can only be put at method level.",
+			"@PreAuthorize is built-in and doesn't need to be enabled with @EnableGlobalMethodSecurity."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-2",
+		"question": "When securing an API using Spring Security, you often use BCrypt to encode the password. However, the BCrypt hashing algorithm is really slow. Why does this happen?",
+		"correct_answer": "To avoid Brute Force Attacks.",
+		"incorrect_answers": [
+			"The algorithm was not optimized for modern computing power.",
+			"Because BCrypt generates a salt before hashing the password.",
+			"The cypher is very complex so the generation slows down the algorithm."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-3",
+		"question": "You have secured your application with Spring Security Framework, however, when deployed in production, the requests are not redirected to HTTPS. How would you implement the following configure method in order to keep developing on http and only redirecting to https in production? <div class=\"code\"><p>@Override</p><p>protected void configure(HttpSecurity http) throws Exception {} </p></div>",
+		"correct_answer": "<div class=\"codeAnswer\">http.requiresChannel().requestMatchers(r -> r.getHeader(\"x-forwarded-proto\") != null).requireSecure();</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">http.headers().httpStrictTransportSecurity().requireSecure();</div>",
+			"<div class=\"codeAnswer\">http.headers().httpStrictTransportSecurity().disable();</div>",
+			"<div class=\"codeAnswer\">http.requiresChannel().requireSecure();</div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-4",
+		"question": "You are investigating a data leak in your company's address book Spring application. The controller method below is responsible for returning the list of Contacts that are within a team. However not all users of the application should be able to see all Contacts nor should they be able to see all Teams. <div class=\"code\"><p>@PreAuthorize(\"hasRole('ROLE_USER')\")</p><p>@PostFilter(\"hasPermission(#team, 'read')\")</p><p>public List<Contact> getContactsInTeam(Team team) {</p><p>&nbsp;return this.db.getContacts(team);</p><p>}</p></div>The application's Spring Access Control List (ACL) system defines the permissions read and write which can be granted to specific users against specific objects.How can the annotations be changed to resolve these issues?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>@PreAuthorize(\"hasRole('ROLE_USER') and hasPermission(#team, 'read')\")</p><p>@PostFilter(\"hasPermission(filterObject, 'read')\")</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>@PreAuthorize(\"hasPermission(#team, 'read')\")</p><p>@PreFilter(\"hasPermission(#return, 'read')\")</p></div>",
+			"<div class=\"codeAnswer\"><p>@PreAuthorize(\"hasRole('ROLE_USER') and hasPermission(#team, 'read')\")</p><p>@PreFilter(\"hasPermission(#return, 'read')\")</p></div>",
+			"<div class=\"codeAnswer\"><p>@PreAuthorize(\"hasPermission(#team, 'read')\")</p><p>@PostFilter(\"hasPermission(#contact, 'read')\")</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-5",
+		"question": "How can you prevent Log Injection?",
+		"correct_answer": "Filter the user input used to prevent injection of Carriage Return (CR) or Line Feed (LF) characters.",
+		"incorrect_answers": [
+			"Use Normalization to ensure canonical encoding is used across all the text and no invalid characters are present.",
+			"Use XPath Variable Resolver in order to prevent injection.",
+			"Don't use string concatenation to build API call expression, but use the API to create the expression."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-6",
+		"question": "When securing a traditional web application, Spring Security implements AuthenticationSuccessHandler to redirect the user to redirectUrl. How would you implement the AuthenticationSuccessHandler for a Spring Data Rest API?",
+		"correct_answer": "Return the status code 200 (OK), along with the authenticated user details as the response body.",
+		"incorrect_answers": [
+			"Redirect to the same endpoint with the status code 301 (MOVED PERMANENTLY).",
+			"Implement onAuthenticationSuccess() method to only log a success message.",
+			"Return the status code 201 (CREATED)."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-7",
+		"question": "You are debugging an application with Spring Security and Cross Site Request Forgery (CSRF) protection is enabled. You notice that for every request, the _csrf token has the same value \"1234\". Why is this happening?",
+		"correct_answer": "The generateToken method from CsrfTokenRepository class is overridden to return a token with a static value.",
+		"incorrect_answers": [
+			"An attacker redirected you to a clone of your website that is unable to generate the _csrf token correctly.",
+			"An on-path attack occurred and the attacker is sending a static token with every response.",
+			"The configure method from CsrfConfigurer class is overridden to return a token with a static value."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-8",
+		"question": "How does the StandardPasswordEncoder Spring password encoder process passwords?",
+		"correct_answer": "SHA-256 hashing with an 8 byte salt.",
+		"incorrect_answers": [
+			"By passing the password in plain text.",
+			"By encoding the password with Base64.",
+			"SHA-1 hashing with a 16 byte salt."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-9",
+		"question": "You are improving the following secured controller method using Spring Security to ensure that it cannot be invoked by a user who authenticated via a remember me token.<div class=\"code\"><p>@PreAuthorize(\"hasRole('account_manager')\")</p><p>public void refundOrder(String orderId);</p></div>How can this be achieved?",
+		"correct_answer": "By changing the authorization SpEL expression to: hasRole('account_manager') and ! isRememberMe().",
+		"incorrect_answers": [
+			"By adding the annotation: @RememberMe(false).",
+			"By changing the authorization SpEL expression to: hasRole('account_manager') and denyRememberMe().",
+			"By disabling remember me authentication for the application."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-10",
+		"question": "In a Spring controller, how can you get the current UserDetails object?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>public String currentUserName(Authentication authentication) {</p><p>&nbsp; UserDetails userDetails = (UserDetails) authentication.getPrincipal();</p><p>&nbsp; ...</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>public String currentUserName(Principal principal) {</p><p>&nbsp; UserDetails userDetails = (UserDetails) principal;</p><p>&nbsp; ...</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public String currentUserName(@AuthenticatedUser UserDetails userDetails) {</p><p>&nbsp; ...</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public String currentUserName(@AuthenticatedPrincipal UserDetails userDetails) {</p><p>&nbsp; ...</p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-11",
+		"question": "You are adding security to a contact management application. The following service method should only be callable by the current authenticated principal:<div class=\"code\">public List<Contact> listAssociatedContacts(Contact contact);</div>How would you go about securing this with Spring Security?",
+		"correct_answer": "Annotating the method with: <span class=\"codeAnswer\">@PreAuthorize(\"#contact.id == authentication.id\")</span>",
+		"incorrect_answers": [
+			"Adding the following to the method: <span class=\"codeAnswer\">Spring.require(contact, \"#contact.id == authentication.id\")</span>",
+			"Annotating the method with: <span class=\"codeAnswer\">@Secured(\"contact.id == authentication.id\")</span>",
+			"Adding the following to the method: <div class=\"codeAnswer\">Spring.authorize(contact.getId().equals(SecurityContext.get().authentication().getId()))</div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-12",
+		"question": "How does Spring Security relate the current authentication state to the thread processing the request?",
+		"correct_answer": "The SecurityContext is stored in a ThreadLocal.",
+		"incorrect_answers": [
+			"The SecurityContext is stored globally correlated to the request id.",
+			"The Authentication is stored globally correlated to the request id.",
+			"The Authentication is stored in a ThreadLocal."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-13",
+		"question": "How can a Spring application mitigate online brute force password attacks?",
+		"correct_answer": "By rate limiting authentication attempts",
+		"incorrect_answers": [
+			"By encrypting stored passwords",
+			"By enabling CORS",
+			"By using CSRF tokens"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-14",
+		"question": "You are tasked with added support to lock accounts automatically for 15 minutes after 5 failed login attempts. How can you implement this in a Spring application?",
+		"correct_answer": "Implement the <span class=\"codeAnswer\">isAccountNonLocked()</span> method of UserDetails to check whether the account is locked or not. Add an event listener for <span class=\"codeAnswer\">AuthenticationFailureBadCredentialsEvent</span> to update the account lock state.",
+		"incorrect_answers": [
+			"Implement a custom <span class=\"codeAnswer\">AuthenticationProvider</span> which will check and update the <span class=\"codeAnswer\">isAccountNonLocked</span> property of UserDetails.",
+			"Implement custom <span class=\"codeAnswer\">UserDetailsService</span> which will update and return the user account lock.",
+			"Implement the <span class=\"codeAnswer\">isAccountNonLocked()</span> method of <span class=\"codeAnswer\">UserDetails</span> to check whether the account is locked or not. Implement <span class=\"codeAnswer\">lockAccount(UserDetails)</span> in a custom <span class=\"codeAnswer\">UserDetailsService</span> to update the account lock state."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-15",
+		"question": "Which is a two factor authentication method that you can use with Spring Security?",
+		"correct_answer": "TOTP",
+		"incorrect_answers": [
+			"HOP",
+			"SHA1",
+			"JWT"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-16",
+		"question": "What is the name of the header that Spring Security Framework will add by default to instruct browsers to automatically use HTTPS for future requests?",
+		"correct_answer": "Strict-Transport-Security",
+		"incorrect_answers": [
+			"Pragma",
+			"X-Frame-Options",
+			"X-XSS-Protection"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-17",
+		"question": "When defining a Spring PasswordEncoder implementation which methods are required?",
+		"correct_answer": "encode and matches",
+		"incorrect_answers": [
+			"encode and decode",
+			"hash and check",
+			"getMessageDigest and getSalt"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-18",
+		"question": "Your Spring application contains an API key encrypted in the application.properties. At startup, the application throws the following exception: <span class=\"code\">java.lang.IllegalStateException: Cannot decrypt: key=encrypted.property</span>. What might be the cause?",
+		"correct_answer": "Spring cannot decrypt the property, because the decryption key is missing.",
+		"incorrect_answers": [
+			"Spring tries to read the property as clear text.",
+			"Spring tries to decrypt the property with a different algorithm than the one used on encryption.",
+			"Spring cannot decrypt the key because the decryption key has expired."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-19",
+		"question": "How can you ensure the controller method Profile <span class=\"code\">getProfileByName(String name)</span> can only be invoked with the current authenticated user's name with Spring Security?",
+		"correct_answer": "<div class=\"codeAnswer\">@PreAuthorize(\"#name == authentication.name\")</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">@Authorize(\"#name == current_user.name\")</div>",
+			"<div class=\"codeAnswer\">@Secured(\"#name == authentication.name\")</div>",
+			"<div class=\"codeAnswer\">@PreAuthorize(\"#name == current_user.name\")</div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-20",
+		"question": "Using Spring security annotations, how can you restrict a controller method to only be accessible to authenticated users with the role ADMIN?",
+		"correct_answer": "<div class=\"codeAnswer\">@PreAuthorize(\"hasRole('ROLE_ADMIN')\")</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">@PreAuthorize(\"hasPermission('ROLE_ADMIN')\")</div>",
+			"<div class=\"codeAnswer\">@Require(\"hasPermission('ROLE_ADMIN')\")</div>",
+			"<div class=\"codeAnswer\">@Authorize(\"hasRole('ROLE_ADMIN')\")</div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-21",
+		"question": "Using Spring Security, how can you restrict access to URLs starting with /api/ to fully authenticated users, and allow only users with the role ROLE_ADMIN to access URLs starting with /api/admin/?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>protected void configure(HttpSecurity http) throws Exception {</p><p>&nbsp; http.authorizeRequests()</p><p>&nbsp;&nbsp;.antMatchers(\"/api/**\").fullyAuthenticated()</p><p>&nbsp;&nbsp;.antMatchers(\"/api/admin/**\").hasRole(\"ADMIN\");</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>protected void configure(HttpSecurity http) throws Exception {</p><p>&nbsp; http.authorizeRequests()</p><p>&nbsp;&nbsp;.antMatchers(\"/api/.*\").fullyAuthenticated()</p><p>&nbsp;&nbsp;.antMatchers(\"/api/admin/.*\").hasRole(\"API_USER\");</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>protected void configure(HttpSecurity http) throws Exception {</p><p>&nbsp; http.authorizeRequests()</p><p>&nbsp;&nbsp;.fullyAuthenticated().antMatchers(\"/api/.*\")</p><p>&nbsp;&nbsp;.antMatchers(\"/api/admin/.*\").hasRole(\"ROLE_ADMIN\");</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>protected void configure(HttpSecurity http) throws Exception {</p><p>&nbsp; http.authorizeRequests()</p><p>&nbsp;&nbsp;.fullyAuthenticated().antMatchers(\"/api/**\")</p><p>&nbsp;&nbsp;.hasRole(\"API_USER\").antMatchers(\"/api/admin/**\");</p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-22",
+		"question": "What would you annotate a controller to allow only your company's website (my-corp.com) to access your team's Spring Data REST API which is hosted at api.my-corp.com?",
+		"correct_answer": "<span class=\"codeAnswer\">@CrossOrigin(origins = \"my-corp.com\")</span>",
+		"incorrect_answers": [
+			"<span class=\"codeAnswer\">@AllowOrigin(origins = \"*\")</span>",
+			"<span class=\"codeAnswer\">@CrossOrigin(origins = \"*\")</span>",
+			"<span class=\"codeAnswer\">@AllowOrigin(origins = \"my-corp.com\")</span>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-23",
+		"question": "How can a Spring application use a relational database for user authentication?",
+		"correct_answer": "Using the built in JDBC authentication configured via AuthenticationManagerBuilder or with a custom UserDetailsService",
+		"incorrect_answers": [
+			"Only via the built in JDBC authentication configured via AuthenticationManagerBuilder",
+			"Using the built in JDBC authentication configured via AuthenticationManagerBuilder or with a custom JDBCAuthenticationService",
+			"Only with a custom UserDetailsService"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-24",
+		"question": "Your application integrates with a third party system at the database level. You must ensure that fine grained access controls are implemented and follow the access controls stored by the third party application. The following table is in the database capturing access controls: <div class=\"code\"><p>CREATE TABLE grants (</p><p>&nbsp; USER_ID BIGINT,</p><p>&nbsp; OBJECT_ID BIGINT,</p><p>&nbsp; PERMISSIONS CHAR[],</p><p>&nbsp; PRIMARY KEY (USER_ID, OBJECT_ID)</p><p>)</p></div> How would you go about solving this?",
+		"correct_answer": "Make use of the hasPermission SpEL function and implement a custom PermissionEvaluator.",
+		"incorrect_answers": [
+			"Create a custom HTTP filter to apply the access controls for each request.",
+			"Make use of the hasAuthority SpEL function and implement a custom UserDetailsService.",
+			"Create a custom PointCut which can filter all repository level methods using the access control data."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-25",
+		"question": "What can be optionally configured on the BCryptPasswordEncoder to improve resistance to brute force attacks?",
+		"correct_answer": "The strength of the BCrypt hash.",
+		"incorrect_answers": [
+			"The length of the BCrypt salt.",
+			"The maximum password length.",
+			"The hash truncation length."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-26",
+		"question": "You want to get the authorities of an authenticated user in a Spring controller. The user is passed using the API of the Authentication class. You notice that you are unable to call the getAuthorities() method because the Spring Security principal is retrieved as an Object type. What can you do to get the authorities of this authenticated user?",
+		"correct_answer": "Cast the principal to a UserDetails instance and call the <span class=\"codeAnswer\">getAuthorities()</span> method.",
+		"incorrect_answers": [
+			"Call the <span class=\"codeAnswer\">getUserPrincipal()</span> method on the authentication object, then call the <span class=\"codeAnswer\">getAuthorities()</span> method.",
+			"Cast the principal to a Spring Security User instance and call the <span class=\"codeAnswer\">getAuthorities()</span> method.",
+			"Call the <span class=\"codeAnswer\">getAuthenticatedUser()</span> method on the principal before calling the <span class=\"codeAnswer\">getAuthorities()</span> method."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-27",
+		"question": "You are defining a custom user model object using the DaoAuthenticationProvider. What interface does this model object need to implement?",
+		"correct_answer": "UserDetails",
+		"incorrect_answers": [
+			"Principal",
+			"Authentication",
+			"User"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-28",
+		"question": "Which browser security headers included with Spring Security Framework reduce the possibility of on-path attacks?",
+		"correct_answer": "HTTP Strict Transport Security (HSTS)",
+		"incorrect_answers": [
+			"X-XSS-Protection",
+			"Content-Type-Options",
+			"X-Frame-Options"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-29",
+		"question": "How does Spring Security relate the current authentication state to the thread processing the request?",
+		"correct_answer": "The SecurityContext is stored in a ThreadLocal.",
+		"incorrect_answers": [
+			"The Authentication is stored globally correlated to the request id.",
+			"The Authentication is stored in a ThreadLocal.",
+			"The SecurityContext is stored globally correlated to the request id."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-30",
+		"question": "What Spring Security annotation can you use to filter the results of a method?",
+		"correct_answer": "<div class=\"codeAnswer\">@PostFilter</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">@FilterRequire</div>",
+			"<div class=\"codeAnswer\">@FilterSecured</div>",
+			"<div class=\"codeAnswer\">@PostAuthorize</div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-31",
+		"question": "What do you need to do in order to load the role of an authenticated user from an OAuth identity store in your controller, given the roles are present in the token?",
+		"correct_answer": "Add <span class=\"codeAnswer\">@AuthenticationPrincipal</span> Jwt jwt as parameter to your controller method and get the roles from the claims.",
+		"incorrect_answers": [
+			"Query the identity store with the user id from your controller and retrieve the roles.",
+			"Persist the roles for each user id in the application and get the role based on the authenticated user id.",
+			"Add <span class=\"codeAnswer\">@PathVariable</span> User user to your controller method and get the role from the User's attributes."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-32",
+		"question": "In a Spring controller how can you get the current UserDetails object?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>public String currentUserName(Authentication authentication) {</p><p>&nbsp; UserDetails userDetails = (UserDetails) authentication.getPrincipal();</p><p>&nbsp; ...</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>public String currentUserName(@AuthenticatedUser UserDetails userDetails) {</p><p>&nbsp; ...</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public String currentUserName(Principal principal) {</p><p>&nbsp; UserDetails userDetails = (UserDetails) principal;</p><p>&nbsp; ...</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public String currentUserName(@AuthenticatedPrincipal UserDetails userDetails) {</p><p>&nbsp; ...</p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-33",
+		"question": "After adding Spring Security dependency to the classpath, the access to any URL other than the login form is restricted. What does Spring Security use to add mandatory authentication?",
+		"correct_answer": "Filters",
+		"incorrect_answers": [
+			"Aspects",
+			"Interceptors",
+			"Servlets"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-34",
+		"question": "You are made aware that users who have two factor authentication enabled to access your web application can not login, but users without two factor authentication can login without issue. The application makes use of Time-base One-time Passwords (TOTP) as the second authentication factor. What is the most likely reason for the issue?",
+		"correct_answer": "The server clock is not synchronized to UTC.",
+		"incorrect_answers": [
+			"The TOTP server primary key has expired.",
+			"The Google Authenticator platform is having an outage.",
+			"The TOTP secret is invalid."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-36",
+		"question": "Given the controller method:<div class=\"code\">public List<Contact> getTeamMembers(Team team);</div>How can you verify that the currently authenticated user has the permission get_team_members on the team object?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>@PreAuthorize(\"hasPermission(#team, 'get_team_members')\")</p><p>&nbsp; public List<Contact> getTeamMembers(Team team) {</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>public List<Contact> getTeamMembers(Team team) {</p><p>&nbsp; this.getPermissionEvalutator().hasPermission(team, \"get_team_members\");</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>@PreAuthorize(\"hasAuthority(#team, 'get_team_members')\")</p><p>&nbsp; public List<Contact> getTeamMembers(Team team) {</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public List<Contact> getTeamMembers(Team team) {</p><p>&nbsp; this.getPermissionEvalutator().hasAuthority(team, \"get_team_members\");</p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-37",
+		"question": "What would you write in the following Spring Security configure method to instruct the browser to treat the domain as an HSTS host for a year?<div class=\"code\"><p>@Override</p><p>protected void configure(HttpSecurity http) throws Exception {}</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\">http.headers().httpStrictTransportSecurity().maxAgeSeconds(31536000); </div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">new HeadersConfigurer.HstsConfig().maxAge(31536000);</div>",
+			"<div class=\"codeAnswer\">new HeadersConfigurer.HstsConfig().maxAgeInSeconds(31536000);</div>",
+			"<div class=\"codeAnswer\">http.headers().httpStrictTransportSecurity().keep(31536000);</div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-38",
+		"question": "You want to collect data for registration after the user is authenticated with OAuth. How can you determine which OAuth provider has been used to log in?",
+		"correct_answer": "Call <span class=\"codeAnswer\">getAuthorizedClientRegistrationId()</span> method from <span class=\"codeAnswer\">OAuth2AuthenticationToken</span>",
+		"incorrect_answers": [
+			"Call <span class=\"codeAnswer\">values()</span> method from <span class=\"codeAnswer\">CommonOAuth2Provider</span>",
+			"Call <span class=\"codeAnswer\">getBuilder()</span> method from <span class=\"codeAnswer\">CommonOAuth2Provider</span>",
+			"Call <span class=\"codeAnswer\">getPrincipal()</span> method from <span class=\"codeAnswer\">OAuth2AuthenticationToken</span>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-39",
+		"question": "The following configuration is supposed to authorize requests only from authenticated users, however, when trying to access the default login form, a 403 Forbidden error is thrown.<div class=\"code\">http.authorizeRequests().anyRequest().authenticated();</div>What is it missing from the configuration?",
+		"correct_answer": "<span class=\"codeAnswer\">.and().formLogin();</span>",
+		"incorrect_answers": [
+			"<span class=\"codeAnswer\">.and().form(login());</span>",
+			"<span class=\"codeAnswer\">.and().form().login();</span>",
+			"<span class=\"codeAnswer\">.and().defaultLogin();</span>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-40",
+		"question": "What class needs to be configured in order to configure authentication in Spring Security?",
+		"correct_answer": "AuthenticationManager",
+		"incorrect_answers": [
+			"AuthenticationConfigBuilder",
+			"AuthenticationConfiguration",
+			"Authentication"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "spring-security-41",
+		"question": "You are debugging a Spring application that has a global exception handler class. That class contains the annotations <span class=\"code\">@ControllerAdvice</span> and <span class=\"code\">@ExceptionHandler</span>. You notice that all the exceptions thrown by Spring MVC are caught, but the ones thrown by Spring Security are not. What might be the issue?",
+		"correct_answer": "The exceptions thrown by Spring Security custom filters run before the controller methods are invoked.",
+		"incorrect_answers": [
+			"The exceptions thrown by Spring Security custom filters are different than the exception argument received by <span class=\"codeAnswer\">@ExceptionHandler</span>.",
+			"Some other exception handler catches the exceptions thrown by Spring Security before the <span class=\"codeAnswer\">@ExceptionHandler</span> class.",
+			"The exceptions caught by <span class=\"codeAnswer\">@ExceptionHandler</span> are more specific than the exception thrown by Spring Security."
+		],
+		"source": "",
+		"explanation": ""
+	}
+]

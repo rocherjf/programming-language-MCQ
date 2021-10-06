@@ -109,6 +109,9 @@ function getURLDocumentQuestion() {
         case "SpringWebAppService":
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-web-app-service.json';
             break;
+        case "SpringSecurity":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-security.json';
+            break;
         default:
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java.json';
     }
