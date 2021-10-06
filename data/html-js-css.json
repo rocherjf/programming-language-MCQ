@@ -1,0 +1,446 @@
+[
+	{
+		"id": "html-js-css-1",
+		"question": "What do built-in JavaScript debuggers do?",
+		"correct_answer": "Force errors to be reported to the user",
+		"incorrect_answers": [
+			"Display common solutions to errors",
+			"Automatically solve common errors",
+			"Ignore any errors that are not critical"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-2",
+		"question": "You wrote some HTML that lays out the new homepage to your website. You attach an external stylesheet to your HTML markup and write some CSS rules that define text colors for the page. When you render the website, the text styling is different from what you wrote because you used a non-existent CSS selector. Aside from the incorrect use of CSS, why did the browser not render your changes?",
+		"correct_answer": "If a browser encounters a CSS selector or declaration and does not understand them, they are ignored.",
+		"incorrect_answers": [
+			"When the browser encounters CSS rules or selectors that are misnamed, it tries to interpret what you meant.",
+			"The browser has a strict set of style guidelines that must be followed or it will implement its own style rules.",
+			"The cascading nature of CSS forces it to overwrite poorly written rules with rules of its own."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-3",
+		"question": "You want to embed an image, which is a diagram, in an HTML page so the document flow is NOT affected if the image is removed from the page. How would you achieve this?",
+		"correct_answer": "Use the &lt;figure&gt; tag to specify the container, then place images inside it with &lt;img&gt;.",
+		"incorrect_answers": [
+			"Use the &lt;span&gt; tag to specify the container, then place images inside it with &lt;figure&gt;.",
+			"Use the &lt;div&gt; tag to specify the container, then place images inside it with &lt;figure&gt;.",
+			"Use the &lt;a&gt; tag to specify the container, then place images inside it with &lt;img&gt;."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-4",
+		"question": "You want to use HTML web storage to store data locally within a user's browser. What JavaScript snippet can you use to check browser support for localStorage and sessionStorage?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>if (typeof(Storage) !== undefined) {</p><p>&nbsp; // Code for localStorage/sessionStorage.</p><p>} else {</p><p>&nbsp; // Sorry! No Web Storage support..</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>if (typeof(Storage) == supported) {</p><p>&nbsp; // Code for localStorage/sessionStorage.</p><p>} else {</p><p>&nbsp; // Sorry! No Web Storage support..</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>if (Storage(typeof) !== \"undefined\") {</p><p>&nbsp; // Code for localStorage/sessionStorage.</p><p>} else {</p><p>&nbsp; // Sorry! No Web Storage support..</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>if (Storage(typeof) == \"supported\") {</p><p>&nbsp; // Code for localStorage/sessionStorage.</p><p>} else {</p><p>&nbsp; // Sorry! No Web Storage support..</p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-5",
+		"question": "Below is a CSS implementation of a shadow:<div class=\"code\">box-shadow: 10px 3px 5px black</div>What does the value 5px represent in this context?",
+		"correct_answer": "The blur radius of the shadow",
+		"incorrect_answers": [
+			"The x offset of the shadow",
+			"The spread radius of the shadow",
+			"The y offset of the shadow"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-6",
+		"question": "A streaming platform user cannot start, stop, or pause the video on the site. What could be the problem?",
+		"correct_answer": "The controls attribute was not specified in the video tag on the page",
+		"incorrect_answers": [
+			"The buttons attribute was not set to true in the video tag on the page",
+			"The &lt;video&gt; tag was not wrapped with a control interface tag",
+			"The controls buttons were not enabled in the video tag on the page"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-7",
+		"question": "You want to use flexbox to vertically align some content inside a &ltli&gt tag. You use the following code but your text is not being vertically aligned:<div class=\"code\"><p>li {</p><p>&nbsp; display: flex;</p><p>&nbsp; justify-content: center;</p><p>&nbsp; align-self: center;</p><p>&nbsp; background: silver;</p><p>&nbsp; width: 100%;</p><p>&nbsp; height: 20%;</p><p>}</p></div>What can you do to successfully align your text?",
+		"correct_answer": "Replace <span class=\"codeAnswer\">align-self: center</span> with <span class=\"codeAnswer\">align-items: center</span>.",
+		"incorrect_answers": [
+			"Replace <span class=\"codeAnswer\">align-self: center</span> with <span class=\"codeAnswer\">align-content: middle</span>.",
+			"Replace <span class=\"codeAnswer\">align-self: center</span> with <span class=\"codeAnswer\">align-text: center</span>.",
+			"Replace <span class=\"codeAnswer\">align-self: center</span> with <span class=\"codeAnswer\">align-text: middle</span>."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-8",
+		"question": "You must change the direction in which the flex items are displayed on an e-commerce website. Which CSS rule will change the direction to the right of the flex container?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>.box {</p><p>&nbsp; display: flex;</p><p>&nbsp; flex-direction: row-reverse;</p><p>}</p>  </div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>.box {</p><p>&nbsp; display: flex;</p><p>&nbsp; flex-direction: column-reverse;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.box {</p><p>&nbsp; display: column;</p><p>&nbsp; flex-direction: row-reverse;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.box {</p><p>&nbsp; display: row;</p><p>&nbsp; flex-direction: column-reverse;</p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-9",
+		"question": "You have an image with very large dimensions. You have a much smaller HTML element and you would like to use CSS to modify the image so it stays inside the HTML box. How can you do this?",
+		"correct_answer": "<span class=\"codeAnswer\">background-size: contain;</span>",
+		"incorrect_answers": [
+			"<span class=\"codeAnswer\">size: 100px 100px;</span>",
+			"<span class=\"codeAnswer\">background-image: auto;</span>",
+			"<span class=\"codeAnswer\">image-type: contain;</span>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-10",
+		"question": "What happens if you set the parameters of a lineTo function of a canvas element to 200 and 100 px?",
+		"correct_answer": "A straight line is drawn on the web page",
+		"incorrect_answers": [
+			"A circle is drawn on the web page",
+			"A rectangle is drawn on the web page",
+			"A triangle is drawn on the web page"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-11",
+		"question": "You have an ordered list with a display property inline-block and must use a nav element to wrap it. What will happen when you do this?",
+		"correct_answer": "You will create a horizontal navigation bar",
+		"incorrect_answers": [
+			"You will create an ordered navigation item",
+			"You will create an unordered navigation item",
+			"You will create a vertical navigation bar"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-12",
+		"question": "You must use a CSS property that can both place an element on either the left or right side of its container, and have other inline elements wrap around it. What property should you choose?",
+		"correct_answer": "Float",
+		"incorrect_answers": [
+			"Fixed",
+			"Flow",
+			"Flex"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-13",
+		"question": "At a simple level, what does the cascade of Cascading Style Sheets (CSS) mean?",
+		"correct_answer": "That the order of CSS rules matters",
+		"incorrect_answers": [
+			"The specificity of a selector's selection",
+			"That anything that is class or id related will take precedence over element level selectors",
+			"That all rules across different selectors get applied"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-14",
+		"question": "You are using the HTML Geolocation API, but a user does not want to share their location with you. What function can you use to deal with this situation?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>function errorCallback(error) {</p><p>&nbsp;if(error.code == 1) {</p><p>&nbsp; &nbsp; result.innerHTML = \"You've decided not to share your position, but it's OK. We won't ask you again.\";</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>errorCallback function(error) {</p><p>&nbsp;if(error.code == 1) {</p><p>&nbsp; &nbsp; result.innerHTML = \"You've decided not to share your position, but it's OK. We won't ask you again.\";</p></div>",
+			"<div class=\"codeAnswer\"><p>function errorCallback(error) {</p><p>&nbsp;if(error.code == 0) {</p><p>&nbsp; &nbsp; result.innerHTML = \"You've decided not to share your position, but it's OK. We won't ask you again.\";</p></div>",
+			"<div class=\"codeAnswer\"><p>errorCallback function(error) {</p><p>&nbsp;if(error.code == 0) {</p><p>&nbsp; &nbsp; result.innerHTML = \"You've decided not to share your position, but it's OK. We won't ask you again.\";</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-15",
+		"question": "You must indicate that a clickable piece of text is downloadable if a user clicks on it. What attribute should you apply to the hyperlink?",
+		"correct_answer": "download",
+		"incorrect_answers": [
+			"href",
+			"link",
+			"alt"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-16",
+		"question": "You have a child element inside a CSS Grid that is laid out as follows: <div class=\"code\"><p>.box1 {</p><p>&nbsp;grid-column-start: 2;</p><p>&nbsp;grid-column-end: 6;</p><p>&nbsp;grid-row-start: 5;</p><p>&nbsp;grid-row-end: 3;</p><p>}</p></div>What CSS shorthand can you use to make the code more concise?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>.box1 {</p><p>&nbsp;grid-column: 2 / 6;</p><p>&nbsp;grid-row: 5 / 3;</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>.box1 {</p><p>&nbsp;grid-column: 6 / 2;</p><p>&nbsp;grid-row: 3 / 5 ;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.box1 {</p><p>&nbsp;grid-column: .3333;</p><p>&nbsp;grid-row: 1.6667;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.box1 {</p><p>&nbsp;grid-column: 6, 2;</p><p>&nbsp;grid-row: 3, 5;</p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-17",
+		"question": "Below are the CSS rules for a box with rounded corners: <div class=\"code\"><p>.box {</p><p>&nbsp;border: 10px solid rebeccapurple;</p><p>&nbsp;border-radius: 1em 2em;</p><p>}</p></div> Which value represents the shape of the upper right corner of this box?",
+		"correct_answer": "2em",
+		"incorrect_answers": [
+			"10px",
+			"20px",
+			"1em"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-18",
+		"question": "In CSS animations, what does a keyframe designate?",
+		"correct_answer": "The start and end state of an animation",
+		"incorrect_answers": [
+			"The core content of the animation",
+			"The dimensions of the animation",
+			"The various pictures that compose a moving image"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-19",
+		"question": "You are developing a website. You must display some data as a graph on one of the web pages. How will you achieve this?",
+		"correct_answer": "Use the &lt;canvas&gt; element.",
+		"incorrect_answers": [
+			"Use the &lt;graph&gt; element.",
+			"Use the &lt;section&gt; element.",
+			"Use the &lt;chart&gt; element."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-20",
+		"question": "How does the <span class=\"code\">calc()</span> function work on values in CSS?",
+		"correct_answer": "It signals the browser to evaluate basic mathematical expressions inside the parenthesis.",
+		"incorrect_answers": [
+			"It implements a JavaScript hook to evaluate basic mathematical expressions inside the parenthesis.",
+			"It calls an external CSS processor to search the document for functions and evaluate their parameters.",
+			"It calls an external JavaScript library that searches the document for the <span class=\"codeAnswer\">calc()</span> function, which it then processes."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-21",
+		"question": "Which CSS snippet will adjust the space between the columns of a grid layout?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>.grid-container {</p><p>&nbsp;display: grid;</p><p>&nbsp;grid-column-gap: 50px;</p><p>&nbsp;grid-template-columns: auto auto auto;</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>.grid-container { </p><p>&nbsp;display: grid; </p><p>&nbsp;grid-columns: 50px; </p><p>&nbsp;grid-template-columns: 50px auto auto; </p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.grid-container {</p><p>&nbsp;display: grid;</p><p>&nbsp;grid-column-space: 50px;</p><p>&nbsp;grid-template-columns: auto auto 10px;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.grid-container { </p><p>&nbsp;&nbsp;display: grid; </p><p>&nbsp;&nbsp;grid-gap: 50px; </p><p>&nbsp;&nbsp;grid-template-columns: 50px auto auto; </p><p>}</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-22",
+		"question": "You designed a webpage using absolute units in your CSS styling rules. When the page renders on your phone, many user interface elements are not in view. How can you change your CSS to resolve the issue?",
+		"correct_answer": "Use percentages instead of absolute units.",
+		"incorrect_answers": [
+			"Use ems instead of absolute units.",
+			"Use picas instead of absolute units.",
+			"Use rems instead of absolute units."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-23",
+		"question": "You are trying to store an array in localStorage, so you use the following code:<div class=\"code\"><p>const names = [\"Name A\",  \"Name B\"];</p><p>localStorage.setItem(\"usernames\", names);</p></div>Your array is not being stored, however. What can you do to fix this issue?",
+		"correct_answer": "Use <span class=\"codeAnswer\">JSON.stringify()</span> on the names array during the setItem call.",
+		"incorrect_answers": [
+			"Use <span class=\"codeAnswer\">XML.stringify()</span> on the names array during the setItem call.",
+			"Use the method setItemArray instead of setItem.",
+			"Use the method setItems instead of setItem."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-24",
+		"question": "When defining styling rules in CSS, you can select HTML elements, ID attributes, and even element states. Which option is another HTML object CSS can select and style?",
+		"correct_answer": "Class attributes",
+		"incorrect_answers": [
+			"The &lt;meta&gt; tag",
+			"The &lt;class&gt; tag",
+			"Link relators"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-25",
+		"question": "If you want an anchor tag to take the user to another section on the same page, which attribute of the target element will you specify in the href attribute of the anchor tag?",
+		"correct_answer": "id",
+		"incorrect_answers": [
+			"style",
+			"link",
+			"class"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-26",
+		"question": "What happens if you use a float property on an absolutely positioned element?",
+		"correct_answer": "The float property is completely ignored",
+		"incorrect_answers": [
+			"The absolute property is completely ignored",
+			"The element remains invisible to the user",
+			"The element automatically stays at the center of the body"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-27",
+		"question": "What groups header content in an HTML table?",
+		"correct_answer": "&lt;thead&gt;",
+		"incorrect_answers": [
+			"&lt;tablehead&gt;",
+			"&lt;th&gt;",
+			"&lt;theaders&gt;"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-28",
+		"question": "You are using the Google Geolocation API to display a user's position, but you keep receiving the following error code: \"error.PERMISSION_DENIED\". What is the most likely explanation for this error?",
+		"correct_answer": "The user rejected the request to be located",
+		"incorrect_answers": [
+			"Your request method is not permitted",
+			"The request for the location information has timed out",
+			"The HTML5 geolocation information is not attainable"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-29",
+		"question": "You must include a custom subject in your mailto link. How can you do this?",
+		"correct_answer": "&lt;a href=\"mailto:user@mail.com?subject=The%quiz\" &gt;Here there!&lt;/a&gt;",
+		"incorrect_answers": [
+			"&lt;a href=\"mailto:user@mail.com%subject=The%quiz\" &gt;Here there!&lt;/a&gt;",
+			"&lt;a href=\"mailto:user@mail.com\" subject=\"The%quiz\" &gt;Here there!&lt;/a&gt;",
+			"&lt;a href=\"mailto:user@mail.com\" subject:\"The%quiz\" &gt;Here there!&lt;/a&gt;"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-30",
+		"question": "Below are some CSS rules styling an HTML element:<div class=\"code\"><p>a:link, a:visited, a:hover, a:active {</p><p>&nbsp;background-color: green;</p><p>&nbsp;color: white;</p><p>&nbsp;padding: 2em;</p><p>&nbsp;text-align: center;</p><p>&nbsp;text-decoration: none;</p><p>&nbsp;display: inline-block;</p><p>}</p></div> What type of measurement units are being used for sizing?",
+		"correct_answer": "Relative units",
+		"incorrect_answers": [
+			"Display units",
+			"Absolute units",
+			"Inline-block units"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-31",
+		"question": "What HTML tag can designate an imported font?",
+		"correct_answer": "&lt;link&gt;",
+		"incorrect_answers": [
+			"&lt;style&gt;",
+			"&lt;href&gt;",
+			"&lt;meta&gt;"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-32",
+		"question": "In CSS, the relative units of measurement are based on some other value. In the case of ems, what value are they relative to?",
+		"correct_answer": "The font size of the container element",
+		"incorrect_answers": [
+			"The font size of the root HTML element",
+			"The line height of the element",
+			"The x-height of the element's font"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-33",
+		"question": "You want to create a reliable animation on your website that loads quickly. You do not want the overhead of using JavaScript or any external dependency. How can you achieve this?",
+		"correct_answer": "Write the animation in pure CSS.",
+		"incorrect_answers": [
+			"Write the animation in pure HTML.",
+			"Define the animation as a separate CSS module that loads with a YARN build.",
+			"Define the animation in your HTML file so it loads automatically when the page is called."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-34",
+		"question": "You are designing a webpage for a client that needs a fast, static page to market its business. The client had problems with page fonts loading quickly in the past and wants to ensure that this is not an issue moving forward. The page fonts the client uses are generally common fonts. What can you do to ensure better load times for fonts in this case?",
+		"correct_answer": "Use a font service such as Google Fonts.",
+		"incorrect_answers": [
+			"Save the font on web visitor's browsers.",
+			"Embed the font on the client's server.",
+			"Compress the font file so it takes up less space."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-35",
+		"question": "You created a Google Chrome extension and are storing data with localStorage. How can you manually view your browser's localStorage data with Chrome DevTools?",
+		"correct_answer": "Go to the Application tab, and in the Storage section expand Local Storage.",
+		"incorrect_answers": [
+			"Go to the Local tab, and in the Storage section expand Local Storage.",
+			"Go to the Browser tab, and in the Storage section expand Local Storage.",
+			"Go to the Storage tab, and in the Local section expand Local Storage."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-36",
+		"question": "In HTML 4.01, what is the purpose of the align attribute in the &lt;p&gt; tag?",
+		"correct_answer": "To arrange the paragraph along the sides, center, or justify it",
+		"incorrect_answers": [
+			"To arrange the paragraphs around the tag containing the attribute along the sides, center, or to justify it",
+			"To center the text properly underneath the header",
+			"To arrange the text on the left side of the document in parallel lines"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "html-js-css-37",
+		"question": "You inserted a Google map into your website but the map is not displaying. Instead, all you see is an error that says \"This page didn't load Google Maps correctly.\" You open the JavaScript console and find a \"MissingKeyMapError.\" What is the most likely explanation for this error?",
+		"correct_answer": "An API key is not being used.",
+		"incorrect_answers": [
+			"The API key used is incorrect.",
+			"The key doesn’t allow your URL.",
+			"An API is not enabled."
+		],
+		"source": "",
+		"explanation": ""
+	}
+]

@@ -106,6 +106,9 @@ function getURLDocumentQuestion() {
         case "Javascript":
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/javascript.json';
             break;
+        case "HtmlJsCss":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/html-js-css.json';
+            break;
         case "SpringWebAppService":
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-web-app-service.json';
             break;
