@@ -1,0 +1,458 @@
+[
+	{
+		"id": "js-rest-api-1",
+		"question": "If you need to call a REST API endpoint from JavaScript, what built-in object could you use?",
+		"correct_answer": "XMLHttpRequest",
+		"incorrect_answers": [
+			"HttpRequest",
+			"RestHttpRequest",
+			"XMLHttpApiRequest"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-2",
+		"question": "Which header should you use to authorize a JSON Web Token (JWT) request?",
+		"correct_answer": "Authorization",
+		"incorrect_answers": [
+			"Bearer",
+			"Holder",
+			"Token"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-3",
+		"question": "What is an HTTP verb?",
+		"correct_answer": "A specific request method indicating the action to be performed for a given resource",
+		"incorrect_answers": [
+			"An identifier that specifies if the request action will return or send data to and from the client",
+			"A request URI prefix that indicates the action the be performed for a given resource",
+			"A request URI suffix that indicates the action the be performed for a given resource"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-4",
+		"question": "What is the difference between the <span class=\"code\">XMLHttpRequest getResponseHeader</span> and <span class=\"code\">getAllResponseHeaders</span> methods?",
+		"correct_answer": "The <span class=\"codeAnswer\">getResponseHeader</span> method returns the value of the specified header name as a string parameter, whereas <span class=\"codeAnswer\">getAllResponseHeaders</span> returns all headers.",
+		"incorrect_answers": [
+			"The <span class=\"codeAnswer\">getResponseHeader</span> method returns the value of the specified header by its index number, whereas <span class=\"codeAnswer\">getAllResponseHeaders</span> returns all headers.",
+			"The <span class=\"codeAnswer\">getResponseHeader</span> method returns the matching header specified as a parameter, whereas <span class=\"codeAnswer\">getAllResponseHeaders</span> returns all custom headers.",
+			"The <span class=\"codeAnswer\">getResponseHeader</span> method returns the first response header as a string, whereas <span class=\"codeAnswer\">getAllResponseHeaders</span> returns all headers. "
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-5",
+		"question": "Consider the following block of code: <div class=\"code\">GET api/get_users</div>This application should expose an API adhering to the RESTful architectural style. What is the issue ?",
+		"correct_answer": "The URI should not contain the HTTP verb.",
+		"incorrect_answers": [
+			"The URI should not contain a pluralized noun.",
+			"The HTTP verb for retrieving a resource should be POST.",
+			"The response status code is not mentioned."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-6",
+		"question": "How can you prefix all routes in an Express application with api?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>const router = express.Router();</p><p></p><p>router.get('/', (req, res) => {</p><p>&nbsp;res.send('Hello!');</p><p>});</p><p>app.use('/api/', router);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>app.get('/api', (req, res) => {</p><p>&nbsp;res.send('Hello!');</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>const router = express.Router();</p><p></p><p>app.get('/', (req, res) => {</p><p>&nbsp;res.send('Hello!');</p><p>});</p><p></p><p>app.use('/api/', router);</p></div>",
+			"<div class=\"codeAnswer\"><p>const router = express.Router('api');</p><p></p><p>router.get('/', (req, res) => {</p><p>&nbsp;res.send('Hello!');</p><p>});</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-7",
+		"question": "What is the purpose of the XMLHttpRequest (XHR) object?",
+		"correct_answer": "To create HTTP requests for exchanging data between a web page and a server",
+		"incorrect_answers": [
+			"To serialize and deserialize XML objects when performing HTTP requests",
+			"To create an HTTP connection to a web server for sending and requesting binary data",
+			"To exchange XML data between a web page and a server-side application"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-8",
+		"question": "You are working with a REST API that sits on a database that is updated frequently. To keep the JavaScript client's data fresh, you want to keep track of various moments in time of this interaction. How can you accomplish this so that the data is kept only while the browser is running?",
+		"correct_answer": "Store timestamps using the session mechanism Web Storage API.",
+		"incorrect_answers": [
+			"Store timestamps in the headers of the requests.",
+			"Store timestamps in a file on the client's file system.",
+			"Store timestamps using the local mechanism Web Storage API."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-9",
+		"question": "What is an example of an HTML element that you can use to provide information about the meaning of the displayed data in a &lt;table /&gt; element?",
+		"correct_answer": "&lt;th /&gt;",
+		"incorrect_answers": [
+			"&lt;td /&gt;",
+			"&lt;tc /&gt;",
+			"&lt;tr /&gt;"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-10",
+		"question": "How would you create and use a custom exception middleware in Express?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>app.use(function (err, req, res, next) {</p><p>&nbsp;res.status(500).json({</p><p>&nbsp;&nbsp;status: 500,</p><p>&nbsp;&nbsp;message: 'Custom Error',</p><p>&nbsp;});</p><p>});</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>app.useMiddleware(function (err, req, res, next) {</p><p>&nbsp;res.status(500).json({</p><p>&nbsp;&nbsp;status: 500,</p><p>&nbsp;&nbsp;message: 'Custom Error',</p><p>&nbsp;});</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>app.use(function (req, res, err) {</p><p>&nbsp;res.status(500).json({</p><p>&nbsp;&nbsp;status: 500,</p><p>&nbsp;&nbsp;message: 'Custom Error',</p><p>&nbsp;});</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>app.useError(function (req) {</p><p>&nbsp;res.status(500).json({</p><p>&nbsp;&nbsp;status: 500,</p><p>&nbsp;&nbsp;message: 'Custom Error',</p><p>&nbsp;});</p><p>});</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-11",
+		"question": "What is Node.js?",
+		"correct_answer": "A runtime for executing JavaScript code outside of a web browser",
+		"incorrect_answers": [
+			"A package that is used to access the file system of a web server",
+			"A frontend framework that can send code to be executed on the server-side",
+			"A library that can be used to run JavaScript code server-side"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-12",
+		"question": "You need to create an API method that will be used for retrieving a list of items; however, when testing the code below, you only receive the first item. <div class=\"code\"><p>const express = require('express');</p><p>const app = express();</p><p></p><p>app.get('/', (req, res) => {</p><p>&nbsp;res.send(</p><p>&nbsp;&nbsp;  { id: 123, name: 'item1' }, </p><p>&nbsp;&nbsp;  { id: 234, name: 'item2' }, </p><p>&nbsp;&nbsp;  { id: 345, name: 'item3' }</p><p>&nbsp;&nbsp;);</p><p>});</p></div> What changes would you make to solve this?",
+		"correct_answer": "The items to be sent need to be part of a JavaScript array.",
+		"incorrect_answers": [
+			"The toList() method should be called after send.",
+			"The sendItems method should be used instead.",
+			"The items to be sent should be included in an object with an array property."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-13",
+		"question": "You want to upload a large file to the server via Fetch API, but you only want to do so if the connection is fast. To avoid a timeout, you will cancel the request if it hasn't succeeded in 2 seconds, but there is no explicit functionality to do so in the Fetch API. How can you proceed?",
+		"correct_answer": "Use an AbortController with setTimeout.",
+		"incorrect_answers": [
+			"Use an UploadController with setInterval.",
+			"Use an UploadController with setTimeout.",
+			"Use an AbortController with setInterval."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-14",
+		"question": "You are using the Web Storage API in your app to save data in the browser. You decide to use the session storage mechanism for all of the data. What will happen when the browser is closed?",
+		"correct_answer": "Data is lost",
+		"incorrect_answers": [
+			"Data is persisted on the client",
+			"Data is persisted on the server",
+			"Data is lost on client but persisted on server"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-15",
+		"question": "You are developing an API method to delete an item using the code below: <div class=\"code\"><p>router.delete('/:id', (req, res) => {</p><p>&nbsp;db.inventory.deleteOne({ id: req.params.id });</p><p>&nbsp;res.status(204);</p><p>});</p></div> What is the issue with this implementation?",
+		"correct_answer": "There is nothing to check that if the item is null, it should return a 404 status code.",
+		"incorrect_answers": [
+			"The Express delete method does not return any status code.",
+			"The status returned from an HTTP DELETE operation should be 200.",
+			"The Express delete method does not receive an object id as a parameter."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-16",
+		"question": "What is true about the mechanisms available for uploading a larger file in an asynchronous manner?",
+		"correct_answer": "You can use the Fetch API.",
+		"incorrect_answers": [
+			"You can use the Ajax API.",
+			"You can use the XMLHttpRequest API, but its async mechanism is deprecated.",
+			"You can use the XMLHttpRequest API, but it is deprecated at an overall level."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-17",
+		"question": "What is an advantage of writing a generic and reusable error middleware in Express?",
+		"correct_answer": "It ensures you always return or log errors in a consistent format.",
+		"incorrect_answers": [
+			"It protects you from accidentally exposing confidential data from the application to your users.",
+			"It provides more information about the error cause because Express does not forward error messages to the client.",
+			"It improves the performance of the application by bypassing the default Express exception middleware."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-18",
+		"question": "How can a JSON Web Token (JWT) be used for reading the user's claims?",
+		"correct_answer": "The token is an encoded JSON object containing the claims.",
+		"incorrect_answers": [
+			"The token can fetch the user claims from the back-end.",
+			"The token contains secrets that can be matched against user claims.",
+			"The token is used to decrypt the encoded user object."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-19",
+		"question": "You have to partially update an entity using a REST API call. How can you accomplish this task?",
+		"correct_answer": "Use the HTTP PATCH request method.",
+		"incorrect_answers": [
+			"Use the HTTP PUT request method.",
+			"Use the HTTP UPDATE request method.",
+			"Use the HTTP POST request method. "
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-20",
+		"question": "You need to create an application that requires database and file system access. How can you implement this using the JavaScript language?",
+		"correct_answer": "Use a specialized JavaScript runtime that is made for writing server-side applications that can access server resources.",
+		"incorrect_answers": [
+			"Use the regular JavaScript syntax and use the built-in functions for accessing databases or the server file system.",
+			"Create a regular browser-based JavaScript application that uses the browser API to interact with server resources from the domain it is hosted.",
+			"Create a custom JavaScript library for interacting with server resources that call built-in OS-level functionality using JS interop functionality."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-21",
+		"question": "What is an example of a JavaScript Cache API method that can help you determine if the cache needs updating?",
+		"correct_answer": "match",
+		"incorrect_answers": [
+			"contains",
+			"has",
+			"is"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-22",
+		"question": "You are developing a front end to an OData-compliant REST API and finished designing a search form. When submitting the search form, how should you pass the data to the API so that it only returns results that match the search criteria?",
+		"correct_answer": "Concatenate the name value pairs as entered into the search areas and pass them in the $filter querystring parameter using HTTP GET.",
+		"incorrect_answers": [
+			"POST the values entered into the search form in the $filter parameter.",
+			"Send the values only as entered into the search areas, and pass them in the $params querystring parameter using HTTP POST.",
+			"GET the complete data set from the REST API and use some scripting to remove the unneeded results from display."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-23",
+		"question": "If a PUT request is made to update an item, what HTTP status is returned?",
+		"correct_answer": "200 OK or 204 No Content",
+		"incorrect_answers": [
+			"202 Accepted or 206 Partial Content",
+			"102 Processing or 200 OK",
+			"200 OK or 201 Created"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-24",
+		"question": "What is one of the advantages of having a general-purpose search endpoint as opposed to multiple ones for each case?",
+		"correct_answer": "It allows greater flexibility and reduces the amount of code.",
+		"incorrect_answers": [
+			"It allows you to use custom query parameters.",
+			"It ensures better security by exposing fewer endpoints.",
+			"It increases the performance of the REST API."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-25",
+		"question": "What is an example of a Node.js module specifically designed for handling file uploads on the server?",
+		"correct_answer": "Formidable",
+		"incorrect_answers": [
+			"Grunt",
+			"Browserify",
+			"Express"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-26",
+		"question": "You are developing a page that will allow a user to retrieve data from an OData-compliant REST API endpoint. You need to limit the number of results to 20 and allow the user to page through the remaining results. What System Query Options would you use to achieve this?",
+		"correct_answer": "<span class=\"codeAnswer\">$top</span> and <span class=\"codeAnswer\">$skip</span>",
+		"incorrect_answers": [
+			"<span class=\"codeAnswer\">$bot</span> and <span class=\"codeAnswer\">$filter</span>",
+			"<span class=\"codeAnswer\">$top</span> and <span class=\"codeAnswer\">$bot</span>",
+			"<span class=\"codeAnswer\">$top</span> and <span class=\"codeAnswer\">$filter</span>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-27",
+		"question": "What is the purpose of the options.rev argument of the get PouchDB method?",
+		"correct_answer": "It allows you to get a specific revision of a document.",
+		"incorrect_answers": [
+			"It allows you to specify the order in which the results are returned.",
+			"It is a flag that tells PouchDB to only return revision metadata in the result without actual data.",
+			"It allows you to revert the current state of the document to a previous version."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-28",
+		"question": "You are writing an API method in Express to remove an item using the code below: <div class=\"code\"><p>router.delete('/:id', (req, res) => {</p><p>&nbsp;deleteItem(req.body);</p><p>&nbsp;res.status(204);&nbsp;   </p><p>});</p></div> What is the issue?",
+		"correct_answer": "An HTTP DELETE request cannot use the req.body.",
+		"incorrect_answers": [
+			"An HTTP DELETE request does not have an id parameter.",
+			"The returned status is not appropriate for a DELETE request.",
+			"The delete API method does not exist in Express."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-29",
+		"question": "You are debugging the API endpoint below that uses Node.js and Express. The request hangs and times out while testing an HTTP PUT request. What could be the problem? <div class=\"code\"><p>// ...</p><p></p><p>router.put('/:id', (req, res) => {</p><p>&nbsp;const itemToUpdate = getItemById(req.params.id);</p><p></p><p>&nbsp;if (itemToUpdate) {</p><p>&nbsp;&nbsp;updateItem(req.body, req.params.id);</p><p>&nbsp;} else {</p><p>&nbsp;&nbsp;res.status(404).send();</p><p>&nbsp;}</p><p>});</p><p></p><p>// ...</p></div>",
+		"correct_answer": "The HTTP 200 response status is not returned. ",
+		"incorrect_answers": [
+			"The id value for the PUT request is stored in req.id and not req.params. ",
+			"The HTTP 404 response status should be an HTTP 400. ",
+			"You used status() instead of the sendStatus() method. "
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-30",
+		"question": "You are using a REST API to create a new item. After successfully executing the command, you need to retrieve the primary key or unique ID of the item that was created. How can you do this?",
+		"correct_answer": "Inspect the body of the '201 CREATED' response you received, which will contain a JSON object with the information you need.",
+		"incorrect_answers": [
+			"Issue a further call to the REST API to retrieve the last item created after the '200 OK' response you received.",
+			"Inspect the body of the '200 OK' response you received, as it will be the primary key of the created item.",
+			"Issue a further call to the REST API to retrieve the last item created after the '201 CREATED' response you received."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-31",
+		"question": "What would you do to manipulate user interface (UI) elements in the browser?",
+		"correct_answer": "Use JavaScript code to directly access the Document Object Model (DOM) API.",
+		"incorrect_answers": [
+			"Use built-in JavaScript functions that can intercept the creation of elements in the browser's Document Object Model (DOM).",
+			"Use a specialized JavaScript framework that can access low-level browser APIs.",
+			"Use third-party libraries that are designed to access the browser's DOM."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-32",
+		"question": "What is an example of a constraint when building a REST API?",
+		"correct_answer": "The necessary state needed to fulfill a request should be contained within the request.",
+		"incorrect_answers": [
+			"The server needs to be aware of the clients requesting the data.",
+			"Request URLs need to be prefixed with the appropriate HTTP verb.",
+			"Responses returned to the client are not allowed to be cached."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-33",
+		"question": "How can you read data from an HTML form to update a product on submit?",
+		"correct_answer": "<div class=\"code\"><p>document.getElementById('submit').onclick = function () {</p><p>&nbsp;const formData = new FormData(document.querySelector('form'));</p><p>&nbsp;// Send data to REST API</p><p>};</p></div>",
+		"incorrect_answers": [
+			"<div class=\"code\"><p>document.getElementById('submit').submit = function () {</p><p>&nbsp;const formData = new FormData(document.select('form'));</p><p>&nbsp;// Send data to REST API</p><p>};</p></div>",
+			"<div class=\"code\"><p>document.getElementById('submit').click = function () {</p><p>&nbsp;const formData = FormData(document.querySelector('form'));</p><p>&nbsp;// Send data to REST API</p><p>};</p></div>",
+			"<div class=\"code\"><p>document.getElementById('submit').update = function () {</p><p>&nbsp;const formData = new FormData(document);</p><p>&nbsp;// Send data to REST API</p><p>};</p></div>"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-34",
+		"question": "You are a developer working on a file upload control. You want it to match your branding, but you are unable to achieve this in a cross-browser manner by just applying CSS to the input. What other strategy might you consider?",
+		"correct_answer": "Associate a label with the input element and style the label instead, while visually hiding the input from the user, but not from the browser.",
+		"incorrect_answers": [
+			"Associate a label with the input element and then style the input while hiding the input from the user and the browser.",
+			"Associate a label with the input element and style them both in a consistent manner.",
+			"Associate a label with the input element and style the label instead, while hiding the input from the user and the browser."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-35",
+		"question": "Which HTTP status code should be returned if the requested item is deleted?",
+		"correct_answer": "204 No Content",
+		"incorrect_answers": [
+			"503 Service Unavailable",
+			"301 Moved Permanently",
+			"404 Not Found"
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-36",
+		"question": "You are working on a Node.js server-side application that needs to access the host's file system to read and write configuration data. How can you accomplish this?",
+		"correct_answer": "Use the built-in fs module in Node.js to work with files that are built-in.",
+		"incorrect_answers": [
+			"Use a third-party library that wraps the native OS file system methods.",
+			"Create a JavaScript module that calls the Node.js os module for working with files.",
+			"Create a JavaScript class that uses the Node.js file module to access the disk."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-37",
+		"question": "What will happen if you do not specify an explicit timeout value when using the Fetch API to upload files?",
+		"correct_answer": "The timeout value will depend on the browser used.",
+		"incorrect_answers": [
+			"The timeout value will default to 30 seconds regardless of the browser. ",
+			"The request won't be issued to the server.",
+			"The timeout value will default to 300 seconds regardless of the browser."
+		],
+		"source": "",
+		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-38",
+		"question": "What Web Storage API function will return an item from a browser's session storage?",
+		"correct_answer": "<span class=\"codeAnswer\">sessionStorage.getItem('item')</span>",
+		"incorrect_answers": [
+			"<span class=\"codeAnswer\">sessionStorage.item('item') </span>",
+			"<span class=\"codeAnswer\">sessionStorage.get('item') </span>",
+			"<span class=\"codeAnswer\">sessionStorage('item') </span>"
+		],
+		"source": "",
+		"explanation": ""
+	}
+]

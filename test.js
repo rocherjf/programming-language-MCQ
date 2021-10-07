@@ -115,6 +115,9 @@ function getURLDocumentQuestion() {
         case "SpringSecurity":
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-security.json';
             break;
+        case "jsRestApi":
+            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/js-rest-api.json';
+            break;
         default:
             URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java.json';
     }
