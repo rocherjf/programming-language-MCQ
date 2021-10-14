@@ -83,43 +83,43 @@ function getURLDocumentQuestion() {
 
     switch (typeQuiz) {
         case "Java":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java.json';
+            URL = 'data/java.json';
             break;
         case "JavaCleanCode":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-clean-code-practice.json';
+            URL = 'data/java-clean-code-practice.json';
             break;
         case "JavaAppSec":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-application-security.json';
+            URL = 'data/java-application-security.json';
             break;
         case "JavaWebAppSec":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-web-application-security.json';
+            URL = 'data/java-web-application-security.json';
             break;
         case "JavaParadigmProgamming":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-paradigm-programming.json';
+            URL = 'data/java-paradigm-programming.json';
             break;
         case "JavaTesting":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java-testing.json';
+            URL = 'data/java-testing.json';
             break;
         case "Spring":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-core.json';
+            URL = 'data/spring-core.json';
             break;
         case "Javascript":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/javascript.json';
+            URL = 'data/javascript.json';
             break;
         case "HtmlJsCss":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/html-js-css.json';
+            URL = 'data/html-js-css.json';
             break;
         case "SpringWebAppService":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-web-app-service.json';
+            URL = 'data/spring-web-app-service.json';
             break;
         case "SpringSecurity":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/spring-security.json';
+            URL = 'data/spring-security.json';
             break;
         case "jsRestApi":
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/js-rest-api.json';
+            URL = 'data/js-rest-api.json';
             break;
         default:
-            URL = 'https://raw.githubusercontent.com/rocherjf/programming-language-MCQ/main/data/java.json';
+            URL = 'data/java.json';
     }
 
     return URL;
