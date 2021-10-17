@@ -20,7 +20,7 @@ let questionsDone = [];
 
 // URL parameters
 let urlParams = new URLSearchParams(window.location.search);
-const typeQuiz = urlParams.get("type"); // TODO : A prendre en compte pour l'URL
+const typeQuiz = urlParams.get("type");
 const MAX_QUESTIONS = urlParams.get("nbQuestions") || 10;
 const practiceMode = urlParams.get("training") || true;
 
@@ -123,8 +123,6 @@ function getURLDocumentQuestion() {
     }
 
     return URL;
-
-
 }
 
 function initLocalStorage() {
