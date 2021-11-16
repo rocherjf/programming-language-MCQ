@@ -1,4 +1,6 @@
 [
+
+
 	{
 		"id": "java-1",
 		"question": "What does this code segment print? <div class=\"code\">static void increment(int index) { <br> &ensp;index++; <br>} <br> <br>public static void main(String[] args){ <br>  &ensp;int i = 0; <br>  &ensp;increment(i); <br> &ensp;i++; <br>  &ensp;System.out.println(i); <br>}</div>",
@@ -478,5 +480,279 @@
 			"A constructor that takes a String parameter, which sets a modelNumber"
 		],
 		"source": ""
+	},
+	{
+		"id": "java-45",
+		"question": "How does a TreeMap store its key-value pairs?",
+		"correct_answer": "It uses a red black tree",
+		"incorrect_answers": [
+			"It puts the keys in an array with pointers to the values",
+			"It uses a skip list of key value pairs",
+			"It uses a set of Map.Entry objects"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-46",
+		"question": "You need a class to handle sequences of characters. In your application, you must put these sequences in upper case and lower case and compare them between themselves. What class can you use?",
+		"correct_answer": "The String class",
+		"incorrect_answers": [
+			"The StringBuffer class",
+			"The StringBuilder class",
+			"The StringJoiner class"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-47",
+		"question": "What does this code print out?<p></p><p></p><p><div class=\"code\"></p><p>int[] tab = {1, 2, 3, 4};</p><p></p><p>int loop = 0;</p><p>for (int i : tab) {</p><p>&nbsp;&nbsp;loop++;</p><p>&nbsp;&nbsp;if (i > 2)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;break;</p><p>&nbsp;&nbsp;loop++;</p><p>}</p><p>System.out.println(\"loop = \" + loop);</p></div>",
+		"correct_answer": "loop = 5",
+		"incorrect_answers": [
+			"loop = 6",
+			"loop = 2",
+			"loop = 4"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-48",
+		"question": "<p>You have the following functional interface: </p><p></p><p><div class=\"code\"></p><p>@FunctionalInterface</p><p>interface DoSomeMath {</p><p>&nbsp;&nbsp;int calculate(int x);</p><p>}</p></div> What change to this interface will cause an error?",
+		"correct_answer": "<p>Adding the following:</p> <div class=\"codeAnswer\">int subtract(int a, int b);</div>",
+		"incorrect_answers": [
+			"<p>Adding the following:</p>  <div class=\"codeAnswer\">public static final int myInt = 0;</div>",
+			"<p>Adding the following:</p>  <div class=\"codeAnswer\">public int myInt = 0;</div>",
+			"Removing the <span class=\"codeAnswer\">@FunctionalInterface</span> annotation"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-49",
+		"question": "<p>Why doesn't the following code compile?</p><p></p><p><div class=\"code\"></p><p>int i1 = 40_000;</p><p>short i2 = i1 + 10;</p></div>",
+		"correct_answer": "Because the addition returns an int, which cannot be converted to a short without an explicit cast",
+		"incorrect_answers": [
+			"Because the addition returns a long, which cannot be cast to a short",
+			"Because 40_000 is not a valid number in Java",
+			"Because it is not possible to have a short greater than 32,767"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-50",
+		"question": "<p>You have the two following classes:</p><p></p><p><div class=\"code\"></p><p>public class Queue {</p><p>&nbsp;&nbsp;public static final int MAX_SIZE = 10;</p><p>}</p></div><div class=\"code\"><p>public class Consumer {</p><p>&nbsp;&nbsp;static final int MAX_QUEUE_SIZE = Queue.MAX_SIZE;</p><p>}</p><p></div></p><p></p><p>These two classes happen to be in two different modules of your application. On day one, you compile both modules and deploy them in production. On day two, you modify the Queue class, by setting the MAX_SIZE value to 20. You compile the Queue module and deploy it in production. What happens when you launch your application?</p>",
+		"correct_answer": "The value of Consumer.MAX_QUEUE_SIZE is still 10.",
+		"incorrect_answers": [
+			"The value of Consumer.MAX_QUEUE_SIZE is set to 20.",
+			"A RuntimeException is raised when you try to read the MAX_QUEUE_SIZE value.",
+			"A RuntimeException is raised when the application is launched."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-51",
+		"question": "<p>You are using the reduce() method to calculate the combined age of people in a group. You have the following code which tries to do that: </p><p></p><p><div class=\"code\"></p><p>//assume implementation of a Person class that has a constructor for name </p><p>//and age, along with appropriate set and get methods</p><p>List<Person> people = Arrays.asList(new Person(\"Person 1\", 20), new Person(\"Person 2\", 25));</p><p>int result = people.stream().reduce(0, (currAge, user) -> currAge + user.getAge());</p><p>System.out.println(result);</p></div><p>This results in a syntax error. How can you change this to make it print out 45?</p>",
+		"correct_answer": "Use a combiner <div class=\"codeAnswer\">int result = people.stream().reduce(0, (currAge, user) -> currAge +  user.getAge(), Integer::sum);</div>",
+		"incorrect_answers": [
+			"Change the type of \"result\" from an int to a double <div class=\"codeAnswer\">double result = people.stream().reduce(0, (currAge, user) -> currAge + user.getAge());</div>",
+			"Change the type of \"result\" from an int to a float <div class=\"codeAnswer\">float result = people.stream().reduce(0, (currAge, user) -> currAge + user.getAge());</div>",
+			"Remove the first argument in the reduce() method <div class=\"codeAnswer\">int result = people.stream().reduce((currAge, user) -> currAge + user.getAge());</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-52",
+		"question": "What action would work when writing a method reference?",
+		"correct_answer": "Calling of an instance method through the name of a class; for example: containingObject::instanceMethodName",
+		"incorrect_answers": [
+			"Passing a final parameter ",
+			"Passing a non-final parameter",
+			"Calling a static method through an instance variable; for example: <div class=\"codeAnswer\">instancevariable::staticMethodName</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-53",
+		"question": "Which of Java's five functional interfaces operates on two reference types?",
+		"correct_answer": "BinaryOperator",
+		"incorrect_answers": [
+			"DoublePredicate",
+			"Consumer",
+			"Supplier"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-54",
+		"question": "Which type of variable is created in a class, but located outside of all methods and constructors, and is visible to all methods and constructors of that class?",
+		"correct_answer": "An instance variable ",
+		"incorrect_answers": [
+			"A parameter",
+			"A local variable ",
+			"A global variable"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-55",
+		"question": "<p>You have two classes:</p><p></p><p><div class=\"code\"></p><p>public class Holder {</p><p>&nbsp;&nbsp;public String toString() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return \"I am a holder\";</p><p>&nbsp;&nbsp;}</p><p>}</p><p></div></p><p></p><p><div class=\"code\"></p><p>public class ExtendedHolder extends Holder {</p><p>&nbsp;&nbsp;public String toString() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;   return \"I am an extended holder\";</p><p>&nbsp;&nbsp;}</p><p>}</p><p></div></p><p></p><p>What does the following code print out when executed?</p><p><div class=\"code\"></p><p>public class Main {</p><p>&nbsp;&nbsp;public static void display(Holder holder) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Object o = holder;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(o.toString());</p><p>&nbsp;&nbsp;}</p><p></p><p>&nbsp;&nbsp;public static void main(String[] args) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Holder holder = new ExtendedHolder();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;display(holder);</p><p>&nbsp;&nbsp;}</p><p>}</p><p></div></p><p></p>",
+		"correct_answer": "I am an extended holder",
+		"incorrect_answers": [
+			"<p>I am an extended holder</p><p>I am a holder</p><p>java.lang.Object@4e04a765 (the number may vary)</p>",
+			"I am a holder",
+			"java.lang.Object@4e04a765 (the number may vary)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-56",
+		"question": "How can you create a stream from the elements of a List variable called list?",
+		"correct_answer": "By calling list.stream()",
+		"incorrect_answers": [
+			"By calling Arrays.stream(list.toArray())",
+			"By calling Stream.of(list)",
+			"By calling List.streamOf(list)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-57",
+		"question": "<p>You create a string of characters and then you trim it. Next, you put it in upper case and finally extract the first three characters using the substring method.</p><p></p><p>How many instances of the string would be created after the entire process of string operations?</p>",
+		"correct_answer": "4",
+		"incorrect_answers": [
+			"2",
+			"3",
+			"1"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-58",
+		"question": "You must create a new stream of names, but you do not yet have any elements to put in. How can you do this?",
+		"correct_answer": "<div class=\"codeAnswer\">Stream<String> names = Stream.empty();</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">Stream<String> names = Stream.create();</div>",
+			"<div class=\"codeAnswer\">Stream.empty();</div>",
+			"<div class=\"codeAnswer\">Stream<String> names = Stream.new();</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-59",
+		"question": "What command must you use to execute a Main class that contains a main() method?",
+		"correct_answer": "java Main",
+		"incorrect_answers": [
+			"Main",
+			"java Main.class",
+			"java Main.main()"
+		],
+		"source": ""
+	},
+
+	{
+		"id": "java-60",
+		"question": "What is a lambda expression in Java?",
+		"correct_answer": "An implementation of any functional interface",
+		"incorrect_answers": [
+			"An implementation of any interface",
+			"An implementation of an interface that must be defined in the java.util.function package",
+			"An implementation of any function"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-61",
+		"question": "Using which type within a switch statement's test expression would result in a syntax error?",
+		"correct_answer": "boolean",
+		"incorrect_answers": [
+			"int",
+			"enum",
+			"String"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-62",
+		"question": "<p>What does the following code print out?</p><p></p><div class=\"code\"><p>int i = 2;</p><p>int result = -1;</p><p>switch(i) {</p><p>&nbsp;&nbsp;case 1: result = 1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;break;</p><p>&nbsp;&nbsp;case 2: result = 2;</p><p>&nbsp;&nbsp;case 3: result = 3;</p><p>&nbsp;&nbsp;case 4: result = 4;</p><p>}</p><p>System.out.println(\"result = \" + result);</div></p><p></p><p></p>",
+		"correct_answer": "result = 4",
+		"incorrect_answers": [
+			"result = 2",
+			"result = 1",
+			"result = -1"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-63",
+		"question": "<p>Consider the following code: </p><div class=\"code\"><p>ArrayList<String> arrayListObject = new ArrayList<>(); </p><p>arrayListObject.add(\"B\");</p><p>arrayListObject.add(\"D\");</p><p>arrayListObject.add(\"A\");</p><p>arrayListObject.add(\"C\");</p></div><p>How can you sort the list of these letters in alphabetical order?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>arrayListObject = (ArrayList<String>) arrayListObject</p><p>&nbsp;&nbsp;.stream()</p><p>&nbsp;&nbsp;.sorted()</p><p>&nbsp;&nbsp;.collect(Collectors.toList());</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>arrayListObject = (ArrayList<String>) arrayListObject</p><p>&nbsp;&nbsp;.collect(Collectors.toList());</p></div>",
+			"<div class=\"codeAnswer\"><p>arrayListObject.stream()</p><p>&nbsp;&nbsp;.sort();</p></div>",
+			"<div class=\"codeAnswer\"><p>arrayListObject = (ArrayList<String>) arrayListObject.stream()</p><p>&nbsp;&nbsp;.sort();</p></div>"
+		],
+		"source": ""
+	},
+
+	{
+		"id": "java-64",
+		"question": "<p>You have the following class:</p><p><div class=\"code\"><p>public class Holder {</p><p>&nbsp;&nbsp;static String MAX_SIZE = System.getProperty(\"max.size\");</p><p>}</p></div></p><p>You execute the following code:</p><p><div class=\"code\"><p>Holder holder1 = new Holder();</p><p>Holder holder2 = new Holder();</p></div></p><p>How many times is the getProperty(\"max.size\") method called?</p>",
+		"correct_answer": "1",
+		"incorrect_answers": [
+			"2",
+			"0 because this code will get an exception ",
+			"0 because this property never gets initialized"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-65",
+		"question": "How can you declare that a class ArrayList can use the methods of the AbstractList class, is of type Serializable, and provides implementations for the methods of List?",
+		"correct_answer": "class ArrayList extends AbstractList implements List, Serializable",
+		"incorrect_answers": [
+			"class ArrayList implements List, Serializable extends AbstractList",
+			"class ArrayList::AbstractList implements List, Serializable",
+			"class ArrayList extends AbstractList implements List as Serializable"
+		],
+		"source": ""
 	}
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
 ]
+
+
