@@ -1,5 +1,4 @@
-[
-	{
+[{
 		"id": "java-ccp-1",
 		"question": "The following code uses a loop on a list to calculate the average age of the clients older than 18. <div class=\"code\"><p>List<Client> list = new ArrayList<Client>();</p><p>int count = 0;</p><p>double sum = 0.0, average = 0.0;</p><p>for (Client client: list) {</p><p>&nbsp; if (client.getAge() > 18) {</p><p>&nbsp; &nbsp; sum += client.getAge();</p><p>&nbsp; &nbsp;count++;</p><p>&nbsp; }</p><p>}</p><p>average = sum/count;</p></div> How can you refactor it to a stream?",
 		"correct_answer": "<div class=\"codeAnswer\"><p>double average = </p><p>&nbsp; list.stream()</p><p>&nbsp; &nbsp; .filter(client -> client.getAge() > 18)</p><p>&nbsp; &nbsp;.mapToInt(Client::getAge)</p><p>&nbsp; &nbsp; .average()</p><p>&nbsp; &nbsp; .getAsDouble();</p></div>",
@@ -262,5 +261,193 @@
 			"One functional interface with a few static methods; each static method will represent a command"
 		],
 		"source": ""
+	},
+	{
+		"id": "java-ccp-28",
+		"question": "In large, complicated pieces of software, when a stack trace is finally logged, the original exception has been caught and wrapped in a different exception multiple times. What is the best approach to understand such a stack trace?",
+		"correct_answer": "The root cause is the exception that was thrown first, which you can find near the bottom of the stack trace.",
+		"incorrect_answers": [
+			"The last \"at ...\" line of the stack trace tells you exactly where the original error occurred.",
+			"The last \"at ...\" line at the end of the stack trace after the final \"Caused by \" line points to the source file and line number where the error first occurred.",
+			"The first \"at ...\" line at the top of the stack trace tells you where the error occurred."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-29",
+		"question": "Why won't the following code compile? <div class=\"code\"><p>class MultithreadingSample {</p><p>&nbsp;&nbsp;public void run() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;try {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Current Thread: \" + Thread.currentThread().getId());</p><p>&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.printStackTrace();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;}</p><p>}</p><p></p><p>public class PracticeClass {</p><p>&nbsp;&nbsp;public static void main(String[] args) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;int numThreads = 8;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < numThreads; i++) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MultithreadingSample mts = new MultithreadingSample();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mts.start();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"correct_answer": "The MultithreadingSample class does not extend the Thread class. ",
+		"incorrect_answers": [
+			"The PracticeClass class does not implement the Runnable interface. ",
+			"The MultithreadingSample class does not implement the Runnable interface. ",
+			"The start() method is not a valid method to run in this scenario. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-30",
+		"question": "What is an example of an unchecked exception?",
+		"correct_answer": "NumberFormatException",
+		"incorrect_answers": [
+			"ClassNotFoundException",
+			"FileNotFoundException",
+			"IOException"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-31",
+		"question": "What must you do to initialize certain fields of an object of a class that you wrote with special values when such an object is deserialized?",
+		"correct_answer": "<p>Implement a method with the following signature in your class that initializes the fields the way you want:</p><div class=\"codeAnswer\">private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException;</div>",
+		"incorrect_answers": [
+			"Implement a no-arguments constructor in your class which initializes the fields as needed.",
+			"Make your class implement interface java.io.Externalizable, and in your implementation of the readExternal() method, initialize the fields as needed.",
+			"<p>Implement a method with the following signature in your class that creates a new instance of your class and initializes the fields the way you want:</p><div class=\"codeAnswer\">public static Object readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException;</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-32",
+		"question": "When using the command pattern, which class performs the actual work?",
+		"correct_answer": "Receiver",
+		"incorrect_answers": [
+			"Client",
+			"Command",
+			"Invoker"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-33",
+		"question": "<p>When the following method is called, it opens a ServerSocket that will wait for a client to connect on port 9000, then it sends back \"Hello \" to the client and closes the connection and the ServerSocket.</p><div class=\"code\"><p>public void hello() throws IOException {</p><p>&nbsp;&nbsp;try (ServerSocket ss = new ServerSocket(9000);</p><p>&nbsp;&nbsp;OutputStream out = ss.accept().getOutputStream()) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;out.write(\"Hello \".getBytes(StandardCharsets.US_ASCII));</p><p>&nbsp;&nbsp;&nbsp;&nbsp;out.flush();</p><p>&nbsp;&nbsp;}</p><p>}</p></div><p>The network connection gets disturbed and the out.write(...) call throws an exception A. But closing the output stream also throws an exception B. What exactly happens to the exceptions A and B?</p>",
+		"correct_answer": "Exception A is thrown out of the method and exception B is suppressed. Code handling exception A can get exception B by calling getSuppressed() on exception A.",
+		"incorrect_answers": [
+			"Exception B is thrown out of the method, while exception A is discarded and gets lost.",
+			"Exception B is thrown out of the method and exception A is suppressed. Code handling exception B can get exception A by calling getSuppressed() on exception B.",
+			"Exception A is thrown out of the method, while exception B is discarded and gets lost."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-34",
+		"question": "What is an example of code reuse?",
+		"correct_answer": "Calling the .toString() method on a non-primitive object  ",
+		"incorrect_answers": [
+			"Using the Factory pattern ",
+			"Using the AbstractFactory pattern",
+			"Creating a new object "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-35",
+		"question": "What does the dependency inversion SOLID design principle mean?",
+		"correct_answer": "The high-level and low-level modules should depend on abstractions.",
+		"incorrect_answers": [
+			"Dependencies should be injected by a container.",
+			"Abstractions should depend on details.",
+			"The low-level modules should depend on the high-level modules."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-36",
+		"question": "What fact does the single responsibility SOLID design principle represent?",
+		"correct_answer": "Any class or method should have only one reason to change.",
+		"incorrect_answers": [
+			"If S is a subtype of T, then you can pass objects of type S wherever objects of type T are expected without any additional information.",
+			"Details should depend on abstractions.",
+			"No client should be forced to depend on methods that it does not use."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-37",
+		"question": "Why is Java's serialization mechanism not well suited for long-term storage of data?",
+		"correct_answer": "There is a strong coupling between the source code of a class and serialized objects of that class; there are many ways in which you can change the class so that previously serialized objects cannot be deserialized anymore.",
+		"incorrect_answers": [
+			"Java's serialization mechanism uses a proprietary, encrypted, binary format; if Java is not supported sometime in the future, it will be impossible to deserialize the data using code written in a different programming language.",
+			"Serialization is inefficient and might cause performance and scalability issues; using a format such as JSON is much more efficient.",
+			"There are security problems with Java's serialization mechanism, which make it inherently unsafe."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-38",
+		"question": "What would you use to implement the strategy pattern?",
+		"correct_answer": "One interface with concrete classes implementing the interface",
+		"incorrect_answers": [
+			"One class that implements multiple interfaces",
+			"One single class which ensures that only one object is created",
+			"Separate classes to control the application logic, visualizations, and data flow"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-39",
+		"question": "<p>What will the following program print when you run it?</p><div class=\"code\"><p>import java.util.concurrent.*;</p><p></p><p>public class Example {</p><p>&nbsp;&nbsp;private static final ExecutorService executorService = </p><p>&nbsp;&nbsp;&nbsp;&nbsp;Executors.newFixedThreadPool(2);</p><p></p><p>&nbsp;&nbsp;private static Future<Integer> calculate(int a, int b) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return executorService.submit(() -> {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thread.sleep(1000L);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Calculating: \" + a + \" + \" + b);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return a + b;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;});</p><p>&nbsp;&nbsp;}</p><p></p><p>&nbsp;&nbsp;public static void main(String[] args) throws ExecutionException, </p><p>&nbsp;&nbsp;&nbsp;&nbsp;  InterruptedException {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Future<Integer> future = calculate(3, 4);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Got the future\"); </p><p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Result 1: \" + future.get()); </p> <p> &nbsp; &nbsp; &nbsp; &nbsp;System.out.println(\"Result 2: \" + future.get()); </p > <p> &nbsp; &nbsp; &nbsp; &nbsp;executorService.shutdownNow(); </p > <p> &nbsp; &nbsp;} </p><p>}</p > <p></div></p>",
+		"correct_answer": "<p>Got the future</p><p>Calculating: 3 + 4</p><p>Result 1: 7</p><p>Result 2: 7</p>",
+		"incorrect_answers": [
+			"<p>Calculating: 3 + 4</p><p>Got the future</p><p>Result 1: 7</p><p>Calculating: 3 + 4</p><p>Result 2: 7</p>",
+			"<p>Got the future</p><p>Calculating: 3 + 4</p><p>Result 1: 7</p><p>Calculating: 3 + 4</p><p>Result 2: 7</p>",
+			"<p>Calculating: 3 + 4</p><p>Got the future</p><p>Result 1: 7</p><p>Result 2: 7</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-40",
+		"question": "<p>What will happen when the following piece of code (with line numbers) executes?</p><div class=\"code\"><p>List list = new ArrayList(); // l1</p><p>list.add(1); // l2</p><p>list.add(\"2 \"); // l3</p><p>Integer number0 = (Integer)list.get(0); // l4</p><p>Integer number1 = (Integer)list.get(1);// l5</p></div>",
+		"correct_answer": "It will throw an exception at line 5, because a String cannot be cast to an Integer.",
+		"incorrect_answers": [
+			"It will throw an exception at line 2, because a Primitive cannot be added to a collection.",
+			"It will not compile, because list is declared as List and initialized as ArrayList.",
+			"It will throw an exception at line 3, because you cannot add a String to a collection where you have already added an Integer."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-41",
+		"question": "<p>Given the following piece of code:</p><div class=\"code\"><p>List<Integer> li = new ArrayList<Integer>();</p><p>List<Object> lo = li;</p><p>lo.add(new Object());</p><p>Integer i = li.get(0);</p></div><p>What will happen?</p>",
+		"correct_answer": "It will produce a compile-time error at line 2.",
+		"incorrect_answers": [
+			"It will compile correctly but it will throw an exception at line 4.",
+			"It will compile and execute correctly.",
+			"It will compile correctly but it will throw an exception at line 2."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-42",
+		"question": "Which snippet of code will print true as result?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>String s1 = \"abc\";</p><p>String s2 = \"abc\";</p><p>System.out.println(s1 == s2);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>String s1 = new String(\"abc\");</p><p>String s2 = \"abc\";</p><p>System.out.println(s1 == s2);</p></div>",
+			"<div class=\"codeAnswer\"><p>Integer integer1 = 1000;</p><p>Integer integer2 = 1000;</p><p>System.out.println(integer1 == integer2);</p></div>",
+			"<div class=\"codeAnswer\"><p>String s1 = new String(\"abc\");</p><p>String s2 = new String(\"abc\");</p><p>System.out.println(s1 == s2);</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-43",
+		"question": "<p>How will the compiler interpret the following interface declaration?</p><div class=\"code\"><p>interface Flyer {</p><p>&nbsp;&nbsp;int NB_WINGS = 2;</p><p>&nbsp;&nbsp;void fly();</p><p>}</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>interface Flyer {</p><p>&nbsp;&nbsp;public final static int NB_WINGS = 2;</p><p>&nbsp;&nbsp;public abstract void fly();</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>interface Flyer {</p><p>&nbsp;&nbsp;private static int NB_WINGS = 2;</p><p>&nbsp;&nbsp;abstract void fly();</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>interface Flyer {</p><p>&nbsp;&nbsp;public static int NB_WINGS = 2;</p><p>&nbsp;&nbsp;abstract void fly();</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>interface Flyer {</p><p>&nbsp;&nbsp;public final static int NB_WINGS = 2;</p><p>&nbsp;&nbsp;public void fly() {&nbsp;&nbsp;}</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-44",
+		"question": "What could an EnumSet replace?",
+		"correct_answer": "The int type bit flag",
+		"incorrect_answers": [
+			"Arithmetic operations on integers",
+			"Concatenation operations on strings",
+			"Arithmetic operations on floats and doubles"
+		],
+		"source": ""
 	}
+
 ]
