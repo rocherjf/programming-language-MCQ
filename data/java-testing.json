@@ -394,5 +394,137 @@
 			"User acceptance testing "
 		],
 		"source": ""
+	},
+	{
+		"id": "java-testing-42",
+		"question": "Which option is a common refactoring?",
+		"correct_answer": "Pull up method",
+		"incorrect_answers": [
+			"Value object",
+			"Template method",
+			"Factory method"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-43",
+		"question": "Which is a bug in the CORRECTNESS category of FindBugs?",
+		"correct_answer": "An apparent infinite loop (IL_INFINITE_LOOP)",
+		"incorrect_answers": [
+			"Clone method does not call super.clone() (CN_IDIOM_NO_SUPER_CALL)",
+			"Comparison of String objects using == or !=(ES_COMPARING_STRINGS_WITH_EQ)",
+			"Method invokes System.exit(...) (DM_EXIT)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-44",
+		"question": "Which tool can help you look for coding errors in Java code?",
+		"correct_answer": "SpotBugs",
+		"incorrect_answers": [
+			"JFrog",
+			"YourKit",
+			"Checkstyle"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-45",
+		"question": "Which of these types is a test double?",
+		"correct_answer": "Spy",
+		"incorrect_answers": [
+			"Fixture",
+			"Double",
+			"Captor"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-47",
+		"question": "Which statement would you use if you wanted to throw an assertion error?",
+		"correct_answer": "fail(\"This failed\");",
+		"incorrect_answers": [
+			"Error(\"This failed\");",
+			"assertNull(\"This failed\");",
+			"assertNotEqual(\"This failed\");"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-51",
+		"question": "What is another name for test doubles in a unit testing paradigm?",
+		"correct_answer": "Mocks",
+		"incorrect_answers": [
+			"Stubs",
+			"Fakes",
+			"Polys"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-52",
+		"question": "<p>Given the following report from a mutation testing tool:</p><p>Total mutations: 10</p><p>Mutations processed: 10</p><p>Mutations not processed: 0</p><p>Removed mutations: 7</p><p>Survived mutations: 3</p><p></p><p></p><p>Which is a valid conclusion after applying some basic analysis?</p>",
+		"correct_answer": "More unit tests or datasets are needed to increase the number of removed mutations.",
+		"incorrect_answers": [
+			"Fewer unit tests or datasets are needed to increase the number of total mutations.",
+			"More unit tests or datasets are needed to decrease the number of processed mutations.",
+			"Fewer unit tests or datasets are needed to decrease the number of survived mutations."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-53",
+		"question": "From a testing perspective, which is an example of legacy code?",
+		"correct_answer": "A code base without tests",
+		"incorrect_answers": [
+			"An application that doesn't have all of its code base available",
+			"An application with broken tests",
+			"A code base that is written in an older version of any language"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-54",
+		"question": "What is the mutation score in mutation testing?",
+		"correct_answer": "The percentage of removed mutants and the total number of mutants.",
+		"incorrect_answers": [
+			"The percentage of failed tests and the total number of tests.",
+			"The number of removed mutants.",
+			"The number of mutations processed."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-55",
+		"question": "<p>You have the following Java method:</p><div class=\"code\"><p>@Test</p><p>public void testJSON() throws Exception {</p><p>&nbsp;&nbsp;this.mockMvc.perform(get(\"/items\"))</p><p>&nbsp;&nbsp;.andExpect(status().isOk())</p><p>&nbsp;&nbsp;.andExpect(content().mimeType(IntegrationTestUtil.APPLICATION_JSON_UTF8))</p><p>&nbsp;&nbsp;//insert answer here</p><p>}</p></div><p>Which addition would you have to make to this method to correctly validate that the response JSON contains two items?</p>",
+		"correct_answer": ".andExpect(jsonPath(\"$\", hasSize(2)));",
+		"incorrect_answers": [
+			".andExpect(jsonPath(hasSize(2)));",
+			".andExpect(json(hasSize(2)));",
+			".andExpect(json(\"$\", hasSize(2)));"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-56",
+		"question": "Which implementation represents a mutation in mutation testing?",
+		"correct_answer": "Change the return value of a method.",
+		"incorrect_answers": [
+			"Change the real implementation of a class for a fake implementation.",
+			"Change the version of a third-party library.",
+			"Change the name of a class or method."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-58",
+		"question": "<p>You are determining if two String variables are the same. Given the following code, what will be the result of this assertion?</p><div class=\"code\"><p>@Test</p><p>public void testAsserts() {</p><p>&nbsp;&nbsp;String string1=\"test\";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;String string2=\"test\";</p><p>&nbsp;&nbsp;assertSame(string1, string2);</p><p>}</p></div>",
+		"correct_answer": "It will return true because both strings are \"test\". ",
+		"incorrect_answers": [
+			"There will be a syntax error because you need to include a message parameter in the assertSame() method. ",
+			"It will return true because both variables are String objects. ",
+			"It will return false because string1 and string2 are not the same object. "
+		],
+		"source": ""
 	}
 ]
