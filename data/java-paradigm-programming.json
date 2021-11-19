@@ -1,5 +1,4 @@
-[
-	{
+[{
 		"id": "java-pp-1",
 		"question": "Consider the following block of code:<div class=\"code\"> <p>class NumberData {</p><p>&nbsp; private final int[] data;</p><p><br></p><p>&nbsp; public NumberData(final int numItems) {</p><p>&nbsp; &nbsp; data = new int[numItems];</p><p>&nbsp; }</p><p><br></p><p>&nbsp; public int[] getData() {&nbsp;</p><p>&nbsp; &nbsp; // IMPLEMENTATION HERE</p><p>&nbsp; }</p><p>}</p><p>public class MyClass {</p><p>&nbsp; public static void main(final String[] args) {</p><p>&nbsp; &nbsp; NumberData data = new NumberData(10);</p><p>&nbsp; &nbsp; // add numbers into data</p><p>&nbsp; &nbsp; int[] newData = data.getData();</p><p>&nbsp; &nbsp; newData[0] = 10;</p><p>&nbsp; }</p><p>}</p></div>What must you add into the getData() method to create a defensive copy of data?",
 		"correct_answer": "return Arrays.copyOf(data, data.length);",
@@ -513,6 +512,94 @@
 			"<div class=\"codeAnswer\">stateful.getContent().add(\"yet another state\");</div>",
 			"<div class=\"codeAnswer\">stateful.content.add(\"yet another state\");</div>",
 			"<div class=\"codeAnswer\">stateful.content = new HashSet<>();</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-49",
+		"question": "What is one concrete benefit of functional code that only uses immutable types?",
+		"correct_answer": "It reduces side effects such as updating a local state.",
+		"incorrect_answers": [
+			"All your objects are serializable by default.",
+			"You can replace re-entrant locks with implicit monitor locks without causing any issues.",
+			"You don't have to use design patterns anymore."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-50",
+		"question": "Which java.util.Collections method will return a Collection object which could throw an UnsupportedOperationException if you try to change that Collection object in its immutable state? ",
+		"correct_answer": "unmodifiableCollection",
+		"incorrect_answers": [
+			"binarySearch",
+			"synchronizedCollection",
+			"max"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-51",
+		"question": "Given the following code: <div class=\"code\"><p>public class Test {</p><p> </p><p>&nbsp;&nbsp;static Function<String, String> apply(BiFunction<String, String, String> f, String a) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return b -> f.apply(a, b);</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;static Function<String, String> apply2(String s) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return (a) -> a + s;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;public static void main(String args[]) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Function<String, String> trim = String::trim;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Function<String, String> partial = apply((a, b) -> a+b, \"x \");</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Predicate<String> filter = s -> s.length() > 3;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;List<String> words = List.of(\"one \", \"two \", \"three \");</p><p>&nbsp;&nbsp;&nbsp;&nbsp;words.stream()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.map((String s1) -> filter.test(s1)? partial : trim)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.map(f -> f.andThen(s2 -> s2 + \"X \"))</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.map(/* INSERT OPTION HERE */)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.forEach(System.out::print);</p><p>&nbsp;&nbsp;}</p>}</div><p>Which option can you insert in the last map function on line 15 so the program compiles correctly?</p>",
+		"correct_answer": "f.apply(\"-\")",
+		"incorrect_answers": [
+			"String::toUpperCase",
+			"Test::apply2",
+			"f -> f.compose(s1 + s2)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-52",
+		"question": "<p>Which option composes the following two predicates to represent a short-circuiting logical OR?</p><div class=\"code\"><p>Predicate<Integer> p1 = (i) -> i > 10;</p><p>Predicate<Integer> p2 = (i) -> i < 5;</p></div>",
+		"correct_answer": "p1.or(p2)",
+		"incorrect_answers": [
+			"p1.merge(p2)",
+			"p1.xor(p2)",
+			"p1.test(p2)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-54",
+		"question": "<p>Consider the following code snippet:</p><div class=\"code\"><p>public class Main {</p><p>&nbsp;&nbsp;public static void main(String[] args) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;String myFirstReferenceVariable;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(myFirstReferenceVariable);</p><p>&nbsp;&nbsp;}</p><p>}</p></div><p>What happens when you try to compile and execute it?</p>",
+		"correct_answer": "A compile-time exception will be thrown because the local variable hasn't been initialized",
+		"incorrect_answers": [
+			"It will print out null",
+			"It will print out a blank string",
+			"A run-time exception will be thrown because the local variable hasn't been initialized"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-55",
+		"question": "<p>You designed the following class to be immutable but it is not. Why not?</p><div class=\"code\"><p>import java.util.Date;</p><p>public final class SomewhatImmutable {</p><p>&nbsp;&nbsp;private final String id;</p><p>&nbsp;&nbsp;private final Date dateCreated;</p><p>&nbsp;&nbsp;public SomewhatImmutable(String id, Date dateCreated) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.id = id;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.dateCreated = dateCreated;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;public String getId() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return id;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;public Date getDateCreated() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return dateCreated;</p><p>&nbsp;&nbsp;}</p><p>}</p><p></p><p></p></div>",
+		"correct_answer": "The Date class is not immutable. You should have used defensive copying in the constructor and the getter to protect the object from changes the original caller made to the Date object and to prevent leaking the mutable Date field with the getter.",
+		"incorrect_answers": [
+			"The String class is not immutable. You should have used defensive copying in the constructor and the getter to protect the object from changes the original caller made to the String object and to prevent leaking the mutable String field with the getter.",
+			"The Date class is mutable and objects having a state that contains mutable objects cannot be made immutable without replacing the mutable types of the state with immutable types.",
+			"The class is using a constructor rather than setter methods, which makes it impossible to enforce any immutability constraints when the arguments are passed in."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-56",
+		"question": "If you correctly implement immutability, where is the only place you should be able change an object's state?",
+		"correct_answer": "The class constructor",
+		"incorrect_answers": [
+			"The get method",
+			"In a subclass",
+			"The set method"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-57",
+		"question": "What does it mean that Java passes primitive method arguments by value?",
+		"correct_answer": "Changes to the values of the parameters exist only within the scope of the method.",
+		"incorrect_answers": [
+			"If called with an insufficient number of arguments, methods will assume default values for the missing ones, based on their types.",
+			"Methods will not accept primitive parameters that have not been explicitly initialized.",
+			"Methods will infer the type of the parameters based on the arguments, therefore you can omit the type of parameters when declaring the method."
 		],
 		"source": ""
 	}
