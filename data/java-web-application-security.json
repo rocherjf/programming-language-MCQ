@@ -409,7 +409,7 @@
 	{
 		"id": "java-web-application-security-38",
 		"question": "A one-time password scheme such as time-based one-time passwords (TOTP) uses a secret key, a seed. What items does a user need to log in with a multi-factor authentication?",
-		"correct_answer": "The seed (for initial setup), the account password, and the TOTP",
+		"correct_answer": "The account password and the TOTP",
 		"incorrect_answers": [
 			"The seed (used for each login attempt), the account password, and the TOTP",
 			"Only the TOTP",
@@ -579,6 +579,182 @@
 			"Because the forward is to the same website",
 			"Because the user is authenticated",
 			"Because it depends on the permission of the role the user is assigned"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-54",
+		"question": "An attacker has a large number of breached user accounts. How can an attacker exploit a broken authentication vulnerability with this data?",
+		"correct_answer": "By trying breached accounts on another web application",
+		"incorrect_answers": [
+			"By asking a ransom for the breached user accounts",
+			"By testing whether one of the accounts is a privileged account",
+			"By selling the breached user accounts"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-55",
+		"question": "A developer who is concerned about having adequate logging, logs all their application's messages. What technical risks might occur from taking such an approach?",
+		"correct_answer": "Under heavy load, logging could result in classic out-of-order deadlocks. ",
+		"incorrect_answers": [
+			"Disks and networks cannot handle the constant logging of large amounts of data.",
+			"Excessive logging hinders server recovery efforts.",
+			"Stack overflows can result from excessive logging consuming system memory."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-56",
+		"question": "What are the two main components of web security?",
+		"correct_answer": "The security of the underlying server application and operating system as well as the security of the served content",
+		"incorrect_answers": [
+			"Proper authorization controls for the server and the security of third-party libraries",
+			"The security of third-party libraries and the security of the underlying application",
+			"The security of the content and proper authorization controls for the server"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-57",
+		"question": "A company plans to classify weaknesses found in its applications. Which list best fits its needs?",
+		"correct_answer": "The Common Weakness Enumeration",
+		"incorrect_answers": [
+			"Critical Security Controls",
+			"The Open Web Application Security Project Top 10",
+			"The Common Vulnerability Enumeration"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-58",
+		"question": "What is the best mitigation strategy to locate the attackers and analyze an ongoing denial-of-service attack?",
+		"correct_answer": "Sinkhole traffic",
+		"incorrect_answers": [
+			"Block new connections",
+			"Wormhole traffic",
+			"Limit incoming requests"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-59",
+		"question": "What do XML document type definitions do?",
+		"correct_answer": "Allow you to specify what a \"valid\" document should contain",
+		"incorrect_answers": [
+			"Present meta information you can use in an XML document feed",
+			"Replaces older definition languages, such as World Wide Web Consortium (W3C) XML Schema",
+			"Define a document structure with a set of key/value pairs of validated elements"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-60",
+		"question": "What is a large collection of generic software weaknesses?",
+		"correct_answer": "Common Weakness Enumeration (CWE)",
+		"incorrect_answers": [
+			"Common Vulnerability Scoring System (CVSS)",
+			"Common Vectors Enumeration (CVE)",
+			"Critical Security Controls"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-61",
+		"question": "What is an XML External Entity?",
+		"correct_answer": "Using a non-internal entity in an XML file",
+		"incorrect_answers": [
+			"Declaring a new entity in an XML file",
+			"Declaring an XML entity that can be exported",
+			"An entity that is not part of the XML specification"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-62",
+		"question": "Attackers stole session cookies from logged-in users using a cross-site scripting exploit. How would you mitigate the attack?",
+		"correct_answer": "By installing a Transport Layer Security (TLS) certificate and setting the httponly flag",
+		"incorrect_answers": [
+			"By setting the secure flag on cookies",
+			"By setting the cookies using a secure channel",
+			"By tightening the cookie scope"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-63",
+		"question": "An application consists of several microservices hosted in the cloud. The services are deployed daily on fresh cloud instances. You want to improve the security of the application. Given this scenario, how would you mitigate security misconfiguration vulnerabilities?",
+		"correct_answer": "Ensure that each deployment uses a hardened base instance.",
+		"incorrect_answers": [
+			"Guarantee each microservice has sufficient computing power.",
+			"Perform security testing on a sample of the microservice before deployment.",
+			"Use content delivery networks to deflect the direct load."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-65",
+		"question": "Which types of data should always be logged?",
+		"correct_answer": "The timestamp, origin, and location metadata",
+		"incorrect_answers": [
+			"All event content and all metadata",
+			"All content of the event itself",
+			"The timestamp, origin, and location data, and all event content"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-66",
+		"question": "A Flash application hosted at globomantics.com fails to retrieve data from the website wiredbraincoffee.com. What is a logical solution?",
+		"correct_answer": "Set up a cross-domain policy file on wiredbraincoffee.com to allow access from globomantics.com.",
+		"incorrect_answers": [
+			"Set up a cross-domain policy file on globomantics.com that allows the application to connect to external domains.",
+			"Set up a cross-domain policy file on wiredbraincoffee.com to allow applications hosted on that domain to access external domains.",
+			"Set up a cross-domain policy file on globomantics.com to allow access to the wiredbraincoffee.com domain."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-67",
+		"question": "What is cross-site request forgery (CSRF)?",
+		"correct_answer": "An attack that performs unwanted requests",
+		"incorrect_answers": [
+			"A vulnerability that allows attackers to modify the HTTP referer",
+			"A vulnerability that allows attackers to modify requests",
+			"An attack that works across multiple sites"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-68",
+		"question": "What is an example of an HTML5 API that might introduce a security risk?",
+		"correct_answer": "Web messaging",
+		"incorrect_answers": [
+			"Drag and drop",
+			"Headers",
+			"History"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-69",
+		"question": "What is the difference between the Open Web Application Security Project (OWASP) Top 10 and the Common Weakness Enumeration (CWE)?",
+		"correct_answer": "The OWASP Top 10 is a ranking, whereas the CWE is a collection.",
+		"incorrect_answers": [
+			"The OWASP Top 10 contains vulnerabilities, whereas the CWE contains threats.",
+			"The OWASP Top 10 contains the top 10 vulnerabilities, whereas the CWE contains all possible vulnerabilities.",
+			"The OWASP Top 10 contains vulnerabilities, whereas the CWE contains risks."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-66",
+		"question": "What browser cookie attribute, when set correctly, is an effective security measure against cross-site request forgery (CSRF) attacks?",
+		"correct_answer": "SameSite attribute",
+		"incorrect_answers": [
+			"ThirdPartyCookies attribute",
+			"OriginatingSite attribute",
+			"SameOrigin attribute"
 		],
 		"source": ""
 	}
