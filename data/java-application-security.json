@@ -361,5 +361,203 @@
 			"There is no default security manager as the application must define its own policy file in order to use a security manager."
 		],
 		"source": ""
+	},
+	{
+		"id": "java-application-security-38",
+		"question": "Which is a valid Java KeyStore format (JKS)?",
+		"correct_answer": "JKS",
+		"incorrect_answers": [
+			"Diagnostic Agent (RDA)",
+			"PCSK12",
+			"PRM"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-39",
+		"question": "Why should you password protect KeyStores?",
+		"correct_answer": "To restrict access to private keys and the list of trusted CAs",
+		"incorrect_answers": [
+			"It is not important to password protect KeyStores",
+			"To prevent the KeyStore from being copied",
+			"To prevent unauthorized read access to the list of trusted CAs"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-40",
+		"question": "Which method must you set with a positive value so cookies last for a fixed time value and not only for the current session?",
+		"correct_answer": "setMaxAge()",
+		"incorrect_answers": [
+			"setTimePeriod()",
+			"setTimeToLive()",
+			"setExpiryTime()"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-41",
+		"question": "What is the difference between calling Cookie#setMaxAge(0) and Cookie#setMaxAge(-1)?",
+		"correct_answer": "setMaxAge(0) expires the cookie and setMaxAge(-1) makes it a session cookie.",
+		"incorrect_answers": [
+			"setMaxAge(-1) expires the cookie and setMaxAge(0) makes it a session cookie.",
+			"setMaxAge(0) expires the cookie, while setMaxAge(-1) is not valid usage.",
+			"It depends on which browser sent the request."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-42",
+		"question": "Which log format is resistent to log injection?",
+		"correct_answer": "JSON",
+		"incorrect_answers": [
+			"Comma delimited",
+			"Timestamped",
+			"Quoted variables"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-44",
+		"question": "What is correct about asymmetric cryptography?",
+		"correct_answer": "It performs slower encryption than the symmetric cryptography.",
+		"incorrect_answers": [
+			"It uses fewer resources compared to symmetric cryptography.",
+			"It always produces a smaller cipher text than the actual plain text.",
+			"It uses only one key to perform both data encryption and decryption."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-45",
+		"question": "Your browser is vulnerable to sending cookies over unencrypted channels. To overcome this issue, you set up a secure attribute by mentioning <httpCookies requireSSL=\"true\" /> within a newly created Web.config file. The cookies are still transmitting over unencrypted HTTP networks, however. How else can you protect them?",
+		"correct_answer": "<p>Delete the Web.config file and add the following in the web.xml file:</p><div class=\"codeAnswer\"><p>&lt;session-config&gt;</p><p>&nbsp;&nbsp;&lt;cookie-config&gt;</p><p>&nbsp;&nbsp;&lt;secure&gt;true&lt;/secure&gt;</p><p>&nbsp;&nbsp;&lt;/cookie-config&gt;</p><p>&lt;/session-config&gt;</p></div>",
+		"incorrect_answers": [
+			"<p>Delete the Web.config file and add the following in the web.xml file:</p><p>session.cookie_secure = true</p>",
+			"<p>Replace the code in the Web.config file with the following code:</p><p><div class=\"codeAnswer\">session.cookie_secure = true</div></p>",
+			"<p>Replace the code in the Web.config file with the following code: </p><div class=\"codeAnswer\"><p>String sessid = request.getSession().getId(); </p><p>response.setHeader(\"SET-COOKIE\", \"JSESSIONID=\" + sessid + \"; secure\");</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-47",
+		"question": "Which is the syntax of XML schema facets?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;xs:restriction base=\"...\"&gt;</p><p> ...</p><p>&lt;/xs:restriction&gt;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>&lt;xs:mask base=\"...\"&gt;</p><p> ...</p><p>&lt;/xs:mask&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;xs:facet base=\"...\"&gt;</p><p> ...</p><p>&lt;/xs:facet&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;xs:resistance base=\"...\"&gt;</p><p> ...</p><p>&lt;/xs:resistance&gt;</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-48",
+		"question": "You created a custom permission myPermission that, when assigned to a user, permits FilePermission, ServicePermission, and SocketPermission. On testing, a user has the first two permissions but is missing the SocketPermission. What could be the possible cause for this issue?",
+		"correct_answer": "The checkPermission() call failed because myPermission is not implying the SocketPermission class.",
+		"incorrect_answers": [
+			"The assignPermission() call failed because myPermission is not implying the SocketPermission class.",
+			"myPermission could only grant a few permissions because it is not implying the Permission class.",
+			"myPermission could only grant a few permissions because it is not implying the BasicPermission class. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-49",
+		"question": "Your application experienced a breach. The application uses a stateless authentication scheme that stores the user identity in a cookie. In order to protect against tampering, the cookie includes the hash of the user's identity information for verification. What would you do to resolve the system failure?",
+		"correct_answer": "Sign the cookie value to prevent tampering",
+		"incorrect_answers": [
+			"Base64 encode the user identity information to better obfuscate the information",
+			"Generate a session ID upon user login and save that as a cookie instead",
+			"There are steps required for resolution"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-50",
+		"question": "<p>What is the problem with the following configuration?</p><div class=\"code\">http.authorizeRequests().antMatchers(\"/**\").authenticated()    .antMatchers(\"*.css\").permitAll();</div>",
+		"correct_answer": "The configuration intends to expose *.css as public, but it fails because the matchers are out of order.",
+		"incorrect_answers": [
+			"The configuration intends to expose *.css as public, but this is not as secure as requiring authentication.",
+			"The configuration intends to expose *.css as public, but it fails because ant does not support file extensions.",
+			"The configuration intends to expose *.css as public, but it would be more secure to implement before .authorizeRequests."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-51",
+		"question": "You must read a file into memory as American Standard Code for Information Interchange (ASCII). How would you configure the reader to complain when it finds a character that it cannot map?",
+		"correct_answer": "Configure a CharsetDecoder with onUnmappableCharacter(REPORT), wrap a FileInputStream in an InputStreamReader, and supply the decoder.",
+		"incorrect_answers": [
+			"Configure a CharsetDecoder with onUnmappableCharacter(REPORT), create a FileReader, and supply the decoder.",
+			"Configure a CharsetEncoder with onUnmappableCharacter(REPORT), wrap a FileInputStream in an InputStreamReader, and supply the decoder.",
+			"Specify -Dfile.encoding=ASCII and -Dfile.encoding.unmappable=REPORT from the command line."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-53",
+		"question": "In the principle of least privilege, how should you create a file in Java?",
+		"correct_answer": "Files.write(path, bytes, StandardOpenOption.CREATE_NEW).toFile().setReadOnly();",
+		"incorrect_answers": [
+			"Files.write(path, bytes, StandardOpenOption.CREATE).toFile().setReadOnly()",
+			"Files.write(path, bytes)",
+			"Files.write(path, bytes).toFile().setReadOnly()"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-54",
+		"question": "Images uploaded into a web application are encrypted with AES in CTR mode. A single bit key and IV are used to encrypt all images. What is the problem with the encryption?",
+		"correct_answer": "Each image must be encrypted with a unique IV.",
+		"incorrect_answers": [
+			"The encrypted image will look similar to the original.",
+			"Each image must be encrypted with a unique key.",
+			"Images should not be encrypted in CTR mode."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-55",
+		"question": "For a 192-bit key Advanced Encryption Standard (AES) algorithm, how many rounds are required to convert plaintext into its corresponding cipher text?",
+		"correct_answer": "12",
+		"incorrect_answers": [
+			"14",
+			"16",
+			"10"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-56",
+		"question": "Which syntax verifies a signed Java Archive (JAR) file?",
+		"correct_answer": "jarsigner -verify jarFile",
+		"incorrect_answers": [
+			"jarverify jarFile",
+			"jar -verify jarFile",
+			"corejar -verify jarFile"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-57",
+		"question": "If Class B calls Class C, and Class C contains a doPrivileged block, with which class's permissions will the code in the doPrivileged block perform?",
+		"correct_answer": "Class C's permissions",
+		"incorrect_answers": [
+			"The union of Class C's and Class B's permissions",
+			"Class B's permissions",
+			"The intersection of Class C's and Class B's permissions"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-58",
+		"question": "What do you do to retrieve an underlying object with SignedObject?",
+		"correct_answer": "Call the verify method with the appropriate key and signature and call getObject to retrieve the object if it returns true",
+		"incorrect_answers": [
+			"Call getObject to retrieve the object",
+			"Call getObjectAndVerify to retrieve and verify the object",
+			"Call the verify method with the appropriate key and signature and call getObject to retrieve the object If it does not throw an exception"
+		],
+		"source": ""
 	}
 ]
