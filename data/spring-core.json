@@ -273,5 +273,271 @@
 			"Field, setter, and constructor"
 		],
 		"source": ""
+	},
+	{
+		"id": "spring-core-27",
+		"question": "Consider the context in which a web application runs. Which action will a Spring model-view-controller (MVC) app take?",
+		"correct_answer": "Create its own context",
+		"incorrect_answers": [
+			"Share its own web context",
+			"Run, but no beans will be initialized",
+			"Fail if a context is not specified"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-28",
+		"question": "What is missing from the following aspect?<div class=\"code\"><p>public class TransactionAspect {</p><p>&nbsp;&nbsp;@AfterReturning(\"@target(org.springframework.transaction.annotation.Transactional)\")</p><p>&nbsp;&nbsp;public void afterTransactionalMethod() {</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"correct_answer": "The @Aspect annotation",
+		"incorrect_answers": [
+			"An @Advice expression",
+			"A @Pointcut expression",
+			"The @EnableAspectJ annotation"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-27",
+		"question": "Consider the context in which a web application runs. Which action will a Spring model-view-controller (MVC) app take?",
+		"correct_answer": "Create its own context",
+		"incorrect_answers": [
+			"Share its own web context",
+			"Run, but no beans will be initialized",
+			"Fail if a context is not specified"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-28",
+		"question": "What is missing from the following aspect?<div class=\"code\"><p>public class TransactionAspect {</p><p>&nbsp;&nbsp;@AfterReturning(\"@target(org.springframework.transaction.annotation.Transactional)\")</p><p>&nbsp;&nbsp;public void afterTransactionalMethod() {</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"correct_answer": "The @Aspect annotation",
+		"incorrect_answers": [
+			"An @Advice expression",
+			"A @Pointcut expression",
+			"The @EnableAspectJ annotation"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-29",
+		"question": "How can you retrieve data using a client from the endpoints given by the class StudentDetails?",
+		"correct_answer": "<p>public&nbsp;&nbsp;class&nbsp;&nbsp;StudentClient&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;WebClient&nbsp;&nbsp;sclient&nbsp;&nbsp;=&nbsp;&nbsp;WebClient.create(\"http://localhost:2020\");</p><p>&nbsp;&nbsp;//&nbsp;&nbsp;...</p><p>}</p>",
+		"incorrect_answers": [
+			"<p>public&nbsp;&nbsp;class&nbsp;&nbsp;StudentClient&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;StudentDetails&nbsp;&nbsp;sdetail&nbsp;&nbsp;=&nbsp;&nbsp;WebClient.create(\"http://localhost:2020\");</p><p>&nbsp;&nbsp;//&nbsp;&nbsp;...</p><p>}</p>",
+			"<p>public&nbsp;&nbsp;class&nbsp;&nbsp;StudentClient&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;WebClient&nbsp;&nbsp;sclient&nbsp;&nbsp;=&nbsp;&nbsp;StudentDetails.create(\"http://localhost:2020\");</p><p>&nbsp;&nbsp;//&nbsp;&nbsp;...</p><p>}</p>",
+			"<p>public&nbsp;&nbsp;class&nbsp;&nbsp;StudentClient&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;WebClient&nbsp;&nbsp;sclient&nbsp;&nbsp;=&nbsp;&nbsp;WebClient(\"http://localhost:2020\");</p><p>&nbsp;&nbsp;//&nbsp;&nbsp;...</p><p>}</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-30",
+		"question": "What is the equivalent to MockMvc for Spring WebFlux endpoints?",
+		"correct_answer": "WebTestClient",
+		"incorrect_answers": [
+			"WebfluxTestTemplate",
+			"TestWebfluxTemplate",
+			"MockWebFlux"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-31",
+		"question": "Spring model-view-controller (MVC) and Spring WebFlux both contain an @Controller and @RestController annotation. Which statement is true about how each framework treats each annotation?",
+		"correct_answer": "MVC and Spring treat the annotations the same.",
+		"incorrect_answers": [
+			"The annotations make WebFlux as well as MVC non-blocking.",
+			"The annotations in WebFlux use qualifiers and disregard qualifiers in MVC.",
+			"The annotations make WebFlux blocking and MVC non-blocking."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-32",
+		"question": "Which class resolves uncaught exceptions against using @ExceptionHandler methods? ",
+		"correct_answer": "ExceptionHandlerExceptionResolver",
+		"incorrect_answers": [
+			"HandlerExceptionResolver",
+			"ResponseStatusExceptionResolver",
+			"DefaultHandlerExceptionResolver"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-33",
+		"question": "Which pointcut expression matches the execution of any method defined within the com.acme.dao package?",
+		"correct_answer": "<div class=\"codeAnswer\"><div class=\"codeAnswer\">execution(* com.acme.dao.*.*(..))</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">execution(within(* com.acme.dao.*.*(..)))</div>",
+			"<div class=\"codeAnswer\">within(package(* com.acme.dao.*.*(..)))</div>",
+			"<div class=\"codeAnswer\">package(* com.acme.dao.*.*(..))</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-34",
+		"question": "<p>While making an application you add some servlet filters into your code for filtering, encryption, and decryption. The following code is the web.xml file:</p><div class=\"code\"><p>&lt;filter&gt;</p><p>&nbsp;&nbsp;&lt;filter-name&gt;myEdit&lt;/filter-name&gt;</p><p>&nbsp;&nbsp;&lt;filter-class&gt;org.springframework.web.filter&lt;/filter-class&gt;</p><p>&lt;/filter&gt;</p></div><p>While running the final application's code, however, the app ignores the filters and executes everything else. How can you fix this?</p>",
+		"correct_answer": "Add the DelegatingFilterProxy filter class in the third line.",
+		"incorrect_answers": [
+			"Replace &lt;filter-class&gt; with &lt;input&gt; in the third line.",
+			"Change the &lt;filter&gt; tag to the &lt;filter-id&gt; tag in the first line.",
+			"Replace the second line with &lt;name&gt;myEdit&lt;/name&gt;."
+		],
+		"source": ""
+	},
+	
+
+	{
+		"id": "spring-core-35",
+		"question": " When unit testing a Spring model-view-controller (MVC), which class allows you to perform requests and generate responses without a Servlet container?",
+		"correct_answer": "MockMvc",
+		"incorrect_answers": [
+			"MockWebMvc",
+			"MockWeb",
+			"MockRequest"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-36",
+		"question": "<p>Your Spring Boot application defines a configuration value as an environment variable:</p><div class=\"code\"><p>GREETING=\"never gonna give you up\"</p></div><p>Which must you use to override this value, according to the PropertySource order that Spring Boot uses?</p>",
+		"correct_answer": "A command-line argument when executing the jar",
+		"incorrect_answers": [
+			"An application.properties file in the same directory as your jar",
+			"A @PropertySource annotation with your @Configuration class",
+			"An application.properties file packaged within your jar"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-37",
+		"question": "You must add several Spring filter beans in your application context file without cluttering up the web.xml file. How would you do so?",
+		"correct_answer": "By using the FilterChainProxy class",
+		"incorrect_answers": [
+			"By using the FilterConfig class ",
+			"By using the SecurityFilterChain class ",
+			"By using the ChannelProcessingFilter class "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-38",
+		"question": "How can you achieve content negotiation?",
+		"correct_answer": "Path extension, URL parameter, and accept headers ",
+		"incorrect_answers": [
+			"URL parameter and path extension ",
+			"Path extension and accept headers",
+			"URL extension, path location, and accept headers "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-39",
+		"question": "What steps would you take to test an API with a POST request?",
+		"correct_answer": "<p>Create a resource through POST;</p><p>Use the GET request and save the data;</p><p>Add a test that fails the POST request </p>",
+		"incorrect_answers": [
+			"<p>Create a resource through POST;</p><p>Add a test that fails the POST request;</p><p>Use the GET request and save the data</p> ",
+			"<p>Create a resource through POST;</p><p>Use the PUT request and save the data; </p><p>Add a test that fails the POST request </p>",
+			"<p>Create a resource through PUT;</p><p>Use the PUT request and save the data;</p><p>Add a test that fails the POST request </p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-40",
+		"question": "<p>The following fragment of code was built with the help of view resolvers, where you mixed different view technologies together in an application:</p> <div class=\"code\"><p>&lt;bean id=\"viewResolver\" class=\"org.springframework.web.servlet.view.InternalResourceViewResolver\"&gt;</p><p>&nbsp;&nbsp;&lt;property name=\"basename\" value=\"views/\"&gt;</p><p>&nbsp;&nbsp;&lt;property name=\"defaultParentView\" value=\"parentView\"/&gt;</p><p>&lt;/bean&gt;</p></div><p>During execution, the code produces an error on line 2. Why?</p>",
+		"correct_answer": "You should use ResourceBundleViewResolver instead of InternalResourceViewResolver.",
+		"incorrect_answers": [
+			"You should use UrlBasedViewResolver instead of InternalResourceViewResolver.",
+			"You should use AbstractCachingViewResolver instead of InternalResourceViewResolver.",
+			"You should use FreeMakerViewResolver instead of InternalResourceViewResolver."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-41",
+		"question": "<p>What does the @SpringBootTest annotation do in the following code? </p><div class=\"code\"><p>@RunWith(SpringRunner.class)</p><p>@SpringBootTest(SpringBootTest.WebEnvironment.MOCK, classes=Application.class)</p><p>@AutoConfigureMockMvc</p><p>@TestPropertySource(location=\"classpath:application-integrationtest.properties\")</p><p>public class ProductIntegrationTest{</p><p> // ...</p><p>}</p></div>",
+		"correct_answer": "Bootstraps the entire container ",
+		"incorrect_answers": [
+			"Operates the container in a mock environment ",
+			"Configures the location of the classes ",
+			"Configures the runtime environment "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-42",
+		"question": "When writing unit tests for Spring-based applications, what is the correct way of creating a plain old Java object (POJO)?",
+		"correct_answer": "Using the new operator",
+		"incorrect_answers": [
+			"Using dependency injection with @Qualifier",
+			"Using dependency injection",
+			"Using the factory pattern"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-43",
+		"question": "What HTTP verb would you use to create a resource if you have its Uniform Resource Identifier (URI)?",
+		"correct_answer": "PUT",
+		"incorrect_answers": [
+			"PATCH",
+			"POST",
+			"GET"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-44",
+		"question": "You must establish a connection between a URL and your application. Which DriverManager class' method do you need to perform this task?",
+		"correct_answer": "<div class=\"codeAnswer\">public static Connection getConnection(String url);</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">public static Connection getConnection(String url, String userName, String password);</div>",
+			"<div class=\"codeAnswer\">public Connection getconnection(String[] url, String[] password);</div>",
+			"<div class=\"codeAnswer\">public static Connection getConnection(String[] url);</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-45",
+		"question": "Which jar is always required to create a simple Spring application?",
+		"correct_answer": "spring-context.jar",
+		"incorrect_answers": [
+			"spring.jar",
+			"spring-boot-starter.jar",
+			"spring-core.jar"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-46",
+		"question": "Lightweight Directory Access Protocol (LDAP) authentication is typically configured differently than other AuthenticationProviders. What are the two configuration parameters usually configured with an LDAP provider?",
+		"correct_answer": "BindAuthenticator and LdapAuthoritiesPopulator",
+		"incorrect_answers": [
+			"AccessDecisionManager and AuthenticationProvider",
+			"LdapAuthenticator and DaoPopulator",
+			"UserService and JdbcDaoImpl"
+		],
+		"source": ""
+	},
+		{
+		"id": "spring-core-47",
+		"question": "Which Spring Boot annotation loads only auto-configurations relevant to the web layer and provides useful support for testing Spring model-view-controller (MVC)?",
+		"correct_answer": "@WebMvcTest",
+		"incorrect_answers": [
+			"@WebMvcAutoConfiguration",
+			"@AutoConfigureWebMvc",
+			"@AutoConfigureMockMvc"
+		],
+		"source": ""
+	},
+		{
+		"id": "spring-core-48",
+		"question": "Which concept can you use to replicate the behavior of a mock object's method?",
+		"correct_answer": "Stubbing ",
+		"incorrect_answers": [
+			"Verifying",
+			"Faking",
+			"Mocking"
+		],
+		"source": ""
 	}
 ]
