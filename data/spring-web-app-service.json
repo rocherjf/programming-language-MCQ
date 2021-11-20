@@ -370,5 +370,237 @@
 		],
 		"source": "",
 		"explanation": ""
+	},
+	{
+		"id": "spring-web-app-service-43",
+		"question": "<p>How would you implement the</p><div class=\"codeAnswer\"><p>@Override</p><p>public void onStartup(ServletContext container) {}</p></div><p>method from the WebApplicationInitializer so that all the requests starting with \"/demo\" are handled by the DispatcherServlet?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>ServletRegistration.Dynamic registration = container.addServlet(\"d\", new DispatcherServlet());  </p><p>registration.setLoadOnStartup(1);  </p><p>registration.addMapping(\"/demo/*\");</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();</p><p>DispatcherServlet ds = new DispatcherServlet(ctx);</p><p>ds.getHandlerMappings().add(\"/demo/*\");</p></div>",
+			"<div class=\"codeAnswer\"><p>DispatcherServlet ds = new DispatcherServlet(new AnnotationConfigWebApplicationContext());</p><p>ds.setDetectAllHandlerMappings(true);</p><p>ds.setDispatchOptionsRequest(\"/demo/*\");</p></div>",
+			"<div class=\"codeAnswer\"><p>DispatcherServlet dispatcherServlet = new DispatcherServlet();</p><p>ServletRegistration.Dynamic registration = container.addServlet(\"d\", dispatcherServlet);</p><p>dispatcherServlet.setContextInitializerClasses(\"/demo/*\");</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-44",
+		"question": "What Spring annotation allows you to customize the name of an associated entity?",
+		"correct_answer": "@RestResource",
+		"incorrect_answers": [
+			"@ResourceLink",
+			"@OneToMany",
+			"@OneToOne"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-45",
+		"question": "Which of the following is an example of a valid relationship between @SessionAttributes and @ModelAttribute?",
+		"correct_answer": "@SessionAttributes lists the names or the types of model attributes that should be stored in a session while @ModelAttribute is used to define and instantiate those attributes.",
+		"incorrect_answers": [
+			"@SessionAttributes can be applied at class level only, whereas @ModelAttribute can only be applied at class and method level.",
+			"@SessionAttributes can be applied at method and class level, whereas @ModelAttribute can only be applied at class level.",
+			"The presence of @SessionAttributes indicates that all beans annotated with @ModelAttribute will be stored in the user session while @ModelAttribute is used to define and instantiate those attributes. "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-46",
+		"question": "You are working on a large Spring project that has been live for more than 10 years, and the process is tedious. After some time you notice that the presentation and the domain layers are very tightly coupled and any change you make in the domain requires you to also change the controllers. How can you start refactoring this application in order to decouple the above layers?",
+		"correct_answer": "Use Data Transfer Objects (DTO) in the service layer of the application. ",
+		"incorrect_answers": [
+			"Remove all the application programming interfaces (APIs) and move all the logic in the domain layer.",
+			"Create an additional business layer and move the code that interacts with both the presentation and the domain layer there.",
+			"Use Data Access Objects (DAO) in the service layer of the application."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-47",
+		"question": "What bean validation reference implementation is Spring using by default?",
+		"correct_answer": "Hibernate Validator",
+		"incorrect_answers": [
+			"Apache Cayenne",
+			"JSR 380",
+			"Apache Commons Validator"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-48",
+		"question": "You implemented classes that provide the base implementation of the HandlerInterceptor interface. The method definition for the preHandle method looks like this:boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)You have returned false in this method and nothing else is continuing to process. Why might this be happening?",
+		"correct_answer": "Spring assumes that the request has been processed by the spring interceptor itself and no more processing is required.",
+		"incorrect_answers": [
+			"The HandlerAdapter has invoked the handler but DispatcherServlet is yet to render the view. ",
+			"The handler has been completely executed but has not yet been processed.",
+			"Spring assumes that the client request has been cancelled by the HTTP protocol."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-49",
+		"question": "Which HTML tag do we need to use in a form to enable the user to upload a file in a Spring MVC application?",
+		"correct_answer": "<div class=\"codeAnswer\">&lt;input type=\"file\" name=\"file\" /&gt;</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">&lt;form:label path=\"file\"&gt;</div>",
+			"<div class=\"codeAnswer\">&lt;form:form method=\"POST\" action=\"/upload\"&gt;</div>",
+			"<div class=\"codeAnswer\">&lt;input type=\"submit\" value=\"Submit\" /&gt;</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-50",
+		"question": "<p>The following code snippet is part of the definition of a Spring REST API endpoint:</p><div class=\"code\"><p>@RequestMapping(value = \"/cities\", method = RequestMethod.GET)</p><p>public String getCities(//your answer goes here) {</p><p>&nbsp;&nbsp;//assume a valid method body exists here</p><p>}</p></div> <p>The method returns a list of all cities close to an airport code. The HTTP GET request will provide the airport code value via the airportCode request parameter. How will you specify the extraction of this parameter?</p>",
+		"correct_answer": "@RequestParam(value = \"airportCode\") String airportCode ",
+		"incorrect_answers": [
+			"@RequestParam(key = \"airportCode\") String airportCode",
+			"@RequestMapping(key= \"airportCode\") String airportCode",
+			"@RequestMapping(value = \"airportCode\") String airportCode"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-51",
+		"question": "Which of the following is an example of a Spring annotation that you use when annotating a method mapped to an HTTP GET request?",
+		"correct_answer": "@GetMapping",
+		"incorrect_answers": [
+			"@GETRequest",
+			"@GET",
+			"@GetRequest"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-52",
+		"question": "You are creating Spring MVC controllers with @Controller and are mapping requests with annotations. What code snippet can you use to successfully implement a @PostMapping annotation for a customer endpoint?",
+		"correct_answer": "<div class=\"code\"><p>@Controller</p><p>public class CustomerController {</p><p>&nbsp;&nbsp;@PostMapping(path = \"/customers\", consumes = \"application/json\", produces =\"application/json\")</p><p>&nbsp;&nbsp;public void customers(@RequestBody Customer customer) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;// user code here</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"code\"><p>@Controller</p><p>public class CustomerController {</p><p>&nbsp;&nbsp;@PostMapping(@Path(\"/customers\"), consumes = \"application/json\", produces = \"application/json\")</p><p>&nbsp;&nbsp;public void customers(@RequestBody Customer customer) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;// user code here</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+			"<div class=\"code\"><p>@Controller</p><p>public class HomeController {</p><p>&nbsp;&nbsp;@PostMapping(\"/\")</p><p>&nbsp;&nbsp;public String customers(Model model) {</p><p>&nbsp;&nbsp;   // user code here</p><p>&nbsp;&nbsp;}</p><p>} </p></div>",
+			"<div class=\"code\"><p>@Controller</p><p>public class HomeController {</p><p>&nbsp;&nbsp;@PostMapping(@RequestBody)</p><p>&nbsp;&nbsp;public String customers(Model model) {</p><p>&nbsp;&nbsp;   // user code here</p><p>&nbsp;&nbsp;}</p><p>} </p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-53",
+		"question": "You have just made a major update to an API that requires a new version 2.0. This new version needs to exist separately from the 1.0 version using URI Versioning. Which versioning change will allow you to properly implement this new version through URI versioning?",
+		"correct_answer": "https://www.exampleapi.com/api/v2/data",
+		"incorrect_answers": [
+			"https://www.exampleapi.com/api/data?version=2",
+			"https://exampleapi-8080/api/v2/data?version=2 ",
+			"https://exampleapi-8080/api/v2/data"
+		],
+		"source": ""
+	},
+		{
+		"id": "spring-web-app-service-54",
+		"question": "How would you retrieve a file that has been uploaded from a form in a Spring MVC controller?",
+		"correct_answer": "From the handler method parameter @RequestParam(\"file\") MultipartFile file ",
+		"incorrect_answers": [
+			"From the handler method parameter @RequestParam(\"file\") File file ",
+			"By decoding the base64 String representation of the file",
+			"By creating a new java.io.File with the path received from the form"
+		],
+		"source": ""
+	},
+		{
+		"id": "spring-web-app-service-55",
+		"question": "Which class provides access to details about a file that has been uploaded from a form in a Spring MVC application?",
+		"correct_answer": "MultipartFile ",
+		"incorrect_answers": [
+			"FilePart",
+			"MockMultipartFile",
+			"File"
+		],
+		"source": ""
+	},
+		{
+		"id": "spring-web-app-service-56",
+		"question": "Which Spring MVC annotation can you use to make sure that a JSP has all the data it needs to display itself?",
+		"correct_answer": "@ModelAttribute",
+		"incorrect_answers": [
+			"@RequestMapping",
+			"@RequestBody",
+			"@PathVariable"
+		],
+		"source": ""
+	},
+		{
+		"id": "spring-web-app-service-57",
+		"question": "You're working on implementing a Spring REST API endpoint responsible for handling HTTP DELETE requests. Relative to the base URL of the controller, the endpoint only adds the id path variable of the resource to the actual URL. No actual request parameters are used. How will you annotate the appropriate controller method?",
+		"correct_answer": "@DeleteMapping(\"/{id}\")",
+		"incorrect_answers": [
+			"@RequestMapping(value = \"/id\", method = RequestMethod.DELETE, params = {\"id\"})",
+			"@RequestMapping(value = \"/{id}\", method = RequestMethod.DELETE, params = {\"id\"})",
+			"@DeleteMapping(\"/id\")"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-58",
+		"question": "<p>Given the following Spring code snippet:</p><div class=\"code\"><p>@Controller</p><p>public class RecipeController {</p><p>&nbsp;&nbsp;@RequestMapping(</p><p>&nbsp;&nbsp;&nbsp;&nbsp; value = \"/api/quantities\", </p><p>&nbsp;&nbsp;&nbsp;&nbsp; method = RequestMethod.GET,</p><p>&nbsp;&nbsp;&nbsp;&nbsp; params = {\"recipe\"}</p><p>&nbsp;&nbsp;)</p><p>&nbsp;&nbsp;public String getQuantities(</p><p>&nbsp;&nbsp;&nbsp;&nbsp; @RequestParam(value = \"recipe\") String recipe</p><p>&nbsp;&nbsp;) {</p><p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;//assume valid method code is here</p><p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;}</p><p>}</p></div><p>When you try to correctly access it from a browser, the request fails and a 404 HTTP status code is returned. How would you fix it by only changing the method?</p>",
+		"correct_answer": "Add @ResponseBody before the return type of the method.",
+		"incorrect_answers": [
+			"Add @RequestBody after the return type of the method.",
+			"Add @RequestBody before the return type of the method.",
+			"Add @ResponseBody after the return type of the method."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-60",
+		"question": "<p>Which Spring MVC annotation would you add on the following handler method?</p><div class=\"code\"><p>Employee replaceEmployee(@RequestBody Employee newEmployee, @PathVariable Long id) { ... }</p></div>",
+		"correct_answer": "@PutMapping(\"/employees/{id}\")",
+		"incorrect_answers": [
+			"@GetMapping(\"/employees/{id}\")",
+			"@PostMapping(\"/employees/{id}\")",
+			"@DeleteMapping(\"/employees/{id}\")"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-61",
+		"question": "<p>Your company has had a set of different APIs that consumers use. Due to market demands you have frequently been making updates and have had to continuously update the URL (example below).</p><p>https://www.myAPI.com/api/v1/orders/1234</p><p>Currently, anyone who knows the ID of the order can use this API call with HTTP GET. What security vulnerability are you potentially exposing with this approach?</p>",
+		"correct_answer": "Insecure direct object reference (IDOR)",
+		"incorrect_answers": [
+			"Direct Denial of Service (DDOS)",
+			"Session fixation",
+			"Cross Site Scripting"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-63",
+		"question": "You are a software developer working on creating a RESTful web service and you know that this service will be popular, because it's just replacing an already popular existing service. You're therefore building rate limiting functionality into this service. What HTTP status code will you return to a client running into rate limiting?",
+		"correct_answer": "429",
+		"incorrect_answers": [
+			"403",
+			"401",
+			"418"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-64",
+		"question": "What tag do you need to use in the spring-web-config.xml file in order to include additional CSS in your Spring MVC application?",
+		"correct_answer": "mvc:resources",
+		"incorrect_answers": [
+			"mvc:resource-chain",
+			"context:component-scan",
+			"link href"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-web-app-service-65",
+		"question": "<p>Given the code snippet below, found in a class annotated with @RestController:</p><div class=\"code\"><p>@RequestMapping(value = \"/cities\", method = RequestMethod.GET)</p><p>public List<ValidCity> getAllCitiesInCounty(</p><p>&nbsp;&nbsp;@RequestParam(value = \"county\") String county</p><p>) {</p><p>&nbsp;&nbsp;//assume valid method body goes here</p><p>}</p></div><p>Assume that the ValidCity type exists and was defined correctly and that a valid method body exists and is also defined correctly. What is your analysis of this endpoint with regards to its ability to return the java.util.List type when responding to a request that accepts any MIME type with JSON content?</p>",
+		"correct_answer": "Everything will work fine as it is because Spring will handle the serialization of the java.util.List to JSON.",
+		"incorrect_answers": [
+			"Everything will work fine as it is only as long as the java.util.List contains a single element.",
+			"It requires a produces=application/json attribute in @RequestMapping before it can work.",
+			"It requires a produces=java.util.List attribute in @RequestMapping before it can work."
+		],
+		"source": ""
 	}
+
 ]
