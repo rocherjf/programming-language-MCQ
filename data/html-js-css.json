@@ -442,5 +442,170 @@
 		],
 		"source": "",
 		"explanation": ""
+	},
+	{
+		"id": "html-js-css-39",
+		"question": "What is the limit of data size localStorage in Google Chrome?",
+		"correct_answer": "10MB",
+		"incorrect_answers": [
+			"20MB",
+			"2MB",
+			"15MB"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-41",
+		"question": "You are working on a website in HTML5 and are using an iframe to present a social network button. What command would you use to restrict the iframe?",
+		"correct_answer": "<div class=\"codeAnswer\">&lt;iframe sandbox src=\"http://example.com\"&gt;&lt;/iframe&gt;</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">&lt;iframe lock src=\"http://example.com\"&gt;&lt;/iframe&gt;</div>",
+			"<div class=\"codeAnswer\">&lt;iframe restrict src=\"http://example.com\"&gt;&lt;/iframe&gt;</div>",
+			"<div class=\"codeAnswer\">&lt;iframe prevent src=\"http://example.com\"&gt;&lt;/iframe&gt;</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-42",
+		"question": "What JavaScript interface allows you to support basic media-related capabilities common to audio and video?",
+		"correct_answer": "HTMLMediaElement",
+		"incorrect_answers": [
+			"HTMLMediaControls",
+			"HTMLElement",
+			"HTMLMediaController"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-43",
+		"question": "Which CSS combinator designates a general sibling relationship?",
+		"correct_answer": "~",
+		"incorrect_answers": [
+			"!",
+			">",
+			"+"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-45",
+		"question": "You want to ask the user for their first and last name on a form written with HTML. You want the user to be able to automatically enter their information again upon further submissions of the form. What attribute would you specify to accomplish this?",
+		"correct_answer": "The autocomplete attribute in the form opening tag",
+		"incorrect_answers": [
+			"The autofill attribute in the form opening tag",
+			"The autofinish attribute in the form closing tag",
+			"The autotype attribute in the form closing tag"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-46",
+		"question": "What is an example of a semantic element?",
+		"correct_answer": "&lt;form&gt;",
+		"incorrect_answers": [
+			"&lt;span&gt;",
+			"&lt;br&gt;",
+			"&lt;div&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-47",
+		"question": "Where must you specify the &lt;legend&gt; tag relative to the form?",
+		"correct_answer": "After the &lt;fieldset&gt; opening tag in the &lt;form&gt;",
+		"incorrect_answers": [
+			"Before the &lt;fieldset&gt; opening tag in the &lt;form&gt;",
+			"After the &lt;form&gt; end tag",
+			"After the &lt;fieldset&gt; closing tag in the &lt;form&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-48",
+		"question": "<p>Below is a CSS rule:</p><div class=\"code\"><p>text-shadow: 4px 4px 2px orange;</p></div><p>What does the value 2px represent for this rule?</p>",
+		"correct_answer": "The blur radius",
+		"incorrect_answers": [
+			"The horizontal offset",
+			"The block level",
+			"The vertical offset"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-49",
+		"question": "What file type offers a high-quality print at any resolution?",
+		"correct_answer": "SVG",
+		"incorrect_answers": [
+			"JPG",
+			"GIF",
+			"PNG"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-50",
+		"question": "A project recently suffered a security breach because the team used the hidden input type to store sensitive information. In hindsight, what fact, if known, could have prevented this breach from occurring?",
+		"correct_answer": "That values stored with the hidden input type are visible in any browser's developer tools or \"View Source\"",
+		"incorrect_answers": [
+			"That the hidden input type can only store sensitive information if you set the security attribute",
+			"That the hidden input type can only store sensitive information if you set the encrypt attribute",
+			"That the hidden input type typically does not function in most browsers"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-51",
+		"question": "What position property value places an element corresponding to its normal position?",
+		"correct_answer": "Relative",
+		"incorrect_answers": [
+			"Fixed",
+			"Absolute",
+			"Static"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-53",
+		"question": "You must create a website that is compatible with multiple device types. Your layout looks fine on a desktop, but has problems on a mobile device. What can you do within JavaScript to fix this problem?",
+		"correct_answer": "Use media queries such as Window.matchMedia() or MediaQueryList.addListener()",
+		"incorrect_answers": [
+			"Use the ScaleLayout() function",
+			"Use media queries such as Window.scaleMedia() or ScaleQueryList.addListener()",
+			"Use the AdjustLayout() function"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-54",
+		"question": "What is the purpose of the HTML window.localStorage object?",
+		"correct_answer": "To store data with no expiration date",
+		"incorrect_answers": [
+			"To store data for two local sessions",
+			"To store data for one session",
+			"To store data with a preset amount of time"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-55",
+		"question": "You must create a navigation menu container for your e-commerce website. How can you do so using CSS?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>.menu{</p><p>&nbsp;&nbsp;overflow: hidden;</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>.menu{</p><p>&nbsp;&nbsp;overflow: true;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.menu{</p><p>&nbsp;&nbsp;overflow: start;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>.menu{</p><p>&nbsp;&nbsp;overflow: end;</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-56",
+		"question": "You want to use whitespace to create a spaced list in an HTML document. No matter how much whitespace you use, however, the whitespace is completely removed and there are only single spaces between words. How could you fix this?",
+		"correct_answer": "Use the &lt;pre&gt; tag to maintain all whitespace inside.",
+		"incorrect_answers": [
+			"Use the &lt;whitespace&gt; tag to maintain all whitespace inside.",
+			"Use the &lt;font&gt; tag to maintain all whitespace inside.",
+			"Use the &lt;format&gt; tag to maintain all whitespace inside."
+		],
+		"source": ""
 	}
 ]
