@@ -478,5 +478,181 @@
 		],
 		"source": "",
 		"explanation": ""
+	},
+	{
+		"id": "spring-security-42",
+		"question": "What annotation can be used on a Spring controller method to enable Cross Origin HTTP requests?",
+		"correct_answer": "@CrossOrigin",
+		"incorrect_answers": [
+			"@CORSAllow",
+			"@AllowCrossOrigin",
+			"@CrossOriginAllow"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-43",
+		"question": "Which of the following is a standard for user authentication using OAuth?",
+		"correct_answer": "OpenID Connect",
+		"incorrect_answers": [
+			"JSON Web Tokens (JWT)",
+			"Security Assertion Markup Language (SAML)",
+			"Microsoft WS-Federation"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-44",
+		"question": "<p>Your team's Spring application integrates with a third party system at the database level. Given the highly sensitive information stored within the third party system your application must ensure that fine grained access controls are implemented and follow the access controls stored by the third party application. The following table is in the database capturing access controls:</p><div class=\"code\"><p>CREATE TABLE grants (</p><p>&nbsp;&nbsp;USER_ID BIGINT,</p><p>&nbsp;&nbsp;OBJECT_ID BIGINT,</p><p>&nbsp;&nbsp;PERMISSIONS CHAR[],</p><p>&nbsp;&nbsp;PRIMARY KEY (USER_ID, OBJECT_ID)</p><p>)</p></div><p>How would you go about solving this?</p>",
+		"correct_answer": "Make use of the hasPermission SpEL function and implement a custom PermissionEvaluator.",
+		"incorrect_answers": [
+			"Create a custom PointCut which can filter all repository level methods using the access control data.",
+			"Create a custom HTTP filter to apply the access controls for each request.",
+			"Make use of the hasAuthority SpEL function and implement a custom UserDetailsService."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-45",
+		"question": "A developer configured Spring Security to disable the Cross Site Request Forgery (CSRF) protection on a Spring Data Rest API. What is the most likely explanation for their action?",
+		"correct_answer": "If the application is attaching the credentials via an Authorization header, then the browser can't automatically authenticate the requests, therefore CSRF isn't possible.",
+		"incorrect_answers": [
+			"The person who implemented this functionality was a Junior Developer who was not able to fix an exception related to the CSRF header.",
+			"If the application is using Cookie Validation for authenticating the requests, then the browser can't automatically authenticate, therefore CSRF isn't possible.",
+			"If the application is using Basic Authentication by headers, then the browser will add the Session ID which will prevent CSRF attacks."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-46",
+		"question": "<p>How can you secure the following controller method so that it can only be invoked by users that are a member of the admin role using Spring Security?</p><div class=\"code\"><p>public void deleteAccount(String accountId) {</p><p>}</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>@PreAuthorize(\"hasRole('ROLE_ADMIN')\")</p><p>public void deleteAccount(String accountId) {</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>@AllowedRoles(\"admin\")</p><p>public void deleteAccount(String accountId) {</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>@Secured(\"admin\")</p><p>public void deleteAccount(String accountId) {</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>public void deleteAccount(String accountId) {</p><p>  AllowedRoles.require(\"admin\")</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-47",
+		"question": "How can you configure a Spring application to use a relational database for user authentication?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>@Autowired</p><p>public void configureAuth(AuthenticationManagerBuilder auth, DataSource dataSource) throws Exception {</p><p>&nbsp;&nbsp;auth.jdbcAuthentication()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;.dataSource(dataSource);</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>@Autowired</p><p>public void configureAuth(AuthenticationManagerBuilder auth, DataSource dataSource) throws Exception {</p><p>&nbsp;&nbsp;auth.registerAuthenticationProvider(new DBAuthenticationProvider(datasource));</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>@Autowired</p><p>public void configureAuth(AuthenticationManagerBuilder auth, DataSource dataSource) throws Exception {</p><p>&nbsp;&nbsp;auth.registerAuthenticationProvider(new JDBCAuthenticationProvider(datasource));</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>@Autowired</p><p>public void configureAuth(AuthenticationManagerBuilder auth, DataSource dataSource) throws Exception {</p><p>&nbsp;&nbsp;auth.dbAuthentication()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;.dataSource(dataSource);</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-48",
+		"question": "How can you configure your Spring based web application to authenticate only users in the randd organizational unit?",
+		"correct_answer": "<div class=\"code\"><p>public void configure(AuthenticationManagerBuilder auth) throws Exception {</p><p>&nbsp;&nbsp;auth</p><p>&nbsp;&nbsp;&nbsp;&nbsp;.ldapAuthentication()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.userDnPatterns(\"uid={0},ou=randd\")</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.contextSource()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.url(\"ldap://localhost:8389/dc=springframework,dc=org\");</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"code\"><p>public void configure(AuthenticationManagerBuilder auth) throws Exception {</p><p>&nbsp;&nbsp;auth</p><p>&nbsp;&nbsp;&nbsp;&nbsp;.ldapAuthentication()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.userDnPatterns(\"uid={0}\")</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.groupDnPatterns(\"ou=randd\")</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.contextSource()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.url(\"ldap://localhost:8389/dc=springframework,dc=org\");</p><p>}</p></div>",
+			"<div class=\"code\">public void configure(AuthenticationManagerBuilder auth) throws Exception {<p></p><p>&nbsp;&nbsp;auth</p><p>&nbsp;&nbsp;&nbsp;&nbsp;.ldapAuthentication()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.organizationalUnit(\"randd\")</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.contextSource()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.url(\"ldap://localhost:8389/dc=springframework,dc=org);</p><p>}</p></div>",
+			"<div class=\"code\"><p>public void configure(AuthenticationManagerBuilder auth) throws Exception {</p><p>&nbsp;&nbsp;auth</p><p>&nbsp;&nbsp;&nbsp;&nbsp;.ldapAuthentication()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.contextSource()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.url(\"ldap://localhost:8389/dc=springframework,dc=org,org=randd\");</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-49",
+		"question": "What kind of attack can be done after a successful SQL Injection that will bypass password checks?",
+		"correct_answer": "Denial-of-Service (DoS) attack",
+		"incorrect_answers": [
+			"Clickjacking",
+			"Cache Control",
+			"Cross Site Request Forgery (CSRF)"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-50",
+		"question": "What is the default policy of the X-Frame-Options header when enabled in Spring Security Framework?",
+		"correct_answer": "DENY",
+		"incorrect_answers": [
+			"ALLOW-FROM",
+			"DEFAULT",
+			"SAMEORIGIN"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-51",
+		"question": "When using the hasPermission Spring Expression Language (SpEL) expression, what component is delegated to?",
+		"correct_answer": "An instance of PermissionEvaluator",
+		"incorrect_answers": [
+			"An instance of AuthenticationProvider",
+			"The SecurityManager",
+			"The ACLManager"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-52",
+		"question": "<p>What is the effect of the following configuration?</p><div class=\"code\"><p>protected void configure(HttpSecurity http) throws Exception {</p><p>&nbsp;&nbsp;http.authorizeRequests().antMatchers(\"/api/**\").hasRole(\"API_USER\");</p><p>}</p></div>",
+		"correct_answer": "All requests starting with /api/ require an authenticated user which has the role ROLE_API_USER.",
+		"incorrect_answers": [
+			"All requests require an authenticated user which has the role ROLE_API_USER.",
+			"All requests starting with /api require an authenticated user which has the role API_USER.",
+			"The exact request /api/** requires an authenticated user which has the role API_USER."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-53",
+		"question": "<p>You are securing a Spring Data Rest API with Spring Security. You have implemented the below UserRepository:</p><div class=\"code\"><p>@Repository</p><p>@PreAuthorize(\"hasRole('ROLE_ADMIN')\")</p><p>public interface UserRepository extends JpaRepository<User, Long>{</p><p>  User findByUsername(String username);</p><p>}</p></div><p>You notice that only admins are able to query the findByUserName() method, but a regular user can query deleteAllInBatch();. How can you fix this?</p>",
+		"correct_answer": "Override deleteAllInBatch() method in the UserRepository interface.",
+		"incorrect_answers": [
+			"Extend PagingAndSortingRepository<User, Long> instead of JpaRepository.",
+			"Add the @PreAuthorize(\"hasRole('ROLE_ADMIN')\") annotation to JpaRepository interface.",
+			"Replace @PreAuthorize(\"hasRole('ROLE_ADMIN')\") with @Secured(\"ROLE_ADMIN\")."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-54",
+		"question": "What are the requirements for a verification token that is being used to verify an email address of a user when they register an account?",
+		"correct_answer": "It should be a randomly generated value of sufficient length and time limited.",
+		"incorrect_answers": [
+			"It should be a hash of the user's email address and password.",
+			"It should be a hash of the user's email address and time limited.",
+			"It should be a randomly generated value."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-54",
+		"question": "<p>A user notices the following message in the console when inspecting an external website:</p><p>\"Refused to display http://localhost:8080/login in a frame because it set 'X-Frame-Options' to 'deny'.</p><p>What attack has been prevented by the Spring Security default security headers?</p>",
+		"correct_answer": "Clickjacking",
+		"incorrect_answers": [
+			"Reflected File Download (RFD) Attack",
+			"Session Fixation",
+			"Content Sniffing"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-56",
+		"question": "Which Spring Security configuration class is used to secure specific URLs?",
+		"correct_answer": "HttpSecurity",
+		"incorrect_answers": [
+			"ControllerSecurity",
+			"WebSecurity",
+			"URLSecurity"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-57",
+		"question": "What annotation can be used to pass the authenticated principal to a controller?",
+		"correct_answer": "@AuthenticationPrincipal",
+		"incorrect_answers": [
+			"@AuthenticationUser",
+			"@AuthenticatedPrincipal",
+			"@AuthenticatedUser"
+		],
+		"source": ""
 	}
 ]
