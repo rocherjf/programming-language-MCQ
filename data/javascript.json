@@ -413,5 +413,247 @@
 		],
 		"source": "",
 		"explanation": ""
+	},
+	{
+		"id": "javascript-core-37",
+		"question": "You have two objects with multiple objects nested inside. What is the best approach for determining if these objects are equal (have the same shape and values)?",
+		"correct_answer": "Iterate through the object, key by key, and assert strict equality === on every corresponding value. Iterate through all the nested objects to do the same until you find a missing key:value pair or confirm equality.",
+		"incorrect_answers": [
+			"Use Object.deepEquals(), a function brought over from JavaScript libraries in ECMAScript 2017.",
+			"Use the deep-equals operator (===) in strict mode. This will automatically compare each corresponding nested object.",
+			"Use Object.is(), the built-in comparison function for JavaScript objects."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-38",
+		"question": "What object is returned when you call Map.prototype.entries()?",
+		"correct_answer": "An iterator",
+		"incorrect_answers": [
+			"A WeakMap",
+			"A generator",
+			"An array"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-39",
+		"question": "<p>A web page is behaving incorrectly. The issue has been tracked back to this script tag in the page's \"head\" tag. What is the most likely cause of the problem?</p><div class=\"code\"><p>&lt;script&gt;   </p><p>document.getElementById('theControl').addEventListener('click',</p><p>&nbsp;&nbsp;function (e) { console.warn('clicked'); }</p><p>);</p><p>&lt;\/script&gt;</p></div>",
+		"correct_answer": "The target element does not exist when this executes.",
+		"incorrect_answers": [
+			"The script tag is missing a type attribute.",
+			"The event object e is not being used.",
+			"Event listeners cannot be added before the page is done loading."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-40",
+		"question": "If an iterator never returns {done: true} what is the result?",
+		"correct_answer": "The iterator will run infinitely.",
+		"incorrect_answers": [
+			"The iterator will always yield the same value for all calls made to .next().",
+			"The iterator will only run for the initial step when .next() is called first.",
+			"The iterator will always return the value false."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-41",
+		"question": "You must tag a template literal for some code you are writing in JavaScript. How would you accomplish this using raw strings?",
+		"correct_answer": "Use the String.raw() method for the template literal.",
+		"incorrect_answers": [
+			"Use the String.tag() method for the template literal.",
+			"Use the Raw.string() method for the template literal.",
+			"Use the Tag.string() for the template literal."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-42",
+		"question": "<p>Which answer completes the following code snippet return statement and correctly emulates a private method by the use of a closure?</p><div class=\"code\"><p>const counter = (function() {</p><p>&nbsp;&nbsp;let privateCounter = 0;</p><p>&nbsp;&nbsp;function changeBy(val) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp; privateCounter += val;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;return {</p><p>&nbsp;&nbsp;&nbsp;&nbsp; // COMPLETE THE CODE SNIPPET</p><p>&nbsp;&nbsp;};</p><p>})(); counter.value();counter.increment();</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>increment: function() { changeBy(1); },</p><p>value: function() { return privateCounter; }</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>privateCounter;</p></div>",
+			"<div class=\"codeAnswer\"><p>increment: function() { changeBy(); },</p><p>value: 0,</p></div>",
+			"<div class=\"codeAnswer\"><p>increment: function() { changeBy(); },</p><p>value: function() { return privateCounter; }</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-43",
+		"question": "What data type is a symbol in JavaScript?",
+		"correct_answer": "Primitive data type",
+		"incorrect_answers": [
+			"Composite data type",
+			"Reference data type",
+			"Special data type"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-44",
+		"question": "What is one method for stopping exploitations of an object and preventing Prototype Pollution?",
+		"correct_answer": "Object.freeze()",
+		"incorrect_answers": [
+			"Object.hold()",
+			"Object.halt()",
+			"Object.stop()"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-45",
+		"question": "What is the difference between a property and a method in a class?",
+		"correct_answer": "A property is an association between a name and a value; a method is when a function is the value of a property.",
+		"incorrect_answers": [
+			"A property is only declarable on objects, not classes; a method is declarable only on classes, not objects.",
+			"A property does not have access to the this object; a method creates a scope with access to the parent's this object, and are more suited for calculated virtual properties.",
+			"Properties and methods are indistinguishable in the ES6 class spec; properties can be methods and methods can be properties."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-46",
+		"question": "A web app has a performance-impacting function, impactFoo(), that is called around the same time that a series of async, await AJAX function calls reach completion. How can the function be deferred to be called after any pending event handlers to avoid blocking the application?",
+		"correct_answer": "setTimeout(impactFoo, 0);",
+		"incorrect_answers": [
+			"setIntervalTimer(impactFoo, 1);",
+			"window.addEventListener(\"impactFoo\", () => { impactFoo() });",
+			"deferTask(impactFoo);"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-47",
+		"question": "What static method defines setters, getters, and other configurations for a new or existing property on an object?",
+		"correct_answer": "Object.defineProperty()",
+		"incorrect_answers": [
+			"Object[\"setProperty\"]()",
+			"Property.declare()",
+			"Object.prototype.Property()"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-48",
+		"question": "<p>What is printed to the console when a web page loads the following scripts?</p><div class=\"code\"><p>&lt;script&gt;  </p><p>var foo = 27;  </p><p>(function () {    </p><p>&nbsp;&nbsp;foo = 42;  </p><p>})();</p><p>&lt;/script&gt;</p><p></p><p>&lt;script&gt;  </p><p>console.log(window.foo);</p><p>&lt;/script&gt;</p></div>",
+		"correct_answer": "42",
+		"incorrect_answers": [
+			"null",
+			"undefined",
+			"27"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-49",
+		"question": "You must create a class prototype property that keeps a count of how many instances of the class have been created. Which code option demonstrates how to handle this scenario?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>class Chips {</p><p>&nbsp;&nbsp;constructor(param1) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.param1 = param1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;if (Chips.prototype.count) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chips.prototype.count++;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;} else {</p><p>&nbsp;&nbsp;&nbsp;&nbsp; Chips.prototype.count = 1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>class Chips {</p><p>constructor(param1) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.param1 = param1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.prototype.count++;</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>class Chips {</p><p>&nbsp;&nbsp;constructor(param1) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.param1 = param1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;if (Chips.get(count)) { </p><p>&nbsp;&nbsp;&nbsp;&nbsp;  Chips.set(count++);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;} else {</p><p>&nbsp;&nbsp;&nbsp;&nbsp; Chips.set(count, 0);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>class Chips {</p><p>&nbsp;&nbsp;constructor(param1) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.param1 = param1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Chips.count++;</p><p>&nbsp;&nbsp;}</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-50",
+		"question": "What static method allows the inheritance of an object's prototype in the creation of a new object?",
+		"correct_answer": "Object.create()",
+		"incorrect_answers": [
+			"let newObject = new oldObject.prototype()",
+			"Object.inherit()",
+			"Object.prototype.inherit()"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-51",
+		"question": "<p>What will the following code print to the console?</p><div class=\"code\"><p>switch (\"42\") {</p><p>&nbsp;&nbsp;case 42: </p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('foo');</p><p>&nbsp;&nbsp;case \"42\":</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('bar');</p><p>&nbsp;&nbsp;default:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('baz');</p><p>}</p></div>",
+		"correct_answer": "<p>bar</p><p>baz</p>",
+		"incorrect_answers": [
+			"<p>bar</p>",
+			"<p>foo</p>",
+			"<p>foo</p><p>bar</p><p>baz</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-52",
+		"question": "What method determines if two values are the same?",
+		"correct_answer": "Object.is()",
+		"incorrect_answers": [
+			"data.cal()",
+			"data.isEqual()",
+			"var.compare()"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-53",
+		"question": "What is the correct syntax for accessing the arguments object inside a function?",
+		"correct_answer": "function square(n) { arguments }",
+		"incorrect_answers": [
+			"function square(n) { self.arguments }",
+			"function square(n) { window.arguments }",
+			"function square(n) { this.arguments }"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-54",
+		"question": "<div class=\"code\"><p>function foo() {</p><p>&nbsp;&nbsp;var a = 42;</p><p>&nbsp;&nbsp;(function() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;a = 27;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(a);</p><p>&nbsp;&nbsp;})();</p><p>&nbsp;&nbsp;console.log(a);</p><p>}</p><p>foo();</p></div>",
+		"correct_answer": "<p>27</p><p>27</p>",
+		"incorrect_answers": [
+			"<p>27</p><p>42</p>",
+			"<p>27</p><p>undefined</p>",
+			"<p>42</p><p>42</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-55",
+		"question": "Bar is a constructor function and Bar.prototype must inherit the prototype of another object. However, Bar must display something different when its inherited property function, foo(), is invoked. How can you do this?",
+		"correct_answer": "By overloading the property at the prototype level:Bar.prototype.foo = function() { //new foo() body }",
+		"incorrect_answers": [
+			"By reassigning foo:Bar.foo = function(){ //new foo() body }",
+			"By overloading the object's property using the ES6 overload keyword:overload Bar.foo = function(){ //new foo() body }",
+			"By instantiating Bar without the class keyword"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-56",
+		"question": "Which code snippet correctly shows unpacking the arguments object into an array?",
+		"correct_answer": "Array.from(arguments)",
+		"incorrect_answers": [
+			"[arguments]",
+			"arguments.toArray()",
+			"Array.toArray(arguments)"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-57",
+		"question": "How would you make a new key flavor equal to sweet in a Map called food?",
+		"correct_answer": "food.set('flavor', 'sweet');",
+		"incorrect_answers": [
+			"food.create('flavor', 'sweet');",
+			"food['flavor'] = 'sweet';",
+			"food.add('flavor', 'sweet');"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-58",
+		"question": "<p>How would you remove the duplicates from the following array using the spread operator?</p><div class=\"code\"><p>let array = [0, 1, 1, 2, 3, 4, 4];</p></div>",
+		"correct_answer": "let noDups = [...new Set(array)];",
+		"incorrect_answers": [
+			"let noDups = [new Set(array...)];",
+			"let noDups = [new Set(...array)];",
+			"let noDups = [...array.unique()];"
+		],
+		"source": ""
 	}
 ]
