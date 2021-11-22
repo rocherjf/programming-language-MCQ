@@ -1,0 +1,356 @@
+[
+    {
+		"id": "html-1",
+		"question": "What element defines contact information of a document or article?",
+		"correct_answer": "&lt;address&gt;",
+		"incorrect_answers": [
+			"&lt;ref&gt;",
+			"&lt;cite&gt;",
+			"&lt;contact&gt;"
+		],
+		"source": ""
+	},
+		{
+		"id": "html-2",
+		"question": "When creating a form that will hold sensitive and secure data, what attribute would you add to prevent the form's &lt;input&gt; elements from auto populating?",
+		"correct_answer": "autocomplete",
+		"incorrect_answers": [
+			"complete",
+			"autofill",
+			"nocomplete"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-3",
+		"question": "<p>What steps would you take to modify the following HTML into a details/summary section?</p><div class=\"code\"><p>&lt;div&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;I have keys but no doors. I have space but no room. You can enter but can't leave. What am I?&lt;/p&gt;</p><p>&nbsp;&nbsp;A keyboard.</p><p>&lt;/div&gt;</p></div>",
+		"correct_answer": "<p>Replace &lt;div&gt; with &lt;details&gt;;</p><p>Replace &lt;p&gt; with &lt;summary&gt;</p>",
+		"incorrect_answers": [
+			"<p>Replace &lt;div&gt; with &lt;section&gt;;</p><p>Replace &lt;p&gt; with &lt;summary&gt;</p>",
+			"<p>Replace &lt;div&gt; with &lt;article&gt;;</p><p>Replace &lt;p&gt; with &lt;summary&gt;</p>",
+			"<p>Replace &lt;div&gt; with &lt;summary&gt;;</p><p>Replace &lt;p&gt; with &lt;details&gt;</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-4",
+		"question": "<p>Consider the following HTML:</p><div class=\"code\"><p>&lt;div&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;missing tag&gt;Painting One&lt;/missing tag&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;by Painter One. Painted in 1893.</p><p>&nbsp;&nbsp;&lt;/p&gt;</p><p>&lt;/div&gt;</p></div><p>Which tag would you use to add the title of a work?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;cite&gt;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>&lt;address&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;citation&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;quote&gt;</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-5",
+		"question": "<p>Consider the following HTML:</p><div class=\"code\"><p>&lt;p&gt;Sign in to your account:&lt;/p&gt;</p><p>&lt;div&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"userId\"&gt;User ID&lt;/label&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"text\" id=\"userId\" name=\"userId\"&gt;</p><p>&lt;/div&gt;</p><p>&lt;input type=\"picture\" id=\"image\" alt=\"Login\"</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; src=\"/media/examples/login-button.png\"&gt;</p></div><p>When the page is rendered the login input does not display the login-button.png. What must you change to correct this problem?</p>",
+		"correct_answer": "Change the input type from type=\"picture\" to type=\"image\"",
+		"incorrect_answers": [
+			"Change the input type from type=\"picture\" to type=\"png\"",
+			"Change the input type from type=\"picture\" to type=\"img\"",
+			"Change the input type from type=\"picture\" to type=\"graphic\""
+		],
+		"source": ""
+	},
+	{
+		"id": "html-6",
+		"question": "What global attribute specifies that an element can be moved on the page using the mouse?",
+		"correct_answer": "draggable",
+		"incorrect_answers": [
+			"drag",
+			"moveable",
+			"mov"
+		],
+		"source": ""
+	},
+		{
+		"id": "html-7",
+		"question": "For radio buttons to work as a group, which attribute must have the same value?",
+		"correct_answer": "name",
+		"incorrect_answers": [
+			"fieldset",
+			"label",
+			"first element"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-8",
+		"question": "<p>Based on the following HTML:</p><div class=\"code\"><p>&lt;video controls=\"controls\" &gt;</p><p>&nbsp;&nbsp;Your browser does not support the HTML5 Video element.</p><p>&lt;/video&gt;</p></div><p>How do you correctly set the source of the video?</p>",
+		"correct_answer": "By setting the src attribute value in the &lt;video&gt; element",
+		"incorrect_answers": [
+			"By including the &lt;embed&gt; tag with the src attribute within the &lt;video&gt; element",
+			"By including the &lt;media&gt; tag with the src attribute within the &lt;video&gt; element",
+			"By setting the url attribute value in the &lt;video&gt; element"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-9",
+		"question": "<p>Which HTML segments would you add below to provide alternate text if the browser doesn't support code?</p><div class=\"code\"><p>&lt;script&gt;</p><p>   document.write(\"Hello World!\")</p><p>&lt;/script&gt;</p><p>--INSERT HTML HERE--</p></div>",
+		"correct_answer": "&lt;noscript&gt;Your browser does not support JavaScript!&lt;/noscript&gt;",
+		"incorrect_answers": [
+			"&lt;alt&gt;Your browser does not support JavaScript!&lt;/alt&gt;",
+			"&lt;if-error&gt;Your browser does not support JavaScript!&lt;/if-error&gt;",
+			"&lt;error&gt;Your browser does not support JavaScript!&lt;/error&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-10",
+		"question": "Which HTML segment correctly organizes content using one of the HTML5 semantic elements?",
+		"correct_answer": "<p>&lt;h1&gt;How to Fish&lt;/h1&gt;</p><p>&lt;section&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Introduction&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;People fish for food…&lt;/p&gt;</p><p>&lt;/section&gt;</p><p></p><p>&lt;section&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Equipment&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;The first thing you’ll need is a fishing rod…&lt;/p&gt;</p><p>&lt;/section&gt;</p>",
+		"incorrect_answers": [
+			"<p>&lt;h1&gt;How to Fish&lt;/h1&gt;</p><p>&lt;div&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Introduction&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;People fish for food…&lt;/p&gt;</p><p>&lt;/div&gt;</p><p></p><p>&lt;div&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Equipment&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;The first thing you’ll need is a fishing rod…&lt;/p&gt;</p><p>&lt;/div&gt;</p>",
+			"<p>&lt;h1&gt;How to Fish&lt;/h1&gt;</p><p>&lt;aside&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Introduction&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;People fish for food…&lt;/p&gt;</p><p>&lt;/aside&gt;</p><p></p><p>&lt;aside&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Equipment&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;The first thing you’ll need is a fishing rod…&lt;/p&gt;</p><p>&lt;/aside&gt;</p>",
+			"<p>&lt;h1&gt;How to Fish&lt;/h1&gt;</p><p>&lt;article&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Introduction&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;People fish for food…&lt;/p&gt;</p><p>&lt;/article&gt;</p><p></p><p>&lt;article&gt;</p><p>&nbsp;&nbsp;&lt;h2&gt;Equipment&lt;/h2&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;The first thing you’ll need is a fishing rod…&lt;/p&gt;</p><p>&lt;/article&gt;</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-11",
+		"question": "Which element would you use in the &lt;HEAD&gt; to set the document character encoding to Unicode Transformation Format (UTF)-8?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;meta charset=\"utf-8\"&gt;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>&lt;meta type=\"charset\" content=\"utf-8\"&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;link rel=\"charset\" content=\"utf-8\"&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;link rel=\"content-type\" content=\"utf-8\"&gt;</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-12",
+		"question": "<p>Which is an example of a properly formed &lt;area&gt; tag that navigates to a URL when clicked?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;area shape=\"rect\" coords=\"0,0,82,126\" href=\"sun.htm\" alt=\"Sun\"&gt;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>&lt;area shape=\"rect\" coords=\"x:0;y:10\" href=\"sun.htm\" alt=\"Sun\"&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;area border=\"rect\" coords=\"0,0,82,126\" href=\"sun.htm\" alt=\"Sun\"&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;area shape=\"rect\" shape_style=\"0,0,82,126\" href=\"sun.htm\" alt=\"Sun\"&gt;</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-13",
+		"question": "<p>Which HTML table header section is an example of formatting an entire row as a header row in a table?</p>",
+		"correct_answer": "<p>&lt;thead&gt;</p><p>&nbsp;&nbsp;&lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Month&lt;/th&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Savings&lt;/th&gt;</p><p>&nbsp;&nbsp;&lt;/tr&gt;</p><p>&nbsp;&nbsp;&lt;/thead&gt;</p>",
+		"incorrect_answers": [
+			"<p>&lt;header&gt;</p><p>&nbsp;&nbsp;&lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Month&lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Savings&lt;/td&gt;</p><p>&nbsp;&nbsp;&lt;/tr&gt;</p><p>&nbsp;&nbsp;&lt;/header&gt;</p>",
+			"<p>&lt;thead&gt;</p><p>&nbsp;&nbsp;&lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Month&lt;/td&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Savings&lt;/td&gt;</p><p>&nbsp;&nbsp;&lt;/tr&gt;</p><p>&nbsp;&nbsp;&lt;/thead&gt;</p>",
+			"<p>&lt;header&gt;</p><p>&nbsp;&nbsp;&lt;tr&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Month&lt;/th&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Savings&lt;/th&gt;</p><p>&nbsp;&nbsp;&lt;/tr&gt;</p><p>&nbsp;&nbsp;&lt;/header&gt;</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-14",
+		"question": "<p>What is the definition of the &lt;blockquote&gt; tag?</p>",
+		"correct_answer": "<p>&lt;blockquote&gt; defines a section of text that is quoted from another source.</p>",
+		"incorrect_answers": [
+			"<p>&lt;blockquote&gt; adds 15px of padding around the inner text.</p>",
+			"<p>&lt;blockquote&gt; adds quotation marks and italicizes the inner text</p>",
+			"<p>&lt;blockquote&gt; adds quotation marks around the inner text.</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-15",
+		"question": "<p>Which is the correct element for adding a basic telephone input to an HTML5 form?</p>",
+		"correct_answer": "<p>&lt;input type=\"tel\" name=\"phone\"&gt;</p>",
+		"incorrect_answers": [
+			"<p>&lt;input type=\"line\" name=\"line\"&gt;</p>",
+			"<p>&lt;tel name=\"phone\" &gt;</p>",
+			"<p>&lt;input type=\"phone\" name=\"phone\"&gt;</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-16",
+		"question": "Which is a characteristic of the &lt;legend&gt; element?",
+		"correct_answer": "The &lt;legend&gt; element defines a caption for the &lt;fieldset&gt; element",
+		"incorrect_answers": [
+			"The &lt;legend&gt; element defines footnotes of the associated &lt;form&gt; element",
+			"The &lt;legend&gt; element defines the properties of the &lt;map&gt; element",
+			"The &lt;legend&gt; element defines the area of the &lt;map&gt; element"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-17",
+		"question": "<p>The following HTML adds a video to a web page:</p> <div class=\"code\"><p>&lt;video controls=\"controls\"&gt;</p><p>&nbsp;&nbsp;&lt;source src=\"shuttle.mp4\" type=\"video/mp4\"&gt;</p><p>&nbsp;&nbsp;&lt;track src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\"&gt;</p><p>&nbsp;&nbsp;&lt;/source&gt;</p><p>&nbsp;&nbsp;Your browser does not support the HTML5 Video element.</p><p>&lt;/video&gt;</p></div><p>When the page loads, the track does not work as expected. What must you change to get it working?</p>",
+		"correct_answer": "<p><span class=\"codeAnswer\">&lt;track src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\"&gt;</span> doesn't belong within the &lt;source&gt; tag. </p><p>Change it to:</p><div class=\"codeAnswer\"><p>&lt;video controls=\"controls\"&gt;</p><p>&nbsp;&nbsp;&lt;source src=\"shuttle.mp4\" type=\"video/mp4\"&gt;</p><p>&nbsp;&nbsp;&lt;track src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\"&gt;</p><p>&nbsp;&nbsp;Your browser does not support the HTML5 Video element.</p><p>&lt;/video&gt;</p></div>",
+		"incorrect_answers": [
+			"<p>Replace </p><div class=\"codeAnswer\"><p>&lt;track src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\"&gt; </p></div><p>with</p><div class=\"codeAnswer\"><p>&lt;language src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\"&gt;.</p></div>",
+			"<p>Replace </p><div class=\"codeAnswer\"><p>&lt;track src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\"&gt; </p></div><p>with</p><div class=\"codeAnswer\"><p>&lt;subtitle src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\"&gt;.</p></div>",
+			"<p>Replace <span class=\"codeAnswer\">label=\"English\"</span> with <span class=\"codeAnswer\">language=\"English\"</span> and reload the page.</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-18",
+		"question": "<p>What is the difference between the &lt;picture&gt; and &lt;img&gt; tags?</p>",
+		"correct_answer": "<p>&lt;picture&gt; defines a container for multiple image sources whereas &lt;img&gt; represents a single image.</p>",
+		"incorrect_answers": [
+			"<p>&lt;picture&gt; defines a lined image whereas &lt;img&gt; represents an embedded image.</p>",
+			"<p>&lt;picture&gt; represents a single image that cannot be copied or downloaded whereas &lt;img&gt; represents a single image that can be copied and downloaded.</p>",
+			"<p>&lt;picture&gt; represents a video whereas &lt;img&gt; represents a single image.</p>"
+		],
+		"source": ""
+	},
+    {
+		"id": "html-19",
+		"question": "<p>Which tag embeds an external application, typically multimedia content such as audio or video, into an HTML document?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;embed&gt;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>&lt;frame&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;content&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;iframe&gt;</p></div>"
+		],
+		"source": ""
+	},
+    {
+		"id": "html-20",
+		"question": "<p>Consider the following markup:</p><div class=\"code\"><p>&lt;!DOCTYPE html&gt;</p><p>&lt;html&gt;</p><p>&nbsp;&nbsp;&lt;body&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Do not forget to buy &lt;span style=\"background:yellow;\" &gt;milk&lt;/span&gt;</p><p>&nbsp;&nbsp;&lt;/body&gt;</p><p>&lt;/html&gt;</p></div><p>What tag is available with HTML5 that, when used in place of<span class=\"code\">&lt;span style=\"background:yellow\"&gt;</span>, results in the same formatting?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;mark&gt;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>&lt;color:yellow&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;emp&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;highlight&gt;</p></div>"
+		],
+		"source": ""
+	},
+    {
+		"id": "html-21",
+		"question": "<p>You may (and should) display a message inside the &lt;canvas&gt; block for both older browsers that don't support canvas and in browsers with JavaScript disabled. Which HTML segment can you add to provide this message?</p><div class=\"code\"><p>&lt;canvas width=\"300\" height=\"300\"&gt; </p><p>&nbsp;&nbsp;--INSERT HERE-- </p><p>&lt;/canvas&gt;</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;p&gt;Error:  This is either not supported or JavaScript is disabled.&lt;/p&gt;</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>&lt;big&gt;Error:  This is either not supported or JavaScript is disabled.&lt;/big&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;error&gt;Error:  This is either not supported or JavaScript is disabled.&lt;/error&gt;</p></div>",
+			"<div class=\"codeAnswer\"><p>&lt;alt&gt;Error:  This is either not supported or JavaScript is disabled.&lt;/alt&gt;</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-22",
+		"question": "<p>You must review the following web page and suggest ways that could increase organic search rankings. What could you suggest to enhance search engine ranking?</p><div class=\"code\"><p>&lt;!DOCTYPE html&gt;</p><p>&lt;html&gt;</p><p>&lt;body&gt;</p><p>&lt;h2&gt;Heading&lt;/h2&gt;</p><p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>&lt;/p&gt;</p><p>&lt;/body&gt;</p><p>&lt;/html&gt;</p></div>",
+		"correct_answer": "<p>Change <span class=\"codeAnswer\">&lt;h2&gt;Heading&lt;/h2&gt;</span> to <span class=\"codeAnswer\">&lt;h1&gt;Heading&lt;/h1&gt;</span></p>",
+		"incorrect_answers": [
+			"<p>Change <span class=\"codeAnswer\">&lt;p&gt; ... &lt;/p&gt;</span> to <span class=\"codeAnswer\">&lt;section type=\"description\"&gt;&lt;p&gt; ... &lt;/p&gt;&lt;/section&gt;</span></p>",
+			"<p>Change <span class=\"codeAnswer\">&lt;!DOCTYPE html&gt;</span> to <span class=\"codeAnswer\">&lt;!DOCTYPE text&gt;</span></p>",
+			"<p>Change <span class=\"codeAnswer\">&lt;!DOCTYPE html&gt;</span> to <span class=\"codeAnswer\">&lt;!DOCTYPE html5&gt;</span></p>"
+		],
+		"source": ""
+	},
+    {
+        "id": "html-24",
+        "question": "<p>Which element's positioning is independent of the main flow of an HTML5 document?</p>",
+        "correct_answer": "<p>&lt;figure&gt;</p>",
+        "incorrect_answers": [
+            "<p>&lt;details&gt;</p>",
+            "<p>&lt;summary&gt;</p>",
+            "<p>&lt;article&gt;</p>"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-26",
+        "question": "What level of element is the &lt;footer&gt;?",
+        "correct_answer": "block",
+        "incorrect_answers": [
+            "inline",
+            "sectioned",
+            "embedded"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-27",
+        "question": "<p>You want to format line 1 to be like line 2. Which tag would you use?</p><p>line 1:</p><p>My goal: Live in harmony with nature.</p><p>line 2:</p><p>My goal: \"Live in harmony with nature\"</p>",
+        "correct_answer": "&lt;q&gt;&lt;/q&gt;",
+        "incorrect_answers": [
+            "&lt;blockquote&gt;&lt;/blockquote&gt;",
+            "&lt;cite&gt;&lt;/cite&gt;",
+            "&lt;quote&gt;&lt;/quote&gt;"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-28",
+        "question": "<p>The following &lt;iframe&gt; element was properly formatted to display a web page named hello.html. When the browser doesn't support frames nothing is displayed. What should you add within the following &lt;iframe&gt; element to provide information when it isn't supported?</p><div class=\"code\"><p>&lt;iframe src=\"hello.html\" width=\"400\" height=\"300\" scrolling=\"auto\"&gt;</p><p>&lt;/iframe&gt;</p></div>",
+        "correct_answer": "<p>Include text within the &lt;iframe&gt; element to be displayed if frames are not supported.</p>",
+        "incorrect_answers": [
+            "<p>Enclose the &lt;iframe&gt; element within an &lt;--if&gt; tag.</p>",
+            "<p>Add the alttext attribute with text containing a message that frames are not supported.</p>",
+            "<p>Add an alternate src attribute to the &lt;iframe&gt; tag to forward navigation if frames aren't supported.</p>"
+        ],
+        "source": ""
+    },
+    
+
+    {
+        "id": "html-31",
+        "question": "<p>Email input is required in the following form, but a user can submit without completing the field. How can you fix this error?</p><div class=\"code\"><p>&lt;form action=\"/action_page.php\" novalidate &gt;</p><p>&nbsp;&nbsp;&lt;label for=\"email\"&gt;Enter your email:&lt;/label&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"email\" id=\"email\" name=\"email\" required&gt;&lt;br&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"submit\"&gt;</p><p>&lt;/form&gt;</div></p>",
+        "correct_answer": "<p>Remove the novalidate attribute from the &lt;form&gt; element.</p>",
+        "incorrect_answers": [
+            "<p>Change the email &lt;input&gt; required attribute to validate.</p>",
+            "<p>Change the &lt;form&gt; novalidate attribute to validate.</p>",
+            "<p>Change the email &lt;input&gt; required attribute to require.</p>"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-33",
+        "question": "<p>Which tag is classified as a formatting tag?</p>",
+        "correct_answer": "<p>&lt;mark&gt;</p>",
+        "incorrect_answers": [
+            "<p>&lt;span&gt;</p>",
+            "<p>&lt;hr&gt;</p>",
+            "<p>&lt;p&gt;</p>"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-34",
+        "question": "<p>How would you change the default value of a &lt;form&gt; method attribute?</p>",
+        "correct_answer": "<p>Set the method attribute value to \"POST\"</p>",
+        "incorrect_answers": [
+            "<p>Set the method attribute value to \"SEND\"</p>",
+            "<p>Set the method attribute value to \"SUBMIT\"</p>",
+            "<p>Set the method attribute value to \"GET\"</p>"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-35",
+        "question": "<p>An HTML programmer must create a function that will stop the web worker named wWork from listening to messages and that will reuse the stopped web worker again when necessary. How will they do it?</p>",
+        "correct_answer": "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork.terminate();</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;undefined;</p><p>}</p></div>",
+        "incorrect_answers": [
+            "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker(var&nbsp;&nbsp;wWork)&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;terminate(undefined);</p><p>}</p></div>",
+            "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;terminate();</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;undefined;</p><p>}</p></div>",
+            "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork.terminate(undefined);</p><p>}</p></div>"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-36",
+        "question": "<p>Review the following HTML:</p><div class=\"code\"><p>&lt;form&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"male\" name=\"male\" value=\"male\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"male\"&gt;Male&lt;/label&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"female\" name=\"female\" value=\"female\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"female\"&gt;Female&lt;/label&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"other\" name=\"other\" value=\"other\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"other\"&gt;Other&lt;/label&gt;</p><p>&lt;/form&gt;</p></div><p>When one option is selected from the option group, the other options do not clear. What is the problem?</p>",
+        "correct_answer": "<p>The name value in a radio input must be the same for all of the radio inputs in the group.</p>",
+        "incorrect_answers": [
+            "<p>The radio input elements must be enclosed in a &lt;group&gt;&lt;/group&gt; tag.</p>",
+            "<p>The radio input type value must be type=\"radiogroup\" and not \"radio\".</p>",
+            "<p>The ID value in a radio input must be the same for all the radio inputs in the group.</p>"
+        ],
+        "source": ""
+    },
+    {
+        "id": "html-37",
+        "question": "Why would you use the web worker in your web application?",
+        "correct_answer": "To execute the long scripts in the background",
+        "incorrect_answers": [
+            "To execute multiple scripts simultaneously",
+            "To increase the performance speed of the application",
+            "To have easy direct access to the web page and the Document Object Model (DOM) API"
+        ],
+        "source": ""
+    }
+]

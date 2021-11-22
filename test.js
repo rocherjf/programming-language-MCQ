@@ -35,8 +35,8 @@ start();
 
 function start() {
     fetch(
-        URL
-    )
+            URL
+        )
         .then((res) => {
             return res.json();
         })
@@ -105,6 +105,9 @@ function getURLDocumentQuestion() {
             break;
         case "Javascript":
             URL = 'data/javascript.json';
+            break;
+        case "Html":
+            URL = 'data/html.json';
             break;
         case "HtmlJsCss":
             URL = 'data/html-js-css.json';
