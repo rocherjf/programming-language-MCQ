@@ -454,5 +454,192 @@
 		],
 		"source": "",
 		"explanation": ""
+	},
+	{
+		"id": "js-rest-api-39",
+		"question": "You are working on a Node.js application using Express and MongoDB. The user store is implemented using MongoDB, and contains username, first name, last name, and SHA-256 hash of their passwords for each user. What changes will you make to improve the security model of this user data store?",
+		"correct_answer": "Replace SHA-256 with SHA-512.",
+		"incorrect_answers": [
+			"Replace SHA-256 with SHA-1.",
+			"Replace SHA-256 with MD5.",
+			"Add Mongoose to your architecture."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-40",
+		"question": "You have a cached response from a REST API call. You decide to make a fresh call and cache the new response instead. How should you do this, ensuring that the previously cached response is overwritten?",
+		"correct_answer": "Use cache.put(url, response) to make a new request to the REST API and store the response.",
+		"incorrect_answers": [
+			"Use cache.replace(url, response) to make a new request to the REST API and store the response.",
+			"Use cache.delete(url) to first delete the existing cached response, then use cache.match(url) to recreate it with a fresh response.",
+			"Use cache.delete(url) to first delete the existing cached response, then use cache.post(url) to recreate it with a fresh response."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-41",
+		"question": "<p>The code below uses the XMLHttpRequest object to retrieve data:</p><div class=\"code\"><p>function getData() {</p><p>&nbsp;&nbsp;const url = 'http://localhost:5000/api';</p><p></p><p>&nbsp;&nbsp;let req = new XMLHttpRequest();</p><p></p><p>&nbsp;&nbsp;req.onreadystatechange = function () {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;if (this.readyState === XMLHttpRequest.DONE && this.status == 200) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let response = JSON.parse(this.response);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(response);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;};</p><p></p><p>&nbsp;&nbsp;req.send();</p><p>}</p></div><p>The request fails to execute. How can you solve this issue?</p>",
+		"correct_answer": "Call the open() method before send().",
+		"incorrect_answers": [
+			"The XMLHttpRequest constructor should receive the url as a parameter.",
+			"Call the open() method after send().",
+			"The send() method should receive url as a parameter."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-42",
+		"question": "What is a Claims data store?",
+		"correct_answer": "A database in which claims are saved",
+		"incorrect_answers": [
+			"A caching mechanism to quickly retrieve JSON Web Token (JWT) tokens upon successive requests",
+			"A database against which the JSON Web Token (JWT) token is verified",
+			"A caching mechanism that reduces the size of JSON Web Token (JWT) tokens"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-43",
+		"question": "Why might you prefer using the scope parameter to secure UI elements instead of a custom parameter?",
+		"correct_answer": "The scope parameter is verified by the server and automatically corrected.",
+		"incorrect_answers": [
+			"Custom parameters are only available on the server.",
+			"It makes your application compatible with other APIs.",
+			"It is a general convention in Claims-based authorization."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-44",
+		"question": "<p>Your JavaScript Cache contains the following URLs:</p><div class=\"code\"><p>http://api.com/?key1=value1</p><p>http://api.com/?key2=value2</p></div><p>You want to see if an entry is in the cache or if you need to go to API. What will happen when you issue a call to the match method on your cache, with a parameter of http://api.com, and no other options supplied?</p>",
+		"correct_answer": "No matches will be returned.",
+		"incorrect_answers": [
+			"The second URL will be returned as a match.",
+			"Both URLs will be returned as matches.",
+			"The first URL will be returned as a match."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-45",
+		"question": "What is true about selecting multiple files for upload on the browser side?",
+		"correct_answer": "It can be achieved by using HTML without any JavaScript",
+		"incorrect_answers": [
+			"It requires custom JavaScript on top of HTML",
+			"It is only supported by a limited amount of modern browsers",
+			"It is only supported by older browsers"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-46",
+		"question": "Which JavaScript function can be used to validate if a value is numeric?",
+		"correct_answer": "isNaN()",
+		"incorrect_answers": [
+			"isNumeric()",
+			"isFinite()",
+			"isNumber()"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-48",
+		"question": "What is the difference between the status message and the response body when handling error responses from a JSON REST API endpoint?",
+		"correct_answer": "The status message contains the HTTP status description. The response body contains a JSON object representing the error(s).",
+		"incorrect_answers": [
+			"The status message contains the HTTP status code. The response body contains a message describing any error(s).",
+			"The status message contains the HTTP status code. The response body contains a description of the HTTP status code.",
+			"The status message contains any error that occurred. The response body is empty."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-48",
+		"question": "<p>How will you extend the following code snippet to incorporate a Claims store, assuming you have a Mongo collection 'Claims' set up as your data store?</p><div class=\"code\"><p>app.get('/authorize', (req, res) => {</p><p>&nbsp;&nbsp;const { username, password } = req.body;</p><p>&nbsp;&nbsp;const user = verifyAndGetUser(username, password);</p><p>&nbsp;&nbsp;const token = jwt.sign(user, privateKey, { expiresIn: '1h' });</p><p>&nbsp;&nbsp;res.send(token);</p><p>});</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>const user = verifyAndGetUser(username, password);</p><p>const userClaims = db.claims.findOne({ userId: user.id });</p><p>const token = jwt.sign(userClaims, privateKey, { expiresIn: '1h' });</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>const userClaims = db.claims.findOne({ username });</p><p>const token = jwt.sign(userClaims, privateKey, { expiresIn: '1h' });</p></div>",
+			"<div class=\"codeAnswer\"><p>const user = verifyAndGetUser(username, password);</p><p>const claims = db.claims.insert(user);</p><p>const token = jwt.sign(claims, privateKey, { expiresIn: '1h' });</p></div>",
+			"<div class=\"codeAnswer\"><p>const user = db.claims.findOne({ username });</p><p>if (password !== user.password) {</p><p>&nbsp;&nbsp;res.status(401).send();</p><p>} else {</p><p>&nbsp;&nbsp;const token = jwt.sign(userClaims, privateKey, { expiresIn: '1h' });</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-49",
+		"question": "What HTML tag can you use when styling an input tag of type file?",
+		"correct_answer": "label",
+		"incorrect_answers": [
+			"style",
+			"area",
+			"span"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-50",
+		"question": "What is true about the mechanisms available for tracking async file upload progress to a server?",
+		"correct_answer": "XMLHttpRequest API exposes dedicated mechanisms for this.",
+		"incorrect_answers": [
+			"It is only possible to do via the Fetch API.",
+			"Fetch API exposes dedicated mechanisms for this.",
+			"It is not possible to do via the XMLHttpRequest API."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-51",
+		"question": "You are using the XMLHttpRequest API to upload a file to a server asynchronously and you want to display the operation's progress. How will you read the progress?",
+		"correct_answer": "Define a handler on the XMLHttpRequest.upload.onprogress object.",
+		"incorrect_answers": [
+			"Define a handler on the XMLHttpRequest.onload object.",
+			"Define a handler on the XMLHttpRequest.upload.onload object.",
+			"Define a handler on the XMLHttpRequest.onprogress object."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-52",
+		"question": "What HTML attribute can be used to turn menu items on and off?",
+		"correct_answer": "disabled",
+		"incorrect_answers": [
+			"enabled",
+			"display",
+			"view"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-53",
+		"question": "In JSON Web Token - (JWT) based authorization, what is the secret key used for?",
+		"correct_answer": "To generate a unique signature for the token",
+		"incorrect_answers": [
+			"To decode the token sent by the client",
+			"To encrypt sensitive information in the token",
+			"To encode the token"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-54",
+		"question": "<p>You are using the Formidable Node.js module in Express to process file upload requests. You want to define a REST endpoint capable of storing several files per request and you can use temp folder storage. What is the next step, once you define the signature of the endpoint as below?</p><div class=\"code\"><p>app.post('/your/endpoint/path/goes/here', (req, res, next) => {</p></div>",
+		"correct_answer": "const formhelp = formidable({ multiples: true });",
+		"incorrect_answers": [
+			"const formhelp = formidable({}); ",
+			"const formhelp = formidable({ uploadDir: temp });",
+			"const formhelp = formidable(); "
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-56",
+		"question": "You are working on a client-side implementation of a form for an item on an e-commerce site. One of the inputs on this form is a file. You want to place the input file on an area of the site that is not the form itself. How can you still associate the file with the form?",
+		"correct_answer": "Set the input's form attribute to a value that matches the form's id.",
+		"incorrect_answers": [
+			"Add a label next to the input and set its id attribute to the form's id.",
+			"Set the input's href attribute to a value that matches the form's id.",
+			"Add a label next to the input and set its for attribute to the form's id."
+		],
+		"source": ""
 	}
 ]
