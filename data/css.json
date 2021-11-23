@@ -1,0 +1,366 @@
+[
+    {
+		"id": "css-1",
+		"question": "Which of the following is an example of a general descendant selector?",
+		"correct_answer": "ul li",
+		"incorrect_answers": [
+			"h1, h2",
+			"input[type=\"text\"]",
+			"div &gt; p"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-2",
+		"question": "Which one of the following CSS functions allows you to change the shape of an element by warping its points by the specified angle in each direction?",
+		"correct_answer": "skew()",
+		"incorrect_answers": [
+			"translate()",
+			"warp()",
+			"rotate()"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-3",
+		"question": "Which selector is used to find anchor elements that have not been visited by the user?",
+		"correct_answer": "a:link",
+		"incorrect_answers": [
+			"a:active",
+			"a:hover",
+			"a:visited"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-4",
+		"question": "Which attribute allows you to use a media query on a <link> element to conditionally load an external stylesheet?",
+		"correct_answer": "media",
+		"incorrect_answers": [
+			"href",
+			"rel",
+			"type"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-5",
+		"question": "The vertical-align property sets the vertical alignment for which of the following?",
+		"correct_answer": "Table cells and inline elements",
+		"incorrect_answers": [
+			"All text-based elements",
+			"Block elements and tables",
+			"&lt;span&gt; and &lt;p&gt; inner text"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-7",
+		"question": "<p>What is the result of the CSS rules below?</p> <div class=\"code\"><p>.container p {</p><p>&nbsp;&nbsp;float: left!important;</p><p>}</p></div> <div class=\"code\"><p>&lt;div class=\"container\"&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;This is another paragraph.&lt;/p&gt;</p><p>&lt;/div&gt;</p></div>",
+		"correct_answer": "The &lt;div class=\"container\"&gt; default height value will be 0 as all child elements are floated.",
+		"incorrect_answers": [
+			"The children elements float attribute value is also left.",
+			"The overflow attribute value of &lt;div class=\"container\"&gt; is \"auto\" by default.",
+			"The &lt;div class=\"container\"&gt; margin attribute value is ignored."
+		],
+		"source": ""
+	},
+	{
+		"id": "css-8",
+		"question": "Which statement is true regarding the animation of SVG elements with CSS?",
+		"correct_answer": "They can be animated with the same CSS properties as HTML elements.",
+		"incorrect_answers": [
+			"CSS property animations for SVG only work in the Chrome Web Browser",
+			"It is not possible to animate SVG elements with CSS.",
+			"SVG elements have a special set of CSS animation properties."
+		],
+		"source": ""
+	},
+	{
+		"id": "css-9",
+		"question": "<p>Based on the structure below, which selector type will target only &lt;p&gt; elements that immediately follow after a given &lt;div&gt; element?</p><div class=\"code\"><p>&lt;body&gt;</p><p>&nbsp;&nbsp;&lt;div&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Example paragraph.&lt;/p&gt;</p><p>&nbsp;&nbsp;&lt;/div&gt;</p><p>&nbsp;&nbsp;&lt;p&gt;Which selector will target only this paragraph?&lt;/p&gt;</p><p>&lt;/body&gt;</p></div>",
+		"correct_answer": "An adjacent sibling selector",
+		"incorrect_answers": [
+			"A general sibling selector",
+			"A descendant selector",
+			"A child selector"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-10",
+		"question": "<p>Based on the following CSS and HTML, what will be the final color value of the &lt;li&gt; elements?</p><div class=\"code\"><p>&lt;style&gt;</p><p>&nbsp;&nbsp;.list li { color: red; }</p><p>&nbsp;&nbsp;div ul li { color: blue; }</p><p>&nbsp;&nbsp;li { color: green; }</p><p>&lt;/style&gt;</p><p>&lt;div class=\"list\"&gt;</p><p>&nbsp;&nbsp;&lt;ul&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;</p><p>&nbsp;&nbsp;&lt;/ul&gt;</p><p>&lt;/div&gt;</p></div>",
+		"correct_answer": "Red",
+		"incorrect_answers": [
+			"Blue",
+			"Black",
+			"Green"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-12",
+		"question": "<p>If the following selectors are being applied to the same element, what will be the final color of the element?</p> <div class=\"code\"><p>.element {</p><p>&nbsp;&nbsp;color: red;</p><p>}</p><p></p><p>div[id=\"container\"] h1 {</p><p>&nbsp;&nbsp;color: blue;</p><p>}</p><p></p><p>.main div:nth-of-type(2) h1 {</p><p>&nbsp;&nbsp;color: green;</p><p>}</p></div>",
+		"correct_answer": "Green",
+		"incorrect_answers": [
+			"Red",
+			"Black",
+			"Blue"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-13",
+		"question": "Which of the following properties has a default value of ease and specifies how the speed during a transition will be calculated?",
+		"correct_answer": "transition-timing-function",
+		"incorrect_answers": [
+			"transition-duration",
+			"transition-property",
+			"transition-delay"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-14",
+		"question": "Which value of the display property will change the layout behavior of an element to act like a block element in the flexbox model?",
+		"correct_answer": "flex",
+		"incorrect_answers": [
+			"block-flex",
+			"flexbox",
+			"inline-flex"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-15",
+		"question": "<p>What will be the final color value of the span below?</p><div class=\"code\"><p>&lt;div&gt; </p><p>&nbsp;&nbsp;&lt;p&gt;This is a &lt;span&gt;paragraph&lt;/span&gt;.&lt;/p&gt; </p><p>&lt;/div&gt; </p></div><p></p><div class=\"code\"><p>div span { </p><p>&nbsp;&nbsp;color: blue; </p><p>} </p><p></p><p>p span {</p><p>&nbsp;&nbsp;color: green;</p><p>}</p><p></p><p>span { </p><p>&nbsp;&nbsp;color: red; </p><p>}</p></div>",
+		"correct_answer": "Green",
+		"incorrect_answers": [
+			"Blue",
+			"Black",
+			"Red"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-16",
+		"question": "Which of the following is true of an element that precedes a floated element?",
+		"correct_answer": "The element will not be affected by the floated element.",
+		"incorrect_answers": [
+			"The element will float to the left of the next element in document flow.",
+			"The element will float to the right of the next element in document flow.",
+			"The element will flow around the following element."
+		],
+		"source": ""
+	},
+		{
+		"id": "css-17",
+		"question": "<p>Which of the following best describes the result of the Cascading Style Sheets (CSS) rule below?</p><div class=\"code\"><p>.element {</p><p>&nbsp;&nbsp;left: 20px;</p><p>&nbsp;&nbsp;top: 50px;</p><p>&nbsp;&nbsp;z-index: 3;</p><p>}</p></div><p></p><div class=\"code\"><p>&lt;div class=\"element\"&gt;Some text&lt;/div&gt;</p></div>",
+		"correct_answer": "None of the declarations will have an effect unless a position property is set to anything other than static or sticky.  ",
+		"incorrect_answers": [
+			"The element will have a z-index of 3 but top and left properties will be ignored.",
+			"The element will be offset 20 pixels to the left and 50 pixels from the top of the browser window, with a stacking order of 3 on the z axis.",
+			"The element will be offset by its original position left by 20 pixels and 50px from the top, and the z-index value will be ignored."
+		],
+		"source": ""
+	},
+		{
+		"id": "css-18",
+		"question": "<p>What is the effect of using a negative number in a padding declaration? Example:</p><div class=\"code\"><p>p {</p><p>&nbsp;&nbsp;padding-top: -10px;</p><p>}</p></div>",
+		"correct_answer": "Same as padding-top: 0px;",
+		"incorrect_answers": [
+			"Same as margin-top: -10px;",
+			"Same as position: absolute; top: -10px;",
+			"Same as padding-top: 10px;"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-19",
+		"question": "What is a valid value for the font-stretch attribute?",
+		"correct_answer": "normal",
+		"incorrect_answers": [
+			"stretch",
+			"narrow",
+			"justify"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-20",
+		"question": "Which list-style-type property renders a filled circle?",
+		"correct_answer": "disc",
+		"incorrect_answers": [
+			"circle",
+			"roman",
+			"square"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-21",
+		"question": "Which of the following properties allows you to use a customized cursor?",
+		"correct_answer": "cursor",
+		"incorrect_answers": [
+			"cursor-style-type",
+			"cursor-style",
+			"style"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-22",
+		"question": "<p>On which side will there be a 30px padding given the following declaration? </p><div class=\"code\"><p>padding: 10px 15px 20px 30px;</p></div>",
+		"correct_answer": "Left",
+		"incorrect_answers": [
+			"Bottom",
+			"Right",
+			"Top"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-23",
+		"question": "<p>Which of the following would be the result of the rule below?</p><div class=\"code\"><p>tr:nth-child(2n){</p><p>&nbsp;&nbsp;background-color: red; </p><p>}</p></div>",
+		"correct_answer": "Changes the background color of every even table row to red",
+		"incorrect_answers": [
+			"Changes the text color of ONLY the second row in a table to red",
+			"Changes the text color of every even number table row to red",
+			"Changes the background color of ONLY the second row in a table to red"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-24",
+		"question": "What does the background-attachment property do?",
+		"correct_answer": "It sets whether a background image should scroll with the content, or be fixed.",
+		"incorrect_answers": [
+			"It displays a link to the background.",
+			"It links background as an external file.",
+			"It attaches an image to the background."
+		],
+		"source": ""
+	},
+		{
+		"id": "css-25",
+		"question": "Which of the following styles has the lowest specificity?",
+		"correct_answer": "*",
+		"incorrect_answers": [
+			"h1",
+			"#element",
+			"&lt;h1 style=\"color: red\"&gt;&lt;/h1&gt;"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-26",
+		"question": "Which of the following keywords can be used to force property inheritance on an element?",
+		"correct_answer": "Inherit",
+		"incorrect_answers": [
+			"Initial",
+			"Parent",
+			"!important"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-27",
+		"question": "Which of the following is a valid pseudo-element?",
+		"correct_answer": "::after",
+		"incorrect_answers": [
+			":last-child",
+			":first-of-type",
+			":active"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-28",
+		"question": "<p>Which element will be matched by the following CSS selector?</p><div class=\"code\"><p>div[class^=\"foo\"]</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\">&lt;div class=\"foobar\"&gt; ... &lt;/div&gt;</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">&lt;div class=\"^foo\"&gt; ... &lt;/div&gt;</div>",
+			"<div class=\"codeAnswer\">&lt;div class=\"baz-foo\"&gt; ... &lt;/div&gt;</div>",
+			"<div class=\"codeAnswer\">&lt;div class=\"~foo\"&gt; ... &lt;/div&gt; </div>"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-30",
+		"question": "What is the default value of the float property?",
+		"correct_answer": "none",
+		"incorrect_answers": [
+			"flex",
+			"inherit",
+			"unset"
+		],
+		"source": ""
+	},
+    {
+		"id": "css-31",
+		"question": "Which of the following will redefine the default margin and padding settings for all browsers so that they are identical?",
+		"correct_answer": "Setting margin and padding to 0",
+		"incorrect_answers": [
+			"Setting margin and padding to auto",
+			"Setting margin and padding to inherit",
+			"Setting margin and padding to custom"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-32",
+		"question": "With regards to the cascade effect of CSS, when does the order of the rules take precedence?",
+		"correct_answer": "The order matters when the elements possess equal specificity.",
+		"incorrect_answers": [
+			"The order matters only when !important is NOT used.",
+			"The order only matters when using external style sheets.",
+			"The order has no effect on styles."
+		],
+		"source": ""
+	},
+		{
+		"id": "css-33",
+		"question": "What is the transform: translate() method used for?",
+		"correct_answer": "To offset elements from their current position",
+		"incorrect_answers": [
+			"To translate text to the language given as a parameter",
+			"To use non-euclidean geometry on elements",
+			"To skew an element's bounding box"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-34",
+		"question": "Which of the following declarations could be used to hide an image without affecting the document's layout?",
+		"correct_answer": "visibility: hidden;",
+		"incorrect_answers": [
+			"display: hide;",
+			"visibility: invisible;",
+			"display: none;"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-35",
+		"question": "Which of the following best describes the role of the float property?",
+		"correct_answer": "To change the default behavior of an element in normal document flow relative to its containing block",
+		"incorrect_answers": [
+			"To alter the default behavior and type of an element's rendering box",
+			"To position an element relative to its original position by the specified offsets",
+			"To change the layout model used by an element"
+		],
+		"source": ""
+	},
+		{
+		"id": "css-36",
+		"question": "Which is a layout model that demonstrates the relationship between parts in an element's rendering box (e.g. margins, padding, borders)?",
+		"correct_answer": "Box model",
+		"incorrect_answers": [
+			"Flex-box",
+			"Table model",
+			"Border-box"
+		],
+		"source": ""
+	}
+    
+]
