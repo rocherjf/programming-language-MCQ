@@ -112,6 +112,9 @@ function getURLDocumentQuestion() {
         case "Javascript":
             URL = 'data/javascript.json';
             break;
+        case "Javascript-es6":
+            URL = 'data/javascript-es6.json';
+            break;
         case "Html":
             URL = 'data/html.json';
             break;

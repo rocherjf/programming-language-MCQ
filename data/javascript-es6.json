@@ -1,0 +1,377 @@
+[
+	{
+		"id": "javascript-es6-1",
+		"question": "Which option will set the value of b to 42?",
+		"correct_answer": "let {foo: a, bar: b} = {foo: 27, bar: 42};",
+		"incorrect_answers": [
+			"let {a, b} = {foo: 27, bar: 42};",
+			"let {a: bar, b: foo} = {foo: 27, bar: 42};",
+			"let [a, b] = {foo: 27, bar: 42};"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-2",
+		"question": "<p>What does the parameter ...args describe in the following function?</p><div class=\"code\"><p>function foo(bar, ...args) { ... }</p></div>",
+		"correct_answer": "Rest parameter",
+		"incorrect_answers": [
+			"Spread parameter",
+			"Variadic parameter",
+			"Getter parameter"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-3",
+		"question": "A module's primary purpose is to define a class, Foo, but it also has some useful helper functions (bar and baz) that should be exposed. Which export statement would best express that intent?",
+		"correct_answer": "export { Foo as default, bar, baz }",
+		"incorrect_answers": [
+			"export default Foo, { bar, baz }",
+			"export { Foo, bar, baz }",
+			"export Foo, { bar, baz }"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-4",
+		"question": "<p>What method can you use to make the following code true?console.log( compare(\"www\", \"com.google.www\") === true );</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>function compare(a, b) {</p><p>&nbsp;&nbsp;return b.endsWith(a);</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>function compare(a, b) {</p><p>&nbsp;&nbsp;return b.reverse().startsWith(a);</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>function compare(a, b) {</p><p>&nbsp;&nbsp;return b.contains(a);</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>function compare(a, b) {</p><p>&nbsp;&nbsp;return b.has(a);</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-5",
+		"question": "<p>You have a string of length 31 and you need to check if it starts with the letter a from an index idx1 and ends with the period . at an index idx2. To do so, you have written the following code:</p> <div class=\"code\"><p>const aString = 'We have a cloudy weather today.';</p><p></p><p>let idx1 = 3;</p><p>let idx2 = 30;</p><p>if (aString.startsWith('a', idx1) && aString.endsWith('.', idx2)) {</p><p>&nbsp;&nbsp;console.log(true);</p><p>} else {</p><p>&nbsp;&nbsp;console.log(false);</p><p>}</p></div><p>The above code results in false. What should be the values of idx1 and idx2 to result in true?</p>",
+		"correct_answer": "<p>idx1: 4, 8, 28</p><p>idx2: 31</p>",
+		"incorrect_answers": [
+			"<p>idx1: 0, 4</p><p>idx2: 30</p>",
+			"<p>idx1: 0, 4</p><p>idx2: 30</p>",
+			"<p>idx1: 0, 4, 8, 28</p><p>idx2: 31</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-6",
+		"question": "You have created a class that consists of three constructor() methods and five user-defined methods. Based on this scenario, which statement is correct?",
+		"correct_answer": "When this class compiles, you will receive a SyntaxError.",
+		"incorrect_answers": [
+			"You can use only one from the available three constructor() methods to call the constructor of the super class.",
+			"When this class compiles, you will receive an InternalError.",
+			"You can use all three of the constructor() methods to call the constructor of the super class."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-7",
+		"question": "Which statement is correct regarding the output of Array.of(10) and Array(10)?",
+		"correct_answer": "They will produce distinct content of different lengths.",
+		"incorrect_answers": [
+			"They will initialize an empty array of length 10.",
+			"They will result in an error because Array does not accept constructor arguments.",
+			"They will initialize an array with a single element [10]."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-8",
+		"question": "Which of the following statements return true?",
+		"correct_answer": "Number.isSafeInteger(Math.pow(2, 53) - 1)",
+		"incorrect_answers": [
+			"Number.isSafeInteger(Math.pow(2, 53) + 1)",
+			"Number.isSafeInteger(Math.pow(2, 53))",
+			"Number.isSafeInteger(Math.pow(2, -53))"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-9",
+		"question": "<p>Consider the following code where you have created an object anObject:</p><div class=\"code\"><p>const anObject = {base: null};</p><p>anObject.main = 'ES6';</p><p>console.log(anObject.base)</p></div><p>How can you apply a setter to the existing object to convert the value of main into lowercase and print to console?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>Object.defineProperty(anObject, 'main', {</p><p>&nbsp;&nbsp;set: function(x) { this.base = x.toLowerCase(); }</p><p>});</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(anObject, 'base', {</p><p>&nbsp;&nbsp;set: function(x) { this.base = x.toLowerCase(); }</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(anObject, 'base', {</p><p>&nbsp;&nbsp;set: function(x) { this.main = x.toLowerCase(); }</p><p>});</p></div>",
+			"<div class=\"codeAnswer\"><p>Object.defineProperty(anObject, 'main', {</p><p>&nbsp;&nbsp;set: function(x) { this.main = x.toLowerCase(); }</p><p>});</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-10",
+		"question": "Which Symbol command on comparison returns true on the console?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>let o = {}</p><p>o[Symbol('Sym')] = 'Sym'</p><p>console.log(Object.keys(o).length == 0);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>console.log(Symbol('Sym') === 'Sym');</p></div>",
+			"<div class=\"codeAnswer\"><p>console.log(Symbol('Sym') === Symbol('Sym'));</p></div>",
+			"<div class=\"codeAnswer\"><p>let Sym = 'Sym'</p><p>console.log(Symbol('Sym') == Symbol(Sym));</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-11",
+		"question": "<p>Which of the following results in the same function definition for foo.f?</p><div class=\"code\"><p>const foo = {</p><p>&nbsp;&nbsp;f: function (bar) { console.log(bar); }</p><p>};</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>const foo = {</p><p>&nbsp;&nbsp;f(bar) { console.log(bar); }</p><p>};</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>const foo = {</p><p>&nbsp;&nbsp;[f]: (bar) { console.log(bar); }</p><p>};</p></div>",
+			"<div class=\"codeAnswer\"><p>const foo = {</p><p>&nbsp;&nbsp;f: (bar) { console.log(bar); }</p><p>};</p></div>",
+			"<div class=\"codeAnswer\"><p>const foo = {</p><p>&nbsp;&nbsp;f => (bar) { console.log(bar); }</p><p>};</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-12",
+		"question": "<p>Which example would return the value 2 from the array?</p><div class=\"code\"><p>arr = [\"the\", \"quick\", \"brown\", \"fox\"]</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>console.log( arr.findIndex(x => x.indexOf('o') > -1) );</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>console.log( arr.findIndexOf(x => x.indexOf('o') > -1) );</p></div>",
+			"<div class=\"codeAnswer\"><p>console.log( arr.indexOf(x => x.indexOf('o') > -1) );</p></div>",
+			"<div class=\"codeAnswer\"><p>console.log( arr.searchIndex(x => x.indexOf('o') > -1) );</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-13",
+		"question": "Which aspect of iterators accounts for their lack of up-front performance affect regardless of collection size?",
+		"correct_answer": "Lazy evaluation",
+		"incorrect_answers": [
+			"Eager evaluation",
+			"Dense packing",
+			"Iterable scoping"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-14",
+		"question": "<p>What output do you receive on the execution of the following code?</p><div class=\"code\"><p>let x = 1</p><p>console.log( {x: 2, x: x+1, x: x*x}.x )</p></div>",
+		"correct_answer": "1",
+		"incorrect_answers": [
+			"2",
+			"9",
+			"3"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-15",
+		"question": "Which code snippet will iterate over just the keys in a Map?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>for (key of myMap.keys()) {</p><p>&nbsp;&nbsp;// work with key</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>for (key of myMap.getKeys()) {</p><p>&nbsp;&nbsp;// work with key</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>myMap.entries().map( (key, value) => {</p><p>&nbsp;&nbsp;// work with key</p><p>})</p></div>",
+			"<div class=\"codeAnswer\"><p>myMap.values().map((key) => {</p><p>&nbsp;&nbsp;// work with key</p><p>})</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-16",
+		"question": "Given an iterable iter, which code snippet will result in an array of all iterable values?",
+		"correct_answer": "arr = […iter]",
+		"incorrect_answers": [
+			"arr = Array.fromIterable(iter)",
+			"arr = () => […iter]",
+			"arr = iter.toArray()"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-17",
+		"question": "<p>What is the execution context of the f in the following snippet?</p><div class=\"code\"><p>const foo = {</p><p>&nbsp;&nbsp;bar() { console.log('hello'); }</p><p>};</p><p>const f = foo.bar;</p><p>f();</p></div>",
+		"correct_answer": "The global object",
+		"incorrect_answers": [
+			"bar",
+			"foo",
+			"null"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-18",
+		"question": "<p>You have created an object with three properties as shown:</p><div class=\"code\"><p>const someConst = {</p><p>&nbsp;&nbsp;name: 'XYZ',</p><p>&nbsp;&nbsp;profession: 'developer',</p><p>&nbsp;&nbsp;overview: function() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.name} is a ${this.profession}`);</p><p>&nbsp;&nbsp;}</p><p>}</p></div><p>Upon adding a fourth property to the object using the code Reflect.set(someConst, 'experience':'5 years');, you receive an error. What fixes must be done in the Reflect statement to resolve the error?</p>",
+		"correct_answer": "You need to replace : with a ,",
+		"incorrect_answers": [
+			"You need to remove single quotes around experience.",
+			"You need to enclose 'experience' : '5 years' inside curly braces {}.",
+			"You need to switch the places of the Reflect and someConst keywords."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-19",
+		"question": "<p>What would the following code log to the console?</p><div class=\"code\"><p>var myPromise1 = Promise.resolve('hello');</p><p>var myPromise2 = Promise.resolve('world');</p><p>Promise.race([myPromise1, myPromise2]).then(result => {</p><p>&nbsp;&nbsp;console.log(result);</p><p>});</p></div>",
+		"correct_answer": "\"hello\"",
+		"incorrect_answers": [
+			"[\"hello\"]",
+			"\"hello world\"",
+			"[\"hello\", \"world\"]"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-20",
+		"question": "<p>What will the console output when D is created?</p><div class=\"code\"><p>class A {</p><p>&nbsp;&nbsp;constructor() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('A');</p><p>&nbsp;&nbsp;}</p><p>}</p><p>class C extends A {</p><p>&nbsp;&nbsp;constructor() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;super();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('C');</p><p>&nbsp;&nbsp;}</p><p>}</p><p>class B extends C {</p><p>&nbsp;&nbsp;constructor() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('B');</p><p>&nbsp;&nbsp;&nbsp;&nbsp;super();</p><p>&nbsp;&nbsp;}</p><p>}</p><p>class D extends B {</p><p>&nbsp;&nbsp;constructor() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('D');</p><p>&nbsp;&nbsp;&nbsp;&nbsp;super();</p><p>&nbsp;&nbsp;}</p><p>}</p><p>const obj = new D();</p></div>",
+		"correct_answer": "<p>\"D\"</p><p>\"B\"</p><p>\"A\"</p><p>\"C\"</p>",
+		"incorrect_answers": [
+			"<p>\"A\"</p><p>\"C\"</p><p>\"B\"</p><p>\"D\"</p>",
+			"<p>\"D\"</p><p>\"B\"</p><p>\"C\"</p><p>\"A\"</p>",
+			"<p>\"A\"</p><p>\"B\"</p><p>\"C\"</p><p>\"D\"</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-21",
+		"question": "You must combine two variables into a single array where each element is a single letter. One variable is an array and the other is either an array or a string. What is the best way to do this?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>[...mightBeAString, ...myArray]</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>mightBeAString.concat(...myArray)</p></div>",
+			"<div class=\"codeAnswer\"><p>[...mightBeAString] + myArray</p></div>",
+			"<div class=\"codeAnswer\"><p>if (!Array.isArray(mightBeAString)) {</p><p>&nbsp;&nbsp;mightBeAString = mightBeAString.split('');</p><p>}</p><p>mightBeAString.concat(myArray);</p></div>"
+		],
+		"source": ""
+	},
+	
+		{
+		"id": "javascript-es6-22",
+		"question": "You have a Set holding a large number of JavaScript objects. When there are no other references to one of the objects, you want it to be garbage collected. What is the easiest way to do this?",
+		"correct_answer": "Use a WeakSet instead of a Set.",
+		"incorrect_answers": [
+			"Use a Map instead of a Set.",
+			"Use a typed array instead of a Set.",
+			"Use a WeakMap instead of a Set."
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-23",
+		"question": "Intermittently, objects stored in a WeakSet seem to disappear. What is the most likely cause of this?",
+		"correct_answer": "Nothing else is referencing that object, so it is garbage collected.",
+		"incorrect_answers": [
+			"Memory pressure is causing values to be dropped from the WeakSet.",
+			"The set is being reindexed when you attempt to retrieve the value so it is temporarily unavailable.",
+			"Code elsewhere in your application is deleting the object from the Set."
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-24",
+		"question": "ES6 supports which hash-map type structures?",
+		"correct_answer": "Map and WeakMap",
+		"incorrect_answers": [
+			"HashMap",
+			"Map and StrongMap",
+			"Map, StrongMap, and WeakMap"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-25",
+		"question": "<p>You have created an Object with two Symbols as shown:</p><div class=\"code\"><p>const o = {};</p><p>const tier1 = Symbol('tier1');</p><p>const tier2 = Symbol.for('tier2');</p><p></p><p>o[tier1] = '0x5413A';</p><p>o[tier2] = '0x8844F';</p></div><p>How can you get the list of Symbol properties from the object o?</p>",
+		"correct_answer": "Object.getOwnPropertySymbols(o);",
+		"incorrect_answers": [
+			"Object.getSymbolsProperties(o);",
+			"Object.getSymbols(o);",
+			"Object.getOwnPropertyNames(o);"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-26",
+		"question": "Which statement can you use to loop over a generator?",
+		"correct_answer": "for...of",
+		"incorrect_answers": [
+			"forEach()",
+			"each()",
+			"for...in"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-27",
+		"question": "<p>What is the type of args in the following function?</p><div class=\"code\"><p>function foo(bar, ...args) { ... }</p></div>",
+		"correct_answer": "Array",
+		"incorrect_answers": [
+			"Object",
+			"Array-like object",
+			"Object literal"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-28",
+		"question": "Which snippet of code can loop through a collection of Document Object Model (DOM) elements?",
+		"correct_answer": "for(x of &lt;DOM_Collection&gt;)",
+		"incorrect_answers": [
+			"(&lt;DOM_Collection&gt;).for(each x)",
+			"for(each x in &lt;DOM_Collection&gt;)",
+			"for(x in &lt;DOM_Collection&gt;)"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-29",
+		"question": "<p>Given the following code, what is the value of result?</p><div class=\"code\"><p>var x = new Map();</p><p>x.set('key1', 1);</p><p>x.set('key2', 2);</p><p>var result = x.entries().next().value[1];</p></div>",
+		"correct_answer": "1",
+		"incorrect_answers": [
+			"Uncaught TypeError: x.entries(...).next is not a function",
+			"['key1', 1]",
+			"{key1: 1}"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-30",
+		"question": "<p>You need to create an arrow function by destructuring its parameters. The first parameter must accept only one element 10, whereas the second parameter must accept multiple elements 1, 5, 5. The function must multiply the value of the first argument with each element of the second argument to produce an array [10, 50, 50]. How would you create this function?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>([arg, ...argMultiple] = [10, 1, 5, 5]) => </p><p>&nbsp;&nbsp;argMultiple.map((pick) => </p><p>&nbsp;&nbsp;&nbsp;&nbsp;pick * arg</p><p>&nbsp;&nbsp;);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>([arg, ...argMultiple] = [10, 1, 5, 5]) => </p><p>&nbsp;&nbsp;argMultiple.reduce((pick) => {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return pick * arg</p><p>&nbsp;&nbsp;});</p></div>",
+			"<div class=\"codeAnswer\"><p>([arg, ...argMultiple] = [10, 1, 5, 5]) => </p><p>&nbsp;&nbsp;argMultiple.reduce((pick) => </p><p>&nbsp;&nbsp;&nbsp;&nbsp;return pick * arg</p><p>&nbsp;&nbsp;);</p></div>",
+			"<div class=\"codeAnswer\"><p>([arg, ...argMultiple] = [10, 1, 5, 5]) => </p><p>&nbsp;&nbsp;argMultiple.map((pick) => {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;pick * arg</p><p>&nbsp;&nbsp;});</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-31",
+		"question": "Which method returns a boolean result after searching for a substring inside a main string?",
+		"correct_answer": "includes(main_string, index_to_search_from)",
+		"incorrect_answers": [
+			"find(main_string, range_of_indexes)",
+			"contains(main_string, index_to_search_from)",
+			"gsub(main_string, range_of_indexes)"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-32",
+		"question": "<p>Consider the following parameters of a proxy:</p><div class=\"code\"><p>const target = {</p><p>&nbsp;&nbsp;key1: true,</p><p>&nbsp;&nbsp;key2: Infinity,</p><p>&nbsp;&nbsp;key3: false</p><p>};</p><p></p><p>const handler = {</p><p>&nbsp;&nbsp;get: function (target, prop, receiver) {&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________________</p><p>&nbsp;&nbsp;}</p><p>};</p><p></p><p>const proxy = new Proxy(target, handler);</p><p></p><p>console.log(proxy.key1, proxy.key2, proxy.key3); </p></div><p>What should be the body of the get function to receive true null false at the console?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>if (prop === \"key2\") {</p><p>   return null;</p><p>}</p><p>return Reflect.get(...arguments);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>if (prop === \"key1\" || prop === \"key3\") {</p><p>   return true;</p><p>} else {</p><p>   return null;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>if (prop === \"key2\") {</p><p>   return null;</p><p>} else {</p><p>   return true;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>if (prop === \"key1\") {</p><p>   return null;</p><p>}</p><p>return Reflect.get(...arguments);</p></div>"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-35",
+		"question": "Which is an advantage of arrow functions versus conventional functions?",
+		"correct_answer": "Execution context is easier to control",
+		"incorrect_answers": [
+			"Constructor functions are easier to write",
+			"An arrow function's arguments parameter is a true array",
+			"Arrow functions always lead to cleaner, more manageable code"
+		],
+		"source": ""
+	},
+		{
+		"id": "javascript-es6-36",
+		"question": "What statement is true regarding a Set and a WeakSet?",
+		"correct_answer": "You can use the clear() method with a Set, but not with a WeakSet.",
+		"incorrect_answers": [
+			"You can use the size property with a WeakSet, but not with a Set.",
+			"You can use the has() method with a Set, but not with a WeakSet.",
+			"You can use the add() method with a WeakSet, but not with a Set. "
+		],
+		"source": ""
+	}
+]
