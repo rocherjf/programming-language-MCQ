@@ -1,0 +1,398 @@
+[
+	{
+		"id": "git-1",
+		"question": "How do you create the first commit in a project?",
+		"correct_answer": "Stage the relevant files and directories and then use git commit.",
+		"incorrect_answers": [
+			"Use git commit because Git automatically stages all the files and folders when you use git init.",
+			"Use git commit without a commit message because Git automatically gives it the message \"First commit\".",
+			"Use git init to make Git create it automatically with the message \"First commit\"."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-2",
+		"question": "What command can result in a fast-forward?",
+		"correct_answer": "pull",
+		"incorrect_answers": [
+			"branch",
+			"fetch",
+			"status"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-3",
+		"question": "<p>You want to remove a specific file from your repository history so you run the following command:</p><div class=\"code\"><p>git filter-branch --tree-filter</p></div><p>After a while, the command is running very slowly. Which filter could you use instead for quicker results?</p>",
+		"correct_answer": "--index-filter",
+		"incorrect_answers": [
+			"--env-filter",
+			"--msg-filter",
+			"--commit-filter"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-4",
+		"question": "How does git cherry-pick add a commit named C to the current branch?",
+		"correct_answer": "It creates a new commit containing a copy of C with the HEAD of the current branch as a parent.",
+		"incorrect_answers": [
+			"It modifies C so that it has the HEAD of the current branch as a parent.",
+			"It creates a new commit with C as a parent.",
+			"It creates a new commit with C and the HEAD of the current branch as parents."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-5",
+		"question": "How does rebasing affect the history of a repository?",
+		"correct_answer": "Rebasing can modify, delete, or even create a new history.",
+		"incorrect_answers": [
+			"Local changes from rebasing are overwritten when pushing to a remote branch.",
+			"Rebasing will erase history, while preserving the previous history in a backup branch.",
+			"Rebasing can only affect superficial data, not the history of the repository."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-6",
+		"question": "Which operation happens when you create a branch?",
+		"correct_answer": "Git creates a new pointer to the current commit.",
+		"incorrect_answers": [
+			"Git copies the commits, but not the history data of the current branch to the new one.",
+			"Git generates the changes between the current branch and the new branch.",
+			"Git copies the history data of the current branch to the new one."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-7",
+		"question": "You are contributing to an open source project on a public repository. You would like to sign your commit so the other contributors can verify the legitimacy of your work. Which command would you run to achieve this, assuming that all prior configuration is properly done?",
+		"correct_answer": "git commit -S -m \"your commit message\"",
+		"incorrect_answers": [
+			"git commit --commit-gpgsign true ",
+			"git sign &lt;commit_sha&gt; &lt;local_cpg_key&gt;",
+			"git config commit.gpgsign true"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-8",
+		"question": "What happens if you give the command git add .?",
+		"correct_answer": "You stage the changes in the current directory and, recursively, all the changed files and directories it contains except for empty directories.",
+		"incorrect_answers": [
+			"You stage the project root directory and, recursively, all the files and directories it contains, including empty directories.",
+			"You stage all the files in the current directory, but not the files in its subdirectories.",
+			"You stage the current directory and, recursively, all the files and directories it contains, including empty directories."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-9",
+		"question": "What does git grep accomplish?",
+		"correct_answer": "It searches for specific patterns in your repository.",
+		"incorrect_answers": [
+			"It lists the commits that contain certain patterns.",
+			"It searches for commit hashes in your repository. ",
+			"It lists the authors that wrote specified patterns."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-10",
+		"question": "What command can move your working directory to an earlier commit?",
+		"correct_answer": "git checkout &lt;commit_hash_here&gt;",
+		"incorrect_answers": [
+			"git update -c &lt;commit_hash_here&gt;",
+			"git restore -c &lt;commit_hash_here&gt;",
+			"git rollback &lt;commit_hash_here&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-11",
+		"question": "Which statement best explains the purpose of git show?",
+		"correct_answer": "It shows blobs, trees, tags, and commits in a human-readable format.",
+		"incorrect_answers": [
+			"It shows the commit history for the current active branch.",
+			"It shows a list of stashed file changes.",
+			"It shows the modified files in the working directory."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-12",
+		"question": "In your repository you notice the presence of a few files that are completely detached from the project history and therefore completely inaccessible. You decide to continue the development and not to take action on the files. After a month, you notice that the files are no longer present in the repository. What could be the reason?",
+		"correct_answer": "By default, garbage collection is triggered in Git if a detached file is present in the repository after 30 days, according to the gc.reflogExpireUnreachable  setting.",
+		"incorrect_answers": [
+			"By default, garbage collection is triggered in Git if a detached file is present in the repository after 7 days, according to the gc.reflogExpire setting.",
+			"By default, garbage collection is triggered in Git if a detached file is present in the repository after 7 days, according to the gc.reflogExpireUnreachable setting ",
+			"By default, garbage collection is triggered in Git if a detached file is present in the repository after 30 days, according to the gc.reflogExpire  setting."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-13",
+		"question": "How can you move to another branch while discarding all uncommitted changes?",
+		"correct_answer": "Use git checkout --force.",
+		"incorrect_answers": [
+			"Use git checkout --reset.",
+			"Manually delete the changes, then check out.",
+			"Check out and Git will delete all your changes."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-14",
+		"question": "You are looking through the Git commit logs using the git log command to find the actual changes in the files, but the print out is showing a list of files and how many changes were in each one. What is wrong with your usage of the log command?",
+		"correct_answer": "You used the --stat flag when you should have used the --patch flag.",
+		"incorrect_answers": [
+			"You used the --patch flag when you should have used the --stat flag.",
+			"You did not include any flags and you should have used the --patch flag.",
+			"You did not include any flags and you should have used the --stat flag."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-15",
+		"question": "Which objects does Git allow you to cryptographically sign?",
+		"correct_answer": "Tags and commits",
+		"incorrect_answers": [
+			"Pull requests and authors",
+			"Authors and tags",
+			"Commits and pull requests"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-16",
+		"question": "What is the difference between git branch -m and git branch -M?",
+		"correct_answer": "git branch -m will rename a branch and the corresponding reflog, whereas git branch -M will force the renaming of the branch, even if a branch with the new name already exists.",
+		"incorrect_answers": [
+			"git branch -m will move a branch to a new location, whereas git branch -M will rename a branch and the corresponding reflog. ",
+			"git branch -m will force the renaming of a branch, even if the branch with the new name already exists. whereas git branch -M will rename a branch and the corresponding reflog",
+			"git branch -m will rename a branch and the corresponding reflog, whereas git branch -M will move a branch to a new location."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-17",
+		"question": "Which command may lead to a detached HEAD situation?",
+		"correct_answer": "git checkout",
+		"incorrect_answers": [
+			"git head",
+			"git commit",
+			"git branch"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-18",
+		"question": "What would you do after fixing a merge conflict on a single file using the command line?",
+		"correct_answer": "Stage the fixed file and complete the merge with git commit.",
+		"incorrect_answers": [
+			"Stage the fixed file and complete the merge with git merge.",
+			"Complete the merge with git commit.",
+			"Complete the merge with git continue."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-19",
+		"question": "What is the difference between git branch -d and git branch -D? ",
+		"correct_answer": "git branch -d will delete a branch, given that it has been properly merged, whereas git branch -D will allow the deletion of the branch irrespective of its merged status.",
+		"incorrect_answers": [
+			"git branch -d will delete a branch regardless of its merged status, whereas git branch -D will allow the deletion of the branch only if it has been properly merged.  ",
+			"git branch -d will delete a branch, given that it no longer points to a commit, whereas git branch -D will allow the deletion of the branch even if the branch points to a commit. ",
+			"git branch -d will delete a branch even if the branch points to a commit, whereas git branch -D will only allow the deletion of the branch if it doesn't point to a commit anymore."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-20",
+		"question": "What is one advantage of rebase over merge?",
+		"correct_answer": "Rebase results in a cleaner, more streamlined history than merge.",
+		"incorrect_answers": [
+			"Rebase is faster than merge.",
+			"Rebase never generates history conflicts among the developers that are working on the same repository, but merge does.",
+			"Data conflicts during a rebase are automatically resolved by Git, but are not with merge."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-21",
+		"question": "You are working on a project that has two key branches : main and dev . You perform all work on dev and once there is a release, you plan to push the code from dev to main expecting a fast-forward merge commit every time. Why is this an unreasonable expectation?",
+		"correct_answer": "The merge commit will not be a fast-forward commit every time, because the HEAD of dev is not always a direct descendant of the HEAD on main.",
+		"incorrect_answers": [
+			"The merge commit will never be a fast-forward commit, because dev, being the development branch, does not support fast-forward commits by default. ",
+			"The merge commit will never be a fast-forward commit, because main, being the release branch, does not support fast-forward commits by default.",
+			"The merge commit will never be a fast-forward commit, because the HEAD of main is not a direct descendant of the HEAD on dev."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-22",
+		"question": "What will happen to the staged file1.txt when you run the command git reset?",
+		"correct_answer": "The staging area will be cleared, but the changes will still exist in the working directory.",
+		"incorrect_answers": [
+			"The branch will be brought back to the initial commit of the repository.",
+			"The staging area and working directory will be cleared.",
+			"The changes will be committed, but you can undo them later."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-23",
+		"question": "What is the difference between apply and pop when using git stash?",
+		"correct_answer": "Apply will apply the changes in the stash and keep them in the stash, whereas pop will apply the changes and discard them from stash.",
+		"incorrect_answers": [
+			"Apply will apply the changes from stash and stage them, whereas pop will apply the changes without staging them.",
+			"Apply will apply the changes in the stash and discard them from stash, while pop will apply the changes in a new branch, to avoid conflicts.",
+			"Apply will apply the changes in the stash and discard them from stash, while pop will apply the changes in the stash and store them."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-24",
+		"question": "Which command renames branch1 to branch2?",
+		"correct_answer": "git branch -m branch1 branch2",
+		"incorrect_answers": [
+			"git branch branch1 branch2",
+			"git rename branch1 branch2",
+			"git mv branch1 branch2"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-25",
+		"question": "<p>You are working on a project where keeping a linear repository history is important. One of your teammates pushes their latest changes to the main branch, so you proceed to pull the latest changes using the following command:</p><div class=\"code\"><p>git pull origin main</p></div><p>What is the problem with this approach? </p>",
+		"correct_answer": "git pull will execute a merge by default, creating merge commits and damaging the linearity of the project's history.",
+		"incorrect_answers": [
+			"git pull will hard reset HEAD to the state of the pulled commits by default, overwriting changes in the staging area and in the working directory.  ",
+			"git pull will execute a fetch by default, stashing all pending commits and damaging the linearity of the project's history. ",
+			"git pull will execute a rebase by default, creating possible conflicts."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-26",
+		"question": "How do you benefit from using git add -i instead of git add .?",
+		"correct_answer": "You can select specific files and easily update, patch, or revert them.",
+		"incorrect_answers": [
+			"It serves as a shorthand for rebasing, merging, and also committing changes.",
+			"You can add all the files with that single command and commit your work.",
+			"You can select specific commits and easily update, patch, or revert them."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-27",
+		"question": "How would you force Git to trigger garbage collection?",
+		"correct_answer": "With git gc",
+		"incorrect_answers": [
+			"With git runtime --gc",
+			"With git clean",
+			"Use a command that starts it implicitly, such as git push"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-28",
+		"question": "A branch rebase procedure is interrupted because of a conflict in one of the rebased commits. How would you skip that specific commit to continue the rebase? ",
+		"correct_answer": "git rebase --skip",
+		"incorrect_answers": [
+			"git rebase --abort",
+			"git commit --skip",
+			"git rebase --continue"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-29",
+		"question": "What is the difference between comparing two branches with git diff or git difftool?",
+		"correct_answer": "git diff uses the command-line diff command, while git difftool uses the external diff tool that you configured.",
+		"incorrect_answers": [
+			"git diff uses the system's default diff program, while git difftool allows you to use the internal git's evaluation tool.",
+			"git diff uses vim style code highlighting, while git difftool does not provide code highlighting at all. ",
+			"git diff is read-only, while git difftool opens the diff in interactive mode."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-30",
+		"question": "What could happen if you check out the head pointer to a previous commit? ",
+		"correct_answer": "HEAD could be in a \"detached\" state.",
+		"incorrect_answers": [
+			"Updating the hash of the old commit could create unnecessary overhead.",
+			"The old commit is cloned and placed as the new tip of the current branch.",
+			"It throws an exception because the HEAD cannot be pointing to older commits than the current one. "
+		],
+		"source": ""
+	},
+	{
+		"id": "git-31",
+		"question": "What is the outcome if you rebase a branch A onto branch B's latest commit?",
+		"correct_answer": "Git moves branch A to the top of branch B creating new commits for each commit of branch A.",
+		"incorrect_answers": [
+			"Branch B is overwritten with the commits coming from branch A.",
+			"Git throws an error because rebase is an operation reserved to include branches into the main branch.",
+			"Git moves branch B to the top of branch A creating new commits for each commit of branch B."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-32",
+		"question": "Which command narrows the search to locate which commit introduced a bug?",
+		"correct_answer": "git bisect",
+		"incorrect_answers": [
+			"git submodule",
+			"git verify-commit",
+			"git worktree"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-33",
+		"question": "A developer on your team commits their latest changes and immediately pushes them to the repository. However, they included in their commits a file with sensitive authentication information. How could they have avoided this situation?",
+		"correct_answer": "By running git status before committing and ensuring that all the staged files are safe to be committed.",
+		"incorrect_answers": [
+			"By running git checkup before committing and ensuring that all the staged files are safe to be committed. ",
+			"By running git push --status before committing and ensuring that all the staged files are safe to be committed.  ",
+			"By running git commit --dry-run -t index before committing and ensuring that all the staged files are safe to be committed. "
+		],
+		"source": ""
+	},
+	{
+		"id": "git-34",
+		"question": "What command would you use to remove file2.txt from the working tree as well as the index and then stage the deletion to the index?",
+		"correct_answer": "git rm file2.txt",
+		"incorrect_answers": [
+			"git reset --hard file2.txt",
+			"git remove file2.txt",
+			"git reset file2.txt"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-35",
+		"question": "Which command recovers commits that are not referenced by a branch or tag?",
+		"correct_answer": "git reflog",
+		"incorrect_answers": [
+			"git log --graph",
+			"git show-branch",
+			"git describe"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-36",
+		"question": "What is rebasing?",
+		"correct_answer": "The process of replaying commits from one branch onto another",
+		"incorrect_answers": [
+			"The process of resolving conflicts after merging two branches together",
+			"The process of setting up a different remote for your repository",
+			"The process of combining branches from separate forks"
+		],
+		"source": ""
+	}
+]

@@ -82,6 +82,9 @@ function getURLDocumentQuestion() {
     let URL;
 
     switch (typeQuiz) {
+        case "Git":
+            URL = 'data/git.json';
+            break;
         case "Java":
             URL = 'data/java.json';
             break;
