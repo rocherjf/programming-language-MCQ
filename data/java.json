@@ -1,6 +1,4 @@
 [
-
-
 	{
 		"id": "java-1",
 		"question": "What does this code segment print? <div class=\"code\">static void increment(int index) { <br> &ensp;index++; <br>} <br> <br>public static void main(String[] args){ <br>  &ensp;int i = 0; <br>  &ensp;increment(i); <br> &ensp;i++; <br>  &ensp;System.out.println(i); <br>}</div>",
@@ -646,7 +644,6 @@
 		],
 		"source": ""
 	},
-
 	{
 		"id": "java-60",
 		"question": "What is a lambda expression in Java?",
@@ -691,7 +688,6 @@
 		],
 		"source": ""
 	},
-
 	{
 		"id": "java-64",
 		"question": "<p>You have the following class:</p><p><div class=\"code\"><p>public class Holder {</p><p>&nbsp;&nbsp;static String MAX_SIZE = System.getProperty(\"max.size\");</p><p>}</p></div></p><p>You execute the following code:</p><p><div class=\"code\"><p>Holder holder1 = new Holder();</p><p>Holder holder2 = new Holder();</p></div></p><p>How many times is the getProperty(\"max.size\") method called?</p>",
@@ -713,6 +709,170 @@
 			"class ArrayList extends AbstractList implements List as Serializable"
 		],
 		"source": ""
+	},
+	{
+		"id": "java-66",
+		"question": "How can you create a sequential stream?",
+		"correct_answer": "Collection.stream()",
+		"incorrect_answers": [
+			"Collection.sequentialStream()",
+			"Collection.parallelStream()",
+			"Collection.streamSequential()"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-67",
+		"question": "<p>What will be the output of the following code? (note there is one space before\"Hello\") </p><p></p><p><div class=\"code\"><p>String myText = \" Hello world\";</p><p>System.out.println(myText.substring(0, 3).toUpperCase().trim());</p></div></p>",
+		"correct_answer": "HE",
+		"incorrect_answers": [
+			"He",
+			"HEL",
+			"Hel"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-68",
+		"question": "You have a list of doubles. Some of those doubles may be NaN or INFINITY and they should not be added. You must compute the sum of these doubles. What code will you write?",
+		"correct_answer": "<div class=\"code\"><p>double sum = 0.0;</p><p>for (double d: list) {</p><p>&nbsp;&nbsp;if (Double.isFinite(d)) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;sum += d;</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>double sum = 0.0;</p><p>for (double d: list) {</p><p>&nbsp;&nbsp;if (!Double.isNaN(d)) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;sum += d;</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>double sum = 0.0;</p><p>for (double d: list) {&nbsp;&nbsp;</p><p>&nbsp;&nbsp; sum += d;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>double sum = 0.0;</p><p>for (double d: list) {</p><p>&nbsp;&nbsp; if (!Double.isInfinite(d)) {&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;  sum += d;&nbsp;&nbsp;</p><p>&nbsp;&nbsp; }</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-69",
+		"question": "What modifier will disallow objects to be instantiated from a class?",
+		"correct_answer": "abstract",
+		"incorrect_answers": [
+			"static",
+			"protected",
+			"final"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-70",
+		"question": "<p>You have a collection of clients' addresses stored in the following Map:  </p><p><div class=\"code\"><p>addresses.put(1, \"1 Main Street\");</p><p>addresses.put(2, \"2 Main Street\");</p><p>addresses.put(3, \"3 Main Street\");</p></div></p><p>You must generate a report of your clients and list out all their addresses. How can you print out all values in this Map?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>for (var addr: addresses.values()) {</p><p>&nbsp;&nbsp;System.out.println(\"Current address: \" + addr);</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>foreach (var addr : addresses.keys()) {</p><p>&nbsp;&nbsp;System.out.println(\"Current address: \" + addr);</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>foreach (var addr : addresses.values()) {</p><p>&nbsp;&nbsp;System.out.println(\"Current address: \" + addr);</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>for (var addr: addresses.keys()) {</p><p>&nbsp;&nbsp;System.out.println(\"Current address: \" + addr);</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-71",
+		"question": "What is the difference between the for loop and the for-each loop?",
+		"correct_answer": "A for loop allows you to modify a list using iterator, while for-each does not allow this.",
+		"incorrect_answers": [
+			"A for-each loop allows you to modify a list, while for does not allow this.",
+			"A for loop is more efficient because it uses an Iterator, while for-each is not as efficient because it uses RandomAccess.",
+			"A for-each loop is more efficient because it uses a RandomAccess, while for is not as efficient because it uses an Iterator."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-72",
+		"question": "How can you print the content of an array?",
+		"correct_answer": "System.out.println(\"Array = \" + Arrays.toString(array));",
+		"incorrect_answers": [
+			"System.out.println(\"Array = \" + array);",
+			"System.out.println(\"Array = \" + array.forEach(System.out::println));",
+			"System.out.println(\"Array = \" + array.toString());"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-73",
+		"question": "<p>You have the following Java code: </p><div class=\"code\"><p>String phrase = \"I can't hear you\";</p><p>String query = \"Insert Into MyTable(createdDate,notes) Values(GetDate(), '\" + phrase + \"')\";</p></div><p>When you try to insert this phrase into your database you get an error because of the apostrophe in \"can't\". How can you use the String class on the phrase variable to avoid this error?</p>",
+		"correct_answer": "Update to: <span class=\"codeAnswer\">String phrase = \"I can't hear you\".replace(\"'\", \"''\");</span>",
+		"incorrect_answers": [
+			"Update to:  <span class=\"codeAnswer\">String phrase = \"I can't hear you\".insert(''', 5);</span>",
+			"Update to:  <span class=\"codeAnswer\">String phrase = \"I can't hear you\".split('\\'');</span>",
+			"Update to:  <span class=\"codeAnswer\">String phrase = \"I can't hear you\".split(''');</span>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-74",
+		"question": "<p>Knowing that the American Standard Code for Information Interchange (ASCII) code of A is 65, what does the following code print?</p><div class=\"code\"><p>char c1 = 'A';</p><p>float f = c1 + 0.9f;</p><p>char c2 = (char)f;</p><p>System.out.println(c2);</p></div>",
+		"correct_answer": "A",
+		"incorrect_answers": [
+			"65",
+			"B",
+			"66"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-75",
+		"question": "What is the difference between the max() method from Stream&lt;T&gt; and IntStream?",
+		"correct_answer": "The max() method from Stream&lt;T&gt; takes a comparator as a parameter, while the max() method from IntStream takes no parameters.",
+		"incorrect_answers": [
+			"The max() method from Stream&lt;T&gt; returns an instance of T, while the max() method from IntStream returns an int. ",
+			"The max() method from IntStream takes a comparator as a parameter, while the max() method from Stream&lt;T&gt; takes no parameters. ",
+			"The max() method from Stream&lt;T&gt; returns an instance of T, while the max() method from IntStream returns an optional.  "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-76",
+		"question": "Which method can compute the average on a Stream?",
+		"correct_answer": "Collectors.averagingDouble(ToDoubleFunction&lt;T&gt;)",
+		"incorrect_answers": [
+			"Collectors.averagingDouble(Consumer&lt;T&gt;)",
+			"Collectors.averagingDouble(Predicate&lt;T&gt;)",
+			"Collectors.averagingDouble(Function&lt;T, double=\"\"&gt;)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-77",
+		"question": "You have a stream of integers with duplicates in it. From that stream, how can you create another stream of the same integers, sorted?",
+		"correct_answer": "By calling the sorted() method",
+		"incorrect_answers": [
+			"By calling the compare() method and passing it to the right comparator",
+			"By calling the treeSet() method",
+			"By calling the method sort()"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-78",
+		"question": "<p>You created a new file called \"output.dat\" and wrote its contents into the file in the following code:</p><p><div class=\"code\"><p>FileOutputStream fos = new FileOutputStream(new File(\"output.dat\"));</p><p>fos.write(\"Hello World\".getBytes());</p></div></p><p>You then have the following File declaration:</p><p><div class=\"code\"><p>String fileName = \"output.dat\";   </p><p>File fy = new File(fileName);</p></div></p><p>How can you find out how many characters are in this file?</p>",
+		"correct_answer": "long fileSize = fy.length();",
+		"incorrect_answers": [
+			"long fileSize = fy.max(); ",
+			"long fileSize = fy.count();",
+			"long fileSize = fy.size();"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-79",
+		"question": "<p>What does this code print out?</p><div class=\"code\"><p>int[] tab = {1, 2, 3, 4};</p><p></p><p>int loop = 0;</p><p>for (int i : tab) {</p><p>&nbsp;&nbsp;loop++;</p><p>&nbsp;&nbsp;if (i > 2)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;continue;</p><p>&nbsp;&nbsp;loop++;</p><p>}</p><p>System.out.println(\"loop = \" + loop);</p></div>",
+		"correct_answer": "loop = 6",
+		"incorrect_answers": [
+			"loop = 5",
+			"loop = 4",
+			"loop = 2"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-80",
+		"question": "<p>You have the two following interfaces: A and B:</p><p><div class=\"code\"><p>interface A {</p><p>&nbsp;&nbsp;default int size() { </p><p>&nbsp;&nbsp;&nbsp;&nbsp;return 10;</p><p>&nbsp;&nbsp;}</p><p>}</p><p>interface B extends A {</p><p>&nbsp;&nbsp;int size();</p><p>}</p></div></p><p>You then create the AB class:  </p><p><div class=\"code\"><p>public class AB implements A, B {</p><p>}</p></div></p><p>And then call the size() method on an instance of AB. What does it print out?</p>",
+		"correct_answer": "Nothing, because this code does not compile.",
+		"incorrect_answers": [
+			"null",
+			"10",
+			"0"
+		],
+		"source": ""
 	}
-
 ]
