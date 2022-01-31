@@ -1,4 +1,5 @@
-[{
+[
+	{
 		"id": "java-ccp-1",
 		"question": "The following code uses a loop on a list to calculate the average age of the clients older than 18. <div class=\"code\"><p>List<Client> list = new ArrayList<Client>();</p><p>int count = 0;</p><p>double sum = 0.0, average = 0.0;</p><p>for (Client client: list) {</p><p>&nbsp; if (client.getAge() > 18) {</p><p>&nbsp; &nbsp; sum += client.getAge();</p><p>&nbsp; &nbsp;count++;</p><p>&nbsp; }</p><p>}</p><p>average = sum/count;</p></div> How can you refactor it to a stream?",
 		"correct_answer": "<div class=\"codeAnswer\"><p>double average = </p><p>&nbsp; list.stream()</p><p>&nbsp; &nbsp; .filter(client -> client.getAge() > 18)</p><p>&nbsp; &nbsp;.mapToInt(Client::getAge)</p><p>&nbsp; &nbsp; .average()</p><p>&nbsp; &nbsp; .getAsDouble();</p></div>",
@@ -448,6 +449,105 @@
 			"Arithmetic operations on floats and doubles"
 		],
 		"source": ""
+	},
+	{
+		"id": "java-ccp-45",
+		"question": "<p>You have the following empty class declaration: </p><p><div class=\"code\"><p>public class MyClass {</p><p>&nbsp;&nbsp;//</p><p>}</p></div></p><p>How would you create a member variable of this class called classVar that will last the entire lifetime of the program and cannot be changed if a new instance of this class is created?</p>",
+		"correct_answer": "public static int classVar",
+		"incorrect_answers": [
+			"private volatile int classVar",
+			"public final int classVar",
+			"private int classVar"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-46",
+		"question": "What offers the safest access to an object in a collection?",
+		"correct_answer": "Type-safe wrapper class ",
+		"incorrect_answers": [
+			"List",
+			"Generic List",
+			"Array"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-47",
+		"question": "<p>What will the following code print?</p><p><div class=\"code\"><p>List<Integer> list = Arrays.asList(1, 10, 3, 7, 5);</p><p>list.stream()</p><p>&nbsp;&nbsp;.peek(num -> System.out.print(num + \" \"))</p><p>&nbsp;&nbsp;.filter(x -> x > 5)</p><p>&nbsp;&nbsp;.findAny()</p><p>&nbsp;&nbsp;.get();</p></div></p>",
+		"correct_answer": "1 10",
+		"incorrect_answers": [
+			"1 10 3 7 5",
+			"10 7",
+			"10"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-48",
+		"question": "Which pattern reuses the already created objects?",
+		"correct_answer": "Flyweight",
+		"incorrect_answers": [
+			"Observer",
+			"Mediator",
+			"Builder"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-49",
+		"question": "<p>The following line of code initializes a list:</p><div class=\"code\"><p>List&lt;String&gt; list = new ArrayList&lt;&gt;();</p></div><p>Which line will execute without throwing an exception?</p>",
+		"correct_answer": "<p>list.stream().collect(</p><p>&nbsp;&nbsp;Collectors.maxBy(</p><p>&nbsp;&nbsp;&nbsp;&nbsp;(s1, s2) -> s1.length() - s2.length()</p><p>&nbsp;&nbsp;)</p><p>).orElse(\"No value\");</p>",
+		"incorrect_answers": [
+			"<p>list.stream().collect(</p><p>&nbsp;&nbsp;Collectors.maxBy(</p><p>&nbsp;&nbsp;&nbsp;&nbsp;(s1, s2) -> s1.length() - s2.length()</p><p>&nbsp;&nbsp;)</p><p>).orElseThrow(RuntimeException::new);</p>",
+			"<p>list.stream().collect(</p><p>&nbsp;&nbsp;Collectors.maxBy(</p><p>&nbsp;&nbsp;&nbsp;&nbsp;(s1, s2) -> s1.length() - s2.length()</p><p>&nbsp;&nbsp;)</p><p>).get();</p>",
+			"<p>list.stream().collect(</p><p>&nbsp;&nbsp;Collectors.maxBy(</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Comparator.comparing(String::length)</p><p>&nbsp;&nbsp;)</p><p>).get();</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-50",
+		"question": "<p>The following code defines three predicates:</p><div class=\"code\"><p>Stream&lt;String&gt; stream = Stream.of(\"one\", \"two\", \"three\", \"four\", \"five\");</p><p>Predicate&lt;String&gt; p1 = s -&gt; s.length() &gt; 3;</p><p>Predicate&lt;String&gt; p2 = s -&gt; s.length() &lt; 5;</p><p>Predicate&lt;String&gt; p3 = s -&gt; s.length() == 5;</p></div><p>Which line of code will print only the \"three\" value?</p>",
+		"correct_answer": "stream.filter(p1.or(p2).and(p3)).forEach(System.out::println);",
+		"incorrect_answers": [
+			"stream.filter(p1.and(p2.or(p3))).forEach(System.out::println);",
+			"stream.filter(p1.or(p2.and(p3))).forEach(System.out::println);",
+			"stream.filter(p1.or(p2).or(p3)).forEach(System.out::println);"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-54",
+		"question": "Which stream method receives a predicate written as a lambda expression?",
+		"correct_answer": "allMatch()",
+		"incorrect_answers": [
+			"reduce()",
+			"findAny()",
+			"max()"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-ccp-55",
+		"question": "What is happening when you extract a subclass?",
+		"correct_answer": "You create a subclass composed of features that are only used in certain cases. ",
+		"incorrect_answers": [
+			"You change the class visibility from public to protected. ",
+			"You change the class visibility from public to private. ",
+			"You create a superclass composed of commonly used fields and methods in its subclasses. "
+		],
+		"source": ""
 	}
 
 ]
+
+
+
+
+
+
+
+
+
+
+
