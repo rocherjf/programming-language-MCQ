@@ -1,4 +1,5 @@
-[{
+[
+	{
 		"id": "java-pp-1",
 		"question": "Consider the following block of code:<div class=\"code\"> <p>class NumberData {</p><p>&nbsp; private final int[] data;</p><p><br></p><p>&nbsp; public NumberData(final int numItems) {</p><p>&nbsp; &nbsp; data = new int[numItems];</p><p>&nbsp; }</p><p><br></p><p>&nbsp; public int[] getData() {&nbsp;</p><p>&nbsp; &nbsp; // IMPLEMENTATION HERE</p><p>&nbsp; }</p><p>}</p><p>public class MyClass {</p><p>&nbsp; public static void main(final String[] args) {</p><p>&nbsp; &nbsp; NumberData data = new NumberData(10);</p><p>&nbsp; &nbsp; // add numbers into data</p><p>&nbsp; &nbsp; int[] newData = data.getData();</p><p>&nbsp; &nbsp; newData[0] = 10;</p><p>&nbsp; }</p><p>}</p></div>What must you add into the getData() method to create a defensive copy of data?",
 		"correct_answer": "return Arrays.copyOf(data, data.length);",
@@ -600,6 +601,171 @@
 			"If called with an insufficient number of arguments, methods will assume default values for the missing ones, based on their types.",
 			"Methods will not accept primitive parameters that have not been explicitly initialized.",
 			"Methods will infer the type of the parameters based on the arguments, therefore you can omit the type of parameters when declaring the method."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-58",
+		"question": "Which block of code will produce a value of 15 when its value is printed at the end of a while loop?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>int m = 5;</p><p>while (m &lt; 15) {</p><p>&nbsp;&nbsp;m++;</p><p>}</p><p>System.out.println(\"m: \" + m);</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>int m = 8;</p><p>while (m &lt;= 16) {</p><p>&nbsp;&nbsp;m++;</p><p>}</p><p>System.out.println(\"m: \" + m);</p></div>",
+			"<div class=\"codeAnswer\"><p>int m = 1;</p><p>while (m &lt;= 15) {</p><p>&nbsp;&nbsp;m++;</p><p>}</p><p>System.out.println(\"m: \" + m);</p></div>",
+			"<div class=\"codeAnswer\"><p>int m = 0;</p><p>while (m &lt; 16) {</p><p>&nbsp;&nbsp;m++;</p><p>}</p><p>System.out.println(\"m: \" + m);</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-59",
+		"question": "What is the main role of a lambda expression?",
+		"correct_answer": "To implement the method of a functional interface",
+		"incorrect_answers": [
+			"To override a single method of any named class",
+			"To implement a single method of any interface",
+			"To override a single method of any anonymous class"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-60",
+		"question": "Why is immutability so important in a multi-threaded Java application?",
+		"correct_answer": "If an object cannot change its state after construction, it is impossible for thread interference to leave that object in a corrupt state, or for a thread to use the object while it is in an inconsistent state.",
+		"incorrect_answers": [
+			"The Java functional application programming interface (API) cannot work with thread-unsafe objects and using this API is mandatory in any multi-threaded application.",
+			"Because of architectural reasons, it is the only way to achieve thread safety that can be applied to the Java platform.",
+			"A multi-threaded application can work correctly without thread-safe objects, but it will result in significantly reduced performance."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-61",
+		"question": "What does it mean that Java passes reference method arguments by value?",
+		"correct_answer": "When the method exits, the passed-in argument reference still points to the same object as before the method call. The values of that object's fields can be changed in the method, however.",
+		"incorrect_answers": [
+			"When the method exits, the passed-in argument reference still points to the same object as before the method call. The values of that object's fields cannot be changed in the method.",
+			"Methods do not accept null values for reference type arguments unless they are annotated with @Nullable.",
+			"Methods will infer the type of the parameters based on the arguments, therefore the type of parameters can be omitted when declaring the method."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-62",
+		"question": "How many terminal operations can a stream pipeline have?",
+		"correct_answer": "0 or 1",
+		"incorrect_answers": [
+			"3",
+			"2",
+			"1-5"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-63",
+		"question": "At object creation, what would you use if you wanted to return a duplicated version of your object instead of the original one you created?",
+		"correct_answer": "Defensive copy",
+		"incorrect_answers": [
+			"Mutator method",
+			"Overridden variable",
+			"Accessor method"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-64",
+		"question": "What is it called when you change the value of a variable inside of a method, but the variable retains that value only while in that method?",
+		"correct_answer": "Call by value",
+		"incorrect_answers": [
+			"Immutability",
+			"Side effect",
+			"Call by reference"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-65",
+		"question": "<p>Given the following Stateful class, which doesn't define any setter methods that could be used to mutate its state:</p><div class=\"code\"><p>import java.util.Set;</p><p>public class Stateful {</p><p>&nbsp;&nbsp;private Set<String> content;</p><p>&nbsp;&nbsp;public Stateful(Set&lt;String&gt; content) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.content = content;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;public Set<String> getContent() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return content;</p><p>&nbsp;&nbsp;}</p><p>}</p></div><p>You have access to an object of type Stateful, referenced by a variable stateful. Which is a modification of the state of the object referenced by stateful?</p>",
+		"correct_answer": "<div class=\"codeAnswer\">stateful.getContent().add(\"yet another state\");</div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\">stateful.content.add(\"yet another state\");</div>",
+			"<div class=\"codeAnswer\">stateful.getContent() = new HashSet&lt;String&gt;();</div>",
+			"<div class=\"codeAnswer\">stateful.content = new HashSet&lt;String&gt;();</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-66",
+		"question": "<p>Given the following class:</p><div class=\"code\"><p>class User { </p><p>&nbsp;&nbsp;private String name; </p><p>&nbsp;&nbsp;private int age;</p><p>&nbsp;&nbsp;// Constructor that takes the two above properties</p><p>&nbsp;&nbsp;// Getter and setters for name and age </p><p>}</p></div><p>And the following array:</p><div class=\"code\"><p>User[] users = new User[] {</p><p>&nbsp;&nbsp;new User(\"User1\", 20),</p><p>&nbsp;&nbsp;new User(\"User2\", 18),</p><p>&nbsp;&nbsp;new User(\"User1\", 30) </p><p>};</p></div><p>Which comparator will sort the array by name and then sort by age ascending on duplicated names?</p>",
+		"correct_answer": "Comparator.comparing(User::getName).thenComparing(User::getAge)",
+		"incorrect_answers": [
+			"Comparator.comparing(User::getAge).thenComparing(User::getName)",
+			"Comparator.comparing(User::getName, User::getAge)",
+			"Comparator.compare(User::getName, User::getAge)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-67",
+		"question": "What is a good way to ensure that changes to shared objects do not negatively affect the other objects using them?",
+		"correct_answer": "Sharing copies of the objects in scope, rather than the actual objects",
+		"incorrect_answers": [
+			"Redesigning and using a single class instead of multiple classes",
+			"Making all the variables of all the classes involved final",
+			"Making all classes involved final"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-68",
+		"question": "<p>Consider the following classes in your application:</p><div class=\"code\"><p>public class Person {</p><p>&nbsp;&nbsp;private String ssn;</p><p>&nbsp;&nbsp;private String name;</p><p>&nbsp;&nbsp;private int age;</p><p>&nbsp;&nbsp;// getters, setters, methods</p><p>}</p></div><p><div class=\"code\"><p>public class Student extends Person {</p><p>&nbsp;&nbsp;private double gpa;</p><p>&nbsp;&nbsp;private int credits;</p><p>&nbsp;&nbsp;// getters, setters, methods</p><p>}</p></div></p><p>Another programmer comes along and declares the following code:</p><p><div class=\"code\"><p>public class Sophomore extends Student {</p><p>&nbsp;&nbsp;private String[] requiredClasses;</p><p>&nbsp;&nbsp;// getters, setters, methods</p><p>}</p></div></p><p>What can you do to prevent this programmer from using inheritance on your Student class?</p>",
+		"correct_answer": "Declare the Student class as final",
+		"incorrect_answers": [
+			"Declare the Student class as abstract",
+			"Declare the Student class as sealed",
+			"Declare the Student class as protected"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-69",
+		"question": "You are converting an object-oriented multi-threaded Java application to the functional paradigm using only fully-immutable objects. What is a threading-related advantage of this refactoring?",
+		"correct_answer": "You don't need to worry about locking because there is no shared state that can change.",
+		"incorrect_answers": [
+			"You won't have to worry about performance anymore.",
+			"You won't need unit testing anymore.",
+			"You will only need one thread."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-70",
+		"question": "<p>You designed the following class to be immutable but it is not. Why not?</p><div class=\"code\"><p>import java.util.Date;</p><p></p><p>public final class SomewhatImmutable {</p><p>&nbsp;&nbsp;private final String id;</p><p>&nbsp;&nbsp;private final Date dateCreated;</p><p>&nbsp;&nbsp;public SomewhatImmutable(String id, Date dateCreated) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.id = id;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.dateCreated = dateCreated;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;public String getId() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return id;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;public Date getDateCreated() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return dateCreated;</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"correct_answer": "The Date class is not immutable. You should have used defensive copying in the constructor and the getter to protect the object from changes the original caller made to the Date object and to prevent leaking the mutable Date field with the getter.",
+		"incorrect_answers": [
+			"The Date class is mutable and objects having a state that contains mutable objects cannot be made immutable without replacing the mutable types of the state with immutable types.",
+			"The String class is not immutable. You should have used defensive copying in the constructor and the getter to protect the object from changes the original caller made to the String object and to prevent leaking the mutable String field with the getter.",
+			"The class is using a constructor rather than setter methods, which makes it impossible to enforce any immutability constraints when the arguments are passed in."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-71",
+		"question": "<p>What will the following code print out when executed?</p><div class=\"code\"><p>public static void main(String[] args) {</p><p>&nbsp;&nbsp;int aPrimitiveVar = 3;</p><p>&nbsp;&nbsp;System.out.println(aPrimitiveVar);</p><p>&nbsp;&nbsp;updater(aPrimitiveVar);</p><p>&nbsp;&nbsp;System.out.println(aPrimitiveVar);</p><p>}</p><p></p><p>public static void updater(int varToBeUpdated) {</p><p>&nbsp;&nbsp;varToBeUpdated = 20;</p><p>}</p></div>",
+		"correct_answer": "<p>3</p><p>3</p>",
+		"incorrect_answers": [
+			"<p>20</p>",
+			"<p>20</p><p>20</p>",
+			"<p>3</p><p>20</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-pp-72",
+		"question": "When a child class extends a parent class, how can the child access the instance methods defined at the parent level?",
+		"correct_answer": "The child can directly call the instance methods as if they were defined in the child class, provided the parent class method is not private and the method is not overridden in the child class. ",
+		"incorrect_answers": [
+			"The child must override the parent instance method that it wants to execute and then call it directly from inside the overridden method.",
+			"The child can call an instance method of the parent class only if the call is proceeded by a super.",
+			"The child can call an instance method of the parent class only if the call is preceeded by a this."
 		],
 		"source": ""
 	}
