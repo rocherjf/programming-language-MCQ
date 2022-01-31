@@ -526,5 +526,93 @@
 			"It will return false because string1 and string2 are not the same object. "
 		],
 		"source": ""
+	},
+	{
+		"id": "java-testing-64",
+		"question": "What action can you associate with behavior-driven development?",
+		"correct_answer": "Injecting the features",
+		"incorrect_answers": [
+			"Involving developers",
+			"Performing unit tests",
+			"Analyzing real-world scenarios"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-65",
+		"question": "Which code snippet finds an element without throwing any error when the element is not found?",
+		"correct_answer": "driver.findElements(By.Id(\"elementId\"));",
+		"incorrect_answers": [
+			"driver.findElement(By.Id(\"elementId\"), false);",
+			"driver.findElement(By.Id(\"elementId\"), true);",
+			"driver.findElement(By.Id(\"elementId\"));"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-66",
+		"question": "<p>In the Mockito framework, what is this code intended to verify?</p><div class=\"code\"><p>verify(userManager, timeout(1000)).saveUser(any(User.class));</p></div>",
+		"correct_answer": "That the saveUser method is invoked within 1,000 milliseconds",
+		"incorrect_answers": [
+			"That the saveUser method completes execution in 1,000 ms",
+			"That the saveUser method will still run correctly after a 1,000 ms timeout.",
+			"That the saveUser method throws a timeout exception if not completed within 1,000 ms"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-68",
+		"question": "What is the first step for detecting bad tests with mutation testing?",
+		"correct_answer": "Introduce a mutant into the source code.",
+		"incorrect_answers": [
+			"Compare the results of the original and the mutated program/tests.",
+			"Execute the unit tests.",
+			"Create a new unit test for the mutant."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-69",
+		"question": "Which types of mutations can you apply in mutation testing?",
+		"correct_answer": "Statement, value, and decision mutations",
+		"incorrect_answers": [
+			"Stateful and stateless mutations",
+			"Class, method, and variable mutations",
+			"Dynamic, operator, and logical mutations"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-70",
+		"question": "Which construct reduces the testability of the system you are developing?",
+		"correct_answer": "Creating objects with a new keyword inside a constructor",
+		"incorrect_answers": [
+			"Using simple public methods",
+			"Using non-final methods",
+			"Favoring composition over inheritance"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-71",
+		"question": "Your company is building a large Enterprise Resource Planning (ERP) system that is composed of several internal applications being comprised together. How should you test this ERP system to ensure that data flows from one application to another?",
+		"correct_answer": "Perform integration tests on the entire ERP system. ",
+		"incorrect_answers": [
+			"Isolate each internal application and perform integration tests on them. ",
+			"Isolate each internal application and perform unit tests on them. ",
+			"Perform unit tests on the entire ERP system. "
+		],
+		"source": ""
+	},
+	{
+		"id": "java-testing-73",
+		"question": "When is the ideal time to start behavior-driven development (BDD)?",
+		"correct_answer": "When requirements are being gathered before development",
+		"incorrect_answers": [
+			"When the design of the application is complete and development is about start",
+			"When the system under test is fully developed and ready for testing",
+			"During the user interface (UI) design phase of the application"
+		],
+		"source": ""
 	}
 ]
