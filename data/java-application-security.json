@@ -559,5 +559,159 @@
 			"Call the verify method with the appropriate key and signature and call getObject to retrieve the object If it does not throw an exception"
 		],
 		"source": ""
+	},
+	{
+		"id": "java-application-security-59",
+		"question": "<p>Once authentication is successful, an application runs the following set of instructions:</p><div class=\"code\"><p>String redirectTo = request.getParameter(\"redirect_to\");</p><p>response.sendRedirect(redirectTo);</p></div><p>How might an attacker exploit the instructions?</p>",
+		"correct_answer": "Using a phishing attack with open redirect",
+		"incorrect_answers": [
+			"Using a phishing attack with response splitting",
+			"Using a phishing attack with cross-site scripting (XSS)",
+			"Using a phishing attack in conjunction with a zero-day attack"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-60",
+		"question": "You have the keywords for four different websites' URLs. Which website must you give priority for its URL encoding?",
+		"correct_answer": "Website 2 URL keywords: io!j and ui~n\\",
+		"incorrect_answers": [
+			"Website 1 URL keywords: k.g3j and -lkjd4 ",
+			"Website 3 URL keywords: 45678 and 32479 ",
+			"Website 4 URL keywords: mvd_mvd and lop5_"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-61",
+		"question": "What is the access modifier for the KeyManagerFactory constructor?",
+		"correct_answer": "protected",
+		"incorrect_answers": [
+			"static",
+			"private",
+			"public"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-62",
+		"question": "When would you rely on symmetric keys rather than asymmetric keys?",
+		"correct_answer": "When hashing",
+		"incorrect_answers": [
+			"When working with cryptocurrencies",
+			"When using digital signatures",
+			"When using encrypted emails"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-63",
+		"question": "How would you read a symmetric Advanced Encryption Standard (AES) key from a file into memory?",
+		"correct_answer": "<div class=\"codeAnswer\"><p>Path aesKeyPath = new File(\"aesKey\").toPath();</p><p>byte[] keyBytes = Files.readAllBytes(aesKeyPath);</p><p>SecretKeySpec aesKey = new SecretKeySpec(keyBytes, \"AES\");</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>Path aesKeyPath = new File(\"aesKey\").toPath();</p><p>Key aesKey = new Key(aesKeyPath, \"AES\");</p></div>",
+			"<div class=\"codeAnswer\"><p>Path aesKeyPath = new File(\"aesKey\").toPath();</p><p>SecretKeySpec aesKey = new SecretKeySpec(aesKeyPath, \"AES\");</p></div>",
+			"<div class=\"codeAnswer\"><p>Path aesKeyPath = new File(\"aesKey\").toPath();</p><p>byte[] keyBytes = Files.readAllBytes(aesKeyPath);</p>SecretKeySpec aesKey = new SecretKeySpec(keyBytes.getEncoded(), \"AES\");</div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-64",
+		"question": "Why would you use an EntityResolver as an XML external entity (XXE) defense?",
+		"correct_answer": "To restrict external entity resolution to allowlisted domains",
+		"incorrect_answers": [
+			"To log all external entity resolutions",
+			"To block specific domains from being used in entity resolution",
+			"To ensure connections are only conducted over the HTTPS protocol"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-65",
+		"question": "After configuring an application to use hostname verification on Transport Layer Security (TLS) requests, the app sometimes experiences SSLHandshakeException errors. The errors always occur when connecting to a server with a self-signed certificate. What is the most likely cause?",
+		"correct_answer": "The self-signed certificates are not included in the trust store.",
+		"incorrect_answers": [
+			"The self-signed certificates are not included in the key store.",
+			"You have not configured hostname verification.",
+			"You cannot use hostname verification with self-signed certificates."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-66",
+		"question": "Which class can create hard links?",
+		"correct_answer": "java.nio.file.LinkPermission ",
+		"incorrect_answers": [
+			"javax.net.ssl.SSLPermission",
+			"java.net.URLPermission",
+			"java.net.NetPermission"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-68",
+		"question": "A Java web application uses the c3p0 connection pooler, which is set to 20 maximum connections. During a test, the first 20 requests are sent and they respond correctly. The 21st request hangs, however. What is the likely problem?",
+		"correct_answer": "The application fails to wrap its connection instances in a try-with-resources.",
+		"incorrect_answers": [
+			"The application fails to flush its connections instances after each use.",
+			"The application wraps its connection instances in synchronized blocks.",
+			"The application needs more concurrent connections."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-69",
+		"question": "<p>You find a cross-site scripting vulnerability that involves the username on an application's profile page. The username is placed within a div tag. The input sanitization process contains two steps.</p><p>1. The following special characters are removed from the string: & < > \" ' /;</p><p>2. The string is normalized.</p><p>What is wrong with the input sanitization process?</p>",
+		"correct_answer": "You should normalize and then compare the string against an allowlist of accepted characters.",
+		"incorrect_answers": [
+			"You should standardize and then compare the string against a denylist of accepted characters. ",
+			"The JavaScript on the edit profile page should validate the username before sending it to the server.",
+			"Step 1 does not remove all special characters that are relevant in HTML context."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-74",
+		"question": "What is a defensive copy?",
+		"correct_answer": "A copy of a mutable object",
+		"incorrect_answers": [
+			"A wrapper class",
+			"A copy of every element",
+			"A copy of an immutable object"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-75",
+		"question": "What is the base interface for keys in Java?",
+		"correct_answer": "Key",
+		"incorrect_answers": [
+			"KeyInfo",
+			"PrivateKey",
+			"Secret"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-76",
+		"question": "If you do not specify character encoding, which encoding will Charset.defaultCharset return?",
+		"correct_answer": "The default encoding of the underlying operating system ",
+		"incorrect_answers": [
+			"16-bit Unicode Transformation Format (UTF-16)",
+			"Windows-1252",
+			"8-bit Unicode Transformation Format (UTF-8)"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-application-security-77",
+		"question": "Client A talks to Service B using serialization. A given transport object is modified to contain a new nullable field. Upon updating service B only, communication breaks when client A sends requests to service B using the transport object. What is the most likely explanation?",
+		"correct_answer": "The transport object is lacking a serialVersionUID field.",
+		"incorrect_answers": [
+			"The transport object must implement writeObject.",
+			"The transport object must implement readObject.",
+			"Java serialization requires all fields be specified."
+		],
+		"source": ""
 	}
 ]
