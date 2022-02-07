@@ -748,13 +748,134 @@
 		"source": ""
 	},
 	{
-		"id": "java-web-application-security-66",
+		"id": "java-web-application-security-70",
 		"question": "What browser cookie attribute, when set correctly, is an effective security measure against cross-site request forgery (CSRF) attacks?",
 		"correct_answer": "SameSite attribute",
 		"incorrect_answers": [
 			"ThirdPartyCookies attribute",
 			"OriginatingSite attribute",
 			"SameOrigin attribute"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-71",
+		"question": "You want to implement a cross-site PUT request using JavaScript. Under what conditions will a preflight request occur?",
+		"correct_answer": "The browser will implement the preflight request for all HTTP/S requests",
+		"incorrect_answers": [
+			"You must implement the preflight request manually with a JavaScript third-party library.",
+			"It will occur if the server detects that the request type is similar to one made from the same origin within the last hour.",
+			"It will occur only if the browser detects that the server it is requesting from has not had a similar request type made to it within the last hour."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-72",
+		"question": "A third-party website includes an img tag, which contains a URL pointing to example.com. How is it possible that a cross-site request forgery attack against example.com abuses the image link?",
+		"correct_answer": "Because even a GET request can perform actions on a website",
+		"incorrect_answers": [
+			"Because it is not a bare link, which could be protected",
+			"Because users may inadvertently click on the img link",
+			"Because img tags are especially vulnerable to attacks"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-73",
+		"question": "A server-side function encodes input using HTML entity encoding. Why does this function fail to prevent cross-site scripting for all HTML contexts?",
+		"correct_answer": "Because the function is not safe for all contexts",
+		"incorrect_answers": [
+			"Because angular brackets, single, and double quotes are encoded",
+			"Because the function depends on whether the input has been filtered on special characters or not",
+			"Because the function can only prevent cross-site scripting attacks coming from the same IP address block as the server"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-74",
+		"question": "An HTTP request uses a CONNECT method to a different domain. What headers will be included in the preflight request?",
+		"correct_answer": "Access-Control-Request-Method, Access-Control-Request-Headers, and Origin",
+		"incorrect_answers": [
+			"Access-Request-Method, Access-Request-Headers, and Origin",
+			"Access-Control-Request-Method, Access-Control-Request-Max-Age, and Origin",
+			"Access-Request-Method, Access-Control-Request-Headers, and Access-Control-Request-Max-Age"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-75",
+		"question": "What is a feature of a password-based key derivation function?",
+		"correct_answer": "They have a sliding computational cost.",
+		"incorrect_answers": [
+			"The resulting key has the same size as the input key.",
+			"The output key is shorter than the input key.",
+			"The function is implemented as efficiently as possible."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-76",
+		"question": "When would you expect to find the most dangerous time-of-check or time-of-use vulnerabilities?",
+		"correct_answer": "When a standard user works with a privileged application",
+		"incorrect_answers": [
+			"When an administrator uses any application",
+			"When a standard user works with an unprivileged application",
+			"When an administrator uses an privileged application"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-77",
+		"question": "What is an example of a mitigation strategy for denial-of-service attacks?",
+		"correct_answer": "Blackholing traffic",
+		"incorrect_answers": [
+			"Adding a CAPTCHA to a web login form",
+			"Disabling comments for a web site",
+			"Enforcing users to register themselves before using a web site"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-79",
+		"question": "What does cross-origin resource sharing (CORS) enable?",
+		"correct_answer": "Cross-origin requests in a safe, standard manner",
+		"incorrect_answers": [
+			"Reading and setting cookies across different domains",
+			"Web servers to share loads dynamically across servers",
+			"Blocking requests that originate from different domains"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-80",
+		"question": "Attackers stole session cookies from logged-in users using a cross-site scripting exploit. How would you mitigate the attack?",
+		"correct_answer": "By installing a Transport Layer Security (TLS) certificate and setting the httponly flag",
+		"incorrect_answers": [
+			"By setting the secure flag on cookies",
+			"By setting the cookies using a secure channel",
+			"By tightening the cookie scope"
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-81",
+		"question": "A developer has two Unicode strings that they wish to compare for equality. What should they do to compare the strings?",
+		"correct_answer": "Canonicalize both strings and then compare them.",
+		"incorrect_answers": [
+			"Trim all blank space from the end of the strings and then compare them.",
+			"Convert both Unicode strings to American Standard Code for Information Interchange (ASCII) format and then compare them.",
+			"Convert both strings to uppercase and then compare them."
+		],
+		"source": ""
+	},
+	{
+		"id": "java-web-application-security-82",
+		"question": "A server uses cookies as session identifiers and it is accessible over an unsecured (HTTP) connection. What will occur if you enable a secure (HTTPS) connection while not changing any parts of the server itself?",
+		"correct_answer": "Cookies sent over a secure channel will also be sent over an insecure channel.",
+		"incorrect_answers": [
+			"Cookies sent over a secure channel will not be sent over an insecure channel.",
+			"Cookies sent over a secure channel cannot be read over an insecure channel.",
+			"Cookies sent over an insecure channel will not be sent over a secure channel."
 		],
 		"source": ""
 	}
