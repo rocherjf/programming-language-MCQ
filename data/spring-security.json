@@ -654,5 +654,115 @@
 			"@AuthenticatedUser"
 		],
 		"source": ""
+	},
+	{
+		"id": "spring-security-58",
+		"question": "Your team is building an API for any reseller to access your company sales promotions. This is built using Spring Data REST and is available at https://sales.api.my-corp.com/promotion A third party complained that they cannot call your API from their website. What can you do to resolve this situation?",
+		"correct_answer": "<p>Add the following to the getPromotions() controller method:</p><p>@CrossOrigin(origins = \"*\")</p>",
+		"incorrect_answers": [
+			"<p>Add the following to the getPromotions() controller method:</p><p>@CrossOrigin(origins = \"sales.api.my-corp.com\")</p>",
+			"<p>Add the following configuration property to your API:</p><p>cors.allowed.origins=sales.api.my-corp.com</p>",
+			"<p>Add the following configuration property to your API:</p><p>cors.allowed.origins=*</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-59",
+		"question": "<p>When using the following Spring Security annotation: </p><p>@PreAuthorize(\"hasPermission(#contact, 'admin')\") </p><p> What needs to be configured in the Spring application?</p>",
+		"correct_answer": "A PermissionEvaluator should be registered with the DefaultMethodSecurityExpressionHandler.",
+		"incorrect_answers": [
+			"A ACLProvider should be registered with the DefaultMethodSecurityExpressionHandler.",
+			"The Spring method Maven dependency should be included into the pom.xml file.",
+			"A SecurityManager should be registered within the Spring context."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-60",
+		"question": "How does a Cross Site Request Forgery (CSRF) attack work?",
+		"correct_answer": "The victim unknowingly submits a malicious web request to a website where the victim has privileged access to.",
+		"incorrect_answers": [
+			"An attacker uses multiple transparent or opaque layers to trick a user into clicking on a button or link on another page.",
+			"It steals the established session between the client and the Web Server after the user logs in.",
+			"Malicious scripts are injected into otherwise benign and trusted websites and the web browser executes them."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-61",
+		"question": "When using a custom UserDetailsService what authentication provider should be used?",
+		"correct_answer": "DaoAuthenticationProvider",
+		"incorrect_answers": [
+			"LDAPAuthenticationProvider",
+			"CustomAuthenticationProvider",
+			"JDBCAuthenticationProvider"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-62",
+		"question": "What annotation do you need to add on the Spring Security configuration class to be able to secure a Spring Data Rest API?",
+		"correct_answer": "@EnableGlobalMethodSecurity",
+		"incorrect_answers": [
+			"@EnableAutoConfiguration",
+			"@PreAuthorize",
+			"@Secured"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-63",
+		"question": "You are using a GrantedAuthoritiesMapper to map OAuth2User.getAuthorities() to GrantedAuthority in order to retrieve the roles for a user from an OAuth identity store. You notice that some users that are authenticated don't have any role assigned. What might be the issue?",
+		"correct_answer": "The users log in via an OpenID Connect provider and the authority is of type OidcUserAuthority.",
+		"incorrect_answers": [
+			"The users have a custom authority that cannot be mapped by GrantedAuthoritiesMapper.",
+			"An on-path attack occurred and the attacker is sending an invalid JWT token.",
+			"The default claim has not been overridden therefore it is null."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-64",
+		"question": "<p>You are tasked with adding email verification to the user registration process of a Spring application, the service code for this is as follows:</p><div class=\"code\"><p>public User registerUser(String name, String email, String password) {</p><p>&nbsp;&nbsp;User user = new User();&nbsp;&nbsp;</p><p>&nbsp;&nbsp;user.setName(name);</p><p>&nbsp;&nbsp;user.setPassword(password);</p><p>&nbsp;&nbsp;user.setEmail(email);</p><p>&nbsp;&nbsp;user.setRoles(Arrays.asList(\"ROLE_USER\"));</p><p>&nbsp;&nbsp;user.setEnabled(true);</p><p>&nbsp;&nbsp;return repository.save(user);&nbsp;&nbsp;   </p><p>}</p></div><p>What needs to be changed to support email verification?</p>",
+		"correct_answer": "user.setEnabled(false);",
+		"incorrect_answers": [
+			"user.setEmail(emailCheck.verify(email));",
+			"user.setEmail(null);",
+			"user.setEnabled(emailCheck.verify(email));"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-65",
+		"question": "What is the purpose of implementing a UserDetailsService?",
+		"correct_answer": "To provide details, including authentication data about a principal to DaoAuthenticationProvider",
+		"incorrect_answers": [
+			"To allow controllers and services of your application to be able to lookup additional details for an authenticated principal",
+			"To replace standard AuthenticationProviders with a custom AuthenticationProvider",
+			"To provide additional details about a principal to AuthenticationProviders"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-67",
+		"question": "What is the default value of X-Content-Type-Options header in Spring Security Framework?",
+		"correct_answer": "nosniff",
+		"incorrect_answers": [
+			"same-origin",
+			"no-cache",
+			"text/html;charset=UTF-8"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-security-68",
+		"question": "You are adding email validation to a Spring application. How can you go about integrating these changes into the registration process?",
+		"correct_answer": "Define an event to be emitted when a user is registered and create an event listener to send the verification email.",
+		"incorrect_answers": [
+			"Enable the Spring provided email verification via an application configuration class.",
+			"Create an email verification service and register a filter to intercept the registration request.",
+			"Create a new AuthenticationProvider implementation which will process the email verification."
+		],
+		"source": ""
 	}
 ]
