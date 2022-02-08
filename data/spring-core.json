@@ -539,5 +539,104 @@
 			"Mocking"
 		],
 		"source": ""
+	},
+	{
+		"id": "spring-core-49",
+		"question": "How will you define one or more model attributes in a method?",
+		"correct_answer": "By applying the @ModelAttribute annotation at the method level ",
+		"incorrect_answers": [
+			"By applying the @RequestMapping annotation before the method ",
+			"By applying the @PathVariable annotation before the method ",
+			"By applying the @ModelAttribute annotation as a method parameter"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-50",
+		"question": "You have code with an interface named BuyProduct and a method productCart() in it. You must verify if the method of the given interface is being invoked or not with the required set of parameters in another file that will execute the final code. How would you do so?",
+		"correct_answer": "Add verify(BuyProduct).productCart(...); in the required method of the new file. ",
+		"incorrect_answers": [
+			"Add verify(BuyProduct.productCart(...)); in the required method of the new file.",
+			"Add mock.verify(BuyProduct.productCart(...)); in the required method of the new file.",
+			"Add mock.verify(BuyProduct).productCart(...); in the required method of the new file. "
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-52",
+		"question": "In a Spring Cloud application, which action would allow you to make HTTP requests to services using the service name as the hostname?",
+		"correct_answer": "Put @LoadBalanced on the method responsible for creating a RestTemplate.",
+		"incorrect_answers": [
+			"Put @LoadBalanced on the configuration class that creates a RestTemplate.",
+			"Put @LoadBalanced on the service or component using the RestTemplate.",
+			"Put @LoadBalanced on the instance variable or method injected with RestTemplate."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-53",
+		"question": "Built-in mocks are included with the Spring Framework for unit testing with which Java specification?",
+		"correct_answer": "The Servlet specification",
+		"incorrect_answers": [
+			"The Java Persistence API (JPA) specification",
+			"The Java Data Objects (JDO) specification",
+			"The Enterprise JavaBeans (EJB) specification"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-54",
+		"question": "<p>Given the following aspect:</p><div class=\"code\"><p>@Aspect</p><p>public class SecurityAspect {</p><p>&nbsp;&nbsp;@Before(\"execution(* com.acme.*.*(..))\")</p><p>&nbsp;&nbsp;public void doSecurityCheck() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;...</p><p>&nbsp;&nbsp;}</p><p>}</p></div> <p>Which annotation must you add to your @Configuration class to make use of this class?</p>",
+		"correct_answer": "@EnableAspectJAutoProxy",
+		"incorrect_answers": [
+			"@EnableAspects",
+			"@EnableAspectJWeaver",
+			"@EnableAspectJ"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-55",
+		"question": "In a Spring Security application, \"authentication\" is the process of doing what?",
+		"correct_answer": "Establishing a principal is who they claim to be",
+		"incorrect_answers": [
+			"Validating a RoleVoter",
+			"Creating a session",
+			"Establishing a principal is allowed to perform an action"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-56",
+		"question": "What is the correct way to configure Java Database Connectivity (JDBC) Authentication?",
+		"correct_answer": "Pass the AuthenticationManagerBuilder class with its object as a parameter to the required method.",
+		"incorrect_answers": [
+			"Pass an interface AuthenticationProvider with its object as a parameter to the required method.",
+			"Pass an interface AuthenticationManager as a parameter to the required method.",
+			"Pass the AuthenticationManagerBuilder class as a parameter to the required method."
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-57",
+		"question": "If you want to set a property on the Mock property source for the current environment, which of these methods would you use?",
+		"correct_answer": "MockEnvironment's setProperty(String key, String value) method",
+		"incorrect_answers": [
+			"MockEnvironment's withProperty(String key, String value) method",
+			"MockPropertySource's withProperty(String name, Object value) method",
+			"MockPropertySource's setProperty(String name, Object value) method"
+		],
+		"source": ""
+	},
+	{
+		"id": "spring-core-60",
+		"question": "What is an advantage of Spring Java Database Connectivity (JDBC) over Java Persistence API (JPA)?",
+		"correct_answer": "Spring JDBC gives complete control over defining the class structure.",
+		"incorrect_answers": [
+			"Spring JDBC supports object-oriented query languages.",
+			"Spring JDBC automatically turns results into plain old Java objects (POJO).",
+			"Spring JDBC automatically translates vendor-specific SQL."
+		],
+		"source": ""
 	}
 ]
