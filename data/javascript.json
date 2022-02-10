@@ -655,5 +655,181 @@
 			"let noDups = [...array.unique()];"
 		],
 		"source": ""
+	},
+	{
+		"id": "javascript-core-59",
+		"question": "When inheriting from a parent class, what does the super keyword do in the child's constructor?",
+		"correct_answer": "super invokes the parent's constructor, and by extension, defines the lexical context and this object for the child class.",
+		"incorrect_answers": [
+			"super instantiates the parent class and copies the properties over as virtual properties on the child class.",
+			"super instantiates the parent class and deep copies the properties over to the child class.",
+			"super invokes the parent constructor, and then performs a deep copy of the parent properties over to the child class to make a wholly new object."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-60",
+		"question": "How can data be provided to a running generator?",
+		"correct_answer": "Pass it as a parameter to the next method call.",
+		"incorrect_answers": [
+			"Call the generator's update method.",
+			"Call the generator's reset method.",
+			"Call the generator's set method."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-61",
+		"question": "Assuming no defer or async usage, why might you place a script tag at the end of the body tag rather than at the end of the head?",
+		"correct_answer": "Placing it in the head tag blocks parsing of the site until the script has loaded.",
+		"incorrect_answers": [
+			"Placing it in the body tag allows site parsing to continue even while the script is loading.",
+			"Placing it in the head tag allows site parsing to continue even while the script is loading.",
+			"Placing it in the body tag blocks parsing of the whole body tag until the script is at least 50% loaded."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-62",
+		"question": "Given a complex object, foo, with keys that are not known ahead of time, how can you check if a given key, \"k\", is in the object without iterating through the whole object?",
+		"correct_answer": "\"k\" in foo",
+		"incorrect_answers": [
+			"foo contains k",
+			"...foo == k",
+			"foo.apply(k)"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-63",
+		"question": "<p>What would you call to create an array from the following Map object?</p><div class=\"code\"><p>let myMap = new Map();</p><p>myMap.set('item1','Foo');</p><p>myMap.set('item2','Bar');</p></div>",
+		"correct_answer": "Array.from(myMap.entries());",
+		"incorrect_answers": [
+			"Array.from(myMap.items());",
+			"Array.convert(MyMap);",
+			"Array.convert(MyMap.entries());"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-64",
+		"question": "When creating a class, how can you define a method that is not accessible from an instance of that class, but instead only callable directly on the class?",
+		"correct_answer": "<p>Using the static keyword:</p><div class=\"code\"><p>class Foo {</p><p>&nbsp;&nbsp;static logFoo(f){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(f);</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<p>Overloading the prototype of the class declaration:</p><div class=\"code\"><p>Foo.logFoo = (f) => { console.log(f) }</p></div>",
+			"<p>Using a getter and setter:</p><div class=\"code\"><p>class Foo {</p><p>&nbsp;&nbsp;get bar(){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;return this.bar;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;set bar(s){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.bar = s;</p><p>&nbsp;&nbsp;}</p><p>}</p></div>",
+			"<p>Using the private keyword:</p><div class=\"code\"><p>class Foo {</p><p>&nbsp;&nbsp;constructor(bar){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.bar = bar;</p><p>&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;private logFoo(){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(this.bar);</p><p>&nbsp;&nbsp;}</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-65",
+		"question": "What is the best way to ensure that any variable is declared before it is used?",
+		"correct_answer": "By enabling strict mode",
+		"incorrect_answers": [
+			"By using let instead of var to declare variables",
+			"By looking for warnings in the console when running the program",
+			"By establishing a coding standard to mandate declaring variables"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-66",
+		"question": "<p>Given the following results:</p><div class=\"code\"><p>evaluate('2', '2');  // 4</p><p>evaluate(true, false);  // 0</p></div><p>Which implementation of evaluate returns the correct result?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>function evaluate(first, second) { </p><p>&nbsp;&nbsp;return first * second;</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>function evaluate(first, second) { </p><p>&nbsp;&nbsp;if (typeof first === string) { </p><p>&nbsp;&nbsp;&nbsp;&nbsp;return 4;</p><p>&nbsp;&nbsp;} </p><p>&nbsp;&nbsp;return first / second;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>function evaluate(first, second) { </p><p>&nbsp;&nbsp;return first + second;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>function evaluate(first, second) { </p><p>&nbsp;&nbsp;if (typeof first === boolean) { </p><p>&nbsp;&nbsp;&nbsp;&nbsp;return 0;</p><p>&nbsp;&nbsp;} </p><p>&nbsp;&nbsp;return first + second;</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-67",
+		"question": "What properties are iterated over when using a for...in loop?",
+		"correct_answer": "An object's own, and its inherited, enumerable properties",
+		"incorrect_answers": [
+			"All of an object's properties",
+			"An object's owned properties",
+			"An object's public properties"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-68",
+		"question": "You worry that using an eval() function to evaluate code in JavaScript will allow malicious parties to infiltrate your system. What is a safer method you can use instead?",
+		"correct_answer": "Function()",
+		"incorrect_answers": [
+			"uneval()",
+			"new String()",
+			"evaluate()"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-69",
+		"question": "When implementing an iterable protocol on an object, what property is the iterable protocol function defined to?",
+		"correct_answer": "Symbol.iterator",
+		"incorrect_answers": [
+			"custom.iterator",
+			"iterator",
+			"__proto__.iterator"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-70",
+		"question": "<p>What does the following code snippet output to the console?</p><div class=\"code\"><p>let x = { \"id\": \"val\" };</p><p>let y = { \"id\": \"val\" };</p><p>console.log(x === y);</p><p>console.log(x == y);</p></div>",
+		"correct_answer": "<p>false</p><p>false</p>",
+		"incorrect_answers": [
+			"<p>true</p><p>false</p>",
+			"<p>false</p><p>true</p>",
+			"<p>true</p><p>true</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-71",
+		"question": "What is a safe alternative to using eval()?",
+		"correct_answer": "window.Function()",
+		"incorrect_answers": [
+			"window.Check()",
+			"window.Evaluate()",
+			"window.Search()"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-72",
+		"question": "You are writing code and need additional information about an object's properties. You determine that the properties you need information on are from a symbol. What is your next step?",
+		"correct_answer": "Use the Object.getOwnPropertySymbols() method to return an array of the symbol properties of an object.",
+		"incorrect_answers": [
+			"Use the Symbol.getProperties() method to return an array of the symbol properties of an object.",
+			"Use the Symbol.ObjectProperties() method to return an array of the symbol properties of an object.",
+			"Use the Object.getOwnPropertyNames() method to return an array of the symbol properties of an object."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-74",
+		"question": "What added notation on an object will allow the properties to be defined with keys that match existing variable names?",
+		"correct_answer": "Object literal property value shorthand",
+		"incorrect_answers": [
+			"Hash value shorthand",
+			"Class value shorthand",
+			"Variable value shorthand"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-core-79",
+		"question": "What function property on the RegExp.prototype object allows you to tell if there is any match at all?",
+		"correct_answer": "RegExp.test()",
+		"incorrect_answers": [
+			"RegExp.match()",
+			"RegExp.one()",
+			"RegExp.first()"
+		],
+		"source": ""
 	}
 ]
