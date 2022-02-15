@@ -1,5 +1,5 @@
 [
-    {
+	{
 		"id": "css-1",
 		"question": "Which of the following is an example of a general descendant selector?",
 		"correct_answer": "ul li",
@@ -361,6 +361,192 @@
 			"Border-box"
 		],
 		"source": ""
+	},
+	{
+		"id": "css-38",
+		"question": "Which fragment identifier correctly implements a pseudo-class target to style a URL?",
+		"correct_answer": "#home:target",
+		"incorrect_answers": [
+			":target #home",
+			"#home[target]",
+			":target(#home)"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-39",
+		"question": "Which property will set the value of an inline element's alignment?",
+		"correct_answer": "float",
+		"incorrect_answers": [
+			"direction",
+			"display",
+			"position"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-40",
+		"question": "<p>Which option is true regarding the @keyframes rule below?</p><div class=\"code\"><p>@keyframes example {</p><p>&nbsp;&nbsp;0% { left: 0 ; }</p><p>&nbsp;&nbsp;50% { left: 20px; top: 50px; }</p><p>&nbsp;&nbsp;50% { left: 10px !important; }</p><p>&nbsp;&nbsp;100% { left: 0 ; top: 0 ; }</p><p>}</p></div>",
+		"correct_answer": "The declaration left: 10px !important will not be applied because !important declarations are ignored in @keyframe rules.",
+		"incorrect_answers": [
+			"The 50% { left: 10px !important; } attributes will be applied because of the !important declaration.",
+			"!important is an illegal declaration with @keyframe causing the last rule, 100% { left: 0; top: 0; }, to be ignored.",
+			"50% { left: 10px !important; } will be ignored because of the duplicate keyframe definition."
+		],
+		"source": ""
+	},
+	{
+		"id": "css-41",
+		"question": "Intermediate values used during a transition are calculated using which attribute?",
+		"correct_answer": "transition-timing-function",
+		"incorrect_answers": [
+			"transition-duration-time",
+			"transition-duration",
+			"transition-time"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-42",
+		"question": "What object-fit attribute value sets a video or image to maintain its aspect ratio while fitting within the parent content box?",
+		"correct_answer": "Contain",
+		"incorrect_answers": [
+			"Fill",
+			"Cover",
+			"Repeat"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-43",
+		"question": "Which style attribute value is used to set the image of a list item?",
+		"correct_answer": "list-style-image",
+		"incorrect_answers": [
+			"li-image-style",
+			"list-image",
+			"li-image-url"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-44",
+		"question": "Which property can be used to control the formatting of white space inside of an element?",
+		"correct_answer": "White-space",
+		"incorrect_answers": [
+			"Tracking",
+			"Text-space",
+			"Text-wrap"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-45",
+		"question": "Which of the following is the correct syntax for a media query that will be applied to all devices with an orientation of landscape and a minimum width of 600px?",
+		"correct_answer": "<p>@media (min-width: 600px) and (orientation: landscape) {</p><p></p><p>}</p>",
+		"incorrect_answers": [
+			"<p>@media (landscape) and (min-width: 600px) {</p><p></p><p>}</p>",
+			"<p>@media print and (orientation: landscape) and (min-width:600px) {</p><p></p><p>}</p>",
+			"<p>@media (device-mode: landscape, min-width: 600px) {</p><p></p><p>}</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-46",
+		"question": "Which of the following is an example of a non-inherited property in CSS?",
+		"correct_answer": "Padding",
+		"incorrect_answers": [
+			"Color",
+			"Font-family",
+			"Text-align"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-47",
+		"question": "Assuming an element has a border applied, where are margins located according to the CSS box model?",
+		"correct_answer": "Immediately outside of an element's border",
+		"incorrect_answers": [
+			"Between an element's padding and border",
+			"Immediately outside of an element's content box",
+			"Between an element's border and outline"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-48",
+		"question": "What is the default display value of a &lt;button&gt; tag?",
+		"correct_answer": "Inline-block",
+		"incorrect_answers": [
+			"Block",
+			"Visible",
+			"Inline-grid"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-49",
+		"question": "Which option is true about inline styles if the keyword !important is NOT added to the style value?",
+		"correct_answer": "They will override a style defined inside the &lt;head&gt; tag, in an external style sheet, or in a browser.",
+		"incorrect_answers": [
+			"They will be overridden by a browser default value.",
+			"They will be overridden by a style defined inside the &lt;head&gt; tag.",
+			"They will be overridden by an external style sheet."
+		],
+		"source": ""
+	},
+	{
+		"id": "css-50",
+		"question": "Which option best describes the purpose of the @keyframes at-rule?",
+		"correct_answer": "To control the intermediate steps in a CSS animation sequence",
+		"incorrect_answers": [
+			"To set FPS (Frames Per Second) of HTML5 Canvas animations",
+			"To control timing for WebGL animations",
+			"To create custom timing functions for CSS animations"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-52",
+		"question": "Which of the following declarations can be used in CSS to cause adjacent table cells to share borders?",
+		"correct_answer": "border-collapse: collapse;",
+		"incorrect_answers": [
+			"border: share;",
+			"table: share-border;",
+			"tableborder: collapse;"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-53",
+		"question": "Which of the following properties specifies the type of list-item marker?",
+		"correct_answer": "list-style-type",
+		"incorrect_answers": [
+			"list-style-all",
+			"list-marker",
+			"list-style-marker"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-54",
+		"question": "What is the purpose of the line-height attribute?",
+		"correct_answer": "Sets the distance between lines",
+		"incorrect_answers": [
+			"To vertically align text in an HTML element",
+			"To create synthetically condensed fonts by setting text height",
+			"To set the height of the inner text"
+		],
+		"source": ""
+	},
+	{
+		"id": "css-55",
+		"question": "Which of the following is true of using @import to load an external stylesheet?",
+		"correct_answer": "@import will be ignored if it is not the first rule in a stylesheet, with the exception of @charset rules",
+		"incorrect_answers": [
+			"@import must be placed last in a stylesheet or it will be ignored",
+			"@import statements can include at most one media query",
+			"@import should be used sparingly due to poor browser support"
+		],
+		"source": ""
 	}
-    
 ]
