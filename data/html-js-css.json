@@ -607,5 +607,115 @@
 			"Use the &lt;format&gt; tag to maintain all whitespace inside."
 		],
 		"source": ""
+	},
+	{
+		"id": "html-js-css-57",
+		"question": "What can you use to style semantic HTML tags for older browsers?",
+		"correct_answer": "Modernizr",
+		"incorrect_answers": [
+			"Compact",
+			"Aside",
+			"CSS min"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-58",
+		"question": "What fundamental aspect about CSS gradients make them one of the most flexible HTML element background choices?",
+		"correct_answer": "They have no intrinsic dimensions and therefore can match any size.",
+		"incorrect_answers": [
+			"They always load when a webpage is requested.",
+			"They can be any color imaginable.",
+			"They are fully supported by every browser."
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-59",
+		"question": "transform is one of the major properties with CSS transform. Which is the other?",
+		"correct_answer": "transform-origin",
+		"incorrect_answers": [
+			"mutate",
+			"perspective",
+			"shift"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-61",
+		"question": "What is intrinsic size in CSS?",
+		"correct_answer": "An element sized based solely on its content",
+		"incorrect_answers": [
+			"An element that will only show up at the top of a webpage, such as a menu",
+			"An element that cannot be styled and must be used as is",
+			"An element sized based solely on on-page CSS values"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-62",
+		"question": "What does line-based placement allow you to do on CSS grids?",
+		"correct_answer": "Align boxes within their containers",
+		"incorrect_answers": [
+			"Mold content to HTML element shapes",
+			"Create unorthodox layouts",
+			"Create generalized layouts"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-64",
+		"question": "What is the purpose of the &lt;html&gt; element?",
+		"correct_answer": "To represent the top-level element of an HTML document",
+		"incorrect_answers": [
+			"To open the document with the language specified in the doctype",
+			"To tell the browser what type of file it is reading",
+			"To specify which version of HTML the compiler is using"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-65",
+		"question": "With CSS transitions, how can you calculate intermediate values of the transitions?",
+		"correct_answer": "With a transition function",
+		"incorrect_answers": [
+			"Exponentially",
+			"Linearly",
+			"Browsers do it automatically"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-66",
+		"question": "You are working on a movie streaming platform that must display timed text tracks on the video. How can you do this?",
+		"correct_answer": "Create a .vtt file and specify in the &lt;track&gt; element of the video tag on the site",
+		"incorrect_answers": [
+			"Create a .srt file and specify in the &lt;webtrack&gt; element of the video tag on the site",
+			"Create a .vtt file and specify in the &lt;webtrack&gt; element of the video tag on the site",
+			"Create a .srt file and specify in the &lt;track&gt; element of the video tag on the site"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-67",
+		"question": "What is the advantage of using Portable Network Graphics?",
+		"correct_answer": "They support alpha transparency.",
+		"incorrect_answers": [
+			"They are always smaller in size than other graphic file formats.",
+			"They have a higher resolution than other graphic file formats.",
+			"They load faster than other graphic file formats."
+		],
+		"source": ""
+	},
+	{
+		"id": "html-js-css-72",
+		"question": "What happens if the value for the download attribute is omitted?",
+		"correct_answer": "The original filename will be used",
+		"incorrect_answers": [
+			"The user will see a JavaScript error",
+			"The download will not start when the user clicks the link",
+			"The download link will be invisible to the website visitor"
+		],
+		"source": ""
 	}
 ]
