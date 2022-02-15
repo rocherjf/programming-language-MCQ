@@ -1,5 +1,5 @@
 [
-    {
+	{
 		"id": "html-1",
 		"question": "What element defines contact information of a document or article?",
 		"correct_answer": "&lt;address&gt;",
@@ -10,7 +10,7 @@
 		],
 		"source": ""
 	},
-		{
+	{
 		"id": "html-2",
 		"question": "When creating a form that will hold sensitive and secure data, what attribute would you add to prevent the form's &lt;input&gt; elements from auto populating?",
 		"correct_answer": "autocomplete",
@@ -65,7 +65,7 @@
 		],
 		"source": ""
 	},
-		{
+	{
 		"id": "html-7",
 		"question": "For radio buttons to work as a group, which attribute must have the same value?",
 		"correct_answer": "name",
@@ -197,7 +197,7 @@
 		],
 		"source": ""
 	},
-    {
+	{
 		"id": "html-19",
 		"question": "<p>Which tag embeds an external application, typically multimedia content such as audio or video, into an HTML document?</p>",
 		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;embed&gt;</p></div>",
@@ -208,7 +208,7 @@
 		],
 		"source": ""
 	},
-    {
+	{
 		"id": "html-20",
 		"question": "<p>Consider the following markup:</p><div class=\"code\"><p>&lt;!DOCTYPE html&gt;</p><p>&lt;html&gt;</p><p>&nbsp;&nbsp;&lt;body&gt;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;Do not forget to buy &lt;span style=\"background:yellow;\" &gt;milk&lt;/span&gt;</p><p>&nbsp;&nbsp;&lt;/body&gt;</p><p>&lt;/html&gt;</p></div><p>What tag is available with HTML5 that, when used in place of<span class=\"code\">&lt;span style=\"background:yellow\"&gt;</span>, results in the same formatting?</p>",
 		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;mark&gt;</p></div>",
@@ -219,7 +219,7 @@
 		],
 		"source": ""
 	},
-    {
+	{
 		"id": "html-21",
 		"question": "<p>You may (and should) display a message inside the &lt;canvas&gt; block for both older browsers that don't support canvas and in browsers with JavaScript disabled. Which HTML segment can you add to provide this message?</p><div class=\"code\"><p>&lt;canvas width=\"300\" height=\"300\"&gt; </p><p>&nbsp;&nbsp;--INSERT HERE-- </p><p>&lt;/canvas&gt;</p></div>",
 		"correct_answer": "<div class=\"codeAnswer\"><p>&lt;p&gt;Error:  This is either not supported or JavaScript is disabled.&lt;/p&gt;</p></div>",
@@ -241,116 +241,268 @@
 		],
 		"source": ""
 	},
-    {
-        "id": "html-24",
-        "question": "<p>Which element's positioning is independent of the main flow of an HTML5 document?</p>",
-        "correct_answer": "<p>&lt;figure&gt;</p>",
-        "incorrect_answers": [
-            "<p>&lt;details&gt;</p>",
-            "<p>&lt;summary&gt;</p>",
-            "<p>&lt;article&gt;</p>"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-26",
-        "question": "What level of element is the &lt;footer&gt;?",
-        "correct_answer": "block",
-        "incorrect_answers": [
-            "inline",
-            "sectioned",
-            "embedded"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-27",
-        "question": "<p>You want to format line 1 to be like line 2. Which tag would you use?</p><p>line 1:</p><p>My goal: Live in harmony with nature.</p><p>line 2:</p><p>My goal: \"Live in harmony with nature\"</p>",
-        "correct_answer": "&lt;q&gt;&lt;/q&gt;",
-        "incorrect_answers": [
-            "&lt;blockquote&gt;&lt;/blockquote&gt;",
-            "&lt;cite&gt;&lt;/cite&gt;",
-            "&lt;quote&gt;&lt;/quote&gt;"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-28",
-        "question": "<p>The following &lt;iframe&gt; element was properly formatted to display a web page named hello.html. When the browser doesn't support frames nothing is displayed. What should you add within the following &lt;iframe&gt; element to provide information when it isn't supported?</p><div class=\"code\"><p>&lt;iframe src=\"hello.html\" width=\"400\" height=\"300\" scrolling=\"auto\"&gt;</p><p>&lt;/iframe&gt;</p></div>",
-        "correct_answer": "<p>Include text within the &lt;iframe&gt; element to be displayed if frames are not supported.</p>",
-        "incorrect_answers": [
-            "<p>Enclose the &lt;iframe&gt; element within an &lt;--if&gt; tag.</p>",
-            "<p>Add the alttext attribute with text containing a message that frames are not supported.</p>",
-            "<p>Add an alternate src attribute to the &lt;iframe&gt; tag to forward navigation if frames aren't supported.</p>"
-        ],
-        "source": ""
-    },
-    
-
-    {
-        "id": "html-31",
-        "question": "<p>Email input is required in the following form, but a user can submit without completing the field. How can you fix this error?</p><div class=\"code\"><p>&lt;form action=\"/action_page.php\" novalidate &gt;</p><p>&nbsp;&nbsp;&lt;label for=\"email\"&gt;Enter your email:&lt;/label&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"email\" id=\"email\" name=\"email\" required&gt;&lt;br&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"submit\"&gt;</p><p>&lt;/form&gt;</div></p>",
-        "correct_answer": "<p>Remove the novalidate attribute from the &lt;form&gt; element.</p>",
-        "incorrect_answers": [
-            "<p>Change the email &lt;input&gt; required attribute to validate.</p>",
-            "<p>Change the &lt;form&gt; novalidate attribute to validate.</p>",
-            "<p>Change the email &lt;input&gt; required attribute to require.</p>"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-33",
-        "question": "<p>Which tag is classified as a formatting tag?</p>",
-        "correct_answer": "<p>&lt;mark&gt;</p>",
-        "incorrect_answers": [
-            "<p>&lt;span&gt;</p>",
-            "<p>&lt;hr&gt;</p>",
-            "<p>&lt;p&gt;</p>"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-34",
-        "question": "<p>How would you change the default value of a &lt;form&gt; method attribute?</p>",
-        "correct_answer": "<p>Set the method attribute value to \"POST\"</p>",
-        "incorrect_answers": [
-            "<p>Set the method attribute value to \"SEND\"</p>",
-            "<p>Set the method attribute value to \"SUBMIT\"</p>",
-            "<p>Set the method attribute value to \"GET\"</p>"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-35",
-        "question": "<p>An HTML programmer must create a function that will stop the web worker named wWork from listening to messages and that will reuse the stopped web worker again when necessary. How will they do it?</p>",
-        "correct_answer": "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork.terminate();</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;undefined;</p><p>}</p></div>",
-        "incorrect_answers": [
-            "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker(var&nbsp;&nbsp;wWork)&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;terminate(undefined);</p><p>}</p></div>",
-            "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;terminate();</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;undefined;</p><p>}</p></div>",
-            "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork.terminate(undefined);</p><p>}</p></div>"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-36",
-        "question": "<p>Review the following HTML:</p><div class=\"code\"><p>&lt;form&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"male\" name=\"male\" value=\"male\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"male\"&gt;Male&lt;/label&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"female\" name=\"female\" value=\"female\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"female\"&gt;Female&lt;/label&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"other\" name=\"other\" value=\"other\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"other\"&gt;Other&lt;/label&gt;</p><p>&lt;/form&gt;</p></div><p>When one option is selected from the option group, the other options do not clear. What is the problem?</p>",
-        "correct_answer": "<p>The name value in a radio input must be the same for all of the radio inputs in the group.</p>",
-        "incorrect_answers": [
-            "<p>The radio input elements must be enclosed in a &lt;group&gt;&lt;/group&gt; tag.</p>",
-            "<p>The radio input type value must be type=\"radiogroup\" and not \"radio\".</p>",
-            "<p>The ID value in a radio input must be the same for all the radio inputs in the group.</p>"
-        ],
-        "source": ""
-    },
-    {
-        "id": "html-37",
-        "question": "Why would you use the web worker in your web application?",
-        "correct_answer": "To execute the long scripts in the background",
-        "incorrect_answers": [
-            "To execute multiple scripts simultaneously",
-            "To increase the performance speed of the application",
-            "To have easy direct access to the web page and the Document Object Model (DOM) API"
-        ],
-        "source": ""
-    }
+	{
+		"id": "html-24",
+		"question": "<p>Which element's positioning is independent of the main flow of an HTML5 document?</p>",
+		"correct_answer": "<p>&lt;figure&gt;</p>",
+		"incorrect_answers": [
+			"<p>&lt;details&gt;</p>",
+			"<p>&lt;summary&gt;</p>",
+			"<p>&lt;article&gt;</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-26",
+		"question": "What level of element is the &lt;footer&gt;?",
+		"correct_answer": "block",
+		"incorrect_answers": [
+			"inline",
+			"sectioned",
+			"embedded"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-27",
+		"question": "<p>You want to format line 1 to be like line 2. Which tag would you use?</p><p>line 1:</p><p>My goal: Live in harmony with nature.</p><p>line 2:</p><p>My goal: \"Live in harmony with nature\"</p>",
+		"correct_answer": "&lt;q&gt;&lt;/q&gt;",
+		"incorrect_answers": [
+			"&lt;blockquote&gt;&lt;/blockquote&gt;",
+			"&lt;cite&gt;&lt;/cite&gt;",
+			"&lt;quote&gt;&lt;/quote&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-28",
+		"question": "<p>The following &lt;iframe&gt; element was properly formatted to display a web page named hello.html. When the browser doesn't support frames nothing is displayed. What should you add within the following &lt;iframe&gt; element to provide information when it isn't supported?</p><div class=\"code\"><p>&lt;iframe src=\"hello.html\" width=\"400\" height=\"300\" scrolling=\"auto\"&gt;</p><p>&lt;/iframe&gt;</p></div>",
+		"correct_answer": "<p>Include text within the &lt;iframe&gt; element to be displayed if frames are not supported.</p>",
+		"incorrect_answers": [
+			"<p>Enclose the &lt;iframe&gt; element within an &lt;--if&gt; tag.</p>",
+			"<p>Add the alttext attribute with text containing a message that frames are not supported.</p>",
+			"<p>Add an alternate src attribute to the &lt;iframe&gt; tag to forward navigation if frames aren't supported.</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-31",
+		"question": "<p>Email input is required in the following form, but a user can submit without completing the field. How can you fix this error?</p><div class=\"code\"><p>&lt;form action=\"/action_page.php\" novalidate &gt;</p><p>&nbsp;&nbsp;&lt;label for=\"email\"&gt;Enter your email:&lt;/label&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"email\" id=\"email\" name=\"email\" required&gt;&lt;br&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"submit\"&gt;</p><p>&lt;/form&gt;</div></p>",
+		"correct_answer": "<p>Remove the novalidate attribute from the &lt;form&gt; element.</p>",
+		"incorrect_answers": [
+			"<p>Change the email &lt;input&gt; required attribute to validate.</p>",
+			"<p>Change the &lt;form&gt; novalidate attribute to validate.</p>",
+			"<p>Change the email &lt;input&gt; required attribute to require.</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-33",
+		"question": "<p>Which tag is classified as a formatting tag?</p>",
+		"correct_answer": "<p>&lt;mark&gt;</p>",
+		"incorrect_answers": [
+			"<p>&lt;span&gt;</p>",
+			"<p>&lt;hr&gt;</p>",
+			"<p>&lt;p&gt;</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-34",
+		"question": "<p>How would you change the default value of a &lt;form&gt; method attribute?</p>",
+		"correct_answer": "<p>Set the method attribute value to \"POST\"</p>",
+		"incorrect_answers": [
+			"<p>Set the method attribute value to \"SEND\"</p>",
+			"<p>Set the method attribute value to \"SUBMIT\"</p>",
+			"<p>Set the method attribute value to \"GET\"</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-35",
+		"question": "<p>An HTML programmer must create a function that will stop the web worker named wWork from listening to messages and that will reuse the stopped web worker again when necessary. How will they do it?</p>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork.terminate();</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;undefined;</p><p>}</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker(var&nbsp;&nbsp;wWork)&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;terminate(undefined);</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;terminate();</p><p>&nbsp;&nbsp;wWork&nbsp;&nbsp;=&nbsp;&nbsp;undefined;</p><p>}</p></div>",
+			"<div class=\"codeAnswer\"><p>function&nbsp;&nbsp;stopUseWorker()&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;wWork.terminate(undefined);</p><p>}</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-36",
+		"question": "<p>Review the following HTML:</p><div class=\"code\"><p>&lt;form&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"male\" name=\"male\" value=\"male\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"male\"&gt;Male&lt;/label&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"female\" name=\"female\" value=\"female\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"female\"&gt;Female&lt;/label&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"radio\" id=\"other\" name=\"other\" value=\"other\"&gt;</p><p>&nbsp;&nbsp;&lt;label for=\"other\"&gt;Other&lt;/label&gt;</p><p>&lt;/form&gt;</p></div><p>When one option is selected from the option group, the other options do not clear. What is the problem?</p>",
+		"correct_answer": "<p>The name value in a radio input must be the same for all of the radio inputs in the group.</p>",
+		"incorrect_answers": [
+			"<p>The radio input elements must be enclosed in a &lt;group&gt;&lt;/group&gt; tag.</p>",
+			"<p>The radio input type value must be type=\"radiogroup\" and not \"radio\".</p>",
+			"<p>The ID value in a radio input must be the same for all the radio inputs in the group.</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-37",
+		"question": "Why would you use the web worker in your web application?",
+		"correct_answer": "To execute the long scripts in the background",
+		"incorrect_answers": [
+			"To execute multiple scripts simultaneously",
+			"To increase the performance speed of the application",
+			"To have easy direct access to the web page and the Document Object Model (DOM) API"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-38",
+		"question": "Which tag would you use to embed a PDF file into a web page?",
+		"correct_answer": "&lt;iframe&gt;",
+		"incorrect_answers": [
+			"&lt;file&gt;",
+			"&lt;source&gt;",
+			"&lt;link&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-39",
+		"question": "What is the main difference between a &lt;DIV&gt; and &lt;SECTION&gt; element?",
+		"correct_answer": "&lt;DIV&gt; does not convey theme relation, aside from any found in its class, lang, and title attributes. &lt;SECTION&gt; means the content relates to a single theme. ",
+		"incorrect_answers": [
+			"&lt;DIV&gt; defines a division in HTML, while &lt;SECTION&gt; defines that the content inside it is grouped.",
+			"&lt;DIV&gt; provides a semantic grouping, while &lt;SECTION&gt; is best used for layout purposes.",
+			"&lt;DIV&gt; provides links to a page, while &lt;SECTION&gt; is meant for content."
+		],
+		"source": ""
+	},
+	{
+		"id": "html-40",
+		"question": "What is the difference between meta and metadata?",
+		"correct_answer": "Meta is the element and metadata is the description",
+		"incorrect_answers": [
+			"Metadata is the combination of all meta elements",
+			"Meta is the description and metadata is the element",
+			"Meta is a singular element and metadata is the term for a group of meta elements"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-41",
+		"question": "What &lt;button&gt; attribute would you use to override the &lt;form&gt; action attribute?",
+		"correct_answer": "formaction",
+		"incorrect_answers": [
+			"target",
+			"sendto",
+			"send"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-42",
+		"question": "Which element is specifically intended to isolate a piece of text that might be formatted in a different direction than text outside the element?",
+		"correct_answer": "&lt;bdi&gt;",
+		"incorrect_answers": [
+			"&lt;figure&gt;",
+			"&lt;command&gt;",
+			"&lt;aside&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-43",
+		"question": "Which is the best semantic HTML5 tag for highlighting words inside an element?",
+		"correct_answer": "&lt;mark&gt;",
+		"incorrect_answers": [
+			"&lt;highlight&gt;",
+			"&lt;span&gt;",
+			"&lt;aside&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-44",
+		"question": "Which element creates a grouping of options within a &lt;select&gt; element?",
+		"correct_answer": "&lt;optgroup&gt;",
+		"incorrect_answers": [
+			"&lt;selectgroup&gt;",
+			"&lt;grouping&gt;",
+			"&lt;group&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-40",
+		"question": "Which attribute would you use to add extra information for an element?",
+		"correct_answer": "title",
+		"incorrect_answers": [
+			"describe",
+			"alt",
+			"caption"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-47",
+		"question": "When a &lt;canvas&gt; element exceeds the maximum size for the browser, what is the result?",
+		"correct_answer": "The canvas is rendered unusable and drawing commands will not work.",
+		"incorrect_answers": [
+			"The page will load with a 500 error representing function not supported",
+			"The page will render with the &lt;canvas&gt; element hidden.",
+			"The page will render with the &lt;canvas&gt; element removed."
+		],
+		"source": ""
+	},
+	{
+		"id": "html-48",
+		"question": "Which is an example of the input attribute available for HTML5 form elements?",
+		"correct_answer": "tel",
+		"incorrect_answers": [
+			"address",
+			"urlref",
+			"radio"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-49",
+		"question": "How do you define a sample output for a computer program?",
+		"correct_answer": "&lt;samp&gt;",
+		"incorrect_answers": [
+			"&lt;result&gt;",
+			"&lt;output&gt;",
+			"&lt;code&gt;"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-51",
+		"question": "A video embedded in a web page is playing and the format is compatible with the browser in use. The quality of the video is poor, however, with a blurry picture and lost color detail. Which two actions can you take to improve video playback quality?",
+		"correct_answer": "Reduce the frame size and frame rate of the video.",
+		"incorrect_answers": [
+			"Use buffering and split the video into multiple parts.",
+			"Check the download rate with JavaScript on loading and remove video content when the download is less than 1 gig bits per second (BPS).",
+			"Reduce the bit rate playback and add buffering."
+		],
+		"source": ""
+	},
+	{
+		"id": "html-52",
+		"question": "Which time element attribute should you use to add a date to a blog post?",
+		"correct_answer": "pubdate",
+		"incorrect_answers": [
+			"postdate",
+			"datetime",
+			"date"
+		],
+		"source": ""
+	},
+	{
+		"id": "html-53",
+		"question": "Which tag specifies multiple alternative media resources for media elements such as &lt;audio&gt; and &lt;video&gt;?",
+		"correct_answer": "&lt;source&gt;",
+		"incorrect_answers": [
+			"&lt;frame&gt;",
+			"&lt;content&gt;",
+			"&lt;media&gt;"
+		],
+		"source": ""
+	}
 ]
