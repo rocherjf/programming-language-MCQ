@@ -641,5 +641,149 @@
 			"Add a label next to the input and set its for attribute to the form's id."
 		],
 		"source": ""
+	},
+	{
+		"id": "js-rest-api-57",
+		"question": "<p>You instantiated a PouchDB database that you can access via the database variable. How can you store the following single JSON object into it?</p><div class=\"code\"><p>var recipe = {</p><p>&nbsp;&nbsp;_id: \"123\",</p><p>&nbsp;&nbsp;title: \"Apple pie\",</p><p>&nbsp;&nbsp;difficult: false</p><p>};</p></div>",
+		"correct_answer": "<div class=\"codeAnswer\"><p>database.put(recipe, function callback(err, result) {</p><p>&nbsp;&nbsp;// handle error/result here</p><p> });</p></div>",
+		"incorrect_answers": [
+			"<div class=\"codeAnswer\"><p>database.postAttachment(recipe, function callback(err, result) {</p><p>&nbsp;&nbsp;// handle error/result here</p><p> });</p></div>",
+			"<div class=\"codeAnswer\"><p>database.putAttachment(recipe, function callback(err, result) {</p><p>&nbsp;&nbsp;// handle error/result here</p><p> });</p></div>",
+			"<div class=\"codeAnswer\"><p>database.post(recipe, function callback(err, result) {</p><p>&nbsp;&nbsp;// handle error/result here</p><p>});</p></div>"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-58",
+		"question": "What type of object is expected when adding items to the JavaScript Cache?",
+		"correct_answer": "A REST API request URL to be retrieved and cached",
+		"incorrect_answers": [
+			"A JSON object returned from a previous call to the REST API",
+			"A name that reserves a slot in the cache which can then be used later",
+			"A cookie name to store the returned JSON from a previous call to the REST API"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-59",
+		"question": "What Express-compatible middleware will help you secure your Node.js REST API?",
+		"correct_answer": "Helmet",
+		"incorrect_answers": [
+			"TLS",
+			"Auth0",
+			"Snyk"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-60",
+		"question": "What is true about storing JSON data in PouchDB?",
+		"correct_answer": "Once you create the database by instantiating a PouchDB object, you are ready to start writing JSON data into it.",
+		"incorrect_answers": [
+			"Once you create the database by instantiating a PouchDB object, you need to create a schema before you can write JSON data into it.",
+			"You must provide the _id key and its associated value in any JSON object that you store, except when you store the data via the post method.",
+			"You must provide the _id key and its associated value in any JSON object that you store, regardless of the method you use to store the data."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-61",
+		"question": "How can you instantly initialize a new project using npm with default values for all the command-line prompts?",
+		"correct_answer": "npm init --yes",
+		"incorrect_answers": [
+			"npm init --empty",
+			"npm init --clean",
+			"npm init --auto"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-62",
+		"question": "What is one reason why developers don't use the Fetch API for uploading multiple files to a server?",
+		"correct_answer": "It doesn't support tracking the percentage of completion.",
+		"incorrect_answers": [
+			"It is considerably slower than the XMLHttpRequest API.",
+			"It doesn't support uploading multiple files.",
+			"It doesn't yet support file upload, only file download."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-63",
+		"question": "<p>You are working on a web form that allows users to send a picture to a server. The file is small and the form is simple, so you implement this using basic HTML form submission:</p><div class=\"code\"><p>&lt;form action=\"avatarendpoint\" method=\"post\"&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"file\" name=\"avatar\"&gt;&lt;br&gt;</p><p>&nbsp;&nbsp;&lt;input type=\"submit\"&gt;</p><p>&lt;/form&gt;</p></div><p>What is missing from the code snippet above?</p>",
+		"correct_answer": "The enctype=\"multipart/form-data\" attribute in the &lt;form&gt; element",
+		"incorrect_answers": [
+			"The enctype=\"application/x-www-form-urlencoded\" attribute in the &lt;form&gt; element ",
+			"The enctype=\"text/file\" attribute in the &lt;form&gt; element ",
+			"The enctype=\"text/plain\" attribute in the &lt;form&gt; element"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-64",
+		"question": "You are working on a JSON Web Token (JWT) implementation for your application. How will you ensure that it correctly includes a user object in its request?",
+		"correct_answer": "const token = jwt.sign(user, privateKey, { expiresIn: '1h' });",
+		"incorrect_answers": [
+			"const token = jwt.sign(privateKey, {user, expiresIn: '1h' });",
+			"const token = jwt.sign(privateKey, {additionalData: user, expiresIn: '1h' });",
+			"const token = jwt.sign({user, privateKey, expiresIn: '1h' });"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-65",
+		"question": "What is the difference between the status message and the response body when handling error responses from a JSON REST API endpoint?",
+		"correct_answer": "The status message contains the HTTP status description. The response body contains a JSON object representing the error(s).",
+		"incorrect_answers": [
+			"The status message contains the HTTP status code. The response body contains a description of the HTTP status code.",
+			"The status message contains the HTTP status code. The response body contains a message describing any error(s).",
+			"The status message contains any error that occurred. The response body is empty."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-66",
+		"question": "<p>You are developing an API method for inserting data using the code below:</p><div class=\"code\"><p>router.post('/', (req, res) => {</p><p>&nbsp;&nbsp;const newItem = req.body;</p><p>&nbsp;&nbsp;// insert item...</p><p>&nbsp;&nbsp;res.sendStatus(201).json({</p><p>&nbsp;&nbsp;&nbsp;&nbsp;message: 'Item created.',</p><p>&nbsp;&nbsp;&nbsp;&nbsp;data: newItem,</p><p>&nbsp;&nbsp;});</p><p>});</p></div><p>The response only contains the \"Created\" message and not the custom JSON payload. What changes would you make to fix this?</p>",
+		"correct_answer": "The status() method should be used instead of sendStatus().",
+		"incorrect_answers": [
+			"The JSON payload should be the second parameter to sendStatus().",
+			"The send() method should be used instead of json().",
+			"The req.body data should be passed to the json() method directly."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-67",
+		"question": "Which method of the jsonwebtoken library can add a user object to the JSON Web Token (JWT)?",
+		"correct_answer": "jwt.sign(...)",
+		"incorrect_answers": [
+			"jwt.add(...)",
+			"jwt.user(...)",
+			"jwt.attributes(...)"
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-68",
+		"question": "You are using the XMLHttpRequest API to upload a file to a server asynchronously and you want to display the operation's progress. How will you read the progress?",
+		"correct_answer": "Define a handler on the XMLHttpRequest.upload.onprogress object.",
+		"incorrect_answers": [
+			"Define a handler on the XMLHttpRequest.onload object.",
+			"Define a handler on the XMLHttpRequest.onprogress object.",
+			"Define a handler on the XMLHttpRequest.upload.onload object."
+		],
+		"source": ""
+	},
+	{
+		"id": "js-rest-api-70",
+		"question": "You are working on a JavaScript server-side application that already uses the Express web application framework. Alongside the REST API, you need to create a simple route for displaying data in the browser. How can you take advantage of the features offered by Express to accomplish this?",
+		"correct_answer": "Use the Express Generator tool to create an application skeleton for serving HTML.",
+		"incorrect_answers": [
+			"Return HTML content from the API method using the res.send method.",
+			"Use a frontend JavaScript framework to create a single-page application (SPA) that calls the API.",
+			"Return an HTML template from the API method using the res.html method."
+		],
+		"source": ""
 	}
+
 ]
