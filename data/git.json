@@ -394,5 +394,258 @@
 			"The process of combining branches from separate forks"
 		],
 		"source": ""
+	},
+	{
+		"id": "git-37",
+		"question": "What would you do to use Secure Shell (SSH) for authentication on a Git server?",
+		"correct_answer": "Generate a new local key if necessary, add the key to ssh-agent, and copy the public key to the server.",
+		"incorrect_answers": [
+			"Generate a unique key from the server, generate a new local key if required, pair the public and private keys, save the private key in the SSH configuration file, and copy the public key to the server.",
+			"Generate a unique key from the server, save the private key to SSH configuration file, and git remote-add -ssh.",
+			"Save the server authentication credentials in the configuration file and confirm that the new device is trusted after connecting to the server."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-38",
+		"question": "<p>Which git log command will produce the following output?</p><div class=\"code\"><p>489f7ca4c (HEAD ->my-branch, origin/my-branch) Updated subtract function</p><p>81621dba9 Create subtract function</p><p>8dfddd479 Created new file math.cs</p></div>",
+		"correct_answer": "git log --oneline",
+		"incorrect_answers": [
+			"git log --all",
+			"git log",
+			"git log --all --graph"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-39",
+		"question": "<p>You are working on the main branch in your repository that contains a file called app.js. You create a branch called experiments where you run experimental changes to app.js.After a while, you want to bring the changes made to app.js into your main branch, so you run the following command:</p><div class=\"code\"><p>git switch main</p><p>git restore --source experiment -- app.js</p></div><p>What would be the outcome?</p>",
+		"correct_answer": "This will check out the latest changes of that file on the experiments branch onto your main branch.",
+		"incorrect_answers": [
+			"This will merge the file with the latest changes onto your experiments branch. ",
+			"This will create a conflict because the file already exists in your main branch.",
+			"This will rebase the file with the latest changes onto your main branch."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-40",
+		"question": "How would you remove a file with sensitive information throughout the history of the repository?",
+		"correct_answer": "git filter-branch",
+		"incorrect_answers": [
+			"git bisect",
+			"git rebase",
+			"git submodule"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-41",
+		"question": "How can you move to another branch while discarding all uncommitted changes?",
+		"correct_answer": "Use git checkout --force.",
+		"incorrect_answers": [
+			"Check out and Git will delete all your changes.",
+			"Use git checkout --reset.",
+			"Manually delete the changes, then check out."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-42",
+		"question": "<p>Using the following stash list, how do you pull in the oldest stash while ensuring that you maintain it in the stash?</p><div class=\"code\"><p>stash@{0}: WIP on feature/feature1: 850f537 New text</p><p>stash@{1}: WIP on feature/feature1: 850f537 New text</p></div>",
+		"correct_answer": "git stash apply stash@{1}",
+		"incorrect_answers": [
+			"git stash apply stash@{0}",
+			"git stash pop stash@{1}",
+			"git stash pop stash@{0}"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-43",
+		"question": "Why does Git garbage collect objects?",
+		"correct_answer": "To avoid storing unnecessary information or sending it over the network",
+		"incorrect_answers": [
+			"To speed up commits",
+			"To avoid problems where the same branch points to multiple commits",
+			"To guarantee the repository's consistency"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-44",
+		"question": "What occurs when you execute the command git blame README.md?",
+		"correct_answer": "You will see each line in the file and information about the last change made to that line.",
+		"incorrect_answers": [
+			"You will receive a list of all the authors who modified the file.",
+			"You will view the commit history related to all the changes in the file’s history.",
+			"You will obtain an error because you can only git blame authors and not files."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-45",
+		"question": "Which two commands would you use to output all commits from the last two weeks?",
+		"correct_answer": "git log --after=\"2 weeks ago\" and git log --after=\"14 days ago\"",
+		"incorrect_answers": [
+			"git log --before=\"14 days ago\" and git log --before=\"now\"",
+			"git log --after=\"2\" --unit=\"weeks\" and git log --after=\"2\" --unit=\"weeks\"",
+			"git log --before=\"2 weeks ago\" and git log --after=\"14 days ago\""
+		],
+		"source": ""
+	},
+	{
+		"id": "git-46",
+		"question": "What does git log f accomplish?",
+		"correct_answer": "It provides the log of the branch named f.",
+		"incorrect_answers": [
+			"It provides the formatted log.",
+			"It provides the log starting from the first commit with a hash that starts with f.",
+			"It provides the log of the last 16 commits."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-47",
+		"question": "Several bugs have appeared since the last sprint ended. You must create a list of files that changed over the last two weeks to determine what files were modified. How would you obtain such information?",
+		"correct_answer": "Use git log with a special format to print commits and dates, then use git show for the commits that fit that range with the --name-only flag to show a list of the files.",
+		"incorrect_answers": [
+			"Use git diff with a special format to print commits and dates, then use git show for the commits that fit that range.",
+			"Use git log with a special format to print commits and dates, then use git diff for the commits that fit that range.",
+			"Use git log with a special format to print commits and dates, then use git show for the commits that fit that range."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-48",
+		"question": "Why is the reflog considered a safety net?",
+		"correct_answer": "It maintains references to the old state of objects even if they are not connected to a branch.",
+		"incorrect_answers": [
+			"It does not perform any destructive operations.",
+			"It is persisted across every distributed copy of the repository without user configuration.",
+			"It logs every action on the repository so that administrators can identify errors easily."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-49",
+		"question": "You are setting up a server and want to add your repository for running continuous integration pipelines. This clone must map all references to their target branches whether they're local or remote. In addition, the local changes must be overwritten by a call to git remote update. Which command will set up this repository correctly?",
+		"correct_answer": "git clone --mirror",
+		"incorrect_answers": [
+			"git clone",
+			"git clone --bare",
+			"git clone --all-branches"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-50",
+		"question": "What does the ^ in git show HEAD^ denote?",
+		"correct_answer": "The parent of",
+		"incorrect_answers": [
+			"The child of",
+			"The remote copy of",
+			"The index of"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-51",
+		"question": "You merge your branch into master, but it breaks some application features. How can you quickly find the commits that introduced the bugs?",
+		"correct_answer": "By using the git bisect command and specifying a good commit and a bad commit to perform a binary search for the faulty commits",
+		"incorrect_answers": [
+			"By rolling back the merge and redoing it using the --debug flag for the git merge command",
+			"By using the git log --check command, specifying the hash of the commit you want to inspect",
+			"By checking out each commit and inspecting its changes until you find the bug"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-52",
+		"question": "You are working on a project with developers all around the country, using git as your version control system. After working in the repository for a while you notice that some commits have become detached from the project history and are unnecessarily kept in memory, as they are not relevant anymore. How can you clean these commits from memory?",
+		"correct_answer": "By running git gc to trigger Git's garbage collection.",
+		"incorrect_answers": [
+			"By running git commit <commit_hash> --clean to trigger Git's commit clean-up feature. ",
+			"By running git runtime --gc to trigger Git's garbage collection.",
+			"By running git commit <commit_hash> --prune  to prune a commit if it's detached."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-53",
+		"question": "Why is it necessary to have both the HEAD^^ and HEAD~2 syntax?",
+		"correct_answer": "To reference commits with multiple parents",
+		"incorrect_answers": [
+			"To validate references across branches",
+			"To be able to revert parallel commits",
+			"To reference single-parent merge commits"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-54",
+		"question": "In the context of Git, what is the definition of \"index\"?",
+		"correct_answer": "A staging area between the working directory and the repository, that is used to build up a set of changes to be committed together.",
+		"incorrect_answers": [
+			"A data structure that holds the serialized information of a Git object. ",
+			"A staging area between the local development environment and the remote filesystem, that is used to push up a set of changes to the remote repository. ",
+			"A data structure that holds Git configuration across environments."
+		],
+		"source": ""
+	},
+	{
+		"id": "git-55",
+		"question": "What is the purpose of the git request-pull command?",
+		"correct_answer": "To generate a request asking your upstream to pull your changes into their tree.",
+		"incorrect_answers": [
+			"To generate a request asking your upstream to pull their latest changes and push them into your tree. ",
+			"To generate a request asking members of your team to pull the latest commits into their tree.",
+			"To generate a request asking members of your team to pull the latest changes from master into their tree. "
+		],
+		"source": ""
+	},
+	{
+		"id": "git-56",
+		"question": "How would you display commit a7855c91ed8c58 (tag: v1.3.1)?",
+		"correct_answer": "git show a7855 or git show v1.3.1",
+		"incorrect_answers": [
+			"git show --commit a7855",
+			"git show --tag v1.3.1",
+			"git show --commit a7855 --tag v1.3.1"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-57",
+		"question": "What is a branch?",
+		"correct_answer": "A pointer to a commit object",
+		"incorrect_answers": [
+			"A unique copy of the tree represented by the range of commits",
+			"A first-class object, such as a commit or blob",
+			"A file that contains references to each commit"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-58",
+		"question": "Which term defines the commands that are used to manipulate Git's internal components?",
+		"correct_answer": "Plumbing commands",
+		"incorrect_answers": [
+			"Development commands",
+			"Internal commands",
+			"Porcelain commands"
+		],
+		"source": ""
+	},
+	{
+		"id": "git-59",
+		"question": "You want to remove some untracked files from your working directory and to discard your latest changes. You run the git reset --hard HEAD command. The latest changes to the tracked files are missing, but the untracked files still remain. Which command would you use to fix this?",
+		"correct_answer": "git clean --force",
+		"incorrect_answers": [
+			"git reset --hard HEAD~1",
+			"git clean -n",
+			"git reset --mixed HEAD"
+		],
+		"source": ""
 	}
 ]
