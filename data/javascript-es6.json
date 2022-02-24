@@ -373,5 +373,148 @@
 			"You can use the add() method with a WeakSet, but not with a Set. "
 		],
 		"source": ""
+	},
+	{
+		"id": "javascript-es6-38",
+		"question": "On what objects/properties do a for...of loop and a for...in loop run?",
+		"correct_answer": "<p>for...of: iterable objects</p><p>for...in: enumerable properties</p>",
+		"incorrect_answers": [
+			"<p>for...of: enumerable properties</p><p>for...in: iterable objects</p>",
+			"<p>for...of: all properties</p><p>for...in: own properties</p>",
+			"<p>for...of: iterable properties</p><p>for...in: enumerable properties</p>"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-39",
+		"question": "<p>You have the following code based on arrow functions and explicit functions:</p><div class=\"code\"><p>var obj = { </p><p>&nbsp;&nbsp;i: 104,</p><p>&nbsp;&nbsp;A: () => console.log(this.i, this),</p><p>&nbsp;&nbsp;B: function() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(this.i, this);</p><p>&nbsp;&nbsp;},</p><p>&nbsp;&nbsp;C: function() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(this.i, B);</p><p>&nbsp;&nbsp;},</p><p>&nbsp;&nbsp;D: () => console.log(this.i, A)</p><p>}</p></div><p>Which option results in the value of i?</p>",
+		"correct_answer": "obj.B();",
+		"incorrect_answers": [
+			"obj.C();",
+			"obj.A();",
+			"obj.D();"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-40",
+		"question": "<p>What is the output of the following code?</p><div class=\"code\"><p>const anObject = { 50: 'ItemA', 20: 'ItemC', 30: 'ItemB' };</p><p>console.log(Object.keys(anObject));</p></div>",
+		"correct_answer": "Array [\"20\", \"30\", \"50\"]",
+		"incorrect_answers": [
+			"Array [\"ItemA\", \"ItemC\", \"ItemB\"]",
+			"Array [\"ItemA\", \"ItemB\", \"ItemC\"]",
+			"Array [\"50\", \"20\", \"30\"]"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-41",
+		"question": "<p>What is the output of the following code?</p><div class=\"code\"><p>class Base {</p><p>&nbsp;&nbsp;constructor(value) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.value = value;</p><p>&nbsp;&nbsp;}</p><p>}</p><p>class Extended extends Base {</p><p>&nbsp;&nbsp;constructor(value) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;super(value);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;this.value = 100;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;super(200);</p><p>&nbsp;&nbsp;}</p><p>}</p><p>const obj = new Extended(300);</p><p>console.log(obj.value);</p></div>",
+		"correct_answer": "An error will be thrown",
+		"incorrect_answers": [
+			"100",
+			"200",
+			"300"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-42",
+		"question": "<p>What will be the output of the following Object?</p><div class=\"code\"><p>Object.keys({ x: 5, y: 5, [5]: \"x\" })</p></div>",
+		"correct_answer": "[\"5\", \"x\", \"y\"]",
+		"incorrect_answers": [
+			"[[5], \"x\", \"y\"]",
+			"[\"[5]\", \"x\", \"y\"]",
+			"[5, \"x\", \"y\"]"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-43",
+		"question": "<p>What is wrong with the following code?</p><div class=\"code\"><p>const value1 = 0 / -1 * 400;</p><p>const value2 = 'abcde';</p><p>value1.is(value2)</p></div>",
+		"correct_answer": "Object.is is a static function, not a prototype function.",
+		"incorrect_answers": [
+			"value1 is a number so the function “is” will only compare to other number values.",
+			"value1 is NaN so the function “is” will be undefined.",
+			"is can only be called on strings, so it needs to be value2.is(value1)."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-44",
+		"question": "Which is the correct usage of the Reflect object?",
+		"correct_answer": "Reflect.get(object1, \"prop\")",
+		"incorrect_answers": [
+			"Reflect(object1).get(\"prop\")",
+			"new Reflect(object1).get(\"prop\")",
+			"new Reflect(object1, { get(prop) { } })"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-46",
+		"question": "<p>How can you access the value -8 from the variable varB?</p><div class=\"code\"><p>let varA = [[10, 2], [-8], [-75]];</p><p>let varB = [...varA]</p><p>varB.shift().shift();</p></div>",
+		"correct_answer": "console.log(varB[0][0]);",
+		"incorrect_answers": [
+			"console.log(varB[0][2]);",
+			"console.log(varB[1][0]);",
+			"console.log(varB[1][1]);"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-47",
+		"question": "You need to import objects exported through default export along with rest of the other objects and values. Which command would you write to fetch them while aliasing all the objects other than defaults to pkg78f?",
+		"correct_answer": "import Defaults, * as pkg78f from '/modules/exp-module.js';",
+		"incorrect_answers": [
+			"import * as pkg78f from '/modules/exp-module.js';",
+			"import (Defaults, * as pkg78f) from '/modules/exp-module.js';",
+			"import Defaults as pkg78f, * from '/modules/exp-module.js';"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-48",
+		"question": "What happens when a generator encounters a yield statement?",
+		"correct_answer": "Execution of the function is suspended, context is stored, and the value specified by the yield is returned to the calling function.",
+		"incorrect_answers": [
+			"Execution of the function is suspended and the value specified by the yield is returned to the calling function.",
+			"The generator pauses to allow the read-eval-print loop (REPL) to process other commands and then resumed when the generator's continue function is called.",
+			"The generator pauses to allow the read-eval-print loop (REPL) to process other commands and then resumed when the REPL queue is empty."
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-51",
+		"question": "Which is a valid way to export multiple named exports?",
+		"correct_answer": "export { Foo as A, baz as b, quux as c };",
+		"incorrect_answers": [
+			"export [ Foo, bar, baz ]; ",
+			"from './Foo' export { Foo as A, bar as b, baz as c };",
+			"export [ Foo as A, bar as b, baz as c ] from './Foo';"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-52",
+		"question": "What syntax is used to remove value from a WeakSet?",
+		"correct_answer": "aWeakSet.delete(value);",
+		"incorrect_answers": [
+			"aWeakSet.remove(value);",
+			"aWeakSet.drop(value);",
+			"aWeakSet.pullOut(value);"
+		],
+		"source": ""
+	},
+	{
+		"id": "javascript-es6-54",
+		"question": "Which code will export a default member as well as one or more named members?",
+		"correct_answer": "export { Foo as default, bar, baz };",
+		"incorrect_answers": [
+			"export Foo as default, bar, baz;",
+			"export { Foo, bar, baz };",
+			"export Foo, { bar, baz };"
+		],
+		"source": ""
 	}
 ]
